@@ -1,0 +1,125 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+    <title>{{ _('Factures : Afrilog') }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="my-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active">{{ _('Factures') }}</li>
+        </ol>
+    </nav>
+</div>
+
+<h2>
+    <span><i class="bi bi-receipt"></i></span>
+    <span class="ms-3">{{ _('Factures') }}</span>
+</h2>
+
+<div class="py-2"></div>
+
+<div class="justify-content-end d-flex gap-1 me-2">
+    <button type="button" class="border-0" id="CreateInvoiceButton" style="background: none;">
+        <i class="bi bi-plus-circle"></i>
+    </button>
+    <button type="button" class="border-0" id="SortInvoicesButton" style="background: none;">
+        <i class="bi bi-sort-up"></i>
+    </button>
+</div>
+
+<div class="py-2"></div>
+
+{% if invoices %}
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+            <tr>
+                <th>{{ _('ID') }}</th>
+                <th>{{ _('Titre') }}</th>
+                <th>{{ _('Montant') }}</th>
+                <th>{{ _('Options') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for invoice in invoices %}
+                <tr>
+                    <td>{{ invoice.id }}</td>
+                    <td>{{ invoice.title }}</td>
+                    <td>{{ invoice.amount }}</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ invoice.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ invoice.id }}">
+                                <li>
+                                    <button type="button" data-invoice-id="{{ invoice.id }}" class="dropdown-item">{{ _('Voir les détails') }}</button>
+                                </li>
+                                <li>
+                                    <button type="button" data-invoice-id="{{ invoice.id }}" class="dropdown-item">{{ _('Modifier') }}</button>
+                                </li>
+                                <hr class="dropdown-divider">
+                                <li>
+                                    <button type="button" data-invoice-id="{{ invoice.id }}" class="dropdown-item">
+                                        <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    {% include 'dashboard/empty/no_invoice.html' %}
+{% endif %}
+
+<div class="modal fade" id="CreateInvoiceModal" tabindex="-1" aria-labelledby="createInvoiceModalLabel" aria-hidden="true">
+    <div class="modal-lg modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createInvoiceModalLabel">{{ _('Créer une nouvelle facture') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="createInvoiceForm" action="{{ url_for('main.invoices') }}">
+                    <div class="mb-3">
+                        <label for="invoiceTitle" class="form-label">{{ _('Titre') }} <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="invoiceTitle" name="title" required placeholder="{{ _('Nouveau moniteur') }}">
+                        <p class="text-danger my-2" id="titleError" style="display: none;">Veuillez entrer le titre de la facture</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="invoiceDescription" class="form-label">{{ _('Description') }}</label>
+                        <textarea class="form-control" id="invoiceDescription" name="description" rows="3" placeholder="{{ _('Ajouter une description supplémentaire') }}"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="invoiceAmount" class="form-label">{{ _('Montant') }}</label>
+                        <input type="number" class="form-control" id="invoiceAmount" name="amount" step="0.01" required>
+                        <p class="text-danger" id="amountError" style="display: none;">Veuillez entrer le montant de la facture</p>
+                        <p class="text-danger" id="amountInvalidError" style="display: none;">Veuillez entrer un montant valide</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submitInvoice">
+                    <span id="loadingText" style="display: none;">{{ _('En cours...') }}</span>
+                    <i class="bi bi-plus-circle"></i>
+                    <span id="addInvoice">{{ _('Ajouter') }}</span>
+                    <div class="spinner-border spinner-border-sm" style="display: none;" id="loadingSpinner"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-5"></div>
+
+<script src="{{ url_for('static', filename='js/async/api/@support_team/Invoices/CreateInvoice.js') }}"></script>
+{% endblock %}

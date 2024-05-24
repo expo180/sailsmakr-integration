@@ -1,0 +1,136 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Table des employés : Afrilog') }}</title>{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span aria-hidden="true">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">Careers</li>
+                <li class="breadcrumb-item active">{{ _('Table des employés') }}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <h2>{{ _('Table des employés') }}</h2>
+
+    {% if employees %}
+        <div class="table-responsive" style="min-height: 200px;">
+            <table class="table align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th>{{ _("Nom & Prénom") }}</th>
+                        <th>{{ _("Fonction") }}</th>
+                        <th>{{ _("Matricule/Identifiant") }}</th>
+                        <th>{{ _("Depuis") }}</th>
+                        <th>{{ _("Options") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employees %}
+                        <tr>
+                            <td>
+                                <div class="d-flex px-2 py-1">
+                                    <div>
+                                        <img src="{{ employee.picture_url }}" class="avatar avatar-sm me-3" alt="{{ employee.employee_first_name }} image">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-xs">
+                                            {{ employee.employee_first_name }} {{ employee.employee_last_name }}
+                                        </h6>
+                                        <p class="text-xs text-secondary mb-0">{{ employee.employee_email_address }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><p class="text-secondary">{{ employee.employee_job_title }}</p></td>
+                            <td>
+                                {% if employee.identifier %}
+                                    <p class="text-secondary">{{ employee.identifier }}</p>
+                                {% else %}
+                                    <p class="text-secondary">{{ employee.id }}</p>
+                                {% endif %}
+                            </td>
+                            <td><p class="text-secondary">{{ employee.member_since }}</p></td>
+                            <td style="width: 200px;">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ _('Options') }}
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li>
+                                            <button class="dropdown-item" type="button"  data-bs-toggle="modal" data-bs-target="#employeeModal{{ employee.id }}">
+                                                <i class="bi bi-eye-fill me-2"></i>{{ _('Voir plus') }}
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('api.edit_employee_infos', employee_id=employee.id) }}">
+                                                <i class="bi bi-pencil-fill me-2"></i>{{ _('Modifier les infos') }}
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <button class="dropdown-item text-danger" type="button" data-employee-id="{{ employee.id }}">
+                                                <i class="bi bi-trash-fill me-2"></i>Supprimer
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <div class="modal fade" id="employeeModal{{ employee.id }}" tabindex="-1" aria-labelledby="employeeModal{{ employee.id }}Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="employeeModal{{ employee.id }}Label">{{ employee.employee_first_name }} {{ employee.employee_last_name }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Employee information -->
+                                            <div class="mb-3">
+                                                <label for="employeeFirstName" class="form-label">{{ _('Prénom') }}</label>
+                                                <input type="text" class="form-control" id="employeeFirstName" value="{{ employee.employee_first_name }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="employeeLastName" class="form-label">{{ _('Nom de Famille') }}</label>
+                                                <input type="text" class="form-control" id="employeeLastName" value="{{ employee.employee_last_name }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="employeeJobTitle" class="form-label">{{ _('Fonction') }}</label>
+                                                <input type="text" class="form-control" id="employeeJobTitle" value="{{ employee.employee_job_title }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="employeeIdentifier" class="form-label">{{ _('Identifiant / Matricule') }}</label>
+                                                <input type="text" class="form-control" id="employeeIdentifier" value="{% if employee.identifier %}{{ employee.identifier }}{% else %}{{ employee.id }}{% endif %}" readonly>
+                                            </div>
+                                            <!-- Add more input fields for other employee details -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                            <!-- Button to print employee card -->
+                                            <button type="button" class="btn btn-info">
+                                                <i class="bi bi-printer"></i>{{ _('Imprimer carte') }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        {% include 'dashboard/@support_team/empty/no_employee.html' %}
+    {% endif %}
+</div>
+
+<div class="py-5"></div>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Employees/RemoveEmployee.js') }}"></script>
+{% endblock %}

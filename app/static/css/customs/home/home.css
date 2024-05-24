@@ -1,0 +1,39 @@
+@import url("../../fonts.css");
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.pattern_1{
+    padding:5em 5em;
+}
+.pattern_2{
+    background-image: url('../../../img/afrilog_pattern_2.png');
+    padding:8em 8em;
+}
+.separator{
+    padding:0 5em;
+}
+.pattern_1{
+    background-image:url('../../../img/afrilog_pattern_1.png');
+}
+
+.hero-afrilog-bg {
+    background-image: url('../../../img/afrilog_bg_1.png');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+canvas{ 
+    display: block; 
+}
+
+#globe-container{ 
+    width: 100%; 
+}
+
+@media (min-width: 640px) {
+    .hero-afrilog-bg {
+        background-position: center;
+    }
+}

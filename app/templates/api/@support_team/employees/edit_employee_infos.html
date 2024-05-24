@@ -1,0 +1,64 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Modifier les infos employé : Afrilog') }}</title>{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="visually-hidden">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                Careers
+                </li>
+                <li class="breadcrumb-item active">{{ _('Modifier les infos') }}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <h2>{{ _('Modifier les infos') }}</h2>
+
+    <form action="{{ url_for('api.edit_employee_infos', employee_id=employee.id) }}" method="POST">
+        <div class="mb-3">
+            <label for="employeeFirstName" class="form-label">{{ _('Prénom') }}</label>
+            <input type="text" class="form-control" id="employeeFirstName" value="{{ employee.employee_first_name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="employeeLastName" class="form-label">{{ _('Nom de Famille') }}</label>
+            <input type="text" class="form-control" id="employeeLastName" value="{{ employee.employee_last_name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="employeeJobTitle" class="form-label">{{ _('Fonction') }}</label>
+            <input type="text" class="form-control" id="employeeJobTitle" value="{{ employee.employee_job_title }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="employeeIdentifier" class="form-label">{{ _('Identifiant / Matricule') }}</label>
+            <input type="text" class="form-control" id="employeeIdentifier" value="{% if employee.identifier %}{{ employee.identifier }}{% else %}{{ employee.id }}{% endif %}" required>
+        </div>
+        
+        <div class="py-5"></div>
+        
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-info">
+                <span id="LoadingText" style="display: none;">En cours...</span>
+                <div class="spinner-border spinner-border-sm" style="display: none;"></div>
+                <span id="SaveChangesButton">
+                    {{ _('Enregistrer') }}
+                </span>
+            </button>
+        </div>
+
+        <div class="py-5"></div>
+    </form>
+
+</div>
+
+<div class="py-5"></div>
+
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Employees/EditEmployee.js') }}"></script>
+
+{% endblock %}

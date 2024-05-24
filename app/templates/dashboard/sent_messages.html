@@ -1,0 +1,32 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Messages envoyés : Afrilog') }}</title>{% endblock %}
+{% block content %}
+
+<div class="d-flex">
+    <div class="my-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+              <i class="bi bi-house-fill"></i>
+              <span class="visually-hidden">{{ _('Accueil') }}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            {{ _('Messages') }}
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ _('Messages envoyés') }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+</div>
+
+<h2>
+  {{ _('Messages envoyés') }}
+</h2>
+
+<div class="py-5"></div>
+
+{% endblock %}

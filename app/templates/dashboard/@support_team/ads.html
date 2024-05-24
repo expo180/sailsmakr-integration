@@ -1,0 +1,255 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Campagnes pub : Afrilog') }}</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="visually-hidden">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">{{ _('Ads') }}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <h2>
+        {{ _('Ads') }}
+    </h2>
+    
+    <div class="d-flex justify-content-end gap-2 me-2 mb-3">
+        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#createAdModal" id="CreateAdsButton" title="{{ _('Créer une nouvelle campagnes') }}">
+            <i class="bi bi-plus-circle"></i>
+        </button>
+        <button type="button" class="btn btn-outline-secondary" id="SortAdsButton" title="{{ _('Trier les campagnes') }}">
+            <i class="bi bi-sort-up"></i>
+        </button>
+    </div>
+
+    {% if ads %}
+        <div class="table-responsive">
+            <table class="table table-striped align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th>{{ _("Titre") }}</th>
+                        <th>{{ _("Débute") }}</th>
+                        <th>{{ _("Termine à") }}</th>
+                        <th>{{ _("Budget Min") }}</th>
+                        <th>{{ _("Budget Max") }}</th>
+                        <th>{{ _("Options") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ad in ads %}
+                        <tr>
+                            <td>{{ ad.title }}</td>
+                            <td>{{ ad.start_from.strftime('%Y-%m-%d %H:%M') }}</td>
+                            <td>{{ ad.end_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                            <td>{{ ad.min_budget }}</td>
+                            <td>{{ ad.max_budget }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-secondary" title="{{ _('Voir les détails') }}" data-bs-toggle="modal" data-bs-target="#viewAdModal{{ ad.id }}">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary edit-button" data-bs-toggle="modal" data-bs-target="#editAdModal{{ ad.id }}" data-ad-id="{{ ad.id }}" title="{{ _('Modifier') }}">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary delete-button" data-ad-id="{{ ad.id }}" title="{{ _('Supprimer') }}">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <!-- Modal for viewing ad details -->
+                            <div class="modal fade" id="viewAdModal{{ ad.id }}" tabindex="-1" aria-labelledby="viewAdModal{{ ad.id }}Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="viewAdModal{{ ad.id }}Label">{{ _('Détails de la campagne') }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="adTitle" class="form-label">{{ _('Titre') }}</label>
+                                                <input type="text" class="form-control" id="adTitle" value="{{ ad.title }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adDescription" class="form-label">{{ _('Description') }}</label>
+                                                <textarea class="form-control" id="adDescription" rows="3" readonly>{{ ad.description }}</textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adObjectives" class="form-label">{{ _('Objectifs') }}</label>
+                                                <textarea class="form-control" id="adObjectives" rows="3" readonly>{{ ad.objectives }}</textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adStartFrom" class="form-label">{{ _('Débute') }}</label>
+                                                <input type="text" class="form-control" id="adStartFrom" value="{{ ad.start_from | strftime('%Y-%m-%d %H:%M') }}" readonly>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adEndAt" class="form-label">{{ _('Termine à') }}</label>
+                                                <input type="text" class="form-control" id="adEndAt" value="{{ ad.end_at | strftime('%Y-%m-%d %H:%M') }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adMinBudget" class="form-label">{{ _('Budget Min') }}</label>
+                                                <input type="number" class="form-control" id="adMinBudget" value="{{ ad.min_budget }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adMaxBudget" class="form-label">{{ _('Budget Max') }}</label>
+                                                <input type="number" class="form-control" id="adMaxBudget" value="{{ ad.max_budget }}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="adDebt" class="form-label">{{ _('Dette') }}</label>
+                                                <input type="number" class="form-control" id="adDebt" value="{{ ad.debt }}" readonly>
+                                            </div>
+                                            <!-- Add the countdown timer here -->
+                                            <div class="mb-3">
+                                                <label for="countdown" class="form-label">{{ _('Temps restant') }}</label>
+                                                <input type="text" class="form-control" id="countdown" value="{{ ad.countdown }}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal for editing ad details -->
+                            <div class="modal fade" id="editAdModal{{ ad.id }}" tabindex="-1" aria-labelledby="editAdModal{{ ad.id }}Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="editAdModal{{ ad.id }}Label">{{ _('Modifier les détails de la campagne') }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="editAdForm{{ ad.id }}" action="{{ url_for('api.edit_ad', ad_id=ad.id) }}" method="POST">
+                                                <div class="mb-3">
+                                                    <label for="editAdTitle{{ ad.id }}" class="form-label">{{ _('Titre') }}</label>
+                                                    <input type="text" class="form-control" id="editAdTitle{{ ad.id }}" name="title" value="{{ ad.title }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdDescription{{ ad.id }}" class="form-label">{{ _('Description') }}</label>
+                                                    <textarea class="form-control" id="editAdDescription{{ ad.id }}" name="description" rows="3" required>{{ ad.description }}</textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdObjectives{{ ad.id }}" class="form-label">{{ _('Objectifs') }}</label>
+                                                    <textarea class="form-control" id="editAdObjectives{{ ad.id }}" name="objectives" rows="3" required>{{ ad.objectives }}</textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdStartFrom{{ ad.id }}" class="form-label">{{ _('Débute') }}</label>
+                                                    <input type="datetime-local" class="form-control" id="editAdStartFrom{{ ad.id }}" name="start_from" value="{{ ad.start_from.isoformat() }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdEndAt{{ ad.id }}" class="form-label">{{ _('Termine à') }}</label>
+                                                    <input type="datetime-local" class="form-control" id="editAdEndAt{{ ad.id }}" name="end_at" value="{{ ad.end_at.isoformat() }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdMinBudget{{ ad.id }}" class="form-label">{{ _('Budget Min') }}</label>
+                                                    <input type="number" class="form-control" id="editAdMinBudget{{ ad.id }}" name="min_budget" value="{{ ad.min_budget }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdMaxBudget{{ ad.id }}" class="form-label">{{ _('Budget Max') }}</label>
+                                                    <input type="number" class="form-control" id="editAdMaxBudget{{ ad.id }}" name="max_budget" value="{{ ad.max_budget }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="editAdDebt{{ ad.id }}" class="form-label">{{ _('Dette') }}</label>
+                                                    <input type="number" class="form-control" id="editAdDebt{{ ad.id }}" name="debt" value="{{ ad.debt }}" required>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                                    <button type="submit" class="btn btn-info" id="SaveEditButton{{ ad.id }}">
+                                                        <span id="LoadingText{{ ad.id }}" style="display: none;">{{ _('En cours...') }}</span>
+                                                        <i class="bi bi-check-circle"></i>
+                                                        <span id="SaveEdit{{ ad.id }}">{{ _('Sauvegarder') }}</span>
+                                                        <div class="spinner-border spinner-border-sm" id="EditSpinner{{ ad.id }}" style="display: none;"></div>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        {% include 'dashboard/@support_team/empty/no_Ads.html' %}
+    {% endif %}
+
+    <!-- Modal for creating new ad -->
+    <div class="modal fade" id="createAdModal" tabindex="-1" aria-labelledby="createAdModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createAdModalLabel">{{ _('Créer une nouvelle campagne') }}</h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="createAdForm" action="{{ url_for('main.ads') }}">
+                        <div class="mb-3">
+                            <label for="adTitle" class="form-label">{{ _('Titre') }}</label>
+                            <input type="text" class="form-control" id="adTitle" name="title" placeholder="{{ _('Campagne N°1') }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adDescription" class="form-label">{{ _('Description') }}</label>
+                            <textarea class="form-control" id="adDescription" name="description" rows="3" required placeholder="{{ _('Entrez la description de la campagne...') }}"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adObjectives" class="form-label">{{ _('Objectifs') }}</label>
+                            <textarea class="form-control" id="adObjectives" name="objectives" rows="3" required placeholder="{{ _('Entrez les objectifs de la campagne...') }}"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adStartFrom" class="form-label">{{ _('Débute') }}</label>
+                            <input type="datetime-local" class="form-control" id="adStartFrom" name="start_from" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adEndAt" class="form-label">{{ _('Termine à') }}</label>
+                            <input type="datetime-local" class="form-control" id="adEndAt" name="end_at" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adMinBudget" class="form-label">{{ _('Budget Min') }}</label>
+                            <input type="number" class="form-control" id="adMinBudget" name="min_budget" placeholder="0.0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adMaxBudget" class="form-label">{{ _('Budget Max') }}</label>
+                            <input type="number" class="form-control" id="adMaxBudget" name="max_budget" placeholder="0.0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adDebt" class="form-label">{{ _('Dette') }}</label>
+                            <input type="number" class="form-control" id="adDebt" name="debt" placeholder="0.0" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                            <button type="submit" class="btn btn-info" id="AddAdButton">
+                                <span id="LoadingText" style="display: none;">{{ _('En cours...') }}</span>
+                                <i class="bi bi-plus-circle"></i>
+                                <span id="AddAd">{{ _('Ajouter') }}</span>
+                                <div class="spinner-border spinner-border-sm" id="Spinner" style="display: none;"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-5"></div>
+
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Ads/CreateNewAd.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Ads/EditAd.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Ads/DeleteAd.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Ads/CountDown.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/dashboard/dashboard.css') }}">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+  <!-- Nucleo Icons -->
+  <link href="{{ url_for('static', filename='css/nucleo/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/nucleo/nucleo-svg.css')}}" rel="stylesheet" />
+  <!-- bootstrap-icons-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="{{ url_for('static', filename='css/customs/dashboard/material-dashboard.min.css') }}" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css" rel="stylesheet"/>
+  {% block title %}<title>{{ _('Afrilog : Dashboard') }}</title>{% endblock %}
+</head>
+<body class="g-sidenav-show bg-gray-200">
+
+  {% include 'dashboard/partials/sidebar.html' %}
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  
+    
+    {% include 'dashboard/partials/navigation.html' %}
+
+    {% block content %}{% endblock content %}
+
+  </main>
+
+
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="{{ url_for('static', filename='js/lib/plugins/material-dashboard.min.js') }}"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  {% include 'includes/inc_bottom.html' %}
+
+</body>
+</html>

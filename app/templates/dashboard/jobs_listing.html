@@ -1,0 +1,70 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _("Nouvelles offres d'emploi : Afrilog") }}</title>{% endblock %}
+{% block content %}
+<div class="container">
+  
+  <div class="d-flex">
+    <div class="my-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+              <i class="bi bi-house-fill"></i>
+              <span class="visually-hidden">{{ _('Accueil') }}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            {{ _('Careers') }}
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ _('Nouvelles offres') }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <h2>
+  {{ _("Nouvelles offres d'emploi") }}
+  </h2>
+
+  {% if jobs %}
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>{{ _('ID') }}</th>
+                    <th>{{ _('Titre') }}</th>
+                    <th>{{ _('Desc') }}</th>
+                    <th>{{ _('Salaire') }}</th>
+                    <th>{{ _('Lieu') }}</th>
+                    <th>{{ _('Date de clôture') }}</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                    <tr>
+                        <td>{{ job.id }}</td>
+                        <td>{{ job.title }}</td>
+                        <td>{{ job.description }}</td>
+                        <td>{{ job.salary }}</td>
+                        <td>{{ job.location }}</td>
+                        <td>{{ job.closing_date }}</td>
+                        <td>
+                          <a href="{{ url_for('api.apply_job') }}/{{ job.id }}" class="btn-info">
+                            {{ _('postuler') }}
+                          </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+      {% include 'dashboard/empty/no_job.html' %}
+    {% endif %}
+
+
+<div class="py-5"></div>
+
+</div>
+{% endblock %}

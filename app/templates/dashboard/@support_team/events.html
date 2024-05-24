@@ -1,0 +1,68 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+    <title>{{ _('Réunions : Afrilog') }}</title>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="my-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active">{{ _('Meets') }}</li>
+        </ol>
+    </nav>
+</div>
+
+<h2>{{ _('Meets') }}</h2>
+
+<div class="my-3">
+
+  <div id='calendar'></div>
+
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="eventForm" method="POST" action="{{ url_for('api.add_event') }}">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">{{ _('Ajouter un événement') }}</h5>
+            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="title" class="form-label">{{ _('Titre') }}</label>
+              <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="start_from" class="form-label">{{ _('Commence à') }}</label>
+              <input type="datetime-local" class="form-control" id="start_from" name="start_from" required>
+            </div>
+            <div class="mb-3">
+              <label for="end_at" class="form-label">{{ _('Termine à') }}</label>
+              <input type="datetime-local" class="form-control" id="end_at" name="end_at" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+            <button type="submit" class="btn btn-primary">{{ _('Enregistrer') }}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales/fr.js'></script>
+  <script type="module" src="{{ url_for('static', filename='js/_utils/calendar.js') }}"></script>
+
+</div>
+</div>
+
+{% endblock %}

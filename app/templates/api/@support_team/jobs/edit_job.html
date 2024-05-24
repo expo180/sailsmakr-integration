@@ -1,0 +1,46 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+  <title>{{ _("Modifier l'Offre") }} {{ job.title }} {{ _('Afrilog') }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="my-5">
+    <h2>{{ _('Edit Job') }}</h2>
+    <form action="{{ url_for('api.edit_job', job_id=job.id) }}" method="POST">
+      <div class="mb-3">
+        <label for="title" class="form-label">{{ _('Title') }}<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ job.title }}" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">{{ _('Description') }}<span class="text-danger">*</span></label>
+        <textarea class="form-control" id="description" name="description" rows="5" required>{{ job.description | striptags }}</textarea>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">{{ _('Lieu') }}<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="location" name="location" value="{{ job.location }}" required>
+      </div>
+      <div class="mb-3">
+        <label for="salary" class="form-label">{{ _('Salaire') }}<span class="text-danger">*</span></label>
+        <input type="number" class="form-control" id="salary" name="salary" value="{{ job.salary }}" required>
+      </div>
+      <div class="mb-3">
+        <label for="posted_date" class="form-label">{{ _('Date de publication') }}<span class="text-danger">*</span></label>
+        <input type="date" class="form-control" id="posted_date" name="posted_date" value="{{ job.posted_date }}" required>
+      </div>
+      <div class="mb-3">
+        <label for="closing_date" class="form-label">{{ _('Date de clôture') }}<span class="text-danger">*</span></label>
+        <input type="date" class="form-control" id="closing_date" name="closing_date" value="{{ job.closing_date }}" required>
+      </div>
+
+      <div class="py-5"></div>
+
+      <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-info">{{ _('Enregistrer') }}</button>
+      </div>
+
+      <div class="py-5"></div>
+    </form>
+  </div>
+</div>
+{% endblock %}

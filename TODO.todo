@@ -1,0 +1,193 @@
+Website
+
+
+
+DESIGN REMAKE
+
+✔ CODE REFRACTURATION @done (5/22/2024, 10:52:19 AM)
+✔ NEW DESIGN IMPLEMENTATION @done (5/22/2024, 10:52:22 AM)
+
+
+
+CRM
+
+FILTERS
+☐ truncate functions adjustments
+☐ pagination system
+
+Buttons
+☐ Filter and data sorting algorithms
+☐ 
+
+1. Accountant Level
+    . Invoice
+        ☐ invoice create flask api
+        ☐ invoice create js api
+        ☐ invoices list view
+        ☐ invoice details view
+        ☐ invoice edit js api
+        ☐ invoice detail flask api
+        ☐ invoice printing api
+        ☐ invoice page design
+        ☐ invoice deleting flask api
+        ☐ invoice deleting js api
+ 
+2. Customer & User Level
+    . Invoice
+        ☐ invoices list view
+        ☐ invoice details view
+        ☐ invoice printing api
+        ☐ invoice detail flask api
+        ☐ invoice deleting flask api
+        ☐ invoice deleting js api
+
+    . Authorizations
+        ☐ send authorizations js api
+        ☐ send authorizations flask api
+        ☐ previous authorizations view
+        ☐ edit authorizations js api
+        ☐ edit authorizations flask api
+        ☐ previous authorizations deleting flask api
+        ☐ previous authorizations deleting js api
+        ☐ previous authorization details view
+        ☐ authorization details flask api
+
+    . Dropshipping
+        ☐ send request js api
+        ☐ send request flask api
+        ☐ previous commands view
+        ☐ previous commands details view flask api
+        ☐ delete previous commands flask api
+        ☐ delete previous commands js api
+        ☐ track a product view
+        ☐ track a product js api
+        ☐ track a product flask api
+    
+    . Docs
+        ☐ doc model defintion
+        ☐ docs list view
+        ☐ doc details flask api
+        ☐ doc create word flask api
+        ☐ doc create xlxs flask api
+        ☐ doc create word js api
+        ☐ doc create xlxs js api
+        ☐ doc edit word js api
+        ☐ doc edit xlxs js api
+        ☐ doc edit word flask api
+        ☐ doc edit xlxs flask api
+        ☐ doc remove word js api
+        ☐ doc remove xlxs js api
+        ☐ doc remove word flask api
+        ☐ doc remove xlxs flask api
+
+    . Jobs
+        ☐ recently applied jobs list view
+
+    . Messages
+        ☐ own inboxes view
+        ☐ send message flask api
+
+2. HR MANAGER Level
+    . Jobs
+        ✔ create job flask api @done (5/23/2024, 1:21:58 PM)
+        ✔ create job js api @done (5/23/2024, 1:22:01 PM)
+        ✔ created jobs list view @done (5/23/2024, 1:55:36 PM)
+        ✔ job details view @done (5/23/2024, 1:55:41 PM)
+        ✔ edit job flask api @done (5/23/2024, 1:55:44 PM)
+        ✔ edit job js api @done (5/23/2024, 1:55:50 PM)
+        ✔ delete job flask api @done (5/23/2024, 1:55:53 PM)
+        ✔ delete job js api @done (5/23/2024, 1:55:56 PM)
+
+    .Employees
+        ☐ applications list view
+        ☐ accept application js api
+        ☐ accept application flask api
+        ☐ reject application js api
+        ☐ reject application flask api
+        ✔ employee excel view @done (5/23/2024, 8:36:04 PM)
+        ✔ employee info edit js api @done (5/24/2024, 8:20:20 AM)
+        ✔ employee info edit flask api @done (5/24/2024, 8:20:23 AM)
+        ✔ employee info remove flask api @done (5/24/2024, 8:20:56 AM)
+        ✔ employee info remove js api @done (5/24/2024, 8:20:58 AM)
+
+
+3. Employee
+    . Authorizations
+        ☐ authorization requests list view
+        ☐ authorization request details view
+        ☐ accept authorization request flask api
+        ☐ accept authorization request js api
+        ☐ reject authorization request flask api
+        ☐ reject authorization request js api + view
+
+    . Purchases
+        ☐ purchases list view
+        ☐ accept purchases request flask api
+        ☐ accept purchases request js api
+        ☐ reject purchases request flask api
+        ☐ reject purchases request js api + view
+    
+    . Calendar
+        ☐ calendar view
+    
+    . MyTasks
+        ☐ task list view
+        ☐ edit task view
+        ☐ edit task flask api
+        ☐ edit task js api
+
+
+4. Project MANAGER Level
+    . Ads
+        ☐ Ads list view
+        ☐ Create Ads flask api
+        ☐ Create Ads js api
+        ☐ remove Ads flask api
+        ☐ remove Ads js api
+
+5. Sales Manager
+    . Ads
+        ✔ Ads list view @done (5/24/2024, 10:03:01 AM)
+        ✔ Edit Ads flask api @done (5/24/2024, 2:09:27 PM)
+        ✔ Edit Ads js api @done (5/24/2024, 2:09:28 PM)
+
+    . Purchases
+        ☐ purchases list view
+        ☐ accept purchases request flask api
+        ☐ accept purchases request js api
+        ☐ reject purchases request flask api
+        ☐ reject purchases request js api + view
+
+6. Admin
+    . Notes
+        ✔ Create Note api flask @done (5/23/2024, 8:23:11 AM)
+        ✔ Create Note api js @done (5/23/2024, 8:23:14 AM)
+        ✔ Edit Note api flask @done (5/23/2024, 8:23:16 AM)
+        ✔ Edit Note api js @done (5/23/2024, 8:23:19 AM)
+        ✔ Delete Note api flask @done (5/23/2024, 8:23:23 AM)
+        ✔ Delete Note api js @done (5/23/2024, 8:23:25 AM)
+        ✔ Note list view @done (5/23/2024, 8:23:28 AM)
+
+    . Tasks
+        ✔ Create Task view @done (5/23/2024, 8:23:38 AM)
+        ✔ Create Task api flask @done (5/23/2024, 8:23:44 AM)
+        ✔ Create Task api js @done (5/23/2024, 8:23:45 AM)
+        ✔ Edit Task api flask @done (5/23/2024, 8:23:49 AM)
+        ✔ Edit Task api js @done (5/23/2024, 8:23:51 AM)
+        ✔ Delete Task api flask @done (5/23/2024, 8:23:53 AM)
+        ✔ Delete Task api js @done (5/23/2024, 8:23:54 AM)
+        ✔ Task list view @done (5/23/2024, 8:24:00 AM)
+
+    . Meets
+        ✔ Create Meet api flask @done (5/23/2024, 8:28:25 AM)
+        ✔ Create Meet api js @done (5/23/2024, 8:28:28 AM)
+        ✔ Edit Meet api flask @done (5/23/2024, 8:28:40 AM)
+        ✔ Edit Meet api js @done (5/23/2024, 8:28:34 AM)
+        ✔ Delete Meet api flask @done (5/23/2024, 8:28:43 AM)
+        ✔ Delete Meet api js @done (5/23/2024, 8:28:46 AM)
+        ✔ Meets list view @done (5/23/2024, 8:28:48 AM)
+
+    . Marketplace
+
+    . Accounting
+    

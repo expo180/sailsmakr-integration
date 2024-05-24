@@ -1,0 +1,17 @@
+<div class="px-4 text-center">
+    <img class="d-block mx-auto mb-4 img-fluid" src="{{ url_for('static', filename='img/feedbacks/sitting-6@2x.png') }}" alt="{{ _('Aucune tâche à afficher image') }}" width="400">
+    <h1 class="display-5 text-body-emphasis">{{ _('Aucune tâche à afficher') }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        {{ _("Les tâches que vous assignerez seront affichées ici") }}
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button class="btn btn-info btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#NewTask">
+          <i class="bi bi-plus-circle-dotted"></i>
+          <span class="ms-2">
+            Créer une nouvelle tâche
+          </span>
+        </button>
+      </div>
+    </div>
+</div>

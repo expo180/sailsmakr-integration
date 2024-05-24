@@ -1,0 +1,28 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+    <title>
+        {{ _('Boîte de réception : Afrilog') }}
+    </title>
+{% endblock %}
+{% block content %}
+
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+                </li>
+                <li class="breadcrumb-item">
+                    {{ _('Messages') }}
+                </li>
+                <li class="breadcrumb-item active">
+                    {{ _('Boîte de réception') }}
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+{% endblock %}

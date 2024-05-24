@@ -1,0 +1,192 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+    <title>{{ _('Tâches : Afrilog') }}</title>
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active">{{ _('Tâches') }}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>{{ _('Tâches') }}</h2>
+        <div class="btn-group" role="group" aria-label="Task Actions">
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#NewTask">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-outline-danger">
+                <i class="bi bi-sort-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="py-2"></div>
+
+    {% if tasks %}
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>{{ _('ID') }}</th>
+                    <th>{{ _('Titre') }}</th>
+                    <th>{{ _('Desc') }}</th>
+                    <th>{{ _('Statut') }}</th>
+                    <th>{{ _('Options') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr>
+                        <td>{{ task.id }}</td>
+                        <td>{{ task.title }}</td>
+                        <td>{{ task.description | truncate }}</td>
+                        <td>
+                            {% if task.status == 0 %}
+                                <span class="badge bg-danger">{{ _('En cours') }}</span>
+                            {% else %}
+                                <span class="badge bg-success">{{ _('Effectuée') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ task.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ task.id }}">
+                                    <li>
+                                        <button type="button" data-task-id="{{ task.id }}" class="dropdown-item edit-task">
+                                            <i class="bi bi-pencil"></i> {{ _('Modifier') }}
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-task-id="{{ task.id }}" class="dropdown-item delete-task">
+                                            <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        {% include 'dashboard/empty/no_task.html' %}
+    {% endif %}
+
+    <!-- Modal for Adding New Task -->
+    <div class="modal fade" id="NewTask" tabindex="-1" aria-labelledby="NewTaskLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewTaskLabel">
+                        <i class="bi bi-plus-circle-dotted"></i>
+                        {{ _('Ajouter une nouvelle tâche') }}
+                    </h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="taskForm" method="POST" action="{{ url_for('main.tasks') }}">
+                        <div class="mb-3">
+                            <label for="TaskTitle" class="col-form-label">{{ _('Titre') }}</label>
+                            <input type="text" class="form-control" id="TaskTitle" name="title" placeholder="{{ _('Analyse concurrentielle') }}" required>
+                            <div class="invalid-feedback" id="TaskTitleError">{{ _('Veuillez entrer le titre de la tâche pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="TaskDescription" class="col-form-label">{{ _('Description') }}</label>
+                            <textarea class="form-control" id="TaskDescription" name="description" rows="4" placeholder="{{ _('Etudier les stratégies mises en place...') }}"></textarea>
+                            <div class="invalid-feedback" id="TaskDescriptionError">{{ _('Veuillez décrire brièvement la tâche pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="AssignedTo" class="col-form-label">{{ _('Assigné à') }}</label>
+                            <select class="form-select" id="AssignedTo" name="assigned_to" required>
+                                {% if users %}
+                                    {% for user in users %}
+                                        <option value="{{ user.id }}">{{ user.email }} - {{ user.role.name }}</option>
+                                    {% endfor %}
+                                {% else %}
+                                    <option value="0">{{ _('Aucun agent trouvé') }}</option>
+                                {% endif %}
+                            </select>
+                            <div class="invalid-feedback" id="TaskAssingmentError">{{ _('Veuillez assigner cette tâche à un agent pour continuer') }}</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="addTaskButton" class="btn btn-info">
+                                <span id="LoadingText" class="d-none">{{ _('En cours...') }}</span>
+                                <i class="bi bi-plus-circle"></i>
+                                <span id="AddTaskText">{{ _('Ajouter') }}</span>
+                                <div class="spinner-border spinner-border-sm d-none"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Editing Task -->
+    <div class="modal fade" id="EditTaskModal" tabindex="-1" aria-labelledby="EditTaskLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditTaskLabel">{{ _('Modifier la tâche') }}</h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editTaskForm" method="POST" data-task-id="">
+                        <div class="mb-3">
+                            <label for="EditTaskTitle" class="col-form-label">{{ _('Titre') }}</label>
+                            <input type="text" class="form-control" id="EditTaskTitle" name="title" required>
+                            <div class="invalid-feedback" id="EditTaskTitleError">{{ _('Veuillez entrer le titre de la tâche pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditTaskDescription" class="col-form-label">{{ _('Description') }}</label>
+                            <textarea class="form-control" id="EditTaskDescription" name="description" rows="4"></textarea>
+                            <div class="invalid-feedback" id="EditTaskDescriptionError">{{ _('Veuillez décrire brièvement la tâche pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditAssignedTo" class="col-form-label">{{ _('Assigné à') }}</label>
+                            <select class="form-select" id="EditAssignedTo" name="assigned_to" required>
+                                {% if users %}
+                                    {% for user in users %}
+                                        <option value="{{ user.id }}">{{ user.email }} - {{ user.role.name }}</option>
+                                    {% endfor %}
+                                {% else %}
+                                    <option value="0">{{ _('Aucun agent trouvé') }}</option>
+                                {% endif %}
+                            </select>
+                            <div class="invalid-feedback" id="EditTaskAssignmentError">{{ _('Veuillez assigner cette tâche à un agent pour continuer') }}</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="editTaskButton" class="btn btn-info">
+                                <span id="EditLoadingText" class="d-none">{{ _('En cours...') }}</span>
+                                <i class="bi bi-pencil"></i>
+                                <span id="EditTaskText">{{ _('Enregistrer') }}</span>
+                                <div class="spinner-border spinner-border-sm d-none"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-5"></div>
+
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Tasks/AddTask.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Tasks/EditTask.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Tasks/DeleteTask.js') }}"></script>
+
+{% endblock %}

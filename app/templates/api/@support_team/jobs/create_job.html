@@ -1,0 +1,99 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _("Créer une offre d'emploi - Afrilog") }}</title>{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="visually-hidden">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    {{ _('Careers') }}
+                </li>
+                <li class="breadcrumb-item active">
+                    {{ _('Ajouter une offre') }}
+                </li>
+            </ol>
+        </nav>
+    </div>
+    
+    <h2>
+        <span>
+            <i class="bi bi-plus-circle-dotted"></i>
+        </span>
+        <span class="ms-3">
+            {{ _('Ajouter une nouvelle offre') }}
+        </span>
+    </h2>
+    
+    <div class="py-2"></div>
+    
+    <form id="jobForm" action="{{ url_for('api.create_job') }}" method="POST">
+        <div class="mb-3">
+            <label for="title" class="form-label">{{ _('Titre') }}<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="{{ _('Développeur ASPNET C#') }}" required>
+            <p class="text-danger my-2" id="JobTitleError" style="display: none;">
+                {{ _('Veuillez entrer le titre du poste') }}
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">{{ _('Description') }}<span class="text-danger">*</span></label>
+            <div id="description" style="min-height: 200px;"></div>
+            <p class="text-danger my-2" id="JobDescriptionError" style="display: none;">
+                {{ _('Veuillez décrire le poste') }}
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">{{ _('Lieu') }}<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="location" name="location" required>
+            <p class="text-danger my-2" id="JobLocationError" style="display: none;">
+                {{ _('Veuillez spécifier le lieu') }}
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">{{ _('Salaire') }}<span class="text-danger">*</span></label>
+            <input type="number" placeholder="450.000 FCFA" class="form-control" id="salary" name="salary" step="0.01" min="0" required>
+            <p class="text-danger my-2" id="JobWageError" style="display: none;">
+                {{ _('Veuillez indiquer le salaire') }}
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="posted_date" class="form-label">{{ _('Date de publication') }}<span class="text-danger">*</span></label>
+            <input type="date" class="form-control" id="posted_date" name="posted_date" required>
+            <p class="text-danger my-2" id="JobPuclicationDateError" style="display: none;">
+                {{ _('Veuillez indiquer la date de publication') }}
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="closing_date" class="form-label">{{ _('Date de clôture') }}<span class="text-danger">*</span></label>
+            <input type="date" class="form-control" id="closing_date" name="closing_date" required>
+            <p class="text-danger my-2" id="JobClosingDateError" style="display: none;">
+                {{ _('Veuillez indiquer la date de clôture') }}
+            </p>
+        </div>
+    
+        <div class="py-5"></div>
+    
+        <div class="d-flex justify-content-end">
+            <button type="submit" id="CreateJobButton" class="btn btn-info">
+                <span id="LoadingText" style="display: none;">En cours...</span>
+                <span><i class="bi bi-plus-circle-dotted"></i></span>
+                <span>{{ _('Ajouter') }}</span>
+                <div class="spinner-border spinner-border-sm" style="display: none;"></div>
+            </button>
+        </div>
+    
+        <div class="py-5"></div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Jobs/text_editor.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Jobs/CreateJobs.js') }}"></script>
+
+{% endblock %}

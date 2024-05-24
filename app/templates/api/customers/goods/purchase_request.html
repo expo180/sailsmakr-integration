@@ -1,0 +1,134 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Passer une commande : Afrilog') }}</title>{% endblock %}
+{% block content %}
+
+<div class="d-flex">
+    <div class="my-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+              <i class="bi bi-house-fill"></i>
+              <span class="visually-hidden">{{ _('Accueil') }}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            {{ _('Mes commandes') }}
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ _('Passer une commande') }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+</div>
+
+<h2>
+  {{ _('Passer une commande') }}
+</h2>
+
+<form action="{{ url_for('api.purchase_request') }}" class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="ClientFirstName" class="form-label">{{ _('Prénom') }}<span class="text-danger">*</span></label>
+      <input type="text" name="" id="ClientFirstName" class="form-control" placeholder="Cersei">
+      <p id="FirstNameError" class="text-danger" style="display: none;">
+        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <label for="ClientLastName" class="form-label">{{ _('Nom de famille') }}<span class="text-danger">*</span></label>
+      <input type="text" name="" id="ClientLastName" class="form-control" placeholder="Lannister">
+      <p id="LastNameError" class="text-danger" style="display: none;">
+        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+      </p>
+    </div> 
+  </div>
+
+  <div class="py-2"></div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="ProductTitle" class="form-label">{{ _('Nom du produit') }}<span class="text-danger">*</span></label>
+      <input type="text" name="" id="ProductTitle" class="form-control" placeholder="Dell Alienware DXP">
+      <p id="ProductTitleError" class="text-danger" style="display: none;">
+        {{ _('Veuillez entrer le nom de votre produit pour continuer') }}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <label for="ProductCategory" class="form-label">{{ _('Nature du produit') }}<span class="text-danger">*</span></label>
+      <select name="" id="ProductCategory" class="form-select">
+        <option value="A">{{ _('Automobile') }}</option>
+        <option value="E">{{ _('Electronique') }}</option>
+        <option value="M">{{ _('Mecanique') }}</option>
+        <option value="P">{{ _('Pharmaceutique') }}</option>
+      </select>
+      <p id="ProductCategoryError" class="text-danger" style="display: none;">
+        {{ _('Veuillez indiquer la nature de votre produit') }}
+      </p>
+    </div> 
+  </div>
+
+  <div class="py-2"></div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <label for="ProductProvider" class="form-label">{{ _('Fournisseur') }}<span class="text-danger">*</span></label>
+      <input type="text" placeholder="Amazon" class="form-control" id="ProductProvider">
+      <p id="ProductProviderError" class="text-danger" style="display: none;">
+        {{ _('Veuillez entrer votre fournisseur') }}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <label for="ClientLocation" class="form-label">{{ _('Votre pays') }}<span class="text-danger">*</span></label>
+      <select name="" id="ClientLocation" class="form-select">
+        {% include 'api/customers/authorizations/world_countries.html' %}
+      </select>
+      <p id="AdresseError" class="text-danger" style="display: none;">
+        {{ _('Veuillez sélectionner votre pays') }}
+      </p>
+    </div>
+  </div>
+
+  <div class="py-2"></div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="PhoneNumber" class="form-label">{{ _('Téléphone') }}<span class="text-danger">*</span></label>
+      <input type="text" placeholder="" class="form-control" id="PhoneNumber">
+      <p id="PhoneNumberError" class="text-danger" style="display: none;">
+        {{ _('Veuillez entrer un numéro de téléphone valide') }}
+      </p>
+    </div>
+  </div>
+
+  <div class="py-2"></div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="ProductShortDescription" class="form-label">{{ _('Description') }}</label>
+      <textarea name="" id="ProductShortDescription" class="form-control" rows="7" placeholder="{{ _('Autre chose que vous aimeriez ajouter sur votre produit') }}"></textarea>
+    </div>
+    <div class="col-md-6">
+      <label for="ProductDocFile" class="form-label">{{ _('Manuel ou document') }}</label>
+      <input type="file" class="form-control" id="ProductDocFile">
+    </div>
+  </div>
+
+
+  <div class="py-5"></div>
+
+  <div class="d-flex justify-content-end">
+    <button type="button" id="SendQuoteRequestButton" class="btn btn-primary">
+      <div class="spinner-border spinner-border-sm" style="display:none;" id="spinner"></div>
+      <span id="LoadingText" style="display: none;">{{ _('Envoi...') }}</span>
+      <i class="bi bi-send-fill"></i>
+      {{ _('Envoyer') }}
+    </button>
+  </div>
+
+  <div class="py-5"></div>
+</form>
+
+{% endblock %}

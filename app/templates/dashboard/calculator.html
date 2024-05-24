@@ -1,0 +1,76 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Calculatrice : Afrilog') }}</title>{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="d-flex">
+    <div class="my-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+              <i class="bi bi-house-fill"></i>
+              <span class="visually-hidden">{{ _('Accueil') }}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ _('Calculatrice') }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+</div>
+
+<h2 class="display-2">
+  {{ _('Calculatrice') }}
+</h2>
+
+<div class="d-flex justify-content-end">
+  <h4 class="display-6">
+    17.555
+  </h4>
+  <span>
+    XOF
+  </span>
+</div>
+
+<form id="calculatorForm" class="row g-3">
+    <div class="col-md-6">
+      <label for="length" class="form-label">{{ _('Longueur (m)') }}</label>
+      <input type="number" class="form-control" id="length" required>
+    </div>
+    <div class="col-md-6">
+      <label for="width" class="form-label">{{ _('Largeur (m)') }}</label>
+      <input type="number" class="form-control" id="width" required>
+    </div>
+    <div class="col-md-6">
+      <label for="height" class="form-label">{{ _('Hauteur (m)') }}</label>
+      <input type="number" class="form-control" id="height" required>
+    </div>
+    <div class="col-md-6">
+      <label for="transportType" class="form-label">{{ _('Type de transport') }}</label>
+      <select class="form-select" id="transportType" required>
+        <option value="air">{{ _('Transport aérien') }}</option>
+        <option value="sea">{{ _('Transport maritime') }}</option>
+      </select>
+    </div>
+</form>
+
+<div class="py-5"></div>
+
+<div class="d-flex justify-content-end">
+    <button class="btn btn-info">
+        Calculer
+    </button>
+</div>
+
+</div>
+<div class="py-5"></div>
+
+<script src=""></script>
+<script src=""></script>
+<script></script>
+
+<div class="py-5"></div>
+
+{% endblock %}

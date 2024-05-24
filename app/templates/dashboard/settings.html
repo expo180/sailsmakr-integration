@@ -1,0 +1,126 @@
+{% extends 'dashboard/dashboard.html' %}
+
+{% block title %}
+  <title>
+    {% if current_user.first_name %}
+      {{ _('Paramètres') }} | 
+      {{ current_user.first_name }}
+    {% else %}
+      {{ _('Paramètres') }}
+    {% endif %}
+  </title>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="d-flex">
+      <div class="my-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+                <i class="bi bi-house-fill"></i>
+                <span class="visually-hidden">{{ _('Accueil') }}</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ _('Paramètres') }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+  </div>
+
+  <h2>
+    {{ _('Paramètres') }}
+  </h2>
+
+  <div class="py-2"></div>
+
+  <form action="{{ url_for('main.settings') }}" method="post">
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <label for="FirstName" class="form-label">
+          {{ _('Prénom') }}
+        </label>
+        <input type="text" 
+          class="form-control" 
+          placeholder="Endie" 
+          value="{% if current_user.first_name %}{{ current_user.first_name }}{% endif %}" 
+          id="FirstName"
+        >
+      </div>
+      
+      <div class="col-md-6">
+        <label for="LastName" class="form-label">
+          {{ _('Nom de famille') }}
+        </label>
+        <input type="text" 
+          class="form-control" 
+          placeholder="Stafford" 
+          value="{% if current_user.last_name %}{{ current_user.last_name }}{% endif %}" 
+          id="LastName"
+        >
+      </div>
+    </div>
+
+    <div class="py-2"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label for="UserName">
+          {{ _("Nom d'utilisateur") }}
+        </label>
+        <input type="text"
+          class="form-control"
+          id="UserName"
+          placeholder="endiestafford456"
+          value="{% if current_user.username %}{{ current_user.username }}{% endif %}"
+        >
+      </div>
+      <div class="col-md-6 my-2">
+        <label for="EmailAddress">
+          {{ _("Adresse E-mail") }}
+        </label>
+        <input type="text"
+          class="form-control"
+          id="EmailAddress"
+          placeholder="endiestafford456@gmail.com"
+          value="{% if current_user.email %}{{ current_user.email }}{% endif %}"
+        >
+      </div>
+    </div>
+
+    <div class="py-2"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label for="UserAddress" class="form-label">
+          {{ _('Adresse Maison') }}
+        </label>
+        <input type="text"
+          class="form-control"
+          id="UserAddress"
+          placeholder="5230 Newell Road, San Francisco, CA"
+          value="{% if current_user.address %}{{ current_user.address }}{% endif %}"
+        >
+      </div>
+    </div>
+
+    <div class="py-5"></div>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info">
+        <span id="LoadingText" style="display: none;">En cours...</span>
+        <span>Sauvegarder</span>
+        <div class="spinner-border spinner-border-sm" style="display: none;"></div>
+      </button>
+    </div>
+      
+    <div class="py-5"></div>
+
+
+  </form>
+
+</div>
+{% endblock %}

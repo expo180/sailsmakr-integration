@@ -1,0 +1,8 @@
+.form-control, .form-select {
+    border: 1px solid #ced4da !important;
+    padding: 1em 1em !important;
+}
+#sidenav-main {
+    background: linear-gradient(145deg, #000428, #004e92);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+}

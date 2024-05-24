@@ -1,0 +1,131 @@
+<!-- dashboard/@support_team/applicants_list.html -->
+
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Applications Récentes : Afrilog') }}</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>{{ _('Applications Récentes') }}</h2>
+    <form method="GET" action="{{ url_for('main.recent_applications') }}">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="jobSelect">{{ _('Sélectionner un Poste') }}</label>
+                    <select class="form-select" id="jobSelect" name="job_id" onchange="this.form.submit()">
+                        <option value="" selected disabled>{{ _('Choisir un Poste') }}</option>
+                        {% for job in jobs %}
+                            <option value="{{ job.id }}" {% if selected_job_id and job.id == selected_job_id|int %}selected{% endif %}>
+                                {{ job.title }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% if applications %}
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>{{ _('Nom du Candidat') }}</th>
+                        <th>{{ _('Adresse E-mail') }}</th>
+                        <th>{{ _('Localisation') }}</th>
+                        <th>{{ _('Date de Candidature') }}</th>
+                        <th>{{ _('Options') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for application in applications %}
+                        <tr>
+                            <td>{{ application.applicant_first_name }} {{ application.applicant_last_name }}</td>
+                            <td>{{ application.applicant_email_address }}</td>
+                            <td>{{ application.applicant_location }}</td>
+                            <td>{{ application.apply_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ application.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ _('Options') }}
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ application.id }}">
+                                        <li>
+                                            <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#applicationModal{{ application.id }}">
+                                                <i class="bi bi-eye-fill me-2"></i>
+                                                {{ _('Voir plus') }}
+                                            </button>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <button class="dropdown-item text-danger" type="button">
+                                                <i class="bi bi-trash-fill me-2"></i>
+                                                {{ _('Supprimer') }}
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Modal for viewing application details -->
+                        <div class="modal fade" id="applicationModal{{ application.id }}" tabindex="-1" aria-labelledby="applicationModal{{ application.id }}Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="applicationModal{{ application.id }}Label">{{ application.applicant_first_name }} {{ application.applicant_last_name }}</h5>
+                                        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Prénom') }}</label>
+                                            <input type="text" class="form-control" value="{{ application.applicant_first_name }}" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Nom de Famille') }}</label>
+                                            <input type="text" class="form-control" value="{{ application.applicant_last_name }}" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Adresse E-mail') }}</label>
+                                            <input type="text" class="form-control" value="{{ application.applicant_email_address }}" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Localisation') }}</label>
+                                            <input type="text" class="form-control" value="{{ application.applicant_location }}" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Date de Naissance') }}</label>
+                                            <input type="text" class="form-control" value="{{ application.date_of_birth.strftime('%Y-%m-%d') }}" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">{{ _('Motivation') }}</label>
+                                            <textarea class="form-control" readonly>{{ application.motivation }}</textarea>
+                                        </div>
+                                        <!-- Add more fields as necessary -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                        <button type="button" class="btn btn-success">
+                                            {{ _('Accepter') }}
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            {{ _('Rejeter') }}
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <i class="bi bi-printer"></i>
+                                            {{ _('Imprimer fichier') }}
+                                        </button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        {% include 'dashboard/@support_team/empty/no_application.html' %}
+    {% endif %}
+</div>
+
+<div class="py-5"></div>
+
+{% endblock %}

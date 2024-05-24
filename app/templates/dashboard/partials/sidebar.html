@@ -1,0 +1,210 @@
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3" id="sidenav-main">
+  <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="{{ url_for('main.user_home') }}">
+          <img src="/static/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+          <span class="ms-1 font-weight-bold text-white">Afrilog</span>
+      </a>
+  </div>
+  <hr class="horizontal light mt-0 mb-2">
+  <div class="collapse navbar-collapse w-auto max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.user_home') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.user_home') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">dashboard</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Accueil') }}</span>
+              </a>
+          </li>
+
+          {% if is_user() %}
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('api.apply_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.apply_quotes') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">add_circle</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Créer une demande') }}</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.previous_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.previous_quotes') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">history</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Demandes récentes') }}</span>
+              </a>
+          </li>
+          {% endif %}
+
+          {% if is_accountant() %}
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.invoices') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.invoices') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">receipt</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Factures') }}</span>
+              </a>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+              <a class="nav-link text-white" data-bs-toggle="collapse" href="#MyDocs" role="button" aria-expanded="false" aria-controls="MyDocs">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">folder</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Documents') }}</span>
+              </a>
+              <div class="collapse" id="MyDocs">
+                  <ul class="navbar-nav ps-3">
+                      <li class="nav-item">
+                          <a class="nav-link text-white {% if request.path == url_for('api.create_doc') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.create_doc') }}">
+                              <span class="nav-link-text ms-1">{{ _('Text') }}</span>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white {% if request.path == url_for('api.create_spreadsheet') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.create_spreadsheet') }}">
+                              <span class="nav-link-text ms-1">{{ _('Xlsx') }}</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </li>
+
+          {% if is_ceo() %}
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.tasks') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.tasks') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">task</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Tâches') }}</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.events') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.events') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">event</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Meets') }}</span>
+              </a>
+          </li>
+          {% endif %}
+
+          {% if is_project_manager() or is_sales() %}
+            <li class="nav-item">
+              <a class="nav-link text-white {% if request.path == url_for('main.ads') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.ads') }}">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">campaign</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Ads') }}</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if is_sales() %}
+            <li class="nav-item">
+                <a class="nav-link text-white {% if request.path == url_for('main.new_purchases') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_purchases') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">shopping_cart</i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Achats') }}</span>
+                </a>
+            </li>
+           {% endif %}
+
+
+          {% if is_ceo() %}
+          <li class="nav-item">
+              <a class="nav-link text-white" data-bs-toggle="collapse" href="#MyNotes" role="button" aria-expanded="false" aria-controls="MyNotes">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">note</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Notes') }}</span>
+              </a>
+              <div class="collapse" id="MyNotes">
+                  <ul class="navbar-nav ps-3">
+                      <li class="nav-item">
+                          <a class="nav-link text-white {% if request.path == url_for('api.add_notes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.add_notes') }}">
+                              <span class="nav-link-text ms-1">{{ _('Ajouter une note') }}</span>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white {% if request.path == url_for('main.previous_notes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.previous_notes') }}">
+                              <span class="nav-link-text ms-1">{{ _('Notes récentes') }}</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+              <a class="nav-link text-white" data-bs-toggle="collapse" href="#Careers" role="button" aria-expanded="false" aria-controls="Careers">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">work</i>
+                  </div>
+                  <span class="nav-link-text ms-1">{{ _('Careers') }}</span>
+              </a>
+              <div class="collapse" id="Careers">
+                    <ul class="navbar-nav ps-3">
+                        {% if is_hr_manager() %}
+                            <li class="nav-item">
+                                <a class="nav-link text-white {% if request.path == url_for('api.create_job') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.create_job') }}">
+                                    <span class="nav-link-text ms-1">{{ _('Ajouter une offre') }}</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {% if request.path == url_for('main.previous_created_jobs') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.previous_created_jobs') }}">
+                                    <span class="nav-link-text ms-1">{{ _('Offres récentes') }}</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {% if request.path == url_for('main.recent_applications') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.recent_applications') }}">
+                                    <span class="nav-link-text ms-1">{{ _('Applications récentes') }}</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {% if request.path == url_for('main.employee_table') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.employee_table') }}">
+                                    <span class="nav-link-text ms-1">{{ _('Table des employés') }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    
+                      {% if not is_hr_manager() %}
+                      <li class="nav-item">
+                          <a class="nav-link text-white {% if request.path == url_for('main.new_jobs') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_jobs') }}">
+                              <span class="nav-link-text ms-1">{{ _('Toutes les offres') }}</span>
+                          </a>
+                      </li>
+                      {% endif %}
+
+                  </ul>
+              </div>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link text-white {% if request.path == url_for('main.calculator') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.calculator') }}">
+                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-calculator"></i>
+                </div>
+                <span class="nav-link-text ms-1">{{ _('Calculatrice') }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white {% if request.path == url_for('main.settings') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.settings') }}">
+                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">settings</i>
+                </div>
+                <span class="nav-link-text ms-1">{{ _('Paramètres') }}</span>
+            </a>
+        </li>
+      </ul>
+  </div>
+  <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-3">
+            <a class="btn bg-gradient-primary mt-4 w-100" href="{{ url_for('auth.logout') }}" type="button">
+                <i class="bi bi-box-arrow-left"></i>
+                {{ _('Se déconnecter') }}
+            </a>
+      </div>
+  </div>
+</aside>
