@@ -1,8 +1,40 @@
 .form-control, .form-select {
-    border: 1px solid #ced4da !important;
-    padding: 1em 1em !important;
+  border: 1px solid #ced4da !important;
+  padding: 1em 1em !important;
 }
 #sidenav-main {
-    background: linear-gradient(145deg, #000428, #004e92);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  background: linear-gradient(145deg, #000428, #004e92);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.iti {
+  width: 100%;
+}
+
+.phone-input {
+  padding: 1em 1em;
+  border: 1px solid #ced4da !important;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.intl-tel-input .form-control {
+  margin-left: 50px;
+}
+
+.intl-tel-input .iti--allow-dropdown input {
+  padding-right: 38px;
+}
+
+.intl-tel-input input[type="tel"] {
+  width: 100%;
+}
+
+.iti__flag-container {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  position: absolute;
 }

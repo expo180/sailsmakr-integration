@@ -1,9 +1,9 @@
-from flask import request, render_template, session, jsonify, url_for, redirect, flash
+from flask import request, render_template, session, jsonify, url_for, redirect, flash, abort
 from flask_babel import _
 from . import main
-from ..models import User, Task, Role, Event, Invoice, ClientInvoice, Note, Job, Employee, JobApplication, MarketingCampaign
+from ..models import User, Task, Role, Event, Invoice, ClientInvoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization
 from flask_login import current_user, login_required, login_user
-from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required
+from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required, user_required, accountant_required
 from .. import db
 import os
 from newsdataapi import NewsDataApiClient
@@ -52,15 +52,43 @@ def calendar():
 def calculator():
     return render_template("dashboard/calculator.html")
 
-@main.route("/previous_purchase_requests")
+@main.route("/my_purchases/previous_purchase_requests")
 @login_required
+@user_required
 def previous_purchase_requests():
-    return render_template("dashboard/customers/previous_purchase_requests.html")
+    purchases = Purchase.query.filter_by(user_id=current_user.id).all()
+    return render_template("dashboard/customers/previous_purchase_requests.html", purchases=purchases)
+
+@main.route("/purchases/<int:id>", methods=['GET'])
+@login_required
+@user_required
+def get_purchase_details(id):
+    purchase = Purchase.query.get_or_404(id)
+    if purchase.user_id != current_user.id:
+        abort(403)
+    return jsonify({
+        'title': purchase.title,
+        'token': purchase.token,
+        'status': purchase.status,
+        'start_check': purchase.start_check,
+        'description': purchase.description,
+        'author_first_name': purchase.author_first_name,
+        'author_last_name': purchase.author_last_name,
+        'author_email_address': purchase.author_email_address,
+        'author_phone_number': purchase.author_phone_number,
+        'author_address': purchase.author_address,
+        'author_country': purchase.location,
+        'qr_code_url': purchase.qr_code_url
+    })
+
 
 @main.route("/quotes/previouses")
 @login_required
+@user_required
 def previous_quotes():
-    return render_template("dashboard/customers/previous_quotes.html")
+    user_id = current_user.id
+    user_requests = Authorization.query.filter_by(user_id=user_id).all()
+    return render_template("dashboard/customers/previous_quotes.html", user_requests=user_requests)
 
 @main.route("/mailbox/sent_messages")
 @login_required
@@ -182,7 +210,8 @@ def marketplace_data():
 @login_required
 @sales_manager_required
 def new_purchases():
-    return render_template("dashboard/@support_team/new_purchases.html")
+    purchases = Purchase.query.filter_by(status=False).all()
+    return render_template("dashboard/@support_team/new_purchases.html", purchases=purchases)
 
 @main.route("/messages/inbox")
 @login_required
@@ -191,6 +220,7 @@ def inbox():
 
 @main.route("/invoices", methods=['GET', 'POST'])
 @login_required
+@accountant_required
 def invoices():
     if request.method == 'POST':
         data = request.get_json()
@@ -247,6 +277,7 @@ def client_invoices():
     return render_template("dashboard/@support_team/client_inoices.html")
 
 @main.route("/my_purchases/track_my_product")
+@user_required
 @login_required
 def live_tracking():
     return render_template('dashboard/customers/live_tracking.html')

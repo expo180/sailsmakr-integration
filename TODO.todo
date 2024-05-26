@@ -17,7 +17,11 @@ FILTERS
 
 Buttons
 ☐ Filter and data sorting algorithms
-☐ 
+☐ Filter and data sorting Buttons restyling with Material UI
+
+Data Types
+☐ Regexp reconfigurations
+☐ SweetAlert translate text
 
 1. Accountant Level
     . Invoice
@@ -42,24 +46,24 @@ Buttons
         ☐ invoice deleting js api
 
     . Authorizations
-        ☐ send authorizations js api
-        ☐ send authorizations flask api
-        ☐ previous authorizations view
-        ☐ edit authorizations js api
-        ☐ edit authorizations flask api
-        ☐ previous authorizations deleting flask api
-        ☐ previous authorizations deleting js api
-        ☐ previous authorization details view
-        ☐ authorization details flask api
+        ✔ send authorizations js api @done (5/25/2024, 10:50:11 PM)
+        ✔ send authorizations flask api @done (5/25/2024, 10:50:14 PM)
+        ✔ previous authorizations view @done (5/25/2024, 10:50:16 PM)
+        ✔ edit authorizations js api @done (5/26/2024, 2:25:10 PM)
+        ✔ edit authorizations flask api @done (5/26/2024, 2:25:11 PM)
+        ✔ previous authorizations deleting flask api @done (5/26/2024, 2:25:13 PM)
+        ✔ previous authorizations deleting js api @done (5/26/2024, 2:25:14 PM)
+        ✔ previous authorization details view @done (5/26/2024, 2:25:16 PM)
+        ✔ authorization details flask api @done (5/26/2024, 2:25:17 PM)
 
     . Dropshipping
-        ☐ send request js api
-        ☐ send request flask api
-        ☐ previous commands view
-        ☐ previous commands details view flask api
-        ☐ delete previous commands flask api
-        ☐ delete previous commands js api
-        ☐ track a product view
+        ✔ send request js api @done (5/25/2024, 9:31:32 PM)
+        ✔ send request flask api @done (5/25/2024, 9:31:34 PM)
+        ✔ previous commands view @done (5/25/2024, 9:31:36 PM)
+        ✔ previous commands details view flask api @done (5/25/2024, 9:31:38 PM)
+        ✔ delete previous commands flask api @done (5/25/2024, 9:31:40 PM)
+        ✔ delete previous commands js api @done (5/25/2024, 9:31:41 PM)
+        ✔ track a product view @done (5/25/2024, 9:31:43 PM)
         ☐ track a product js api
         ☐ track a product flask api
     

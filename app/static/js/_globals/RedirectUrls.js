@@ -5,6 +5,8 @@ const RedirectURLs = {
     JobCreationSuccessURL : 'http://127.0.0.1:5000/careers/previous_created_jobs',
     EmployeeEditInfoSuccess : 'http://127.0.0.1:5000/careers/employees_table',
     CreateAdSuccessURL : 'http://127.0.0.1:5000/ads/',
+    PurchaseRequestSendSuccess : 'http://127.0.0.1:5000/my_purchases/previous_purchase_requests',
+    AuthorizationSuccessRedirectURL : 'http://127.0.0.1:5000/quotes/previouses'
 }
 
 export default RedirectURLs;

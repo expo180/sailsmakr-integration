@@ -1,8 +1,8 @@
 {% extends 'dashboard/dashboard.html' %}
 {% block title %}<title>{{ _('Demandes récentes : Afrilog') }}</title>{% endblock %}
 {% block content %}
-
-<div class="d-flex">
+<div class="container">
+  <div class="d-flex">
     <div class="my-3">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
@@ -21,13 +21,216 @@
         </ol>
       </nav>
     </div>
+  </div>
+
+  <h2>
+    {{ _('Demandes récentes') }}
+  </h2>
+
+  {% if user_requests %}
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{ _('Client') }}</th>
+            <th scope="col">{{ _('Lading Number') }}</th>
+            <th scope="col">{{ _('Date') }}</th>
+            <th scope="col">{{ _('Statut') }}</th>
+            <th scope="col">{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for request in user_requests %}
+          <tr>
+            <td>{{ request.client_first_name }} {{ request.client_last_name }}</td>
+            <td>{{ request.lading_bills_identifier }}</td>
+            <td>{{ request.date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>
+              {% if request.granted %}
+                <span class="badge bg-success">{{ _('Accordé') }}</span>
+              {% else %}
+                <span class="badge bg-warning">{{ _('En cours') }}</span>
+              {% endif %}
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ request.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ _('Options') }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ request.id }}">
+                  <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewModal{{ request.id }}">
+                      {{ _('Voir les détails') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-bs-toggle="modal" href="#" data-bs-target="#editModal{{ request.id }}">
+                      <i class="bi bi-pencil-square"></i> {{ _('Modifier') }}
+                    </a>
+                  </li>
+                  <li>
+                    <button class="dropdown-item text-danger" data-request-id="{{ request.id }}">
+                      <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <!-- View Modal -->
+          <div class="modal fade" id="viewModal{{ request.id }}" tabindex="-1" aria-labelledby="viewModalLabel{{ request.id }}" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="viewModalLabel{{ request.id }}">{{ _('Details de la demande') }}</h5>
+                  <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="clientFullName">{{ _('Nom complet du client') }}</label>
+                        <input type="text" class="form-control" id="clientFullName" value="{{ request.client_first_name }} {{ request.client_last_name }}" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="clientPhoneNumber">{{ _('Numéro de Téléphone') }}</label>
+                        <input type="text" class="form-control" id="clientPhoneNumber" value="{{ request.client_phone_number }}" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="clientLocation">{{ _('Pays') }}</label>
+                        <input type="text" class="form-control" id="clientLocation" value="{{ request.client_location }}" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="ladingNumber">{{ _('Lading Number') }}</label>
+                        <input type="text" class="form-control" id="ladingNumber" value="{{ request.lading_bills_identifier }}" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="agentName">{{ _('Nom complet du transitaire') }}</label>
+                        <input type="text" class="form-control" id="agentName" value="{{ request.agent_first_name }} {{ request.agent_last_name }}" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="shippingCompany">{{ _('Shipping Company') }}</label>
+                        <input type="text" class="form-control" id="shippingCompany" value="{{ request.shipping_company_title }}" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="requestDate">{{ _('Date') }}</label>
+                        <input type="text" class="form-control" id="requestDate" value="{{ request.date.strftime('%Y-%m-%d %H:%M:%S') }}" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="signature">{{ _('Signature') }}</label>
+                        <img src="{{ url_for('static', filename=request.client_signature_url) }}" alt="Client Signature" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="idCard">{{ _("Carte d'identité") }}</label>
+                        <img src="{{ url_for('static', filename=request.client_id_card_url) }}" alt="Client ID Card" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>  
+          <!-- Edit Modal -->
+          <div class="modal fade" id="editModal{{ request.id }}" tabindex="-1" aria-labelledby="editModalLabel{{ request.id }}" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editModalLabel{{ request.id }}">{{ _('Modifier les infos') }}</h5>
+                  <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="editForm{{ request.id }}" action="{{ url_for('api.edit_request', request_id=request.id) }}" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                      <label for="ClientFirstName{{ request.id }}" class="form-label">{{ _('Prénom du client') }}</label>
+                      <input type="text" class="form-control" id="ClientFirstName{{ request.id }}" name="client_first_name" value="{{ request.client_first_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ClientLastName{{ request.id }}" class="form-label">{{ _('Nom du client') }}</label>
+                      <input type="text" class="form-control" id="ClientLastName{{ request.id }}" name="client_last_name" value="{{ request.client_last_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ClientPhone{{ request.id }}" class="form-label">{{ _('Numéro de Téléphone') }}</label>
+                      <input type="text" class="form-control" id="ClientPhone{{ request.id }}" name="client_phone_number" value="{{ request.client_phone_number }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ClientLocation{{ request.id }}" class="form-label">{{ _('Pays') }}</label>
+                      <input type="text" class="form-control" id="ClientLocation{{ request.id }}" name="client_location" value="{{ request.client_location }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="LaddingNumber{{ request.id }}" class="form-label">{{ _('Lading Number') }}</label>
+                      <input type="text" class="form-control" id="LaddingNumber{{ request.id }}" name="lading_number" value="{{ request.lading_bills_identifier }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="AgentFirstName{{ request.id }}" class="form-label">{{ _('Prénom du transitaire') }}</label>
+                      <input type="text" class="form-control" id="AgentFirstName{{ request.id }}" name="agent_first_name" value="{{ request.agent_first_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="AgentLastName{{ request.id }}" class="form-label">{{ _('Nom du transitaire') }}</label>
+                      <input type="text" class="form-control" id="AgentLastName{{ request.id }}" name="agent_last_name" value="{{ request.agent_last_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ShippingCompanyTitle{{ request.id }}" class="form-label">{{ _('Compagnie') }}</label>
+                      <input type="text" class="form-control" id="ShippingCompanyTitle{{ request.id }}" name="shipping_company_title" value="{{ request.shipping_company_title }}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ClientSignatureFile{{ request.id }}" class="form-label">{{ _("Signature du client") }}</label>
+                      <input type="file" class="form-control" id="ClientSignatureFile{{ request.id }}" name="client_signature_url">
+                    </div>
+                    <div class="mb-3">
+                      <label for="ClientIdFile{{ request.id }}" class="form-label">{{ _("Carte d'identité du client") }}</label>
+                      <input type="file" class="form-control" id="ClientIdFile{{ request.id }}" name="client_id_card_url">
+                    </div>
+                    <div class="modal-footer">
+                      <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-info">{{ _('Enregistrer') }}</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    {% include 'dashboard/customers/empty/no_quote.html' %}
+  {% endif %}  
+
+  <div class="py-5"></div>
+
 </div>
 
-<h2>
-  {{ _('Demandes récentes') }}
-</h2>
-
-
-<div class="py-5"></div>
+<script type="module" src="{{ url_for('static', filename='js/async/api/customers/Authorizations/DeleteAuthorizationApplication.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/customers/Authorizations/EditAuthorizationApplication.js') }}"></script>
 
 {% endblock %}

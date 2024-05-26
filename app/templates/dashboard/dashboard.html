@@ -10,17 +10,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+  
   <!-- Nucleo Icons -->
   <link href="{{ url_for('static', filename='css/nucleo/nucleo-icons.css')}}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='css/nucleo/nucleo-svg.css')}}" rel="stylesheet" />
+  
   <!-- bootstrap-icons-->
   <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
+
+  <!-- tel input css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css">
+
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ url_for('static', filename='css/customs/dashboard/material-dashboard.min.css') }}" rel="stylesheet" />
+ 
   <link href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css" rel="stylesheet"/>
   {% block title %}<title>{{ _('Afrilog : Dashboard') }}</title>{% endblock %}
 </head>

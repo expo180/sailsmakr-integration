@@ -1,11 +1,78 @@
-{% extends 'api/shared/layout.html' %}
-{% block head %}
-    <head>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        {% block title %}<title>{{ _('Suivez votre colis en temps réel - Afrilog') }}</title>{% endblock %}
-    </head>
+{% extends 'dashboard/dashboard.html' %}
+
+{% block title %}
+<title>{{ _('Suivre mon colis : Afrilog') }}</title>
 {% endblock %}
+
 {% block content %}
+<div class="container">
+    <div class="d-flex">
+        <div class="my-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+              <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+                  <i class="bi bi-house-fill"></i>
+                  <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                {{ _('Mes commandes') }}
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                {{ _('Suivre mon colis') }}
+              </li>
+            </ol>
+          </nav>
+        </div>
+    </div>
+
+    <h2>{{ _('Suivre mon colis') }}</h2>
+    
+    <form id="trackPackageForm">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="departurePort">{{ _('Port de départ') }}</label>
+                    <input type="text" class="form-control" id="departurePort" placeholder="{{ _('Entrer le port de départ') }}" required>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label for="destinationPort">{{ _('Port de destination') }}</label>
+                    <input type="text" class="form-control" id="destinationPort" placeholder="{{ _('Entrer le port de destination') }}" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="purchaseDatalist">{{ _('Sélectionner un achat') }}</label>
+            <input type="text" list="purchases" class="form-control" id="purchaseInput" placeholder="{{ _('Tapez pour rechercher') }}" required>
+            <datalist id="purchases">
+                <option value="" disabled selected>No purchases found</option>
+            </datalist>            
+        </div>
+
+        <div class="py-3"></div>
+
+        <div class="justify-content-end d-flex">
+            <button type="submit" class="btn btn-info">
+                <i class="bi bi-geo-alt-fill"></i>
+                {{ _('Suivre') }}
+            </button>
+        </div>
+    </form>
+    
+    <div class="iframe-container mt-3" id="iframeContainer" style="position: relative;">
+        <img src="placeholder_image.jpg" alt="Placeholder Image" style="width: 100%; height: auto;">
+        <iframe src="" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    
+
+    <div class="py-5"></div>
+
+</div>
+
+<script type="module" src="{{ url_for('static', filename='js/async/api/customers/Goods/TrackUserGood.js') }}"></script>
 
 {% endblock %}

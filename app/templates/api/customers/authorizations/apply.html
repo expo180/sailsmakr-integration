@@ -1,151 +1,145 @@
 {% extends 'dashboard/dashboard.html' %}
 {% block title %}<title>{{ _('Formulaire de demande de procuration : Afrilog') }}</title>{% endblock %}
 {% block content %}
-<div class="d-flex">
-  <div class="my-3">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
-        <li class="breadcrumb-item">
-          <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
-            <i class="bi bi-house-fill"></i>
-            <span class="visually-hidden">{{ _('Accueil') }}</span>
-          </a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">
-          {{ _('Demande de procuration') }}
-        </li>
-      </ol>
-    </nav>
-  </div>
-</div>
-
-<h2>
-  {{ _('Demande de procuration') }}
-</h2>
-
-
-<form action="{{ url_for('api.apply_quotes') }}" class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <label for="ClientFirstName" class="form-label">{{ _('Prénom') }}<span class="text-danger">*</span></label>
-      <input type="text" name="" id="ClientFirstName" class="form-control" placeholder="Cersei">
-      <p id="FirstNameError" class="text-danger" style="display: none;">
-        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
-      </p>
+<div class="container">
+  <div class="d-flex">
+    <div class="my-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+          <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+              <i class="bi bi-house-fill"></i>
+              <span class="visually-hidden">{{ _('Accueil') }}</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ _('Demande de procuration') }}
+          </li>
+        </ol>
+      </nav>
     </div>
-    <div class="col-md-6">
-      <label for="ClientLastName" class="form-label">{{ _('Nom de famille') }}<span class="text-danger">*</span></label>
-      <input type="text" name="" id="ClientLastName" class="form-control" placeholder="Lannister">
-      <p id="LastNameError" class="text-danger" style="display: none;">
-        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
-      </p>
-    </div> 
   </div>
-
-  <div class="py-2"></div>
   
-  <div class="row">
-    <div class="col-md-6">
-      <label for="ClientPhone" class="form-label">{{ _('Téléphone') }}<span class="text-danger">*</span></label>
-      <input type="text" placeholder="" class="form-control" id="ClientPhone">
-      <p id="PhoneError" class="text-danger" style="display: none;">
-        {{ _('Veuillez entrer un numéro de téléphone valide') }}
-      </p>
+  <h2>
+    {{ _('Demande de procuration') }}
+  </h2>
+  
+  
+  <form action="{{ url_for('api.apply_quotes') }}" method="post" id="AuthorizationApplyForm">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="ClientFirstName" class="form-label">{{ _('Prénom') }}<span class="text-danger">*</span></label>
+        <input type="text" name="" id="ClientFirstName" class="form-control" placeholder="Cersei">
+        <p id="FirstNameError" class="text-danger" style="display: none;">
+          {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <label for="ClientLastName" class="form-label">{{ _('Nom de famille') }}<span class="text-danger">*</span></label>
+        <input type="text" name="" id="ClientLastName" class="form-control" placeholder="Lannister">
+        <p id="LastNameError" class="text-danger" style="display: none;">
+          {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+        </p>
+      </div> 
     </div>
-    <div class="col-md-6">
-      <label for="LaddingNumber" class="form-label">{{ _('Numéro de suivi') }}<span class="text-danger">*</span></label>
-      <input type="text" placeholder="" class="form-control" id="LaddingNumber">
-      <p id="LaddingNumberError" class="text-danger" style="display: none;">
-        {{ _('Veuillez entrer un numéro de valide') }}
-      </p>
+  
+    <div class="py-2"></div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <label for="ClientPhone" class="form-label">{{ _('Téléphone') }}<span class="text-danger">*</span></label>
+        <input type="text" placeholder="" class="form-control" id="ClientPhone">
+        <p id="PhoneError" class="text-danger" style="display: none;">
+          {{ _('Veuillez entrer un numéro de téléphone valide') }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <label for="ClientSignatureFile" class="form-label">{{ _("Votre signature") }}<span class="text-danger">*</span></label>
+        <input type="file" class="form-control" id="ClientSignatureFile">
+        <p id="ClientSignatureIdFileError" class="text-danger" style="display: none;">
+          {{ _("Veuillez télécharger votre signature") }}
+        </p>
+      </div>
     </div>
-  </div>
-
-  <div class="py-2"></div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <label for="ClientLocation" class="form-label">{{ _('Votre pays') }}<span class="text-danger">*</span></label>
-      <select name="" id="ClientLocation" class="form-select">
-        {% include 'api/customers/authorizations/world_countries.html' %}
-      </select>
-      <p id="AdresseError" class="text-danger" style="display: none;">
-        {{ _('Veuillez sélectionner votre pays') }}
-      </p>
+  
+    <div class="py-2"></div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <label for="ClientLocation" class="form-label">{{ _('Votre pays') }}<span class="text-danger">*</span></label>
+        <select name="" id="ClientLocation" class="form-select">
+          {% include 'api/customers/authorizations/world_countries.html' %}
+        </select>
+        <p id="AdresseError" class="text-danger" style="display: none;">
+          {{ _('Veuillez sélectionner votre pays') }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <label for="LaddingNumber" class="form-label">{{ _('Numéro de suivi') }}<span class="text-danger">*</span></label>
+        <input type="text" placeholder="XXX-XXX-XXX" class="form-control" id="LaddingNumber">
+        <p id="LaddingNumberError" class="text-danger" style="display: none;">
+          {{ _('Veuillez entrer un numéro de valide') }}
+        </p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="LaddingNumber" class="form-label">{{ _('Numéro de suivi') }}<span class="text-danger">*</span></label>
-      <input type="text" placeholder="" class="form-control" id="LaddingNumber">
-      <p id="LaddingNumberError" class="text-danger" style="display: none;">
-        {{ _('Veuillez entrer un numéro de valide') }}
-      </p>
+  
+  
+    <div class="py-2"></div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <label for="AgentFirstName" class="form-label">{{ _('Prénom du transitaire') }}<span class="text-danger">*</span></label>
+        <input type="text" name="" id="AgentFirstName" class="form-control" placeholder="Geoffrey">
+        <p id="AgentFirstNameError" class="text-danger" style="display: none;">
+          {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <label for="AgentLastName" class="form-label">{{ _('Nom de famille du transitaire') }}<span class="text-danger">*</span></label>
+        <input type="text" name="" id="AgentLastName" class="form-control" placeholder="Barathéon">
+        <p id="AgentLastNameError" class="text-danger" style="display: none;">
+          {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
+        </p>
+      </div> 
     </div>
-  </div>
-
-
-  <div class="py-2"></div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <label for="AgentFirstName" class="form-label">{{ _('Prénom du transitaire') }}<span class="text-danger">*</span></label>
-      <input type="text" name="" id="AgentFirstName" class="form-control" placeholder="Geoffrey">
-      <p id="AgentFirstNameError" class="text-danger" style="display: none;">
-        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
-      </p>
+  
+    <div class="py-2"></div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <label for="ShippingCompanyTitle" class="form-label">{{ _('Compagnie') }}<span class="text-danger">*</span></label>
+        <select name="" id="ShippingCompanyTitle" class="form-select">
+          <option value="C/o MSC BENIN S.A." selected>C/o MSC BENIN S.A.</option>
+          <option value="C/o MSC Lomé S.A." >C/o MSC Lomé S.A.</option>
+        </select>
+        <p id="ShippingCompanyTitleError" class="text-danger" style="display: none;">
+          {{ _('Veuillez sélectionner une compagnie') }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <label for="ClientIdFile" class="form-label">{{ _("Carte d'identité") }}<span class="text-danger">*</span></label>
+        <input type="file" class="form-control" id="ClientIdFile">
+        <p id="ClientIdFileError" class="text-danger" style="display: none;">
+          {{ _("Veuillez télécharger votre carte d'identité") }}
+        </p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="AgentLastName" class="form-label">{{ _('Nom de famille du transitaire') }}<span class="text-danger">*</span></label>
-      <input type="text" name="" id="ClientLastName" class="form-control" placeholder="Barathéon">
-      <p id="AgentLastNameError" class="text-danger" style="display: none;">
-        {{ _('Un nom doit contenir seulement des lettres, les chiffres, les espaces et les caractères spéciaux sont interdits') }}
-      </p>
-    </div> 
-  </div>
+  
 
-  <div class="py-2"></div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <label for="ShippingCompanyTitle" class="form-label">{{ _('Compagnie') }}<span class="text-danger">*</span></label>
-      <select name="" id="ShippingCompanyTitle" class="form-select">
-        <option value="C/o MSC BENIN S.A." selected>C/o MSC BENIN S.A.</option>
-        <option value="C/o MSC Lomé S.A." >C/o MSC Lomé S.A.</option>
-      </select>
-      <p id="ShippingCompanyTitleError" class="text-danger" style="display: none;">
-        {{ _('Veuillez sélectionner une compagnie') }}
-      </p>
+    <div class="py-5"></div>
+  
+    <div class="d-flex justify-content-end">
+      <button type="button" id="SendQuoteRequestButton" class="btn btn-info">
+        <div class="spinner-border spinner-border-sm" style="display:none;" id="spinner"></div>
+        <span id="LoadingText" style="display: none;">{{ _('Envoi...') }}</span>
+        <i class="bi bi-send-fill" id="SendIcon"></i>
+        <span id="sendText">{{ _('Envoyer') }}</span>
+      </button>
     </div>
-    <div class="col-md-6">
-      <label for="ClientIdFile" class="form-label">{{ _("Carte d'identité") }}<span class="text-danger">*</span></label>
-      <input type="file" class="form-control" id="ClientIdFile">
-      <p id="ClientIdFileError" class="text-danger" style="display: none;">
-        {{ _("Veuillez télécharger votre carte d'identité") }}
-      </p>
-    </div>
-  </div>
+    <div class="py-5"></div>
+  </form>
 
-  <div class="py-2"></div>
+  <script type="module" src="{{ url_for('static', filename='js/async/api/customers/Authorizations/ApplyAuthorization.js') }}"></script>
 
-  <div class="row">
-    <div class="col-md-6">
-      <label for="ClientSignatureFile" class="form-label">{{ _("Votre signature") }}<span class="text-danger">*</span></label>
-      <input type="file" class="form-control" id="ClientSignatureFile">
-      <p id="ClientSignatureIdFileError" class="text-danger" style="display: none;">
-        {{ _("Veuillez télécharger votre signature") }}
-      </p>
-    </div>
-  </div>
-
-  <div class="py-5"></div>
-
-  <div class="d-flex justify-content-end">
-    <button type="button" id="SendQuoteRequestButton" class="btn btn-primary">
-      <div class="spinner-border spinner-border-sm" style="display:none;" id="spinner"></div>
-      <span id="LoadingText" style="display: none;">{{ _('Envoi...') }}</span>
-      <i class="bi bi-send-fill"></i>
-      {{ _('Envoyer') }}
-    </button>
-  </div>
-  <div class="py-5"></div>
-</form>
+</div>
 {% endblock %}

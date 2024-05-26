@@ -1,0 +1,37 @@
+<div class="row w-100">
+    <div class="col-md-12">
+      <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="privacy_policy" required>
+          <label class="form-check-label" for="privacy_policy">
+            {{ _('En utilisant nos services, vous acceptez notre ') }}<a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">{{ _('politique de confidentialité') }}</a>.
+          </label>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="privacyPolicyModalLabel">{{ _('Politique de Confidentialité') }}</h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>{{ _("Nous collectons des informations personnelles telles que le nom, l'adresse et les coordonnées pour fournir nos services de livraison.") }}</p>
+          <p>{{ _("Vos données peuvent être utilisées pour suivre et améliorer nos opérations logistiques.") }}</p>
+          <p>{{ _("Nous pouvons partager vos informations avec des prestataires de services tiers pour les besoins de la livraison.") }}</p>
+          <p><span style="color: blue;">{{ _("Nous accordons une importance particulière à la sécurité de vos données et utilisons des mesures standard de l'industrie pour les protéger.") }}</span></p>
+          <p>{{ _("En utilisant nos services, vous acceptez d'être majeur dans votre juridiction pour consentir à notre politique de confidentialité.") }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+        </div>
+      </div>
+    </div>
+  </div>

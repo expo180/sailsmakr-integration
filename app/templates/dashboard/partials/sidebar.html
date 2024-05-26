@@ -19,23 +19,63 @@
           </li>
 
           {% if is_user() %}
-          <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('api.apply_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.apply_quotes') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                       <i class="material-icons opacity-10">add_circle</i>
                   </div>
                   <span class="nav-link-text ms-1">{{ _('Créer une demande') }}</span>
               </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('main.previous_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.previous_quotes') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                       <i class="material-icons opacity-10">history</i>
                   </div>
                   <span class="nav-link-text ms-1">{{ _('Demandes récentes') }}</span>
               </a>
-          </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" data-bs-toggle="collapse" href="#MesAchats" role="button" aria-expanded="false" aria-controls="MesAchats">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-cart-fill"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Mes achats') }}</span>
+                </a>
+                <div class="collapse" id="MesAchats">
+                    <ul class="navbar-nav ps-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if request.path == url_for('api.purchase_request') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.purchase_request') }}">
+                                <span>
+                                    <i class="bi bi-plus-circle"></i> 
+                                </span>
+                                <span class="nav-link-text ms-1">{{ _('Nouveau achat') }}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if request.path == url_for('main.previous_purchase_requests') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.previous_purchase_requests') }}">
+                                <span>
+                                    <i class="bi bi-clock-history"></i> 
+                                </span>
+                                <span class="nav-link-text ms-1">{{ _('Achats récents') }}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ url_for('main.live_tracking') }}">
+                                <span>
+                                    <i class="bi bi-geo-alt"></i> 
+                                </span>
+                                <span class="nav-link-text ms-1">{{ _('Suivre mon produit') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            
           {% endif %}
+
+
 
           {% if is_accountant() %}
           <li class="nav-item">

@@ -1,25 +1,173 @@
 {% extends 'dashboard/dashboard.html' %}
 {% block title %}
-    <title>
-        {{ _('Nouveaux achats : Afrilog') }}
-    </title>
+    <title>{{ _('Nouveaux achats : Afrilog') }}</title>
 {% endblock %}
 {% block content %}
+    <div class="container">
+        <div class="my-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                    <li class="breadcrumb-item">
+                        <a class="link-body-emphasis" href="#">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="visually-hidden">{{ _('Accueil') }}</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active">{{ _('Nouveaux achats') }}</li>
+                </ol>
+            </nav>
+        </div>
+    
+        <h2>
+            {{ _('Nouveaux Achats') }}
+        </h2>
 
-    <div class="my-5">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-                <li class="breadcrumb-item">
-                <a class="link-body-emphasis" href="#">
-                    <i class="bi bi-house-door-fill"></i>
-                    <span class="visually-hidden">{{ _('Accueil') }}</span>
-                </a>
-                </li>
-                <li class="breadcrumb-item active">
-                    {{ _('Nouveaux achats') }}
-                </li>
-            </ol>
-        </nav>
+        <div class="table-responsive">
+            {% if purchases %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>{{ _('Titre') }}</th>
+                            <th>{{ _('Auteur') }}</th>
+                            <th>{{ _('Catégorie') }}</th>
+                            <th>{{ _('Statut') }}</th>
+                            <th>{{ _('Actions') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for purchase in purchases %}
+                        <tr>
+                            <td>{{ purchase.title }}</td>
+                            <td>{{ purchase.author_first_name }} {{ purchase.author_last_name }}</td>
+                            <td>{{ purchase.category }}</td>
+                            <td>{{ _('Répondu') if purchase.status else _('En attente') }}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ _('Actions') }}
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#purchaseDetailsModal{{ purchase.id }}">{{ _('Voir détails') }}</a></li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#replyModal{{ purchase.id }}">{{ _('Répondre') }}</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li>
+                                            <a class="dropdown-item delete-btn text-danger" href="#" data-purchase-id="{{ purchase.id }}">
+                                                <i class="bi bi-trash"></i>
+                                                {{ _('Supprimer') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <!-- Details Modal -->
+                            <div class="modal fade" id="purchaseDetailsModal{{ purchase.id }}" tabindex="-1" aria-labelledby="purchaseDetailsModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="purchaseDetailsModalLabel">{{ _('Détails de l\'achat') }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="provider" class="form-label">{{ _('Fournisseur') }}:</label>
+                                                        <input type="text" id="provider" class="form-control" value="{{ purchase.provider or 'Fournisseur non spécifié' }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="authorAddress" class="form-label">{{ _('Adresse de l\'auteur') }}:</label>
+                                                        <input type="text" id="authorAddress" class="form-control" value="{{ purchase.author_address or 'Adresse non spécifiée' }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="location" class="form-label">{{ _('Lieu') }}:</label>
+                                                        <input type="text" id="location" class="form-control" value="{{ purchase.location or 'Lieu non spécifié' }}" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="authorEmail" class="form-label">{{ _('Adresse e-mail de l\'auteur') }}:</label>
+                                                        <input type="email" id="authorEmail" class="form-control" value="{{ purchase.author_email_address or 'E-mail non spécifié' }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="productDimensions" class="form-label">{{ _('Dimensions du produit') }}:</label>
+                                                        <input type="text" id="productDimensions" class="form-control" value="{{ purchase.product_length }} x {{ purchase.product_width }}" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="description" class="form-label">{{ _('Description') }}:</label>
+                                                <textarea id="description" class="form-control" rows="5" readonly>{{ purchase.description }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="productImage" class="form-label">{{ _('Image du produit') }}:</label>
+                                                <img src="{{ purchase.product_picture_url or 'placeholder.jpg' }}" alt="Product Image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reply to client modal -->
+                            <div class="modal fade" id="replyModal{{ purchase.id }}" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="replyModalLabel">
+                                                {{ _('Répondre à') }} {{ purchase.author_first_name }}
+                                            </h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="senderEmail" class="form-label">{{ _('De') }}</label>
+                                                    <input type="email" value="{{ current_user.email }}" class="form-control" id="senderEmail" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="customerEmail" class="form-label">{{ _('A') }}</label>
+                                                    <input type="email" class="form-control" id="customerEmail" value="{{ purchase.author_email_address }}" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Message" class="form-label">{{ _('Message') }}</label>
+                                                    <textarea class="form-control" id="Message" rows="5" placeholder="{{ _('Ecrire quelque chose...') }}"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="uploadFiles" class="form-label">{{ _('Télécharger des fichiers') }}</label>
+                                                    <input type="file" class="form-control">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="usefulLinks" class="form-label">{{ _('Liens utiles') }}</label>
+                                                    <textarea class="form-control" id="usefulLinks" rows="3"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info">
+                                                <i class="bi bi-send"></i>
+                                                {{ _('Envoyer') }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% else %}
+                {% include 'dashboard/@support_team/empty/no_purchase.html' %}
+            {% endif %}
+        </div>
     </div>
-
+    <div class="py-5"></div>
+    <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Goods/DeletePurchaseRequest.js') }}"></script>
 {% endblock %}

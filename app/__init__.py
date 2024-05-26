@@ -10,6 +10,7 @@ from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
 from flask_babel import Babel
 from .role_helpers import inject_role_helpers
+from .filters import mask_token
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -51,6 +52,8 @@ def create_app(development=True):
         if len(s) > length:
             return s[:length] + '...'
         return s
+    
+    filters.register_filters(app)
 
     
     @app.template_filter('strftime')

@@ -2,18 +2,124 @@ from flask import request, render_template, session,  flash, redirect, url_for, 
 from flask_babel import _
 from . import api
 from flask_login import current_user, login_required
-from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign
-from ..decorators import ceo_required, hr_manager_required
+from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice
+from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
+import secrets
+from .utils import save_files, generate_qr_code, save_authorization_request_files
+import json
 
-@api.route("/quotes/apply")
+
+@api.route("/quotes/apply", methods=['GET', 'POST'])
+@login_required
+@user_required
 def apply_quotes():
+    if request.method == 'POST':
+        client_first_name = request.form.get('client_first_name')
+        client_last_name = request.form.get('client_last_name')
+        client_phone_number = request.form.get('client_phone_number')
+        client_location = request.form.get('client_location')
+        lading_number = request.form.get('lading_number')
+        agent_first_name = request.form.get('agent_first_name')
+        agent_last_name = request.form.get('agent_last_name')
+        shipping_company_title = request.form.get('shipping_company_title')
+        
+        client_signature_file = request.files.get('client_signature_url')
+        client_id_file = request.files.get('client_id_card_url')
+
+        try:
+            saved_files = save_authorization_request_files([client_signature_file, client_id_file], client_first_name, client_last_name)
+            client_signature_url = saved_files[0] if len(saved_files) > 0 else ''
+            client_id_card_url = saved_files[1] if len(saved_files) > 1 else ''
+
+            qr_code_path = generate_qr_code(lading_number, client_first_name, client_last_name)
+
+            new_authorization = Authorization(
+                client_first_name=client_first_name,
+                client_last_name=client_last_name,
+                client_phone_number=client_phone_number,
+                client_location=client_location,
+                lading_bills_identifier=lading_number,
+                agent_first_name=agent_first_name,
+                agent_last_name=agent_last_name,
+                shipping_company_title=shipping_company_title,
+                client_signature_url=client_signature_url,
+                client_id_card_url=client_id_card_url,
+                user_id=current_user.id
+            )
+
+            db.session.add(new_authorization)
+            db.session.commit()
+
+            return jsonify({'success': True, 'message': _('Votre requête a bien été envoyé')}), 200
+
+        except Exception as e:
+            return jsonify({'success': False, 'message': str(e)}), 500
+
     return render_template('api/customers/authorizations/apply.html')
 
-@api.route("/purchases/request")
+
+
+@api.route("/my_purchases/track_my_product/user", methods=['GET'])
+def get_user_purchases():
+    user_id = current_user.id if current_user.is_authenticated else None
+    purchases = Purchase.query.filter_by(user_id=user_id).all()
+    return jsonify([{
+        'token': purchase.token,
+        'title': purchase.title
+    } for purchase in purchases])
+
+
+@api.route("/purchases/request", methods=['GET', 'POST'])
 @login_required
+@user_required
 def purchase_request():
+    if request.method == 'POST':
+        data = request.form
+        files = request.files
+
+        token = secrets.token_urlsafe(16)
+
+        product_picture_paths = save_files(files.getlist('product_picture_url'), data['author_first_name'], data['author_last_name'])
+        doc_paths = save_files(files.getlist('doc_url'), data['author_first_name'], data['author_last_name'])
+
+        purchase = Purchase(
+            title=data['title'],
+            author_first_name=data['author_first_name'],
+            author_last_name=data['author_last_name'],
+            author_address=data['author_address'],
+            author_email_address=data['author_email_address'],
+            product_length=float(data.get('product_length', 0.0)),
+            product_width=float(data.get('product_width', 0.0)),
+            author_phone_number=data['author_phone_number'],
+            location=data['location'],
+            provider=data.get('provider'),
+            product_picture_url=json.dumps(product_picture_paths),
+            description=data['description'],
+            category=data['category'],
+            doc_url=json.dumps(doc_paths),
+            user_id=current_user.id,
+            token=token,
+            qr_code_url=generate_qr_code(token, data['author_first_name'], data['author_last_name']),
+            start_check=datetime.utcnow()
+        )
+
+        db.session.add(purchase)
+        
+        try:
+            db.session.commit()
+            
+            return jsonify({
+                'title': _('Envoyé avec succès'), 
+                'message': _('Votre requête a été bien envoyé'), 
+                'token': token
+            })
+        
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({'error': str(e)}), 500
+
     return render_template('api/customers/goods/purchase_request.html')
 
 @api.route("/mailbox/new_message")
@@ -128,6 +234,22 @@ def add_event():
 
     flash('Événement ajouté avec succès!', 'success')
     return redirect(url_for('main.events'))
+
+@api.route('/my_purchases/delete/<int:purchase_id>', methods=['DELETE'])
+@user_required
+@login_required
+def delete_purchase(purchase_id):
+    purchase = Purchase.query.get_or_404(purchase_id)
+    if purchase.user_id != current_user.id:
+        return jsonify({'error': 'Unauthorized access'}), 403
+
+    db.session.delete(purchase)
+    try:
+        db.session.commit()
+        return jsonify({'success': True}), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
 
 @api.route("/docs/create_new_document")
 @login_required
@@ -358,3 +480,90 @@ def delete_ad(ad_id):
     except Exception as e:
         db.session.rollback()
         return jsonify({'success': False, 'message': str(e)}), 500
+    
+
+@api.route('/edit_request/<int:request_id>', methods=['POST'])
+@login_required
+def edit_request(request_id):
+    req = Authorization.query.get_or_404(request_id)
+    if req.user_id != current_user.id:
+        return jsonify({"success": False, "message": "Unauthorized"}), 403
+
+    req.client_first_name = request.form.get('client_first_name')
+    req.client_last_name = request.form.get('client_last_name')
+    req.client_phone_number = request.form.get('client_phone_number')
+    req.client_location = request.form.get('client_location')
+    req.lading_bills_identifier = request.form.get('lading_number')
+    req.agent_first_name = request.form.get('agent_first_name')
+    req.agent_last_name = request.form.get('agent_last_name')
+    req.shipping_company_title = request.form.get('shipping_company_title')
+
+    files = []
+    if 'client_signature_url' in request.files:
+        files.append(request.files['client_signature_url'])
+    if 'client_id_card_url' in request.files:
+        files.append(request.files['client_id_card_url'])
+
+    if files:
+        save_authorization_request_files(files, req.client_first_name, req.client_last_name)
+
+    db.session.commit()
+    return jsonify({"success": True, "message": _("Votre demande a bien été mise à jour")})
+
+@api.route('/delete_request/<int:request_id>', methods=['DELETE'])
+@login_required
+def delete_request(request_id):
+    req = Authorization.query.get_or_404(request_id)
+    if req.user_id != current_user.id:
+        return jsonify({"success": False, "message": _("Accès non autorisé")}), 403
+
+    db.session.delete(req)
+    db.session.commit()
+    return jsonify({"success": True, "message": _("Votre demande a été bien supprimé")})
+
+@api.route('/delete_purchase/<int:purchase_id>', methods=['DELETE'])
+@login_required
+@sales_manager_required
+def delete_client_purchase(purchase_id):
+    purchase = Purchase.query.get_or_404(purchase_id)
+    if purchase is None:
+        return jsonify({'message': 'Purchase not found'}), 404
+
+    try:
+        db.session.delete(purchase)
+        db.session.commit()
+        return jsonify({'message': 'Commande supprimée'}), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'message': 'Erreur lors de la suppression', 'error': str(e)}), 500
+    
+
+@api.route("/edit_invoice/<int:invoice_id>", methods=['PUT'])
+@login_required
+@accountant_required
+def edit_invoice(invoice_id):
+    invoice = Invoice.query.get_or_404(invoice_id)
+    if not invoice:
+        return jsonify({'message': 'Invoice not found'}), 404
+
+    data = request.get_json()
+    title = data.get('title')
+    amount = data.get('amount')
+    description = data.get('description')
+
+    if not title or not amount:
+        return jsonify({'message': 'Title and amount are required!'}), 400
+
+    try:
+        amount = float(amount)
+        if amount <= 0:
+            raise ValueError
+    except ValueError:
+        return jsonify({'message': 'Invalid amount!'}), 400
+
+    invoice.title = title
+    invoice.amount = amount
+    invoice.description = description
+    db.session.commit()
+
+    return jsonify({'message': 'Votre facture a bien été mis à jour!'}), 200

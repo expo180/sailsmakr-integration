@@ -1,8 +1,8 @@
 {% extends 'dashboard/dashboard.html' %}
 {% block title %}<title>{{ _('Commandes récentes : Afrilog') }}</title>{% endblock %}
 {% block content %}
-
-<div class="d-flex">
+<div class="container"> 
+  <div class="d-flex">
     <div class="my-3">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
@@ -21,13 +21,165 @@
         </ol>
       </nav>
     </div>
-</div>
+  </div>
 
-<h2>
-  {{ _('Commandes récentes') }}
-</h2>
+  <h2>{{ _('Commandes récentes') }}</h2>
+
+  {% if purchases %}
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>{{ _('Nom du produit') }}</th>
+            <th>{{ _('Token') }}</th>
+            <th>{{ _('Status') }}</th>
+            <th>{{ _('Date') }}</th>
+            <th>{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for purchase in purchases %}
+          <tr>
+            <td>{{ purchase.title }}</td>
+            <td>{{ purchase.token | mask_token }}</td>
+            <td>
+              {% if not purchase.status %}
+                <span class="badge bg-warning text-dark">{{ _('en cours...') }}</span>
+              {% else %}
+                <span class="badge bg-success text-dark">{{ _('reçu...') }}</span>
+              {% endif %}
+            </td>
+            <td>{{ purchase.start_check.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ purchase.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ _('Actions') }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ purchase.id }}">
+                  <li><a class="dropdown-item view-details" href="#" data-bs-toggle="modal" data-bs-target="#viewDetailsModal" data-id="{{ purchase.id }}">{{ _('Voir les détails') }}</a></li>
+                  <li>
+                    <a class="dropdown-item delete-request" href="#" data-id="{{ purchase.id }}">{{ _('Supprimer') }}</a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    {% include 'dashboard/customers/empty/no_purchase.html' %}
+  {% endif %}
+
+  <!-- Modal for viewing details -->
+  <div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="viewDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewDetailsModalLabel">{{ _('Détails de la commande') }}</h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Details content will be loaded here via JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const viewDetailsLinks = document.querySelectorAll('.view-details');
+    const viewDetailsModal = new bootstrap.Modal(document.getElementById('viewDetailsModal'));
+
+    viewDetailsLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const id = this.getAttribute('data-id');
+        fetch(`/purchases/${id}`)
+          .then(response => response.json())
+          .then(data => {
+            document.querySelector('#viewDetailsModal .modal-body').innerHTML = `
+            <div class="container-fluid">
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="productName" class="form-label">{{ _('Nom du produit') }}</label>
+                    <input type="text" class="form-control" id="productName" value="${data.title}" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="productToken" class="form-label">{{ _('Token') }}</label>
+                    <input type="text" class="form-control" id="productToken" value="${data.token}" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="productStatus" class="form-label">{{ _('Status') }}</label>
+                    <input type="text" class="form-control" id="productStatus" value="${data.status}" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="creationDate" class="form-label">{{ _('Date de création') }}</label>
+                    <input type="text" class="form-control" id="creationDate" value="${new Date(data.start_check).toLocaleString()}" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <label for="productDescription" class="form-label">{{ _('Description') }}</label>
+                    <textarea class="form-control" id="productDescription" rows="3" readonly>${data.description}</textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="authorFirstName" class="form-label">{{ _('Prénom de l\'auteur') }}</label>
+                    <input type="text" class="form-control" id="authorFirstName" value="${data.author_first_name}" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="authorLastName" class="form-label">{{ _('Nom de l\'auteur') }}</label>
+                    <input type="text" class="form-control" id="authorLastName" value="${data.author_last_name}" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="authorEmail" class="form-label">{{ _('Adresse e-mail de l\'auteur') }}</label>
+                    <input type="email" class="form-control" id="authorEmail" value="${data.author_email_address}" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="authorPhoneNumber" class="form-label">{{ _('Numéro de téléphone de l\'auteur') }}</label>
+                    <input type="text" class="form-control" id="authorPhoneNumber" value="${data.author_phone_number}" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="authorAddress" class="form-label">{{ _('Adresse de l\'auteur') }}</label>
+                    <input type="text" class="form-control" id="authorAddress" value="${data.author_address}" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="authorCountry" class="form-label">{{ _('Pays de l\'auteur') }}</label>
+                    <input type="text" class="form-control" id="authorCountry" value="${data.author_country}" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <img src="${data.qr_code_url}" alt="{{ _('QR Code') }}" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            `;
+            viewDetailsModal.show();
+          });
+      });
+    });
+  });
+
+  </script>
+
+  <script type="module" src="{{ url_for('static', filename='js/async/api/customers/Goods/DeletePurchase.js') }}"></script>
 
   <div class="py-5"></div>
-</form>
 
+</div>
 {% endblock %}
