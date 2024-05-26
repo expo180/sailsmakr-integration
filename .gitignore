@@ -7,4 +7,4 @@ app.db
 venv
 *.sublime*
 node_modules
-./app/static/data
+static/data

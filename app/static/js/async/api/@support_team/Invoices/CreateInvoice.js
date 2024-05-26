@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     'Success!',
                     data.message,
                     'success'
-                );
-                $('#CreateInvoiceModal').modal('hide');
-                window.location.reload();
+                ).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
             } else {
                 const data = await response.json();
                 Swal.fire(
