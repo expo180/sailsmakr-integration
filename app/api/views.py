@@ -3,7 +3,7 @@ from flask_babel import _
 from . import api
 from flask_login import current_user, login_required
 from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice
-from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required
+from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required, employee_required
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
 import secrets
@@ -544,7 +544,7 @@ def delete_client_purchase(purchase_id):
 def edit_invoice(invoice_id):
     invoice = Invoice.query.get_or_404(invoice_id)
     if not invoice:
-        return jsonify({'message': 'Invoice not found'}), 404
+        return jsonify({'message': _('La facture est introuvable.')}), 404
 
     data = request.get_json()
     title = data.get('title')
@@ -552,18 +552,74 @@ def edit_invoice(invoice_id):
     description = data.get('description')
 
     if not title or not amount:
-        return jsonify({'message': 'Title and amount are required!'}), 400
+        return jsonify({'message': _('Le titre et le montant sont requis.')}), 400
 
     try:
         amount = float(amount)
         if amount <= 0:
             raise ValueError
     except ValueError:
-        return jsonify({'message': 'Invalid amount!'}), 400
+        return jsonify({'message': _('Montant invalide.')}), 400
 
     invoice.title = title
     invoice.amount = amount
     invoice.description = description
     db.session.commit()
 
-    return jsonify({'message': 'Votre facture a bien été mis à jour!'}), 200
+    return jsonify({'message': _('La facture a été mise à jour avec succès.')}), 200
+
+
+@api.route("/delete_invoice/<int:invoice_id>", methods=['DELETE'])
+@login_required
+@accountant_required
+def delete_invoice(invoice_id):
+    invoice = Invoice.query.get_or_404(invoice_id)
+    if not invoice:
+        return jsonify({'message': _('La facture est introuvable.')}), 404
+
+    try:
+        db.session.delete(invoice)
+        db.session.commit()
+        return jsonify({'message': _('La facture a été supprimée avec succès.')}), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'message': _('Une erreur est survenue lors de la suppression de la facture.')}), 500
+    
+
+@api.route('/quote/delete/<int:quote_id>', methods=['DELETE'])
+@login_required
+@employee_required
+def delete_quote(quote_id):
+    quote = Authorization.query.get_or_404(quote_id)
+    if quote:
+        db.session.delete(quote)
+        db.session.commit()
+        return jsonify({'success': True})
+    return jsonify({'success': False, 'message': _('Demande Introuvable')}), 404
+
+@api.route('/quote/edit/<int:quote_id>', methods=['PUT'])
+@login_required
+@employee_required
+def edit_quote(quote_id):
+    quote = Authorization.query.get_or_404(quote_id)
+    if not quote:
+        return jsonify({'success': False, 'message': _('Demande Introuvable')}), 404
+
+    data = request.json
+    if 'client_first_name' in data:
+        quote.client_first_name = data['client_first_name']
+    if 'client_last_name' in data:
+        quote.client_last_name = data['client_last_name']
+    if 'client_phone_number' in data:
+        quote.client_phone_number = data['client_phone_number']
+    if 'client_email_adress' in data:
+        quote.client_email_adress = data['client_email_adress']
+    if 'shipping_company_title' in data:
+        quote.shipping_company_title = data['shipping_company_title']
+    if 'lading_bills_identifier' in data:
+        quote.lading_bills_identifier = data['lading_bills_identifier']
+    if 'service_fees' in data:
+        quote.service_fees = data['service_fees']
+
+    db.session.commit()
+    return jsonify({'success': True})

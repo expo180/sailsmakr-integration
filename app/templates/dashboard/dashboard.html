@@ -57,11 +57,14 @@
     }
   </script>
 
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  {% include 'includes/inc_bottom.html' %}
+
+  <!-- scrollbar plugins -->
+  <script src="{{ url_for('static', filename='js/lib/plugins/perfect-scrollbar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lib/plugins/smooth-scrollbar.min.js') }}"></script>
+
   <script src="{{ url_for('static', filename='js/lib/plugins/material-dashboard.min.js') }}"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  {% include 'includes/inc_bottom.html' %}
 
 </body>
 </html>

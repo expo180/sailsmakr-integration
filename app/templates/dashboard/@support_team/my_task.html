@@ -1,0 +1,71 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Mes tâches : Afrilog') }}</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="visually-hidden">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">{{ _('Mes tâches') }}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <h2>
+        {{ _('Mes tâches') }}
+    </h2>
+    
+    <div class="d-flex justify-content-end gap-2 me-2 mb-3">
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-sort-up"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-check2-square"></i>
+            </button>
+        </div>
+    </div>
+
+    {% if tasks %}
+        <div class="table-responsive">
+            <table class="table table-striped align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th>{{ _("Titre") }}</th>
+                        <th>{{ _("Statut") }}</th>
+                        <th>{{ _("Description") }}</th>
+                        <th>{{ _("Assigné à") }}</th>
+                        <th>{{ _("Options") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.title }}</td>
+                            <td>{{ task.status }}</td>
+                            <td>{{ task.description }}</td>
+                            <td>{{ task.assigned_to }}</td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        {% include 'dashboard/@support_team/empty/no_tasks.html' %}
+    {% endif %}
+
+</div>
+
+<div class="py-5"></div>
+
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Tasks/EditTask.js') }}"></script>
+
+{% endblock %}

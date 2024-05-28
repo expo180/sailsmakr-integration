@@ -8,7 +8,10 @@ const UtilApiURLs = {
     PopulatePurchaseDataListURL : 'http://127.0.0.1:5000/api/v1/my_purchases/track_my_product/user',
     DeleteAuthorizationRequestURL: 'http://127.0.0.1:5000/api/v1/delete_request/',
     DeletePurchaseRequestURLSales: 'http://127.0.0.1:5000/api/v1/delete_purchase/',
-    EditInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/edit_invoice/'
+    EditInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/edit_invoice/',
+    DeleteInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/delete_invoice/',
+    checkValidityQuoteURL : 'http://127.0.0.1:5000/api/v1/quote/edit/',
+    DeleteQuoteRequestURL : 'http://127.0.0.1:5000/api/v1/quote/delete/'
 }
 
 export default UtilApiURLs;

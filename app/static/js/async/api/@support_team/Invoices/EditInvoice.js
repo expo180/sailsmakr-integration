@@ -14,25 +14,28 @@ async function handleEdit(invoiceId, newData) {
 
         if (response.ok) {
             const data = await response.json();
-            Swal.fire(
-                'Success!',
-                data.message,
-                'success'
-            );
-            $('#editInvoiceModal').modal('hide');
-            window.location.reload();
+            Swal.fire({
+                title: 'Succès!',
+                text: data.message,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.reload();
+                }
+            });
         } else {
             const data = await response.json();
             Swal.fire(
-                'Error!',
-                data.message || 'An error occurred while editing the invoice.',
+                'Erreur!',
+                data.message || 'Une erreur est survenue lors de la modification de la facture.',
                 'error'
             );
         }
     } catch (error) {
         Swal.fire(
-            'Error!',
-            'An error occurred while editing the invoice.',
+            'Erreur!',
+            'Une erreur est survenue lors de la modification de la facture.',
             'error'
         );
     }
@@ -49,15 +52,16 @@ $(document).ready(function() {
         $('#editDescription').val(description);
         $('#editAmount').val(amount);
 
-        $('#editInvoiceModal').modal('show');
-        $('#editInvoiceSubmit').on('click', function() {
-            console.log("Hello world")
-            const newData = {
-                title: $('#editTitle').val(),
-                description: $('#editDescription').val(),
-                amount: $('#editAmount').val()
-            };
-            handleEdit(invoiceId, newData);
-        });
+        $('#editInvoiceModal{{ invoice.id }}').modal('show');
+    });
+
+    $(document).on('click', '#editInvoiceSubmit', function() {
+        const invoiceId = $(this).data('invoice-id');
+        const newData = {
+            title: $('#editTitle').val(),
+            description: $('#editDescription').val(),
+            amount: $('#editAmount').val()
+        };
+        handleEdit(invoiceId, newData);
     });
 });

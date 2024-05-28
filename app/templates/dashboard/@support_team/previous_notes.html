@@ -1,4 +1,5 @@
 {% extends 'dashboard/dashboard.html' %}
+
 {% block title %}
     <title>{{ _('Notes récentes : Afrilog') }}</title>
 {% endblock %}
@@ -32,48 +33,50 @@
 
   {% if previous_notes %}
     <table class="table align-middle mb-0 bg-white">
-        <thead class="bg-light">
-            <tr>
-                <th>{{ _('ID') }}</th>
-                <th>{{ _('Titre') }}</th>
-                <th>{{ _('Contenu') }}</th>
-                <th>{{ _('Type') }}</th>
-                <th>{{ _('Options') }}</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for note in previous_notes %}
-                <tr>
-                    <td>{{ note.id }}</td>
-                    <td>{{ note.title }}</td>
-                    <td>{{ note.content }}</td>
-                    {% if note.nature == 'Warning' %}
-                      <span class="badge bg-warning">{{ note.nature }}</span>
-                    {% elif note.nature == 'Information' %}
-                      <span class="badge bg-success">{{ note.nature }}</span>
-                    {% endif %}
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ note.id }}" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-three-dots"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ note.id }}">
-                                <li>
-                                    <button type="button" data-note-id="{{ note.id }}" class="dropdown-item edit-note">
-                                      <i class="bi bi-pencil"></i> {{ _('Modifier') }}
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" data-note-id="{{ note.id }}" class="dropdown-item delete-note">
-                                      <i class="bi bi-trash"></i> {{ _('Supprimer') }}
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
+      <thead class="bg-light">
+        <tr>
+          <th>{{ _('ID') }}</th>
+          <th>{{ _('Titre') }}</th>
+          <th>{{ _('Contenu') }}</th>
+          <th>{{ _('Type') }}</th>
+          <th>{{ _('Options') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for note in previous_notes %}
+          <tr>
+            <td>{{ note.id }}</td>
+            <td>{{ note.title }}</td>
+            <td>{{ note.content }}</td>
+            <td>
+              {% if note.nature == 'Warning' %}
+                <span class="badge bg-warning">{{ note.nature }}</span>
+              {% elif note.nature == 'Information' %}
+                <span class="badge bg-success">{{ note.nature }}</span>
+              {% endif %}
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ note.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ note.id }}">
+                  <li>
+                    <button type="button" data-note-id="{{ note.id }}" class="dropdown-item edit-note">
+                      <i class="bi bi-pencil"></i> {{ _('Modifier') }}
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-note-id="{{ note.id }}" class="dropdown-item delete-note">
+                      <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
     </table>
   {% else %}
     {% include 'api/@support_team/empty/no_notice.html' %}
@@ -102,8 +105,8 @@
             <div class="mb-3">
               <label for="EditNoteNature" class="form-label">{{ _('Nature') }}</label>
               <select id="EditNoteNature" class="form-select">
-                <option value="Danger">{{ _('Avertissement') }}</option>
-                <option value="Warning">{{ _('Information') }}</option>
+                <option value="Warning">{{ _('Avertissement') }}</option>
+                <option value="Information">{{ _('Information') }}</option>
               </select>
             </div>
           </form>

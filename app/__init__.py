@@ -4,13 +4,14 @@ from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from config import config
 from flask_bootstrap import Bootstrap
-from flask_login import LoginManager
+from flask_login import LoginManager, current_user
 from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
 from flask_babel import Babel
 from .role_helpers import inject_role_helpers
 from .filters import mask_token
+from .utils import get_tasks_for_user
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -46,6 +47,11 @@ def create_app(development=True):
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
+
+    @app.context_processor
+    def inject_tasks():
+        tasks = get_tasks_for_user(current_user.email)
+        return dict(tasks=tasks)
 
     @app.template_filter
     def _jinja2_filter_truncate(s, length=17):

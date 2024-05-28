@@ -1,13 +1,11 @@
 {% extends 'dashboard/dashboard.html' %}
 {% block title %}
-    <title>
-        {{ _('Calendrier : Afrilog') }}
-    </title>
+    <title>{{ _('Calendrier : Afrilog') }}</title>
 {% endblock %}
-
 {% block content %}
 
-<div class="my-5">
+<div class="container">
+  <div class="my-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
             <li class="breadcrumb-item">
@@ -16,15 +14,23 @@
                     <span class="visually-hidden">{{ _('Accueil') }}</span>
                 </a>
             </li>
-            <li class="breadcrumb-item active">
-                {{ _('Calendrier') }}
-            </li>
+            <li class="breadcrumb-item active">{{ _('Calendrier') }}</li>
         </ol>
     </nav>
 </div>
 
-<h2>
-    {{ _('Calendrier') }}
-</h2>
+<h2>{{ _('Calendrier') }}</h2>
+
+<div class="my-3">
+
+  <div id='calendar'></div>
+  
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales/fr.js'></script>
+  <script type="module" src="{{ url_for('static', filename='js/_utils/calendar-employee.js') }}"></script>
+
+
+</div>
+</div>
 
 {% endblock %}

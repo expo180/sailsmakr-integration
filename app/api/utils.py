@@ -41,7 +41,7 @@ def generate_qr_code(token, first_name, last_name):
     qr_folder = os.path.join(UPLOAD_PURCHASE_REQUEST_FOLDERS, f"{first_name}_{last_name}", "qr_codes")
     os.makedirs(qr_folder, exist_ok=True)
 
-    qr_path = os.path.join(qr_folder, f"{token}.png")
+    qr_path = os.path.join(qr_folder, exist_ok=True)
 
     qr = qrcode.QRCode(
         version=1,

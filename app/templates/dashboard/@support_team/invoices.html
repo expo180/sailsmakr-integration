@@ -25,12 +25,14 @@
     
     
     <div class="justify-content-end d-flex gap-1 me-2">
-        <button type="button" class="btn btn-outline-secondary" id="CreateInvoiceButton" style="background: none;">
-            <i class="bi bi-plus-circle"></i>
-        </button>
-        <button type="button" class="btn btn-outline-secondary" id="SortInvoicesButton" style="background: none;">
-            <i class="bi bi-sort-up"></i>
-        </button>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" id="CreateInvoiceButton" style="background: none;">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" id="SortInvoicesButton" style="background: none;">
+                <i class="bi bi-sort-up"></i>
+            </button>
+        </div>
     </div>
 
     
@@ -64,7 +66,7 @@
                                     </li>
                                     <hr class="dropdown-divider">
                                     <li>
-                                        <button type="button" data-invoice-id="{{ invoice.id }}" class="dropdown-item">
+                                        <button type="button" data-invoice-id="{{ invoice.id }}" class="dropdown-item delete-btn">
                                             <i class="bi bi-trash"></i> {{ _('Supprimer') }}
                                         </button>
                                     </li>
@@ -89,7 +91,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="description" class="form-label">{{ _('Description') }}:</label>
-                                                        <textarea id="description" class="form-control" value="{{ invoice.description or _('Description non disponible') }}" readonly></textarea>
+                                                        <textarea id="description" class="form-control" placeholder="{{ invoice.description }}" value="{{ invoice.description or _('Description non disponible') }}" readonly></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,19 +127,18 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="description" class="form-label">{{ _('Description') }}</label>
-                                                    <textarea class="form-control" id="editDescription" name="description" rows="3" value="{{ invoice.description }}" ></textarea>
+                                                    <textarea class="form-control" id="editDescription" name="description" rows="3" placeholder="{{ invoice.description }}"></textarea>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="amount" class="form-label">{{ _('Montant') }} <span class="text-danger">*</span></label>
-                                                    <input type="number" class="form-control" id="editAmount" name="amount" step="0.01" value="{{ invoice }}" required>
+                                                    <input type="number" class="form-control" id="editAmount" name="amount" step="0.01" value="{{ invoice.amount }}" required>
                                                     <p class="text-danger" id="editAmountError" style="display: none;">{{ _('Veuillez entrer le montant de la facture') }}</p>
                                                     <p class="text-danger" id="editAmountInvalidError" style="display: none;">{{ _('Veuillez entrer un montant valide') }}</p>
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
-                                            <button type="button" class="btn btn-info" id="editInvoiceSubmit">{{ _('Enregistrer') }}</button>
+                                            <button type="button" class="btn btn-info" id="editInvoiceSubmit" data-invoice-id="{{ invoice.id }}">{{ _('Enregistrer') }}</button>
                                         </div>
                                     </div>
                                 </div>
@@ -195,4 +196,5 @@
 
 <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Invoices/EditInvoice.js') }}"></script>
 <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Invoices/CreateInvoice.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Invoices/DeleteInvoice.js') }}"></script>
 {% endblock %}

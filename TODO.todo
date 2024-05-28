@@ -11,6 +11,18 @@ DESIGN REMAKE
 
 CRM
 
+HomePageView
+☐ user level view
+☐ admin level view
+☐ hr manager level
+☐ accountant manager level view
+☐ sales manager level view
+☐ project manager level view
+
+
+
+
+
 FILTERS
 ☐ truncate functions adjustments
 ☐ pagination system
@@ -25,16 +37,16 @@ Data Types
 
 1. Accountant Level
     . Invoice
-        ☐ invoice create flask api
-        ☐ invoice create js api
-        ☐ invoices list view
-        ☐ invoice details view
-        ☐ invoice edit js api
-        ☐ invoice detail flask api
+        ✔ invoice create flask api @done (5/26/2024, 5:59:43 PM)
+        ✔ invoice create js api @done (5/26/2024, 5:59:45 PM)
+        ✔ invoices list view @done (5/26/2024, 5:59:48 PM)
+        ✔ invoice details view @done (5/26/2024, 5:59:51 PM)
+        ✔ invoice edit js api @done (5/26/2024, 6:29:07 PM)
+        ✔ invoice detail flask api @done (5/26/2024, 6:29:11 PM)
         ☐ invoice printing api
         ☐ invoice page design
-        ☐ invoice deleting flask api
-        ☐ invoice deleting js api
+        ✔ invoice deleting flask api @done (5/26/2024, 6:29:35 PM)
+        ✔ invoice deleting js api @done (5/26/2024, 6:29:36 PM)
  
 2. Customer & User Level
     . Invoice
@@ -68,21 +80,8 @@ Data Types
         ☐ track a product flask api
     
     . Docs
-        ☐ doc model defintion
-        ☐ docs list view
-        ☐ doc details flask api
-        ☐ doc create word flask api
-        ☐ doc create xlxs flask api
-        ☐ doc create word js api
-        ☐ doc create xlxs js api
-        ☐ doc edit word js api
-        ☐ doc edit xlxs js api
-        ☐ doc edit word flask api
-        ☐ doc edit xlxs flask api
-        ☐ doc remove word js api
-        ☐ doc remove xlxs js api
-        ☐ doc remove word flask api
-        ☐ doc remove xlxs flask api
+        ✔ doc model defintion @done (5/26/2024, 6:28:40 PM)
+        ☐ Google docs API integration
 
     . Jobs
         ☐ recently applied jobs list view
@@ -117,25 +116,19 @@ Data Types
 
 3. Employee
     . Authorizations
-        ☐ authorization requests list view
-        ☐ authorization request details view
-        ☐ accept authorization request flask api
-        ☐ accept authorization request js api
-        ☐ reject authorization request flask api
-        ☐ reject authorization request js api + view
+        ✔ authorization requests list view @done (5/26/2024, 7:20:08 PM)
+        ✔ authorization request details view @done (5/26/2024, 7:20:10 PM)
+        ✔ accept authorization request flask api @done (5/26/2024, 7:20:12 PM)
+        ✔ accept authorization request js api @done (5/26/2024, 7:20:14 PM)
+        ✔ reject authorization request flask api @done (5/26/2024, 7:20:15 PM)
+        ✔ reject authorization request js api + view @done (5/26/2024, 7:20:17 PM)
 
-    . Purchases
-        ☐ purchases list view
-        ☐ accept purchases request flask api
-        ☐ accept purchases request js api
-        ☐ reject purchases request flask api
-        ☐ reject purchases request js api + view
     
     . Calendar
-        ☐ calendar view
+        ✔ calendar view @done (5/26/2024, 7:28:50 PM)
     
     . MyTasks
-        ☐ task list view
+        ✔ task list view @done (5/27/2024, 8:59:17 AM)
         ☐ edit task view
         ☐ edit task flask api
         ☐ edit task js api
@@ -143,11 +136,11 @@ Data Types
 
 4. Project MANAGER Level
     . Ads
-        ☐ Ads list view
-        ☐ Create Ads flask api
-        ☐ Create Ads js api
-        ☐ remove Ads flask api
-        ☐ remove Ads js api
+        ✔ Ads list view @done (5/26/2024, 3:42:25 PM)
+        ✔ Create Ads flask api @done (5/26/2024, 3:42:26 PM)
+        ✔ Create Ads js api @done (5/26/2024, 3:42:28 PM)
+        ✔ remove Ads flask api @done (5/26/2024, 3:42:29 PM)
+        ✔ remove Ads js api @done (5/26/2024, 3:42:30 PM)
 
 5. Sales Manager
     . Ads
@@ -156,11 +149,11 @@ Data Types
         ✔ Edit Ads js api @done (5/24/2024, 2:09:28 PM)
 
     . Purchases
-        ☐ purchases list view
+        ✔ purchases list view @done (5/26/2024, 3:41:38 PM)
         ☐ accept purchases request flask api
-        ☐ accept purchases request js api
-        ☐ reject purchases request flask api
-        ☐ reject purchases request js api + view
+        ✔ accept purchases request js api @done (5/26/2024, 3:42:00 PM)
+        ✔ reject purchases request flask api @done (5/26/2024, 3:42:04 PM)
+        ✔ reject purchases request js api + view @done (5/26/2024, 3:42:07 PM)
 
 6. Admin
     . Notes
@@ -194,4 +187,7 @@ Data Types
     . Marketplace
 
     . Accounting
-    
+
+
+BUGS
+☐ task editing flask view

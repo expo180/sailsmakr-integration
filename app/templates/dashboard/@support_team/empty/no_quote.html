@@ -1,11 +1,9 @@
-{% extends 'api/shared/layout.html' %}
-{% block head %}
-    <head>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        {% block title %}<title>{{ _('Aucune demande trouvée - Afrilog') }}</title>{% endblock %}
-    </head>
-{% endblock %}
-{% block content %}
-
-{% endblock %}
+<div class="px-4 text-center">
+    <img class="d-block mx-auto mb-4 img-fluid" src="{{ url_for('static', filename='img/feedbacks/sitting-1@2x.png') }}" alt="{{ _('Aucune offre àa afficher image') }}" width="400">
+    <h1 class="display-5 text-body-emphasis">{{ _("Aucune demande de procuration") }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        {{ _("Aucune demande de procuration effectuée pour le moment") }}
+      </p>
+    </div>
+</div>

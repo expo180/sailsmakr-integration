@@ -18,6 +18,36 @@
               </a>
           </li>
 
+          {% if is_employee() or is_hr_manager() or is_accountant() or is_sales() or is_project_manager() %}
+            <li class="nav-item">
+                <a class="nav-link text-white {% if request.path == url_for('main.new_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_quotes') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">history</i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Nouvelle demandes') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {% if request.path == url_for('main.calendar') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.calendar') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">event</i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Calendrier') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white position-relative {% if request.path == url_for('main.my_tasks') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.my_tasks') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center position-relative">
+                        <i class="material-icons opacity-10">task</i>
+                        {% if tasks|length > 0 %}
+                            <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">{{ tasks|length }}</span>
+                        {% endif %}
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Mes tâches') }}</span>
+                </a>
+            </li>            
+          {% endif %}
+
           {% if is_user() %}
             <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('api.apply_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.apply_quotes') }}">
@@ -241,7 +271,7 @@
   </div>
   <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
-            <a class="btn bg-gradient-primary mt-4 w-100" href="{{ url_for('auth.logout') }}" type="button">
+            <a class="btn bg-light mt-4 w-100" href="{{ url_for('auth.logout') }}" type="button">
                 <i class="bi bi-box-arrow-left"></i>
                 {{ _('Se déconnecter') }}
             </a>

@@ -64,7 +64,7 @@ class User(UserMixin, db.Model):
     authorizations = db.relationship('Authorization', backref='user', lazy='dynamic')
     purchases = db.relationship('Purchase', back_populates='user', lazy=True)
     tasks = db.relationship('Task', lazy=True)
-    invoices = db.relationship('ClientInvoice', lazy=True)
+    docs = db.relationship('Doc', backref='user', lazy=True)
     
     @property
     def password(self):
@@ -169,8 +169,8 @@ class Authorization(db.Model):
     provider_name3 = db.Column(db.String)
     provider_name4 = db.Column(db.String)
     lading_bills_identifier = db.Column(db.String, nullable=False)
-    granted = db.Column(db.Boolean, default=False)
     service_fees = db.Column(db.Float, default=0.0)
+    granted = db.Column(db.Boolean, default=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
 
@@ -220,16 +220,6 @@ class Invoice(db.Model):
     amount = db.Column(db.Float, default=0.0)
     qr_code_url = db.Column(db.String())
     date_created = db.Column(db.DateTime(), default=datetime.utcnow)
-
-class ClientInvoice(db.Model):
-    __tablename__ = 'client_invoices'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String, nullable=False)
-    description = db.Column(db.Text)
-    amount = db.Column(db.Float, default=0.0)
-    qr_code_url = db.Column(db.String())
-    date_created = db.Column(db.DateTime(), default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
 class MarketingCampaign(db.Model):
     __tablename__ = 'marketing_campaigns'
@@ -310,6 +300,7 @@ class Purchase(db.Model):
     category = db.Column(db.String)
     doc_url = db.Column(db.String)
     qr_code_url = db.Column(db.String)
+    service_fees = db.Column(db.Float, default=0.0)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship('User', back_populates='purchases')
     start_check = db.Column(db.DateTime(), default=datetime.utcnow)
@@ -340,3 +331,11 @@ class Note(db.Model):
     content = db.Column(db.String, nullable=False)
     nature = db.Column(db.String)
 
+
+class Doc(db.Model):
+    __tablename__ = 'docs'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    doc_url = db.Column(db.String, nullable=False)
+    last_modified = db.Column(db.DateTime, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)

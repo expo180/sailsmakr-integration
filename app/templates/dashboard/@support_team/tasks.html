@@ -3,7 +3,7 @@
     <title>{{ _('Tâches : Afrilog') }}</title>
 {% endblock %}
 {% block content %}
-<div class="container mt-5">
+<div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
             <li class="breadcrumb-item">
@@ -16,13 +16,14 @@
         </ol>
     </nav>
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>{{ _('Tâches') }}</h2>
+    <h2>{{ _('Tâches') }}</h2>
+
+    <div class="d-flex justify-content-end align-items-center mb-4">
         <div class="btn-group" role="group" aria-label="Task Actions">
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#NewTask">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#NewTask">
                 <i class="bi bi-plus-circle"></i>
             </button>
-            <button type="button" class="btn btn-outline-danger">
+            <button type="button" class="btn btn-outline-secondary">
                 <i class="bi bi-sort-up"></i>
             </button>
         </div>
@@ -111,7 +112,7 @@
                             <select class="form-select" id="AssignedTo" name="assigned_to" required>
                                 {% if users %}
                                     {% for user in users %}
-                                        <option value="{{ user.id }}">{{ user.email }} - {{ user.role.name }}</option>
+                                        <option value="{{ user.email }}">{{ user.email }} - {{ user.role.name }}</option>
                                     {% endfor %}
                                 {% else %}
                                     <option value="0">{{ _('Aucun agent trouvé') }}</option>

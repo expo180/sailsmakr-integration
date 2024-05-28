@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = RedirectURLs.CreateAdSuccessURL;
+                    location.reload();
                 }
             });
         })

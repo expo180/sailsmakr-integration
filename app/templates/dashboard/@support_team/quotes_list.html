@@ -1,102 +1,177 @@
-{% extends 'api/shared/layout.html' %}
-{% block head %}
-    <head>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        {% block title %}<title>{{ _('Procurations récentes - Afrilog') }}</title>{% endblock %}
-    </head>
+{% extends 'dashboard/dashboard.html' %}
+
+{% block title %}
+    <title>{{ _('Demandes de procurations : Afrilog') }}</title>
 {% endblock %}
+
 {% block content %}
-<ul role="list" class="divide-y divide-gray-100">
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Leslie Alexander</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">leslie.alexander@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Co-Founder / CEO</p>
-        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
-      </div>
-    </li>
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Michael Foster</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">michael.foster@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Co-Founder / CTO</p>
-        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
-      </div>
-    </li>
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Dries Vincent</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">dries.vincent@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Business Relations</p>
-        <div class="mt-1 flex items-center gap-x-1.5">
-          <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-            <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-          </div>
-          <p class="text-xs leading-5 text-gray-500">Online</p>
-        </div>
-      </div>
-    </li>
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Lindsay Walton</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">lindsay.walton@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Front-end Developer</p>
-        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
-      </div>
-    </li>
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Courtney Henry</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">courtney.henry@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Designer</p>
-        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
-      </div>
-    </li>
-    <li class="flex justify-between gap-x-6 py-5">
-      <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-        <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Tom Cook</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">tom.cook@example.com</p>
-        </div>
-      </div>
-      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Director of Product</p>
-        <div class="mt-1 flex items-center gap-x-1.5">
-          <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-            <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-          </div>
-          <p class="text-xs leading-5 text-gray-500">Online</p>
-        </div>
-      </div>
-    </li>
-  </ul>
+<div class="container">
+    <div class="my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="visually-hidden">{{ _('Accueil') }}</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active">{{ _('Demandes de procurations') }}</li>
+            </ol>
+        </nav>
+    </div>
+    
+    <h2>
+        <span class="ms-3">{{ _('Demandes de devis') }}</span>
+    </h2>
+
+    {% if quotes %}
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>{{ _('ID') }}</th>
+                    <th>{{ _('Nom du client') }}</th>
+                    <th>{{ _('Titre de la compagnie de transport') }}</th>
+                    <th>{{ _('Options') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for quote in quotes %}
+                    <tr>
+                        <td>{{ quote.id }}</td>
+                        <td>{{ quote.client_first_name }} {{ quote.client_last_name }}</td>
+                        <td>{{ quote.shipping_company_title }}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ _('Actions') }}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ quote.id }}">
+                                    <li>
+                                        <button type="button" data-quote-id="{{ quote.id }}" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#quoteDetailsModal{{ quote.id }}">{{ _('Voir les détails') }}</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-quote-id="{{ quote.id }}" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editQuoteModal{{ quote.id }}">{{ _('Modifier') }}</button>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <button type="button" data-quote-id="{{ quote.id }}" class="dropdown-item delete-btn">
+                                            <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- View details modal -->
+                            <div class="modal fade" id="quoteDetailsModal{{ quote.id }}" tabindex="-1" aria-labelledby="quoteDetailsModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="quoteDetailsModalLabel">{{ _('Détails de la demande de devis') }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="client_first_name" class="form-label">{{ _('Prénom du client') }}:</label>
+                                                        <input type="text" id="client_first_name" class="form-control" value="{{ quote.client_first_name }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="client_last_name" class="form-label">{{ _('Nom du client') }}:</label>
+                                                        <input type="text" id="client_last_name" class="form-control" value="{{ quote.client_last_name }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="client_phone_number" class="form-label">{{ _('Numéro de téléphone du client') }}:</label>
+                                                        <input type="text" id="client_phone_number" class="form-control" value="{{ quote.client_phone_number }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="client_email_adress" class="form-label">{{ _('Adresse e-mail du client') }}:</label>
+                                                        <input type="text" id="client_email_adress" class="form-control" value="{{ quote.client_email_adress }}" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="shipping_company_title" class="form-label">{{ _('Titre de la compagnie de transport') }}:</label>
+                                                        <input type="text" id="shipping_company_title" class="form-control" value="{{ quote.shipping_company_title }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lading_bills_identifier" class="form-label">{{ _('Identifiant des documents de chargement') }}:</label>
+                                                        <input type="text" id="lading_bills_identifier" class="form-control" value="{{ quote.lading_bills_identifier }}" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="service_fees" class="form-label">{{ _('Frais de service') }}:</label>
+                                                        <input type="text" id="service_fees" class="form-control" value="{{ quote.service_fees }}" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Edit quote modal -->
+                            <div class="modal fade" id="editQuoteModal{{ quote.id }}" tabindex="-1" aria-labelledby="editQuoteModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="editQuoteModalLabel">{{ _('Modifier la demande de devis') }}</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="editQuoteForm">
+                                                <div class="mb-3">
+                                                    <label for="client_first_name" class="form-label">{{ _('Prénom du client') }} <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="editClientFirstName" name="client_first_name" value="{{ quote.client_first_name }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="client_last_name" class="form-label">{{ _('Nom du client') }} <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="editClientLastName" name="client_last_name" value="{{ quote.client_last_name }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="client_phone_number" class="form-label">{{ _('Numéro de téléphone du client') }} <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="editClientPhoneNumber" name="client_phone_number" value="{{ quote.client_phone_number }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="client_email_adress" class="form-label">{{ _('Adresse e-mail du client') }}</label>
+                                                    <input type="email" class="form-control" id="editClientEmailAdress" name="client_email_adress" value="{{ quote.client_email_adress }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="shipping_company_title" class="form-label">{{ _('Titre de la compagnie de transport') }} <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="editShippingCompanyTitle" name="shipping_company_title" value="{{ quote.shipping_company_title }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="lading_bills_identifier" class="form-label">{{ _('Identifiant des documents de chargement') }} <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="editLadingBills" name="lading_bills_identifier" value="{{ quote.lading_bills_identifier }}" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="service_fees" class="form-label">{{ _('Frais de service') }} <span class="text-danger">*</span></label>
+                                                    <input type="number" step="0.01" class="form-control" id="editServiceFees" name="service_fees" value="{{ quote.service_fees }}" required>
+                                                </div>
+                                                <button type="button" id="editQuoteSubmit" data-quote-id="{{ quote.id }}" class="btn btn-primary">{{ _('Enregistrer') }}</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Fermer') }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+          {% include 'dashboard/@support_team/empty/no_quote.html' %}
+        {% endif %}
+        <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Authorizations/EditAuthorization.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Authorizations/DeleteAuthorization.js') }}"></script>
+    <div class="py-5"></div>
+</div>
 
 {% endblock %}
-  

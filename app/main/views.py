@@ -1,14 +1,14 @@
 from flask import request, render_template, session, jsonify, url_for, redirect, flash, abort
 from flask_babel import _
 from . import main
-from ..models import User, Task, Role, Event, Invoice, ClientInvoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization
+from ..models import User, Task, Role, Event, Invoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization
 from flask_login import current_user, login_required, login_user
 from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required, user_required, accountant_required
 from .. import db
 import os
 from newsdataapi import NewsDataApiClient
 from dotenv import load_dotenv
-from ._utils import truncate_description
+from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary
 from datetime import datetime
 
 load_dotenv()
@@ -25,8 +25,14 @@ def cgu():
 @main.route("/home")
 @login_required
 def user_home():
+    summary = get_weekly_financial_summary()
+    user_summary = get_monthly_user_summary()
+    client_summary = get_daily_client_summary()
     return render_template(
-        "dashboard/user_home.html"
+        "dashboard/user_home.html",
+        summary=summary,
+        user_summary=user_summary,
+        client_summary=client_summary
     )
 
 @main.route("/careers/job_list")
@@ -90,6 +96,14 @@ def previous_quotes():
     user_requests = Authorization.query.filter_by(user_id=user_id).all()
     return render_template("dashboard/customers/previous_quotes.html", user_requests=user_requests)
 
+
+@main.route("/new_previouses")
+@login_required
+@employee_required
+def new_quotes():
+    quotes = Authorization.query.all()
+    return render_template("dashboard/@support_team/quotes_list.html", quotes=quotes)
+
 @main.route("/mailbox/sent_messages")
 @login_required
 def sent_messages():
@@ -121,6 +135,7 @@ def previous_created_jobs():
     )
 
 @main.route("/tasks", methods=["GET", "POST"])
+@ceo_required
 @login_required
 def tasks():
     if request.method == 'POST':
@@ -287,3 +302,10 @@ def live_tracking():
 @login_required
 def my_recent_applications(user_id):
     return render_template("dashboard/customers/my_recent_applications.html")
+
+@main.route('/my_tasks')
+@login_required
+def my_tasks():
+    user_email = current_user.email
+    tasks = Task.query.filter_by(assigned_to=user_email).all()
+    return render_template('dashboard/@support_team/my_task.html', tasks=tasks)
