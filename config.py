@@ -3,6 +3,9 @@
 # config.py
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -11,6 +14,8 @@ class Config:
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', 'true').lower() in ['true', 'on', '1']
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    ADMIN = os.environ.get('ADMIN')
+    AGENTS_EMAILS = os.environ.get('AGENTS_EMAILS')
     COMPANY_CEO = os.environ.get('COMPANY_CEO')
     COMPANY_CEO_ASSISTANT = os.environ.get('COMPANY_CEO_ASSISTANT')
     COMPANY_HR_MANAGER = os.environ.get('COMPANY_HR_MANAGER')
@@ -18,6 +23,9 @@ class Config:
     COMPANY_SALES_MANAGER = os.environ.get('COMPANY_SALES_MANAGER')
     COMPANY_IT_ADMINISTRATOR = os.environ.get('COMPANY_IT_ADMINISTRATOR') 
     COMPANY_ACCOUNTANT = os.environ.get('COMPANY_ACCOUNTANT')
+    BABEL_DEFAULT_LOCALE = 'fr'
+    BABEL_SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'zh']
+    BABEL_TRANSLATION_DIRECTORIES = './translations'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     @staticmethod

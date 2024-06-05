@@ -1,0 +1,128 @@
+{% extends 'main/layout.html' %}
+{% block head %}
+    <head>
+        {% block meta %}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="{{ _('Découvrez nos services de fret terrestre') }}">
+            <meta name="keywords" content="{{ _('Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, Afrique, Oceanie, Chine') }}">
+            <meta content="author"  name="Afrilog SARL">
+        {% endblock %}
+        {% block title %}<title>{{ _('Afrilog : Fret terrestre') }}</title>{% endblock %}
+        {% block styles %}
+            <!-- pagedone css -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/pagedone.css') }}">
+
+            <!-- tailwind output css -->
+            <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+
+            <!-- custom home css -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/home/home.css') }}">
+            
+            <!-- bootstrap-icons-->
+            <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
+            
+            <!-- tel input css -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"> 
+
+            <!-- flags css -->
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+            />
+        {% endblock %}
+    </head>
+{% endblock %}
+<body>
+    <main>
+        {% block content %}
+        
+        <!-- hero section -->
+        <section class="lg:pt-20 pt-0 lg:pl-8 h-full">
+            <div class="rounded-2xl bg-indigo-50 py-10 overflow-hidden m-5 lg:m-0 2xl:py-16 xl:py-8 lg:rounded-tl-2xl lg:rounded-bl-2xl">
+              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-14 items-center lg:grid-cols-12 lg:gap-32">
+                  <div class="w-full xl:col-span-5 lg:col-span-6 2xl:-mx-5 xl:-mx-0">
+                    <h1 class="py-8 text-center text-gray-900 font-manrope text-5xl lg:text-left leading-[70px]">
+                      {{ _("Fret Terrestre") }}
+                    </h1>
+                    <p class="text-gray-500 text-lg text-center lg:text-left">
+                      {{ _("Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant des solutions flexibles et économiques pour le transport de marchandises. Avec des réseaux routiers bien développés et une infrastructure solide, le fret terrestre permet des livraisons rapides et ponctuelles, réduisant les temps d'attente et les coûts. En optant pour le fret terrestre, votre entreprise bénéficie d'une prestation de services fiable et efficace, adaptée à vos besoins spécifiques. Découvrez comment nos solutions de fret terrestre peuvent optimiser vos opérations logistiques.") }}
+                    </p>
+                    <div
+                      class="relative p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-col md:flex-row justify-between rounded-full md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)]">
+                        <a href="#SalesContact"
+                            class="bg-blue-800 rounded-full py-3 px-7 text-base font-semibold text-white hover:bg-blue-700 cursor-pointer transition-all duration-500 md:w-fit w-full">
+                            {{ _('Service commercial') }}
+                        </a>
+                    </div>
+                  </div>
+                  <div class="w-full xl:col-span-7 lg:col-span-6 block">
+                    <div class="w-full sm:w-auto lg:w-[60.8125rem] xl:ml-16">
+                      <img src="{{ url_for('static', filename='img/camion-long-vehicule-pret-pour-livraison-transport.jpg') }}" alt="{{ _('fret terrestre') }}" class="w-full lg:h-auto">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>          
+        <!-- end hero section -->
+
+        <div class="pattern_1"></div>
+
+        {% include 'main/testimonial.html' %}
+
+        <div class="pattern_1"></div>
+
+        {% include 'main/contact.html' %}
+
+        <div class="pattern_2"></div>
+
+
+        {% endblock %}
+
+    </main>
+    {% block scripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const categoryMegamenuParent = document.querySelector('#category-megamenu-parent');
+          const categoryMegamenu = document.querySelector('#category-megamenu');
+          const collapseToggle = document.querySelector('[data-collapse-toggle="megamenu-full-width"]');
+          const megamenuFullWidth = document.querySelector('#megamenu-full-width');
+          const navLinks = document.querySelector('.nav-links');
+  
+          categoryMegamenuParent.addEventListener('click', () => {
+            categoryMegamenu.classList.toggle('active');
+          });
+  
+          collapseToggle.addEventListener('click', () => {
+            megamenuFullWidth.classList.toggle('active');
+            navLinks.classList.toggle('hidden');
+          });
+        })
+  
+        function toggleDropdown() {
+          const dropdownMenu = document.getElementById('dropdown');
+          dropdownMenu.classList.toggle('hidden');
+        }
+  
+  
+      </script>
+      
+  
+      <!-- tel input js -->
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+  
+      <!-- sendQuote.js-->
+      <script src="{{ url_for('static', filename='js/async/api/customers/Messages/SendQuote.js') }}"></script>
+  
+      <!-- three module.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      
+        
+      <!-- globe.js -->
+      <script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
+  
+      <!-- pagedone.js -->
+      <script type="module" src="{{ url_for('static', filename='js/lib/plugins/pagedone.js') }}"></script>
+    {% endblock %}
+</body>

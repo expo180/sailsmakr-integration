@@ -39,9 +39,9 @@ def save_authorization_request_files(files, client_first_name, client_last_name)
 
 def generate_qr_code(token, first_name, last_name):
     qr_folder = os.path.join(UPLOAD_PURCHASE_REQUEST_FOLDERS, f"{first_name}_{last_name}", "qr_codes")
-    os.makedirs(qr_folder, exist_ok=True)
+    os.makedirs(qr_folder)
 
-    qr_path = os.path.join(qr_folder, exist_ok=True)
+    qr_path = os.path.join(qr_folder)
 
     qr = qrcode.QRCode(
         version=1,

@@ -1,4 +1,4 @@
-from flask import render_template, request, jsonify, flash, redirect, url_for, flash
+from flask import render_template, request, jsonify, flash, redirect, url_for, flash, session
 from flask_login import login_user
 from werkzeug.security import check_password_hash
 from . import auth
@@ -22,6 +22,7 @@ def login():
             return jsonify({'success': False, 'errorType': 'incorrectPassword'}), 401
         
         login_user(user)
+        session['email'] = email 
         return jsonify({'success': True})
 
     return render_template('auth/login.html')

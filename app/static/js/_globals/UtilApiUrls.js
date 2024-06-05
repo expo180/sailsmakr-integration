@@ -11,7 +11,8 @@ const UtilApiURLs = {
     EditInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/edit_invoice/',
     DeleteInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/delete_invoice/',
     checkValidityQuoteURL : 'http://127.0.0.1:5000/api/v1/quote/edit/',
-    DeleteQuoteRequestURL : 'http://127.0.0.1:5000/api/v1/quote/delete/'
+    DeleteQuoteRequestURL : 'http://127.0.0.1:5000/api/v1/quote/delete/',
+    AddressAutoCompleteURL : 'http://127.0.0.1:5000/api/v1/autocomplete-address'
 }
 
 export default UtilApiURLs;

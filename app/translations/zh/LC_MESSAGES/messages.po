@@ -1,0 +1,3214 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-02 01:45+0100\n"
+"PO-Revision-Date: 2024-06-02 01:47+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: api/views.py:55
+msgid "Votre requête a bien été envoyé"
+msgstr "您的请求已成功发送"
+
+#: api/views.py:114
+msgid "Envoyé avec succès"
+msgstr "发送成功"
+
+#: api/views.py:115
+msgid "Votre requête a été bien envoyé"
+msgstr "您的请求已成功发送"
+
+#: api/views.py:349
+msgid "Offre mise à jour avec succès"
+msgstr "报价已成功更新"
+
+#: api/views.py:432
+msgid "Votre candidature a été soumise avec succès!"
+msgstr "您的申请已成功提交！"
+
+#: api/views.py:466
+msgid "Votre campagne a été bien mise à jour"
+msgstr "您的活动已成功更新"
+
+#: api/views.py:479
+msgid "Campagne supprimée"
+msgstr "活动已删除"
+
+#: api/views.py:511
+msgid "Votre demande a bien été mise à jour"
+msgstr "您的请求已成功更新"
+
+#: api/views.py:518 templates/errors/403.html:6
+msgid "Accès non autorisé"
+msgstr "未经授权的访问"
+
+#: api/views.py:522
+msgid "Votre demande a été bien supprimé"
+msgstr "您的请求已成功删除"
+
+#: api/views.py:547 api/views.py:578
+msgid "La facture est introuvable."
+msgstr "找不到发票。"
+
+#: api/views.py:555
+msgid "Le titre et le montant sont requis."
+msgstr "需要标题和金额。"
+
+#: api/views.py:562
+msgid "Montant invalide."
+msgstr "无效金额。"
+
+#: api/views.py:569
+msgid "La facture a été mise à jour avec succès."
+msgstr "发票已成功更新。"
+
+#: api/views.py:583
+msgid "La facture a été supprimée avec succès."
+msgstr "发票已成功删除。"
+
+#: api/views.py:586
+msgid "Une erreur est survenue lors de la suppression de la facture."
+msgstr "删除发票时发生错误。"
+
+#: api/views.py:598 api/views.py:606
+msgid "Demande Introuvable"
+msgstr "找不到请求"
+
+#: auth/views.py:49
+msgid "Votre compte a été créé avec succès. Veuillez vous connecter."
+msgstr "您的账户已成功创建。请登录。"
+
+#: auth/views.py:70
+msgid "Veuillez vous connecter à votre compte!"
+msgstr "请登录您的账户！"
+
+#: main/views.py:244
+msgid ""
+"Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le "
+"meilleur de votre audience"
+msgstr "您的新活动已添加，您现在可以充分利用您的受众"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:2
+msgid "Modifier les infos employé : Afrilog"
+msgstr "修改员工信息：Afrilog"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:12
+#: templates/api/@support_team/jobs/create_job.html:12
+#: templates/api/@support_team/notice/create_notice.html:13
+#: templates/api/customers/authorizations/apply.html:12
+#: templates/api/customers/goods/purchase_request.html:13
+#: templates/api/customers/jobs/apply.html:11
+#: templates/api/docs/spreadsheet_doc.html:13
+#: templates/api/docs/text_doc.html:13
+#: templates/api/messages/new_message.html:12
+#: templates/dashboard/@support_team/ads.html:11
+#: templates/dashboard/@support_team/calendar.html:14
+#: templates/dashboard/@support_team/employees_listing.html:12
+#: templates/dashboard/@support_team/events.html:14
+#: templates/dashboard/@support_team/finance_reports.html:16
+#: templates/dashboard/@support_team/invoices.html:14
+#: templates/dashboard/@support_team/marketplace.html:16
+#: templates/dashboard/@support_team/my_task.html:11
+#: templates/dashboard/@support_team/new_purchases.html:13
+#: templates/dashboard/@support_team/previous_created_jobs.html:17
+#: templates/dashboard/@support_team/previous_notes.html:16
+#: templates/dashboard/@support_team/quotes_list.html:15
+#: templates/dashboard/@support_team/tasks.html:12
+#: templates/dashboard/calculator.html:13
+#: templates/dashboard/customers/inbox.html:15
+#: templates/dashboard/customers/live_tracking.html:16
+#: templates/dashboard/customers/previous_purchase_requests.html:12
+#: templates/dashboard/customers/previous_quotes.html:12
+#: templates/dashboard/jobs_listing.html:13
+#: templates/dashboard/new_messages.html:12
+#: templates/dashboard/partials/sidebar.html:17
+#: templates/dashboard/sent_messages.html:12
+#: templates/dashboard/settings.html:23 templates/includes/footer.html:10
+#: templates/includes/header.html:18
+msgid "Accueil"
+msgstr "主页"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:18
+#: templates/api/@support_team/employees/edit_employee_infos.html:23
+#: templates/dashboard/@support_team/employees_listing.html:73
+#: templates/dashboard/customers/previous_quotes.html:164
+msgid "Modifier les infos"
+msgstr "修改信息"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:27
+#: templates/api/customers/authorizations/apply.html:31
+#: templates/api/customers/goods/purchase_request.html:44
+#: templates/api/customers/jobs/apply.html:26
+#: templates/dashboard/@support_team/applicants_list.html:79
+#: templates/dashboard/@support_team/employees_listing.html:97
+#: templates/dashboard/settings.html:44 templates/main/contact.html:18
+msgid "Prénom"
+msgstr "名字"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:31
+#: templates/api/customers/jobs/apply.html:30
+#: templates/dashboard/@support_team/applicants_list.html:83
+#: templates/dashboard/@support_team/employees_listing.html:101
+msgid "Nom de Famille"
+msgstr "姓氏"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:35
+#: templates/dashboard/@support_team/employees_listing.html:29
+#: templates/dashboard/@support_team/employees_listing.html:105
+msgid "Fonction"
+msgstr "职能"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:39
+#: templates/dashboard/@support_team/employees_listing.html:109
+msgid "Identifiant / Matricule"
+msgstr "标识符/工号"
+
+#: templates/api/@support_team/employees/edit_employee_infos.html:50
+#: templates/api/@support_team/jobs/edit_job.html:39
+#: templates/dashboard/@support_team/events.html:54
+#: templates/dashboard/@support_team/invoices.html:141
+#: templates/dashboard/@support_team/quotes_list.html:155
+#: templates/dashboard/@support_team/tasks.html:176
+#: templates/dashboard/customers/previous_quotes.html:213
+msgid "Enregistrer"
+msgstr "保存"
+
+#: templates/api/@support_team/empty/no_job.html:2
+#: templates/dashboard/@support_team/empty/no_quote.html:2
+#: templates/dashboard/customers/empty/no_quote.html:2
+#: templates/dashboard/empty/no_job.html:2
+msgid "Aucune offre àa afficher image"
+msgstr "没有要显示的报价图片"
+
+#: templates/api/@support_team/empty/no_job.html:3
+msgid "Aucune offre d'emploi créee"
+msgstr "没有创建的工作机会"
+
+#: templates/api/@support_team/empty/no_job.html:6
+msgid "Les nouvelles offres d'emplois créees vont s'afficher ici"
+msgstr "创建的新工作机会将显示在这里"
+
+#: templates/api/@support_team/empty/no_job.html:12
+msgid "Créer une nouvelle offre"
+msgstr "创建新报价"
+
+#: templates/api/@support_team/empty/no_notice.html:2
+msgid "Aucune note à afficher image"
+msgstr "没有要显示的笔记图片"
+
+#: templates/api/@support_team/empty/no_notice.html:3
+msgid "Aucune note à afficher"
+msgstr "没有要显示的笔记"
+
+#: templates/api/@support_team/empty/no_notice.html:6
+msgid "Les notes que vous créerez seront affichée ici"
+msgstr "您创建的笔记将显示在这里"
+
+#: templates/api/@support_team/folders/reply_to_quote.html:6
+msgid "Répondre à la demande"
+msgstr "回复请求"
+
+#: templates/api/@support_team/jobs/create_job.html:2
+msgid "Créer une offre d'emploi - Afrilog"
+msgstr "创建职位 - Afrilog"
+
+#: templates/api/@support_team/jobs/create_job.html:16
+#: templates/dashboard/@support_team/previous_created_jobs.html:21
+#: templates/dashboard/jobs_listing.html:17
+#: templates/dashboard/partials/sidebar.html:216
+msgid "Careers"
+msgstr "招聘"
+
+#: templates/api/@support_team/jobs/create_job.html:19
+#: templates/dashboard/partials/sidebar.html:223
+msgid "Ajouter une offre"
+msgstr "添加报价"
+
+#: templates/api/@support_team/jobs/create_job.html:30
+msgid "Ajouter une nouvelle offre"
+msgstr "添加新报价"
+
+#: templates/api/@support_team/jobs/create_job.html:38
+#: templates/api/@support_team/notice/create_notice.html:37
+#: templates/dashboard/@support_team/ads.html:39
+#: templates/dashboard/@support_team/ads.html:80
+#: templates/dashboard/@support_team/ads.html:137
+#: templates/dashboard/@support_team/ads.html:204
+#: templates/dashboard/@support_team/events.html:40
+#: templates/dashboard/@support_team/invoices.html:44
+#: templates/dashboard/@support_team/invoices.html:89
+#: templates/dashboard/@support_team/invoices.html:124
+#: templates/dashboard/@support_team/invoices.html:167
+#: templates/dashboard/@support_team/my_task.html:39
+#: templates/dashboard/@support_team/new_purchases.html:30
+#: templates/dashboard/@support_team/previous_created_jobs.html:40
+#: templates/dashboard/@support_team/previous_notes.html:39
+#: templates/dashboard/@support_team/previous_notes.html:96
+#: templates/dashboard/@support_team/tasks.html:39
+#: templates/dashboard/@support_team/tasks.html:101
+#: templates/dashboard/@support_team/tasks.html:150
+#: templates/dashboard/jobs_listing.html:36 templates/views/invoices.html:44
+msgid "Titre"
+msgstr "标题"
+
+#: templates/api/@support_team/jobs/create_job.html:39
+msgid "Développeur ASPNET C#"
+msgstr "ASPNET C# 开发人员"
+
+#: templates/api/@support_team/jobs/create_job.html:41
+msgid "Veuillez entrer le titre du poste"
+msgstr "请输入职位名称"
+
+#: templates/api/@support_team/jobs/create_job.html:45
+#: templates/api/@support_team/jobs/edit_job.html:16
+#: templates/api/customers/goods/purchase_request.html:132
+#: templates/dashboard/@support_team/ads.html:84
+#: templates/dashboard/@support_team/ads.html:141
+#: templates/dashboard/@support_team/ads.html:208
+#: templates/dashboard/@support_team/invoices.html:93
+#: templates/dashboard/@support_team/invoices.html:129
+#: templates/dashboard/@support_team/invoices.html:172
+#: templates/dashboard/@support_team/my_task.html:41
+#: templates/dashboard/@support_team/new_purchases.html:100
+#: templates/dashboard/@support_team/tasks.html:106
+#: templates/dashboard/@support_team/tasks.html:155
+#: templates/dashboard/customers/previous_purchase_requests.html:131
+msgid "Description"
+msgstr "描述"
+
+#: templates/api/@support_team/jobs/create_job.html:48
+msgid "Veuillez décrire le poste"
+msgstr "请描述职位"
+
+#: templates/api/@support_team/jobs/create_job.html:52
+#: templates/api/@support_team/jobs/edit_job.html:20
+#: templates/dashboard/@support_team/new_purchases.html:84
+#: templates/dashboard/@support_team/previous_created_jobs.html:43
+#: templates/dashboard/jobs_listing.html:39
+msgid "Lieu"
+msgstr "地点"
+
+#: templates/api/@support_team/jobs/create_job.html:55
+msgid "Veuillez spécifier le lieu"
+msgstr "请指定地点"
+
+#: templates/api/@support_team/jobs/create_job.html:59
+#: templates/api/@support_team/jobs/edit_job.html:24
+#: templates/dashboard/@support_team/previous_created_jobs.html:42
+#: templates/dashboard/jobs_listing.html:38
+msgid "Salaire"
+msgstr "薪资"
+
+#: templates/api/@support_team/jobs/create_job.html:62
+msgid "Veuillez indiquer le salaire"
+msgstr "请注明薪资"
+
+#: templates/api/@support_team/jobs/create_job.html:66
+#: templates/api/@support_team/jobs/edit_job.html:28
+msgid "Date de publication"
+msgstr "发布日期"
+
+#: templates/api/@support_team/jobs/create_job.html:69
+msgid "Veuillez indiquer la date de publication"
+msgstr "请注明发布日期"
+
+#: templates/api/@support_team/jobs/create_job.html:73
+#: templates/api/@support_team/jobs/edit_job.html:32
+#: templates/dashboard/@support_team/previous_created_jobs.html:44
+#: templates/dashboard/jobs_listing.html:40
+msgid "Date de clôture"
+msgstr "截止日期"
+
+#: templates/api/@support_team/jobs_create_job.html:76
+msgid "Veuillez indiquer la date de clôture"
+msgstr "请注明截止日期"
+
+#: templates/api/@support_team/jobs_create_job.html:86
+#: templates/dashboard/@support_team/ads.html:240
+#: templates/dashboard/@support_team/invoices.html:187
+#: templates/dashboard/@support_team/tasks.html:127
+msgid "Ajouter"
+msgstr "添加"
+
+#: templates/api/@support_team/jobs/edit_job.html:3
+msgid "Modifier l'Offre"
+msgstr "编辑报价"
+
+#: templates/api/@support_team/jobs/edit_job.html:3
+msgid "Afrilog"
+msgstr "Afrilog"
+
+#: templates/api/@support_team/jobs/edit_job.html:9
+msgid "Edit Job"
+msgstr "编辑工作"
+
+#: templates/api/@support_team/jobs/edit_job.html:12
+msgid "Title"
+msgstr "标题"
+
+#: templates/api/@support_team/notice/create_notice.html:2
+msgid "Ajouter une nouvelle note : Afrilog"
+msgstr "添加新笔记：Afrilog"
+
+#: templates/api/@support_team/notice/create_notice.html:17
+#: templates/dashboard/@support_team/previous_notes.html:20
+#: templates/dashboard/partials/sidebar.html:192
+msgid "Notes"
+msgstr "笔记"
+
+#: templates/api/@support_team/notice/create_notice.html:20
+#: templates/api/@support_team/notice/create_notice.html:28
+msgid "Ajouter une nouvelle note"
+msgstr "添加新笔记"
+
+#: templates/api/@support_team/notice/create_notice.html:40
+msgid "Politique de non-discrimination"
+msgstr "非歧视政策"
+
+#: templates/api/@support_team/notice/create_notice.html:42
+msgid "Veuillez donner un titre à votre notice"
+msgstr "请为您的笔记提供标题"
+
+#: templates/api/@support_team/notice/create_notice.html:47
+#: templates/dashboard/@support_team/previous_notes.html:106
+msgid "Nature"
+msgstr "性质"
+
+#: templates/api/@support_team/notice/create_notice.html:55
+msgid "Veuillez communiquer le type d'information"
+msgstr "请说明信息类型"
+
+#: templates/api/@support_team/notice/create_notice.html:65
+#: templates/dashboard/@support_team/previous_notes.html:40
+#: templates/dashboard/@support_team/previous_notes.html:101
+msgid "Contenu"
+msgstr "内容"
+
+#: templates/api/@support_team/notice/create_notice.html:68
+msgid "Tous les agents se doivent..."
+msgstr "所有代理都必须..."
+
+#: templates/api/@support_team/notice/create_notice.html:70
+#: templates/dashboard/@support_team/previous_notes.html:103
+msgid "Veuillez écrire le contenu de votre note"
+msgstr "请撰写您的笔记内容"
+
+#: templates/api/@support_team/notice/create_notice.html:80
+#: templates/dashboard/@support_team/ads.html:171
+#: templates/dashboard/@support_team/ads.html:238
+#: templates/dashboard/@support_team/invoices.html:185
+#: templates/dashboard/@support_team/previous_notes.html:118
+#: templates/dashboard/@support_team/tasks.html:125
+#: templates/dashboard/@support_team/tasks.html:174
+msgid "En cours..."
+msgstr "进行中..."
+
+#: templates/api/@support_team/notice/create_notice.html:82
+msgid "Publier"
+msgstr "发布"
+
+#: templates/api/customers/authorizations/apply.html:2
+msgid "Formulaire de demande de procuration : Afrilog"
+msgstr "授权申请表单：Afrilog"
+
+#: templates/api/customers/authorizations/apply.html:16
+#: templates/api/customers/authorizations/apply.html:24
+msgid "Demande de procuration"
+msgstr "授权请求"
+
+#: templates/api/customers/authorizations/apply.html:34
+#: templates/api/customers/authorizations/apply.html:41
+#: templates/api/customers/authorizations/apply.html:94
+#: templates/api/customers/authorizations/apply.html:101
+msgid ""
+"Un nom doit contenir seulement des lettres, les chiffres, les espaces et "
+"les caractères spéciaux sont interdits"
+msgstr ""
+"姓名只能包含字母，数字，空格，不允许使用特殊字符"
+
+#: templates/api/customers/authorizations/apply.html:38
+#: templates/api/customers/goods/purchase_request.html:35
+#: templates/dashboard/settings.html:56 templates/main/contact.html:26
+msgid "Nom de famille"
+msgstr "姓氏"
+
+#: templates/api/customers/authorizations/apply.html:50
+msgid "Téléphone"
+msgstr "电话"
+
+#: templates/api/customers/authorizations/apply.html:53
+msgid "Veuillez entrer un numéro de téléphone valide"
+msgstr "请输入有效的电话号码"
+
+#: templates/api/customers/authorizations/apply.html:57
+msgid "Votre signature"
+msgstr "您的签名"
+
+#: templates/api/customers/authorizations/apply.html:60
+msgid "Veuillez télécharger votre signature"
+msgstr "请上传您的签名"
+
+#: templates/api/customers/authorizations/apply.html:69
+msgid "Votre pays"
+msgstr "您的国家"
+
+#: templates/api/customers/authorizations/apply.html:74
+#: templates/api/customers/goods/purchase_request.html:145
+msgid "Veuillez sélectionner votre pays"
+msgstr "请选择您的国家"
+
+#: templates/api/customers/authorizations/apply.html:78
+msgid "Numéro de suivi"
+msgstr "跟踪编号"
+
+#: templates/api/customers/authorizations/apply.html:81
+msgid "Veuillez entrer un numéro de valide"
+msgstr "请输入有效的编号"
+
+#: templates/api/customers/authorizations/apply.html:91
+#: templates/dashboard/customers/previous_quotes.html:192
+msgid "Prénom du transitaire"
+msgstr "承运人名字"
+
+#: templates/api/customers/authorizations/apply.html:98
+msgid "Nom de famille du transitaire"
+msgstr "承运人姓氏"
+
+#: templates/api/customers/authorizations/apply.html:110
+#: templates/dashboard/customers/previous_quotes.html:200
+#: templates/main/aerien.html:83 templates/main/pricing.html:11
+msgid "Compagnie"
+msgstr "公司"
+
+#: templates/api/customers/authorizations/apply.html:116
+msgid "Veuillez sélectionner une compagnie"
+msgstr "请选择一家公司"
+
+#: templates/api/customers/authorizations/apply.html:120
+#: templates/dashboard/customers/previous_quotes.html:150
+msgid "Carte d'identité"
+msgstr "身份证"
+
+#: templates/api/customers/authorizations/apply.html:123
+msgid "Veuillez télécharger votre carte d'identité"
+msgstr "请上传您的身份证"
+
+#: templates/api/customers/authorizations/apply.html:134
+#: templates/api/customers/goods/purchase_request.html:172
+msgid "Envoi..."
+msgstr "发送..."
+
+#: templates/api/customers/authorizations/apply.html:136
+#: templates/api/customers/goods/purchase_request.html:175
+#: templates/dashboard/@support_team/new_purchases.html:155
+#: templates/main/contact.html:84
+msgid "Envoyer"
+msgstr "发送"
+
+#: templates/api/customers/authorizations/world_countries.html:1
+msgid "Sélectionnez un pays"
+msgstr "请选择一个国家"
+
+#: templates/api/customers/blog/comment.html:6
+msgid "Commenter - Afrilog"
+msgstr "评论 - Afrilog"
+
+#: templates/api/customers/blog/saved_articles_listing.html:6
+msgid "Articles enregistrés - Afrilog"
+msgstr "已保存文章 - Afrilog"
+
+#: templates/api/customers/goods/privacy_policy.html:7
+msgid "En utilisant nos services, vous acceptez notre "
+msgstr "通过使用我们的服务，您同意我们的 "
+
+#: templates/api/customers/goods/privacy_policy.html:7
+#: templates/main/contact.html:77
+msgid "politique de confidentialité"
+msgstr "隐私政策"
+
+#: templates/api/customers/goods/privacy_policy.html:20
+msgid "Politique de Confidentialité"
+msgstr "隐私政策"
+
+#: templates/api/customers/goods/privacy_policy.html:26
+msgid ""
+"Nous collectons des informations personnelles telles que le nom, "
+"l'adresse et les coordonnées pour fournir nos services de livraison."
+msgstr ""
+"我们收集个人信息，如姓名、地址和联系方式，以提供我们的交付服务。"
+
+#: templates/api/customers/goods/privacy_policy.html:27
+msgid ""
+"Vos données peuvent être utilisées pour suivre et améliorer nos "
+"opérations logistiques."
+msgstr ""
+"我们可能使用您的数据来跟踪并改进我们的物流运营。"
+
+#: templates/api/customers/goods/privacy_policy.html:28
+msgid ""
+"Nous pouvons partager vos informations avec des prestataires de services "
+"tiers pour les besoins de la livraison."
+msgstr ""
+"为了交付需求，我们可能与第三方服务提供商分享您的信息。"
+
+#: templates/api/customers/goods/privacy_policy.html:29
+msgid ""
+"Nous accordons une importance particulière à la sécurité de vos données "
+"et utilisons des mesures standard de l'industrie pour les protéger."
+msgstr ""
+"我们非常重视您数据的安全，并采取行业标准的措施来保护您的数据。"
+
+#: templates/api/customers/goods/privacy_policy.html:30
+msgid ""
+"En utilisant nos services, vous acceptez d'être majeur dans votre "
+"juridiction pour consentir à notre politique de confidentialité."
+msgstr ""
+"通过使用我们的服务，您同意在您的司法管辖区内已年满法定年龄并同意我们的隐私政策。"
+
+#: templates/api/customers/goods/privacy_policy.html:33
+#: templates/dashboard/@support_team/ads.html:119
+#: templates/dashboard/@support_team/ads.html:169
+#: templates/dashboard/@support_team/ads.html:236
+#: templates/dashboard/@support_team/applicants_list.html:105
+#: templates/dashboard/@support_team/employees_listing.html:115
+#: templates/dashboard/@support_team/events.html:53
+#: templates/dashboard/@support_team/invoices.html:106
+#: templates/dashboard/@support_team/new_purchases.html:109
+#: templates/dashboard/@support_team/quotes_list.html:110
+#: templates/dashboard/@support_team/quotes_list.html:159
+#: templates/dashboard/customers/previous_purchase_requests.html:89
+msgid "Fermer"
+msgstr "关闭"
+
+#: templates/api/customers/goods/purchase_request.html:2
+msgid "Passer une commande : Afrilog"
+msgstr "提交订单：Afrilog"
+
+#: templates/api/customers/goods/purchase_request.html:17
+#: templates/dashboard/customers/live_tracking.html:20
+#: templates/dashboard/customers/previous_purchase_requests.html:16
+msgid "Mes commandes"
+msgstr "我的订单"
+
+#: templates/api/customers/goods/purchase_request.html:20
+#: templates/api/customers/goods/purchase_request.html:28
+msgid "Passer une commande"
+msgstr "提交订单"
+
+#: templates/api/customers/goods/purchase_request.html:36
+msgid "Bertram"
+msgstr "伯特兰"
+
+#: templates/api/customers/goods/purchase_request.html:39
+msgid "Veuillez entrer un nom de famille valide"
+msgstr "请输入有效的姓氏"
+
+#: templates/api/customers/goods/purchase_request.html:45
+msgid "Gillfoyle"
+msgstr "吉尔福尔"
+
+#: templates/api/customers/goods/purchase_request.html:48
+msgid "Veuillez entrer un prénom valide"
+msgstr "请输入有效的名字"
+
+#: templates/api/customers/goods/purchase_request.html:55
+#: templates/dashboard/customers/previous_purchase_requests.html:33
+#: templates/dashboard/customers/previous_purchase_requests.html:111
+msgid "Nom du produit"
+msgstr "产品名称"
+
+#: templates/api/customers/goods/purchase_request.html:58
+msgid "Veuillez entrer le nom de votre produit"
+msgstr "请输入您的产品名称"
+
+#: templates/api/customers/goods/purchase_request.html:64
+#: templates/dashboard/@support_team/new_purchases.html:32
+msgid "Catégorie"
+msgstr "类别"
+
+#: templates/api/customers/goods/purchase_request.html:66
+msgid "Électronique"
+msgstr "电子产品"
+
+#: templates/api/customers/goods/purchase_request.html:67
+msgid "Vêtements"
+msgstr "服装"
+
+#: templates/api/customers/goods/purchase_request.html:68
+msgid "Livres"
+msgstr "书籍"
+
+#: templates/api/customers/goods/purchase_request.html:72
+msgid "Veuillez sélectionner la catégorie de votre produit"
+msgstr "请选择您产品的类别"
+
+#: templates/api/customers/goods/purchase_request.html:72
+msgid "Veuillez sélectionner la catégorie de votre produit"
+msgstr "请选择您产品的类别"
+
+#: templates/api/customers/goods/purchase_request.html:80
+#: templates/api/customers/goods/purchase_request.html:81
+msgid "Longueur du produit"
+msgstr "产品长度"
+
+#: templates/api/customers/goods/purchase_request.html:86
+#: templates/api/customers/goods/purchase_request.html:87
+msgid "Largeur du produit"
+msgstr "产品宽度"
+
+#: templates/api/customers/goods/purchase_request.html:94
+#: templates/main/contact.html:50
+msgid "Numéro de téléphone"
+msgstr "电话号码"
+
+#: templates/api/customers/goods/purchase_request.html:98
+msgid "Votre numéro de téléphone est requis"
+msgstr "您的电话号码是必填项"
+
+#: templates/api/customers/goods/purchase_request.html:104
+msgid "Votre Adresse E-mail"
+msgstr "您的电子邮件地址"
+
+#: templates/api/customers/goods/purchase_request.html:107
+msgid "Votre adresse E-mail est requise"
+msgstr "您的电子邮件地址是必填项"
+
+#: templates/api/customers/goods/purchase_request.html:110
+msgid "Cette adresse E-mail est invalide"
+msgstr "此电子邮件地址无效"
+
+#: templates/api/customers/goods/purchase_request.html:118
+#: templates/dashboard/@support_team/new_purchases.html:76
+msgid "Fournisseur"
+msgstr "供应商"
+
+#: templates/api/customers/goods/purchase_request.html:124
+#: templates/dashboard/@support_team/new_purchases.html:104
+msgid "Image du produit"
+msgstr "产品图像"
+
+#: templates/api/customers/goods/purchase_request.html:133
+msgid "Autre chose sur votre produit..."
+msgstr "关于您的产品的其他信息..."
+
+#: templates/api/customers/goods/purchase_request.html:140
+msgid "Votre Pays"
+msgstr "您的国家"
+
+#: templates/api/customers/goods/purchase_request.html:151
+msgid "Adresse physique"
+msgstr "实际地址"
+#: templates/api/customers/goods/purchase_request.html:152
+msgid "Entrez votre adresse"
+msgstr "请输入您的地址"
+
+#: templates/api/customers/goods/purchase_request.html:154
+msgid "Veuillez entrer une adresse valide"
+msgstr "请输入有效地址"
+
+#: templates/api/customers/goods/purchase_request.html:160
+msgid "Document ou Manuel"
+msgstr "文档或手册"
+
+#: templates/api/customers/jobs/apply.html:2
+msgid "Formulaire de candidature : Afrilog"
+msgstr "应聘表格：Afrilog"
+
+#: templates/api/customers/jobs/apply.html:17
+#: templates/api/customers/jobs/apply.html:22
+msgid "Formulaire de candidature"
+msgstr "求职表格"
+
+#: templates/api/customers/jobs/apply.html:34
+msgid "Email"
+msgstr "电子邮件"
+
+#: templates/api/customers/jobs/apply.html:38
+msgid "Location"
+msgstr "地点"
+
+#: templates/api/customers/jobs/apply.html:42
+#: templates/dashboard/@support_team/applicants_list.html:99
+msgid "Motivation"
+msgstr "动机"
+
+#: templates/api/customers/jobs/apply.html:46
+msgid "LinkedIn URL"
+msgstr "LinkedIn 网址"
+
+#: templates/api/customers/jobs/apply.html:50
+msgid "GitHub URL"
+msgstr "GitHub 网址"
+
+#: templates/api/customers/jobs/apply.html:54
+msgid "Dribble URL"
+msgstr "Dribble 网址"
+
+#: templates/api/customers/jobs/apply.html:58
+#: templates/dashboard/@support_team/applicants_list.html:95
+msgid "Date de Naissance"
+msgstr "出生日期"
+
+#: templates/api/customers/jobs/apply.html:62
+msgid "Upload CV"
+msgstr "上传简历"
+
+#: templates/api/customers/jobs/apply.html:66
+msgid "Soumettre"
+msgstr "提交"
+
+#: templates/api/docs/spreadsheet_doc.html:2
+msgid "Nouvelle Feuille: Afrilog"
+msgstr "新工作表：Afrilog"
+
+#: templates/api/docs/spreadsheet_doc.html:17
+#: templates/api/docs/text_doc.html:17
+#: templates/dashboard/partials/sidebar.html:126
+msgid "Documents"
+msgstr "文档"
+
+#: templates/api/docs/spreadsheet_doc.html:20
+msgid "Nouvelle feuille"
+msgstr "新工作表"
+
+#: templates/api/docs/spreadsheet_doc.html:32
+msgid "Créer une nouvelle feuille"
+msgstr "创建新工作表"
+
+#: templates/api/docs/text_doc.html:2
+msgid "Nouveau document: Afrilog"
+msgstr "新文档：Afrilog"
+
+#: templates/api/docs/text_doc.html:20
+msgid "Nouveau document"
+msgstr "新文档"
+
+#: templates/api/docs/text_doc.html:32
+msgid "Créer un nouveau document"
+msgstr "创建新文档"
+
+#: templates/api/messages/new_message.html:2
+msgid "Nouveau message : Afrilog"
+msgstr "新消息：Afrilog"
+
+#: templates/api/messages/new_message.html:16
+#: templates/dashboard/customers/inbox.html:19
+#: templates/dashboard/new_messages.html:16
+#: templates/dashboard/sent_messages.html:16
+msgid "Messages"
+msgstr "消息"
+
+#: templates/api/messages/new_message.html:19
+#: templates/api/messages/new_message.html:31
+msgid "Nouveau message"
+msgstr "新消息"
+
+
+#: templates/auth/layout.html:6
+msgid ""
+"Afrilog, leader dans le domaine du transport et de la logistique, Page de"
+" connexion"
+msgstr ""
+"Afrilog，在运输和物流领域的领导者，连接页面"
+
+#: templates/auth/layout.html:7
+msgid ""
+"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
+"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
+"Marchandises, Commerce, Santé, Défencse, Technologie, \n"
+"    Equipement, MSC, Connexion, Utilisateur, Portail"
+msgstr ""
+"Afrilog，物流，过境，运输，非洲，尼日尔，欧洲，亚洲， \n"
+"    美洲，大洋洲，海洋，航空，陆地，集装箱， "
+"商品，商业，健康，防御，技术， \n"
+"    设备，MSC，连接，用户，门户"
+
+#: templates/auth/layout.html:11 templates/auth/login.html:2
+msgid "Afrilog : Se connecter"
+msgstr "Afrilog：登录"
+
+#: templates/auth/login.html:7 templates/auth/login.html:109
+msgid "Connexion"
+msgstr "连接"
+
+#: templates/auth/login.html:15 templates/auth/login.html:21
+#: templates/auth/signup.html:13 templates/auth/signup.html:18
+#: templates/dashboard/@support_team/applicants_list.html:32
+#: templates/dashboard/@support_team/applicants_list.html:87
+#: templates/dashboard/settings.html:83 templates/main/contact.html:42
+msgid "Adresse E-mail"
+msgstr "电子邮件地址"
+
+#: templates/auth/login.html:46 templates/auth/signup.html:43
+msgid "Adresse e-mail invalide"
+msgstr "无效的电子邮件地址"
+
+#: templates/auth/login.html:50
+msgid "Adresse e-mail incorrect"
+msgstr "电子邮件地址不正确"
+
+#: templates/auth/login.html:54
+msgid "Votre adresse est e-mail est requise"
+msgstr "您的电子邮件地址是必需的"
+
+#: templates/auth/login.html:59
+msgid "Mot de Passe"
+msgstr "密码"
+
+#: templates/auth/login.html:61
+msgid "Mot de passe oublié?"
+msgstr "忘记密码？"
+
+#: templates/auth/login.html:68
+msgid "8 caractères min"
+msgstr "至少8个字符"
+
+#: templates/auth/login.html:97
+msgid "Mot de passe incorrect"
+msgstr "密码不正确"
+
+#: templates/auth/login.html:101
+msgid "Votre mot de passe est requis"
+msgstr "您的密码是必需的"
+
+#: templates/auth/login.html:149
+msgid "Se connecter avec Google"
+msgstr "使用Google登录"
+
+#: templates/auth/login.html:153
+msgid "Vous n'avez pas de compte?"
+msgstr "您还没有帐户吗？"
+
+#: templates/auth/login.html:154
+msgid "Créer un compte ici"
+msgstr "在这里创建帐户"
+
+#: templates/auth/signup.html:2
+msgid "Afrilog : Créer un nouveau compte"
+msgstr "Afrilog：创建新帐户"
+
+#: templates/auth/signup.html:7
+msgid "Créer un nouveau compte"
+msgstr "创建新帐户"
+
+#: templates/auth/signup.html:47
+msgid "Adresse e-mail requise!"
+msgstr "需要电子邮件地址！"
+
+#: templates/auth/signup.html:51
+msgid "Votre compte existe déja!"
+msgstr "您的帐户已存在！"
+
+#: templates/auth/signup.html:56
+msgid "Créer Mot de Passe"
+msgstr "创建密码"
+
+#: templates/auth/signup.html:58
+msgid "Au moins 08 caractères"
+msgstr "至少8个字符"
+
+#: templates/auth/signup.html:65
+msgid "Mot de passe"
+msgstr "密码"
+
+#: templates/auth/signup.html:94
+msgid "Mot de passe requis!"
+msgstr "需要密码！"
+
+#: templates/auth/signup.html:98
+msgid "Un mot de passe doit contenir au moins 08 caractères!"
+msgstr "密码必须至少包含8个字符！"
+
+#: templates/auth/signup.html:103 templates/auth/signup.html:109
+msgid "Confirmer Mot de Passe"
+msgstr "确认密码"
+
+#: templates/auth/signup.html:116
+msgid "Les deux mots de passe ne correspondent pas"
+msgstr "两次输入的密码不一致"
+
+#: templates/auth/signup.html:120
+msgid "Confirmation requise pour continuer!"
+msgstr "需要确认以继续！"
+
+#: templates/auth/signup.html:124
+msgid "En continuant vous aviez lu et accepté nos"
+msgstr "继续，您已阅读并接受我们的"
+
+#: templates/auth/signup.html:124
+msgid "conditions générales d'utilisation."
+msgstr "使用条款和条件。"
+
+#: templates/auth/signup.html:132 templates/main/home.html:66
+msgid "Continuer"
+msgstr "继续"
+
+#: templates/auth/signup.html:172
+msgid "Continuer avec Google"
+msgstr "使用Google继续"
+
+#: templates/auth/signup.html:176
+msgid "Avez-vous déja un compte?"
+msgstr "您已经有一个帐户了吗？"
+
+#: templates/auth/signup.html:177
+msgid "Connectez vous ici"
+msgstr "在这里登录"
+
+#: templates/dashboard/applied_jobs_listing.html:6
+msgid "Postes récents - Afrilog"
+msgstr "最近的职位-Afrilog"
+
+#: templates/dashboard/calculator.html:2
+msgid "Calculatrice : Afrilog"
+msgstr "计算器：Afrilog"
+
+#: templates/dashboard/calculator.html:17
+#: templates/dashboard/calculator.html:25
+#: templates/dashboard/partials/sidebar.html:259
+msgid "Calculatrice"
+msgstr "计算器"
+
+#: templates/dashboard/calculator.html:39
+msgid "Longueur (m)"
+msgstr "长度（米）"
+
+#: templates/dashboard/calculator.html:43
+msgid "Largeur (m)"
+msgstr "宽度（米）"
+
+#: templates/dashboard/calculator.html:47
+msgid "Hauteur (m)"
+msgstr "高度（米）"
+
+#: templates/dashboard/calculator.html:51
+msgid "Type de transport"
+msgstr "运输类型"
+
+#: templates/dashboard/calculator.html:53
+msgid "Transport aérien"
+msgstr "航空运输"
+
+#: templates/dashboard/calculator.html:54
+msgid "Transport maritime"
+msgstr "海洋运输"
+
+#: templates/dashboard/dashboard.html:41
+msgid "MyAfrilog : Dashboard"
+msgstr "MyAfrilog：仪表板"
+
+#: templates/dashboard/jobs_listing.html:2
+msgid "Nouvelles offres d'emploi : Afrilog"
+msgstr "Afrilog的
+
+#: templates/dashboard/calculator.html:17
+#: templates/dashboard/calculator.html:25
+#: templates/dashboard/partials/sidebar.html:259
+msgid "Calculatrice"
+msgstr "计算器"
+
+#: templates/dashboard/calculator.html:39
+msgid "Longueur (m)"
+msgstr "长度（米）"
+
+#: templates/dashboard/calculator.html:43
+msgid "Largeur (m)"
+msgstr "宽度（米）"
+
+#: templates/dashboard/calculator.html:47
+msgid "Hauteur (m)"
+msgstr "高度（米）"
+
+#: templates/dashboard/calculator.html:51
+msgid "Type de transport"
+msgstr "运输类型"
+
+#: templates/dashboard/calculator.html:53
+msgid "Transport aérien"
+msgstr "航空运输"
+
+#: templates/dashboard/calculator.html:54
+msgid "Transport maritime"
+msgstr "海洋运输"
+
+#: templates/dashboard/dashboard.html:41
+msgid "MyAfrilog : Dashboard"
+msgstr "MyAfrilog：仪表板"
+
+#: templates/dashboard/jobs_listing.html:2
+msgid "Nouvelles offres d'emploi : Afrilog"
+msgstr "Afrilog的最新职位"
+
+#: templates/dashboard/jobs_listing.html:20
+msgid "Nouvelles offres"
+msgstr "最新职位"
+
+#: templates/dashboard/jobs_listing.html:28
+msgid "Nouvelles offres d'emploi"
+msgstr "最新职位"
+
+#: templates/dashboard/@support_team/invoices.html:43
+#: templates/dashboard/@support_team/previous_created_jobs.html:39
+#: templates/dashboard/@support_team/previous_notes.html:38
+#: templates/dashboard/@support_team/quotes_list.html:31
+#: templates/dashboard/@support_team/tasks.html:38
+#: templates/dashboard/jobs_listing.html:35 templates/views/invoices.html:43
+msgid "ID"
+msgstr "ID"
+
+#: templates/dashboard/@support_team/previous_created_jobs.html:41
+#: templates/dashboard/@support_team/tasks.html:40
+#: templates/dashboard/jobs_listing.html:37
+msgid "Desc"
+msgstr "描述"
+
+#: templates/dashboard/jobs_listing.html:55
+msgid "postuler"
+msgstr "申请"
+
+#: templates/dashboard/customers/inbox.html:4
+#: templates/dashboard/new_messages.html:2
+msgid "Boîte de réception : Afrilog"
+msgstr "Afrilog的收件箱"
+
+#: templates/dashboard/customers/inbox.html:22
+#: templates/dashboard/new_messages.html:19
+#: templates/dashboard/new_messages.html:27
+msgid "Boîte de réception"
+msgstr "收件箱"
+
+#: templates/dashboard/sent_messages.html:2
+msgid "Messages envoyés : Afrilog"
+msgstr "Afrilog的已发送消息"
+
+#: templates/dashboard/sent_messages.html:19
+#: templates/dashboard/sent_messages.html:27
+msgid "Messages envoyés"
+msgstr "已发送消息"
+
+#: templates/dashboard/partials/sidebar.html:267
+#: templates/dashboard/settings.html:6 templates/dashboard/settings.html:9
+#: templates/dashboard/settings.html:27 templates/dashboard/settings.html:35
+msgid "Paramètres"
+msgstr "设置"
+
+#: templates/dashboard/settings.html:72
+msgid "Nom d'utilisateur"
+msgstr "用户名"
+
+#: templates/dashboard/settings.html:99
+msgid "Adresse Maison"
+msgstr "家庭地址"
+
+#: templates/dashboard/user_home.html:2
+msgid "MyAfrilog : Accueil"
+msgstr "MyAfrilog：首页"
+
+#: templates/dashboard/@support_team/ads.html:2
+msgid "Campagnes pub : Afrilog"
+msgstr "广告活动：Afrilog"
+
+#: templates/dashboard/@support_team/ads.html:14
+#: templates/dashboard/@support_team/ads.html:20
+#: templates/dashboard/partials/sidebar.html:169
+msgid "Ads"
+msgstr "广告"
+
+#: templates/dashboard/@support_team/ads.html:25
+msgid "Créer une nouvelle campagnes"
+msgstr "创建新广告活动"
+
+#: templates/dashboard/@support_team/ads.html:28
+msgid "Trier les campagnes"
+msgstr "分类广告活动"
+
+#: templates/dashboard/@support_team/ads.html:40
+#: templates/dashboard/@support_team/ads.html:92
+#: templates/dashboard/@support_team/ads.html:149
+#: templates/dashboard/@support_team/ads.html:216
+msgid "Débute"
+msgstr "开始于"
+
+#: templates/dashboard/@support_team/ads.html:41
+#: templates/dashboard/@support_team/ads.html:97
+#: templates/dashboard/@support_team/ads.html:153
+#: templates/dashboard/@support_team/ads.html:220
+#: templates/dashboard/@support_team/events.html:48
+msgid "Termine à"
+msgstr "结束于"
+
+#: templates/dashboard/@support_team/ads.html:42
+#: templates/dashboard/@support_team/ads.html:101
+#: templates/dashboard/@support_team/ads.html:157
+#: templates/dashboard/@support_team/ads.html:224
+msgid "Budget Min"
+msgstr "最低预算"
+
+#: templates/dashboard/@support_team/ads.html:43
+#: templates/dashboard/@support_team/ads.html:105
+#: templates/dashboard/@support_team/ads.html:161
+#: templates/dashboard/@support_team/ads.html:228
+msgid "Budget Max"
+msgstr "最高预算"
+
+#: templates/dashboard/@support_team/ads.html:44
+#: templates/dashboard/@support_team/applicants_list.html:35
+#: templates/dashboard/@support_team/applicants_list.html:48
+#: templates/dashboard/@support_team/employees_listing.html:32
+#: templates/dashboard/@support_team/employees_listing.html:63
+#: templates/dashboard/@support_team/invoices.html:46
+#: templates/dashboard/@support_team/my_task.html:43
+#: templates/dashboard/@support_team/previous_created_jobs.html:45
+#: templates/dashboard/@support_team/previous_created_jobs.html:60
+#: templates/dashboard/@support_team/previous_notes.html:42
+#: templates/dashboard/@support_team/quotes_list.html:34
+#: templates/dashboard/@support_team/tasks.html:42
+#: templates/dashboard/customers/previous_quotes.html:58
+msgid "Options"
+msgstr "选项"
+
+#: templates/dashboard/@support_team/ads.html:57
+#: templates/dashboard/@support_team/invoices.html:62
+#: templates/dashboard/@support_team/quotes_list.html:50
+#: templates/dashboard/customers/previous_purchase_requests.html:59
+#: templates/dashboard/customers/previous_quotes.html:63
+msgid "Voir les détails"
+msgstr "查看详情"
+
+#: templates/dashboard/@support_team/ads.html:60
+#: templates/dashboard/@support_team/invoices.html:65
+#: templates/dashboard/@support_team/previous_created_jobs.html:65
+#: templates/dashboard/@support_team/previous_notes.html:66
+#: templates/dashboard/@support_team/quotes_list.html:53
+#: templates/dashboard/@support_team/tasks.html:66
+#: templates/dashboard/customers/previous_quotes.html:68
+msgid "Modifier"
+msgstr "修改"
+
+#: templates/dashboard/@support_team/ads.html:63
+#: templates/dashboard/@support_team/applicants_list.html:61
+#: templates/dashboard/@support_team/invoices.html:70
+#: templates/dashboard/@support_team/new_purchases.html:56
+#: templates/dashboard/@support_team/previous_created_jobs.html:70
+#: templates/dashboard/@support_team/previous_notes.html:71
+#: templates/dashboard/@support_team/quotes_list.html:58
+#: templates/dashboard/@support_team/tasks.html:71
+#: templates/dashboard/customers/previous_purchase_requests.html:61
+#: templates/dashboard/customers/previous_quotes.html:73
+msgid "Supprimer"
+msgstr "删除"
+
+#: templates/dashboard/@support_team/ads.html:73
+msgid "Détails de la campagne"
+msgstr "广告活动详情"
+
+#: templates/dashboard/@support_team/ads.html:88
+#: templates/dashboard/@support_team/ads.html:145
+#: templates/dashboard/@support_team/ads.html:212
+msgid "Objectifs"
+msgstr "目标"
+
+#: templates/dashboard/@support_team/ads.html:109
+#: templates/dashboard/@support_team/ads.html:165
+#: templates/dashboard/@support_team/ads.html:232
+msgid "Dette"
+msgstr "债务"
+
+#: templates/dashboard/@support_team/ads.html:114
+msgid "Temps restant"
+msgstr "剩余时间"
+
+#: templates/dashboard/@support_team/ads.html:129
+msgid "Modifier les détails de la campagne"
+msgstr "修改广告活动详情"
+
+#: templates/dashboard/@support_team/ads.html:173
+msgid "Sauvegarder"
+msgstr "保存"
+
+#: templates/dashboard/@support_team/ads.html:196
+#: templates/dashboard/@support_team/empty/no_Ads.html:12
+msgid "Créer une nouvelle campagne"
+msgstr "创建新广告活动"
+
+#: templates/dashboard/@support_team/ads.html:205
+msgid "Campagne N°1"
+msgstr "广告活动 #1"
+
+#: templates/dashboard/@support_team/ads.html:209
+msgid "Entrez la description de la campagne..."
+msgstr "输入广告活动描述..."
+
+#: templates/dashboard/@support_team/ads.html:213
+msgid "Entrez les objectifs de la campagne..."
+msgstr "输入广告活动目标..."
+
+#: templates/dashboard/@support_team/applicant_desc.html:6
+#: templates/dashboard/@support_team/quote_desc.html:6
+msgid " - Afrilog"
+msgstr " - Afrilog"
+
+#: templates/dashboard/@support_team/applicants_list.html:4
+msgid "Applications Récentes : Afrilog"
+msgstr "最近申请：Afrilog"
+
+#: templates/dashboard/@support_team/applicants_list.html:7
+msgid "Applications Récentes"
+msgstr "最近申请"
+
+#: templates/dashboard/@support_team/applicants_list.html:12
+msgid "Sélectionner un Poste"
+msgstr "选择一个职位"
+
+#: templates/dashboard/@support_team/applicants_list.html:14
+msgid "Choisir un Poste"
+msgstr "选择一个职位"
+
+#: templates/dashboard/@support_team/applicants_list.html:31
+msgid "Nom du Candidat"
+msgstr "候选人姓名"
+
+#: templates/dashboard/@support_team/applicants_list.html:33
+#: templates/dashboard/@support_team/applicants_list.html:91
+msgid "Localisation"
+msgstr "位置"
+
+#: templates/dashboard/@support_team/applicants_list.html:34
+msgid "Date de Candidature"
+msgstr "申请日期"
+
+#: templates/dashboard/@support_team/applicants_list.html:54
+#: templates/dashboard/@support_team/employees_listing.html:68
+#: templates/main/cgu.html:164
+msgid "Voir plus"
+msgstr "查看更多"
+
+#: templates/dashboard/@support_team/applicants_list.html:107
+msgid "Accepter"
+msgstr "接受"
+
+#: templates/dashboard/@support_team/applicants_list.html:110
+msgid "Rejeter"
+msgstr "拒绝"
+
+#: templates/dashboard/@support_team/applicants_list.html:114
+msgid "Imprimer fichier"
+msgstr "打印文件"
+
+#: templates/dashboard/@support_team/authorizations_listing.html:6
+msgid "Procurations récentes - Afrilog"
+msgstr "最近授权 - Afrilog"
+
+#: templates/dashboard/@support_team/calendar.html:3
+msgid "Calendrier : Afrilog"
+msgstr "日历：Afrilog"
+
+#: templates/dashboard/@support_team/calendar.html:17
+#: templates/dashboard/@support_team/calendar.html:22
+#: templates/dashboard/partials/sidebar.html:35
+msgid "Calendrier"
+msgstr "日历"
+
+#: templates/dashboard/@support_team/employees_listing.html:2
+msgid "Table des employés : Afrilog"
+msgstr "员工表：Afrilog"
+
+#: templates/dashboard/@support_team/employees_listing.html:16
+#: templates/dashboard/@support_team/employees_listing.html:21
+#: templates/dashboard/partials/sidebar.html:238
+msgid "Table des employés"
+msgstr "员工表"
+
+#: templates/dashboard/@support_team/employees_listing.html:28
+msgid "Nom & Prénom"
+msgstr "姓名"
+
+#: templates/dashboard/@support_team/employees_listing.html:30
+msgid "Matricule/Identifiant"
+msgstr "工号/标识符"
+
+#: templates/dashboard/@support_team/employees_listing.html:31
+msgid "Depuis"
+msgstr "从"
+
+
+#: templates/dashboard/@support_team/employees_listing.html:118
+msgid "Imprimer carte"
+msgstr "打印卡片"
+
+#: templates/dashboard/@support_team/events.html:3
+msgid "Réunions : Afrilog"
+msgstr "会议：Afrilog"
+
+#: templates/dashboard/@support_team/events.html:17
+#: templates/dashboard/@support_team/events.html:22
+#: templates/dashboard/partials/sidebar.html:158
+msgid "Meets"
+msgstr "会议"
+
+#: templates/dashboard/@support_team/events.html:33
+msgid "Ajouter un événement"
+msgstr "添加事件"
+
+#: templates/dashboard/@support_team/finance_reports.html:4
+msgid "Rapport financier : Afrilog"
+msgstr "财务报告：Afrilog"
+
+#: templates/dashboard/@support_team/finance_reports.html:20
+#: templates/dashboard/@support_team/marketplace.html:20
+msgid "Rapports"
+msgstr "报告"
+
+#: templates/dashboard/@support_team/finance_reports.html:23
+msgid "Rapport financier"
+msgstr "财务报告"
+
+#: templates/dashboard/@support_team/invoices.html:3
+msgid "Factures : Afrilog"
+msgstr "发票：Afrilog"
+
+#: templates/dashboard/@support_team/invoices.html:17
+#: templates/dashboard/@support_team/invoices.html:23
+#: templates/dashboard/partials/sidebar.html:116
+#: templates/views/invoices.html:7
+msgid "Factures"
+msgstr "发票"
+
+#: templates/dashboard/@support_team/invoices.html:45
+#: templates/dashboard/@support_team/invoices.html:100
+#: templates/dashboard/@support_team/invoices.html:133
+#: templates/dashboard/@support_team/invoices.html:176
+#: templates/views/invoices.html:45
+msgid "Montant"
+msgstr "金额"
+
+#: templates/dashboard/@support_team/invoices.html:58
+#: templates/dashboard/@support_team/new_purchases.html:34
+#: templates/dashboard/@support_team/new_purchases.html:47
+#: templates/dashboard/@support_team/quotes_list.html:46
+#: templates/dashboard/customers/previous_purchase_requests.html:37
+#: templates/dashboard/customers/previous_purchase_requests.html:56
+#: templates/dashboard/customers/previous_quotes.html:39
+msgid "Actions"
+msgstr "操作"
+
+#: templates/dashboard/@support_team/invoices.html:80
+msgid "Détails de la facture"
+msgstr "发票详情"
+
+#: templates/dashboard/@support_team/invoices.html:90
+msgid "Titre non spécifié"
+msgstr "未指定标题"
+
+#: templates/dashboard/@support_team/invoices.html:94
+msgid "Description non disponible"
+msgstr "描述不可用"
+
+#: templates/dashboard/@support_team/invoices.html:101
+msgid "Montant non spécifié"
+msgstr "未指定金额"
+
+#: templates/dashboard/@support_team/invoices.html:116
+msgid "Modifier la facture"
+msgstr "编辑发票"
+
+#: templates/dashboard/@support_team/invoices.html:126
+msgid "Veuillez entrer le titre de la facture"
+msgstr "请输入发票标题"
+
+#: templates/dashboard/@support_team/invoices.html:135
+msgid "Veuillez entrer le montant de la facture"
+msgstr "请输入发票金额"
+
+#: templates/dashboard/@support_team/invoices.html:136
+msgid "Veuillez entrer un montant valide"
+msgstr "请输入有效的金额"
+
+#: templates/dashboard/@support_team/invoices.html:159
+msgid "Créer une nouvelle facture"
+msgstr "创建新发票"
+
+#: templates/dashboard/@support_team/invoices.html:168
+msgid "Nouveau moniteur"
+msgstr "新监视器"
+
+#: templates/dashboard/@support_team/invoices.html:173
+msgid "Ajouter une description supplémentaire"
+msgstr "添加附加描述"
+
+#: templates/dashboard/@support_team/job_details.html:6
+msgid "- Afrilog"
+msgstr "- Afrilog"
+
+#: templates/dashboard/@support_team/marketplace.html:4
+msgid "Marketplace : Afrilog"
+msgstr "市场：Afrilog"
+
+#: templates/dashboard/@support_team/marketplace.html:23
+msgid "Marketplace"
+msgstr "市场"
+
+#: templates/dashboard/@support_team/my_task.html:2
+msgid "Mes tâches : Afrilog"
+msgstr "我的任务：Afrilog"
+
+#: templates/dashboard/@support_team/my_task.html:14
+#: templates/dashboard/@support_team/my_task.html:20
+#: templates/dashboard/partials/sidebar.html:46
+msgid "Mes tâches"
+msgstr "我的任务"
+
+#: templates/dashboard/@support_team/my_task.html:40
+#: templates/dashboard/@support_team/new_purchases.html:33
+#: templates/dashboard/@support_team/tasks.html:41
+#: templates/dashboard/customers/previous_quotes.html:38
+msgid "Statut"
+msgstr "状态"
+
+#: templates/dashboard/@support_team/my_task.html:42
+#: templates/dashboard/@support_team/tasks.html:111
+#: templates/dashboard/@support_team/tasks.html:160
+msgid "Assigné à"
+msgstr "分配给"
+
+#: templates/dashboard/@support_team/new_purchases.html:3
+msgid "Nouveaux achats : Afrilog"
+msgstr "新采购：Afrilog"
+
+#: templates/dashboard/@support_team/new_purchases.html:16
+msgid "Nouveaux achats"
+msgstr "新采购"
+
+#: templates/dashboard/@support_team/new_purchases.html:22
+msgid "Nouveaux Achats"
+msgstr "新采购"
+
+#: templates/dashboard/@support_team/new_purchases.html:31
+msgid "Auteur"
+msgstr "作者"
+
+#: templates/dashboard/@support_team/new_purchases.html:43
+msgid "Répondu"
+msgstr "已回复"
+
+#: templates/dashboard/@support_team/new_purchases.html:43
+msgid "En attente"
+msgstr "待定"
+
+#: templates/dashboard/@support_team/new_purchases.html:50
+msgid "Voir détails"
+msgstr "查看详情"
+
+#: templates/dashboard/@support_team/new_purchases.html:51
+msgid "Répondre"
+msgstr "回复"
+
+#: templates/dashboard/@support_team/new_purchases.html:67
+msgid "Détails de l'achat"
+msgstr "采购详情"
+
+#: templates/dashboard/@support_team/new_purchases.html:80
+#: templates/dashboard/customers/previous_purchase_requests.html:157
+msgid "Adresse de l'auteur"
+msgstr "作者地址"
+
+#: templates/dashboard/@support_team/new_purchases.html:90
+#: templates/dashboard/customers/previous_purchase_requests.html:147
+msgid "Adresse e-mail de l'auteur"
+msgstr "作者电子邮件地址"
+
+#: templates/dashboard/@support_team/new_purchases.html:94
+msgid "Dimensions du produit"
+msgstr "产品尺寸"
+
+#: templates/dashboard/@support_team/new_purchases.html:120
+msgid "Répondre à"
+msgstr "回复给"
+
+#: templates/dashboard/@support_team/new_purchases.html:131
+msgid "De"
+msgstr "从"
+
+#: templates/dashboard/@support_team/new_purchases.html:135
+msgid "A"
+msgstr "至"
+
+#: templates/dashboard/@support_team/new_purchases.html:139
+#: templates/main/contact.html:59
+msgid "Message"
+msgstr "消息"
+
+#: templates/dashboard/@support_team/new_purchases.html:140
+msgid "Ecrire quelque chose..."
+msgstr "写点什么..."
+
+#: templates/dashboard/@support_team/new_purchases.html:143
+msgid "Télécharger des fichiers"
+msgstr "下载文件"
+
+#: templates/dashboard/@support_team/new_purchases.html:147
+msgid "Liens utiles"
+msgstr "有用链接"
+
+#: templates/dashboard/@support_team/previous_created_jobs.html:4
+msgid "Offres publiées : Afrilog"
+msgstr "已发布的职位：Afrilog"
+
+#: templates/dashboard/@support_team/previous_created_jobs.html:24
+#: templates/dashboard/@support_team/previous_created_jobs.html:32
+msgid "Offres publiées"
+msgstr "已发布的职位"
+
+#: templates/dashboard/@support_team/previous_notes.html:4
+msgid "Notes récentes : Afrilog"
+msgstr "最近的备注：Afrilog"
+
+#: templates/dashboard/@support_team/previous_notes.html:23
+#: templates/dashboard/@support_team/previous_notes.html:31
+#: templates/dashboard/partials/sidebar.html:203
+msgid "Notes récentes"
+msgstr "最近的备注"
+
+#: templates/dashboard/@support_team/previous_notes.html:41
+msgid "Type"
+msgstr "类型"
+
+#: templates/dashboard/@support_team/previous_notes.html:90
+msgid "Modifier la note"
+msgstr "编辑备注"
+
+
+#: templates/dashboard/@support_team/previous_notes.html:98
+msgid "Veuillez donner un titre à votre note"
+msgstr "请为您的备注提供一个标题"
+
+#: templates/dashboard/@support_team/previous_notes.html:108
+msgid "Avertissement"
+msgstr "警告"
+
+#: templates/dashboard/@support_team/previous_notes.html:109
+msgid "Information"
+msgstr "信息"
+
+#: templates/dashboard/@support_team/previous_notes.html:115
+msgid "Annuler"
+msgstr "取消"
+
+#: templates/dashboard/@support_team/previous_notes.html:117
+msgid "Mettre à jour"
+msgstr "更新"
+
+#: templates/dashboard/@support_team/quotes_list.html:4
+msgid "Demandes de procurations : Afrilog"
+msgstr "采购申请：Afrilog"
+
+#: templates/dashboard/@support_team/quotes_list.html:18
+msgid "Demandes de procurations"
+msgstr "采购申请"
+
+#: templates/dashboard/@support_team/quotes_list.html:24
+msgid "Demandes de devis"
+msgstr "报价申请"
+
+#: templates/dashboard/@support_team/quotes_list.html:32
+#: templates/dashboard/@support_team/quotes_list.html:81
+#: templates/dashboard/@support_team/quotes_list.html:132
+#: templates/dashboard/customers/previous_quotes.html:176
+msgid "Nom du client"
+msgstr "客户姓名"
+
+#: templates/dashboard/@support_team/quotes_list.html:33
+#: templates/dashboard/@support_team/quotes_list.html:95
+#: templates/dashboard/@support_team/quotes_list.html:144
+msgid "Titre de la compagnie de transport"
+msgstr "运输公司名称"
+
+#: templates/dashboard/@support_team/quotes_list.html:68
+msgid "Détails de la demande de devis"
+msgstr "报价申请详情"
+
+#: templates/dashboard/@support_team/quotes_list.html:77
+#: templates/dashboard/@support_team/quotes_list.html:128
+#: templates/dashboard/customers/previous_quotes.html:172
+msgid "Prénom du client"
+msgstr "客户名字"
+
+#: templates/dashboard/@support_team/quotes_list.html:85
+#: templates/dashboard/@support_team/quotes_list.html:136
+msgid "Numéro de téléphone du client"
+msgstr "客户电话号码"
+
+#: templates/dashboard/@support_team/quotes_list.html:89
+#: templates/dashboard/@support_team/quotes_list.html:140
+msgid "Adresse e-mail du client"
+msgstr "客户电子邮件地址"
+
+#: templates/dashboard/@support_team/quotes_list.html:99
+#: templates/dashboard/@support_team/quotes_list.html:148
+msgid "Identifiant des documents de chargement"
+msgstr "货物装载文档标识符"
+
+#: templates/dashboard/@support_team/quotes_list.html:103
+#: templates/dashboard/@support_team/quotes_list.html:152
+msgid "Frais de service"
+msgstr "服务费用"
+
+#: templates/dashboard/@support_team/quotes_list.html:120
+msgid "Modifier la demande de devis"
+msgstr "编辑报价申请"
+
+#: templates/dashboard/@support_team/tasks.html:3
+msgid "Tâches : Afrilog"
+msgstr "任务：Afrilog"
+
+#: templates/dashboard/@support_team/tasks.html:15
+#: templates/dashboard/@support_team/tasks.html:19
+#: templates/dashboard/partials/sidebar.html:150
+msgid "Tâches"
+msgstr "任务"
+
+#: templates/dashboard/@support_team/tasks.html:53
+#: templates/dashboard/customers/previous_quotes.html:52
+msgid "En cours"
+msgstr "进行中"
+
+#: templates/dashboard/@support_team/tasks.html:55
+msgid "Effectuée"
+msgstr "已完成"
+
+#: templates/dashboard/@support_team/tasks.html:92
+msgid "Ajouter une nouvelle tâche"
+msgstr "添加新任务"
+
+#: templates/dashboard/@support_team/tasks.html:102
+msgid "Analyse concurrentielle"
+msgstr "竞争分析"
+
+#: templates/dashboard/@support_team/tasks.html:103
+#: templates/dashboard/@support_team/tasks.html:152
+msgid "Veuillez entrer le titre de la tâche pour continuer"
+msgstr "请输入任务标题以继续"
+
+#: templates/dashboard/@support_team/tasks.html:107
+msgid "Etudier les stratégies mises en place..."
+msgstr "研究已经制定的策略..."
+
+#: templates/dashboard/@support_team/tasks.html:108
+#: templates/dashboard/@support_team/tasks.html:157
+msgid "Veuillez décrire brièvement la tâche pour continuer"
+msgstr "请简要描述任务以继续"
+
+#: templates/dashboard/@support_team/tasks.html:118
+#: templates/dashboard/@support_team/tasks.html:167
+msgid "Aucun agent trouvé"
+msgstr "未找到任何代理"
+
+#: templates/dashboard/@support_team/tasks.html:121
+#: templates/dashboard/@support_team/tasks.html:170
+msgid "Veuillez assigner cette tâche à un agent pour continuer"
+msgstr "请将此任务分配给代理以继续"
+
+#: templates/dashboard/@support_team/tasks.html:142
+msgid "Modifier la tâche"
+msgstr "编辑任务"
+
+#: templates/dashboard/@support_team/empty/no_Ads.html:2
+msgid "Aucune campagne commencé"
+msgstr "尚未开始任何广告活动"
+
+#: templates/dashboard/@support_team/empty/no_Ads.html:3
+msgid "Aucune campagne disponible"
+msgstr "没有可用的广告活动"
+
+#: templates/dashboard/@support_team/empty/no_Ads.html:6
+msgid ""
+"Ici vous pouvez gérer les campagnes publicitaires plus efficacement avec "
+"de puissants outils d'analyse de données"
+msgstr "您可以使用强大的数据分析工具更有效地管理广告活动"
+
+#: templates/dashboard/@support_team/empty/no_application.html:2
+#: templates/dashboard/@support_team/empty/no_application.html:3
+msgid "Aucune candidature à afficher"
+msgstr "没有申请可显示"
+
+#: templates/dashboard/@support_team/empty/no_application.html:6
+msgid "Aucune demande d'emploi disponible pour cette offre"
+msgstr "此职位没有可用的工作申请"
+
+#: templates/dashboard/@support_team/empty/no_employee.html:2
+#: templates/dashboard/@support_team/empty/no_employee.html:3
+msgid "Aucun employé à afficher"
+msgstr "没有员工可显示"
+
+#: templates/dashboard/@support_team/empty/no_employee.html:6
+msgid "Les employés vont s'afficher automatiquement ici"
+msgstr "员工将自动显示在此处"
+
+#: templates/dashboard/@support_team/empty/no_job.html:6
+msgid "Aucun emploi trouvé - Afrilog"
+msgstr "找不到职位 - Afrilog"
+
+#: templates/dashboard/@support_team/empty/no_purchase.html:2
+msgid "Aucune achat effectué"
+msgstr "没有购买记录"
+
+#: templates/dashboard/@support_team/empty/no_purchase.html:3
+#: templates/dashboard/customers/empty/no_purchase.html:2
+msgid "Aucun achat effectué"
+msgstr "没有进行过任何购买"
+
+#: templates/dashboard/@support_team/empty/no_purchase.html:6
+msgid "Aucun achat n'a été effectué pour le moment"
+msgstr "目前尚未进行任何购买"
+
+#: templates/dashboard/@support_team/empty/no_quote.html:3
+#: templates/dashboard/customers/empty/no_quote.html:3
+msgid "Aucune demande de procuration"
+msgstr "没有采购申请"
+
+#: templates/dashboard/@support_team/empty/no_quote.html:6
+#: templates/dashboard/customers/empty/no_quote.html:6
+msgid "Aucune demande de procuration effectuée pour le moment"
+msgstr "目前尚未进行任何采购申请"
+
+#: templates/dashboard/@support_team/empty/no_tasks.html:2
+msgid "Aucune tâche assignée"
+msgstr "没有分配任务"
+
+#: templates/dashboard/@support_team/empty/no_tasks.html:3
+msgid "Aucune tâche ne vous a été assignée"
+msgstr "您尚未分配任何任务"
+
+#: templates/dashboard/@support_team/empty/no_tasks.html:6
+msgid "Ici vous pouvez gérer et organiser les tâches qu'on vous aura assigné."
+msgstr "在这里，您可以管理和组织分配给您的任务。"
+
+#: templates/dashboard/customers/live_tracking.html:4
+msgid "Suivre mon colis : Afrilog"
+msgstr "跟踪我的包裹：Afrilog"
+
+#: templates/dashboard/customers/live_tracking.html:23
+#: templates/dashboard/customers/live_tracking.html:30
+msgid "Suivre mon colis"
+msgstr "跟踪我的包裹"
+
+#: templates/dashboard/customers/live_tracking.html:36
+#: templates/main/pricing.html:308 templates/main/sea.html:144
+msgid "Port de départ"
+msgstr "出发港口"
+
+#: templates/dashboard/customers/live_tracking.html:37
+msgid "Entrer le port de départ"
+msgstr "输入出发港口"
+
+#: templates/dashboard/customers/live_tracking.html:42
+msgid "Port de destination"
+msgstr "目的地港口"
+
+#: templates/dashboard/customers/live_tracking.html:43
+msgid "Entrer le port de destination"
+msgstr "输入目的地港口"
+
+#: templates/dashboard/customers/live_tracking.html:47
+msgid "Sélectionner un achat"
+msgstr "选择一个购买"
+
+#: templates/dashboard/customers/live_tracking.html:48
+msgid "Tapez pour rechercher"
+msgstr "输入以搜索"
+
+#: templates/dashboard/customers/live_tracking.html:50
+msgid "Aucun achat trouvé"
+msgstr "找不到任何购买记录"
+
+#: templates/dashboard/customers/live_tracking.html:73
+msgid "Suivre"
+msgstr "跟踪"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:2
+msgid "Commandes récentes : Afrilog"
+msgstr "最近的订单：Afrilog"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:19
+#: templates/dashboard/customers/previous_purchase_requests.html:26
+msgid "Commandes récentes"
+msgstr "最近的订单"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:34
+#: templates/dashboard/customers/previous_purchase_requests.html:115
+msgid "Token"
+msgstr "令牌"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:35
+#: templates/dashboard/customers/previous_purchase_requests.html:121
+msgid "Status"
+msgstr "状态"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:36
+#: templates/dashboard/customers/previous_quotes.html:37
+#: templates/dashboard/customers/previous_quotes.html:136
+msgid "Date"
+msgstr "日期"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:47
+msgid "en cours..."
+msgstr "进行中..."
+
+#: templates/dashboard/customers/previous_purchase_requests.html:49
+msgid "reçu..."
+msgstr "已收到..."
+
+#: templates/dashboard/customers/previous_purchase_requests.html:80
+msgid "Détails de la commande"
+msgstr "订单详情"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:125
+msgid "Date de création"
+msgstr "创建日期"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:137
+msgid "Prénom de l'auteur"
+msgstr "作者名字"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:141
+msgid "Nom de l'auteur"
+msgstr "作者姓名"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:151
+msgid "Numéro de téléphone de l'auteur"
+msgstr "作者电话号码"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:161
+msgid "Pays de l'auteur"
+msgstr "作者国家"
+
+#: templates/dashboard/customers/previous_purchase_requests.html:167
+msgid "QR Code"
+msgstr "二维码"
+
+#: templates/dashboard/customers/previous_quotes.html:2
+msgid "Demandes récentes : Afrilog"
+msgstr "最近的请求：Afrilog"
+
+#: templates/dashboard/customers/previous_quotes.html:16
+msgid "Demandes"
+msgstr "请求"
+
+#: templates/dashboard/customers/previous_quotes.html:19
+#: templates/dashboard/customers/previous_quotes.html:27
+#: templates/dashboard/partials/sidebar.html:65
+msgid "Demandes récentes"
+msgstr "最近的请求"
+
+#: templates/dashboard/customers/previous_quotes.html:35
+msgid "Client"
+msgstr "客户"
+
+#: templates/dashboard/customers/previous_quotes.html:36
+#: templates/dashboard/customers/previous_quotes.html:114
+#: templates/dashboard/customers/previous_quotes.html:188
+msgid "Lading Number"
+msgstr "提单号"
+
+#: templates/dashboard/customers/previous_quotes.html:50
+msgid "Accordé"
+msgstr "批准"
+
+#: templates/dashboard/customers/previous_quotes.html:85
+msgid "Details de la demande"
+msgstr "请求详情"
+
+#: templates/dashboard/customers/previous_quotes.html:94
+msgid "Nom complet du client"
+msgstr "客户全名"
+
+#: templates/dashboard/customers/previous_quotes.html:100
+#: templates/dashboard/customers/previous_quotes.html:180
+msgid "Numéro de Téléphone"
+msgstr "电话号码"
+
+#: templates/dashboard/customers/previous_quotes.html:108
+#: templates/dashboard/customers/previous_quotes.html:184
+msgid "Pays"
+msgstr "国家"
+
+#: templates/dashboard/customers/previous_quotes.html:122
+msgid "Nom complet du transitaire"
+msgstr "承运人全名"
+
+#: templates/dashboard/customers/previous_quotes.html:128
+msgid "Nom du transitaire"
+msgstr "承运人名称"
+
+#: templates/dashboard/customers/previous_quotes.html:142
+msgid "Signature"
+msgstr "签名"
+
+#: templates/dashboard/customers/previous_quotes.html:196
+msgid "Nom du transitaire"
+msgstr "承运人名称"
+
+#: templates/dashboard/customers/previous_quotes.html:204
+msgid "Signature du client"
+msgstr "客户签名"
+
+#: templates/dashboard/customers/previous_quotes.html:208
+msgid "Carte d'identité du client"
+msgstr "客户身份证"
+
+#: templates/dashboard/customers/saved_jobs_listing.html:6
+msgid "Postes Sauvegardés - Afrilog"
+msgstr "已保存职位 - Afrilog"
+
+#: templates/dashboard/customers/tracked_goods_listing.html:6
+msgid "Liste des colis que vous suivez en temps réel - Afrilog"
+msgstr "您实时跟踪的包裹列表 - Afrilog"
+
+#: templates/dashboard/customers/empty/no_application.html:6
+msgid "Aucune procuration octroyée - Afrilog"
+msgstr "没有授权 - Afrilog"
+
+#: templates/dashboard/customers/empty/no_job.html:6
+msgid "Aucun poste trouvée - Afrilog"
+msgstr "找不到职位 - Afrilog"
+
+#: templates/dashboard/customers/empty/no_purchase.html:3
+msgid "Aucun achat effectué pour le moment"
+msgstr "目前没有购买记录"
+
+#: templates/dashboard/customers/empty/no_purchase.html:6
+msgid "Les achats que vous effectuerez vont tous s'afficher ici"
+msgstr "您的所有购买记录将显示在这里"
+
+#: templates/dashboard/customers/empty/no_purchase.html:12
+#: templates/dashboard/customers/empty/no_quote.html:12
+#: templates/includes/footer.html:46
+msgid "Commencer"
+msgstr "开始"
+
+#: templates/dashboard/customers/empty/no_tracked_good.html:6
+msgid "Aucun coli suivi - Afrilog"
+msgstr "没有跟踪的包裹 - Afrilog"
+
+#: templates/dashboard/empty/no_invoice.html:2
+#: templates/dashboard/empty/no_sent_messages.html:2
+msgid "Aucun email à afficher image"
+msgstr "没有邮件可显示图像"
+
+#: templates/dashboard/empty/no_invoice.html:3
+msgid "Aucune facture à afficher"
+msgstr "没有可显示的发票"
+
+#: templates/dashboard/empty/no_invoice.html:6
+msgid "Vos factures vont s'afficher ici"
+msgstr "您的发票将显示在这里"
+
+#: templates/dashboard/empty/no_job.html:3
+msgid "Aucune offre disponible"
+msgstr "没有可用的职位"
+
+#: templates/dashboard/empty/no_job.html:6
+msgid "Aucune offre d'emploi disponible pour le moment"
+msgstr "目前没有可用的职位"
+
+#: templates/dashboard/empty/no_sent_messages.html:3
+msgid "Aucun message à afficher"
+msgstr "没有可显示的消息"
+
+#: templates/dashboard/empty/no_sent_messages.html:6
+msgid "Vos messages vont s'afficher ici"
+msgstr "您的消息将显示在这里"
+
+#: templates/dashboard/empty/no_task.html:2
+msgid "Aucune tâche à afficher image"
+msgstr "没有可显示的任务图像"
+
+#: templates/dashboard/empty/no_task.html:3
+msgid "Aucune tâche à afficher"
+msgstr "没有可显示的任务"
+
+#: templates/dashboard/empty/no_task.html:6
+msgid "Les tâches que vous assignerez seront affichées ici"
+msgstr "您分配的任务将显示在这里"
+
+#: templates/dashboard/partials/navigation.html:12
+msgid "Taper quelque chose..."
+msgstr "输入内容..."
+
+#: templates/dashboard/partials/navigation.html:20
+#: templates/dashboard/partials/sidebar.html:276
+msgid "Se déconnecter"
+msgstr "退出登录"
+
+#: templates/dashboard/partials/sidebar.html:27
+msgid "Nouvelle demandes"
+msgstr "新请求"
+
+#: templates/dashboard/partials/sidebar.html:57
+msgid "Créer une demande"
+msgstr "创建请求"
+
+#: templates/dashboard/partials/sidebar.html:73
+msgid "Mes achats"
+msgstr "我的购买记录"
+
+#: templates/dashboard/partials/sidebar.html:82
+msgid "Nouveau achat"
+msgstr "新购买"
+
+#: templates/dashboard/partials/sidebar.html:90
+msgid "Achats récents"
+msgstr "最近的购买记录"
+
+#: templates/dashboard/partials/sidebar.html:98
+msgid "Suivre mon produit"
+msgstr "跟踪我的产品"
+
+#: templates/dashboard/partials/sidebar.html:132
+msgid "Text"
+msgstr "文本"
+
+#: templates/dashboard/partials/sidebar.html:137
+msgid "Xlsx"
+msgstr "Xlsx"
+
+#: templates/dashboard/partials/sidebar.html:180
+msgid "Achats"
+msgstr "购买记录"
+
+#: templates/dashboard/partials/sidebar.html:198
+msgid "Ajouter une note"
+msgstr "添加备注"
+
+#: templates/dashboard/partials/sidebar.html:228
+msgid "Offres récentes"
+msgstr "最近的职位"
+
+#: templates/dashboard/partials/sidebar.html:233
+msgid "Applications récentes"
+msgstr "最近的申请"
+
+#: templates/dashboard/partials/sidebar.html:246
+msgid "Toutes les offres"
+msgstr "所有职位"
+
+#: templates/errors/403.html:8
+msgid "Vous n'avez pas les droits pour accéder à cette page"
+msgstr "您没有权限访问此页面"
+
+#: templates/errors/403.html:12 templates/errors/404.html:12
+msgid "Retour"
+msgstr "返回"
+
+#: templates/errors/403.html:15 templates/errors/404.html:15
+msgid "Demander de l'aide"
+msgstr "请求帮助"
+
+#: templates/errors/404.html:6
+msgid "Page Introuvable"
+msgstr "页面未找到"
+
+#: templates/errors/404.html:8
+msgid "Désolé nous n'avons pas trouvé cette page"
+msgstr "抱歉，我们找不到这个页面"
+
+#: templates/includes/footer.html:13 templates/includes/header.html:112
+msgid "A propos"
+msgstr "关于"
+
+#: templates/includes/footer.html:16 templates/includes/header.html:109
+msgid "Tarifs"
+msgstr "价格"
+
+#: templates/includes/footer.html:22
+msgid "Produits"
+msgstr "产品"
+
+#: templates/includes/footer.html:25
+msgid "MyAfrilog"
+msgstr "我的Afrilog"
+
+#: templates/includes/footer.html:28
+msgid "Fret Aérien"
+msgstr "空运货物"
+
+#: templates/includes/footer.html:31
+msgid "Fret Maritime"
+msgstr "海运货物"
+
+#: templates/includes/footer.html:34 templates/main/terrestre.html:46
+msgid "Fret Terrestre"
+msgstr "陆运货物"
+
+#: templates/includes/footer.html:40
+msgid "Ressources"
+msgstr "资源"
+
+#: templates/includes/footer.html:49
+msgid "Documentation"
+msgstr "文档"
+
+#: templates/includes/footer.html:52
+msgid "Guide Utilisateur"
+msgstr "用户指南"
+
+#: templates/includes/footer.html:58
+msgid "Aide"
+msgstr "帮助"
+
+#: templates/includes/footer.html:61
+msgid "Service client"
+msgstr "客户服务"
+
+#: templates/includes/footer.html:64
+msgid "Cookies"
+msgstr "Cookies"
+
+#: templates/includes/footer.html:67
+msgid "License"
+msgstr "许可证"
+
+#: templates/includes/footer.html:70
+msgid "Termes et conditions"
+msgstr "条款和条件"
+
+#: templates/includes/footer.html:73 templates/main/cgu.html:34
+msgid "Politique de confidentialité"
+msgstr "隐私政策"
+
+#: templates/includes/footer.html:84
+msgid "Tous droits réservés"
+msgstr "保留所有权利"
+
+#: templates/includes/header.html:21
+msgid "Partenaires"
+msgstr "合作伙伴"
+
+#: templates/includes/header.html:24 templates/includes/header.html:32
+msgid "Services"
+msgstr "服务"
+
+#: templates/includes/header.html:42
+msgid "Transit, Manutention et Transport"
+msgstr "过境、装卸和运输"
+
+#: templates/includes/header.html:44
+msgid ""
+"Les services de transit, de manutention et de transport sont des services "
+"qui assurent la manutention, le stockage et/ou le transport de marchandises "
+"dans certaines zones"
+msgstr "过境、装卸和运输服务是指在某些区域进行货物装卸、储存和/或运输的服务"
+
+#: templates/includes/header.html:58 templates/main/customs.html:46
+msgid "Dédouanement"
+msgstr "报关"
+
+#: templates/includes/header.html:58
+msgid "Nouveau"
+msgstr "新"
+
+#: templates/includes/header.html:75 templates/main/warehousing.html:46
+msgid "Entrepôt de stockage"
+msgstr "仓储"
+
+#: templates/includes/header.html:77
+msgid ""
+"Afrilog propose des services spécialisés d'entreposage sous douane et de "
+"transport en libre-entreposage"
+msgstr "Afrilog提供专业的海关监管仓储服务和自由仓储运输服务"
+
+#: templates/includes/header.html:85
+msgid "Services de Fret"
+msgstr "货运服务"
+
+#: templates/includes/header.html:90 templates/main/aerien.html:46
+msgid "Fret aérien"
+msgstr "空运"
+
+#: templates/includes/header.html:95 templates/main/sea.html:46
+msgid "Fret maritime"
+msgstr "海运"
+
+#: templates/includes/header.html:100
+msgid "Fret terrestre"
+msgstr "陆运"
+
+#: templates/includes/header.html:120 templates/main/aerien.html:56
+#: templates/main/customs.html:56 templates/main/sea.html:55
+#: templates/main/terrestre.html:55 templates/main/transit.html:56
+#: templates/main/warehousing.html:56
+msgid "Service commercial"
+msgstr "商业服务"
+
+#: templates/includes/header.html:123
+msgid "Se connecter"
+msgstr "登录"
+
+#: templates/includes/language_selector.html:2
+msgid "Anglais"
+msgstr "英语"
+
+#: templates/includes/language_selector.html:3
+msgid "Allemand"
+msgstr "德语"
+
+#: templates/includes/language_selector.html:4
+msgid "Français"
+msgstr "法语"
+
+#: templates/includes/language_selector.html:5
+msgid "Espagnol"
+msgstr "西班牙语"
+
+#: templates/includes/language_selector.html:6
+msgid "Chinois"
+msgstr "中文"
+
+#: templates/main/aerien.html:6
+msgid "Découvrez nos services de fret aérien"
+msgstr "了解我们的空运货物服务"
+
+#: templates/main/aerien.html:7 templates/main/transit.html:7
+msgid ""
+"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine"
+msgstr ""
+"运输、物流、货运、空运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+
+#: templates/main/aerien.html:10
+msgid "Afrilog : Fret aérien"
+msgstr "Afrilog：空运货物"
+
+#: templates/main/aerien.html:49
+msgid ""
+"Le fret aérien est la solution idéale pour le transport rapide et sécurisé "
+"de vos marchandises à l'échelle mondiale. Offrant des temps de transit "
+"réduits et une flexibilité inégalée, il permet de répondre efficacement aux "
+"exigences de délais stricts et aux demandes urgentes. Nos services de fret "
+"aérien garantissent une gestion optimale de vos envois, de la prise en "
+"charge à la livraison, assurant la rapidité et la fiabilité de chaque "
+"expédition. Découvrez comment nous pouvons accélérer votre chaîne "
+"d'approvisionnement et renforcer votre avantage concurrentiel grâce à nos "
+"solutions de fret aérien de pointe."
+msgstr ""
+"空运货物是您快速、安全地全球范围内运送货物的理想选择。提供缩短运输时间和无与伦比的灵活性，"
+"它能够有效应对严格的交货期要求和紧急需求。我们的空运货物服务确保了从接收到交付的每个"
+"货件的最佳管理，确保了每次货运的快速和可靠性。了解我们如何通过我们先进的空运货物解决方案加速您的供应链并增强您的竞争优势。"
+
+#: templates/main/aerien.html:62
+msgid "fret aérien"
+msgstr "空运货物"
+
+#: templates/main/aerien.html:74 templates/main/pricing.html:2
+msgid "Notre grille tarifaire pour le fret aérien"
+msgstr "我们的空运货物价格表"
+
+#: templates/main/aerien.html:75 templates/main/pricing.html:3
+#: templates/main/pricing.html:269 templates/main/sea.html:105
+msgid "A partir de la France"
+msgstr "从法国出发"
+
+#: templates/main/aerien.html:84 templates/main/aerien.html:147
+#: templates/main/pricing.html:12 templates/main/pricing.html:75
+msgid "Aéroport de départ"
+msgstr "起飞机场"
+
+#: templates/main/aerien.html:85 templates/main/aerien.html:148
+#: templates/main/pricing.html:13 templates/main/pricing.html:76
+msgid "Aéroport d'arrivée"
+msgstr "到达机场"
+
+#: templates/main/aerien.html:86 templates/main/pricing.html:14
+msgid "Incoterm"
+msgstr "国际贸易术语"
+
+#: templates/main/aerien.html:87 templates/main/aerien.html:181
+#: templates/main/aerien.html:227 templates/main/aerien.html:273
+#: templates/main/pricing.html:15 templates/main/pricing.html:109
+#: templates/main/pricing.html:155 templates/main/pricing.html:201
+#: templates/main/pricing.html:248 templates/main/pricing.html:279
+#: templates/main/pricing.html:353 templates/main/sea.html:84
+#: templates/main/sea.html:115 templates/main/sea.html:189
+msgid "Devise"
+msgstr "货币"
+
+#: templates/main/aerien.html:103 templates/main/aerien.html:104
+#: templates/main/aerien.html:105 templates/main/aerien.html:106
+#: templates/main/pricing.html:31 templates/main/pricing.html:32
+#: templates/main/pricing.html:33 templates/main/pricing.html:34
+msgid "8,70"
+msgstr "8.70"
+
+#: templates/main/aerien.html:115 templates/main/pricing.html:43
+msgid "9,15"
+msgstr "9.15"
+
+#: templates/main/aerien.html:116 templates/main/pricing.html:44
+msgid "7,75"
+msgstr "7.75"
+
+#: templates/main/aerien.html:117 templates/main/pricing.html:45
+msgid "7,25"
+msgstr "7.25"
+
+#: templates/main/aerien.html:118 templates/main/pricing.html:46
+msgid "7,10"
+msgstr "7.10"
+
+#: templates/main/aerien.html:126 templates/main/pricing.html:54
+msgid "18,34"
+msgstr "18.34"
+
+#: templates/main/aerien.html:127 templates/main/pricing.html:55
+msgid "14,23"
+msgstr "14.23"
+
+#: templates/main/aerien.html:128 templates/main/pricing.html:56
+msgid "13,59"
+msgstr "13.59"
+
+#: templates/main/aerien.html:129 templates/main/pricing.html:57
+msgid "13,23"
+msgstr "13.23"
+
+#: templates/main/aerien.html:130 templates/main/pricing.html:58
+msgid "12,86"
+msgstr "12.86"
+
+#: templates/main/aerien.html:139 templates/main/pricing.html:67
+#: templates/main/pricing.html:300 templates/main/sea.html:136
+msgid "A partir de la Chine"
+msgstr "从中国出发"
+
+#: templates/main/aerien.html:159 templates/main/aerien.html:160
+#: templates/main/pricing.html:87 templates/main/pricing.html:88
+msgid "15,06"
+msgstr "15.06"
+
+#: templates/main/aerien.html:161 templates/main/aerien.html:162
+#: templates/main/pricing.html:89 templates/main/pricing.html:90
+msgid "14,91"
+msgstr "14.91"
+
+#: templates/main/aerien.html:171 templates/main/pricing.html:99
+msgid "A partir de Tel Aviv (Israel)"
+msgstr "从特拉维夫（以色列）出发"
+
+#: templates/main/aerien.html:179 templates/main/aerien.html:225
+#: templates/main/aerien.html:271 templates/main/pricing.html:107
+#: templates/main/pricing.html:153 templates/main/pricing.html:199
+msgid "Poids Net"
+msgstr "净重"
+
+#: templates/main/aerien.html:180 templates/main/aerien.html:226
+#: templates/main/aerien.html:272 templates/main/pricing.html:108
+#: templates/main/pricing.html:154 templates/main/pricing.html:200
+#: templates/main/pricing.html:247 templates/main/pricing.html:278
+#: templates/main/sea.html:83 templates/main/sea.html:114
+msgid "Prix par Kgs"
+msgstr "每公斤价格"
+
+#: templates/main/aerien.html:187 templates/main/pricing.html:115
+msgid "16,45 USD/Kg"
+msgstr "每公斤16.45美元"
+
+#: templates/main/aerien.html:192 templates/main/aerien.html:202
+#: templates/main/pricing.html:120 templates/main/pricing.html:130
+msgid "13,00 USD/Kg"
+msgstr "每公斤13.00美元"
+
+#: templates/main/aerien.html:197 templates/main/pricing.html:125
+msgid "13,85 USD/Kg"
+msgstr "每公斤13.85美元"
+
+#: templates/main/aerien.html:207 templates/main/pricing.html:135
+msgid "13,00 USD"
+msgstr "13.00美元"
+
+#: templates/main/aerien.html:217 templates/main/pricing.html:145
+msgid "A partir du Canada"
+msgstr "从加拿大出发"
+
+#: templates/main/aerien.html:233 templates/main/pricing.html:161
+msgid "15,55 USD/Kg"
+msgstr "每公斤15.55美元"
+
+#: templates/main/aerien.html:238 templates/main/pricing.html:166
+msgid "13,45 USD/Kg"
+msgstr "每公斤13.45美元"
+
+#: templates/main/aerien.html:243 templates/main/pricing.html:171
+msgid "12,95 USD/Kg"
+msgstr "每公斤12.95美元"
+
+#: templates/main/aerien.html:248 templates/main/pricing.html:176
+msgid "12,25 USD/Kg"
+msgstr "每公斤12.25美元"
+
+#: templates/main/aerien.html:253 templates/main/pricing.html:181
+msgid "12,00 USD"
+msgstr "12.00美元"
+
+#: templates/main/aerien.html:263 templates/main/pricing.html:191
+msgid "A partir de l'Inde"
+msgstr "从印度出发"
+
+#: templates/main/aerien.html:279 templates/main/pricing.html:207
+msgid "15,70 USD/Kg"
+msgstr "每公斤15.70美元"
+
+#: templates/main/aerien.html:284 templates/main/pricing.html:212
+msgid "17,63 USD/Kg"
+msgstr "每公斤17.63美元"
+
+#: templates/main/aerien.html:289 templates/main/pricing.html:217
+msgid "16,55 USD/Kg"
+msgstr "每公斤16.55美元"
+
+#: templates/main/aerien.html:294 templates/main/pricing.html:222
+msgid "15,50 USD/Kg"
+msgstr "每公斤15.50美元"
+
+#: templates/main/aerien.html:299 templates/main/pricing.html:227
+msgid "13,90 USD/Kg"
+msgstr "每公斤13.90美元"
+
+#: templates/main/aerien.html:315 templates/main/pricing.html:381
+#: templates/main/sea.html:217
+msgid "Pour plus d'infos veuillez contacter notre "
+msgstr "欲获取更多信息，请联系我们的"
+
+#: templates/main/aerien.html:316 templates/main/pricing.html:382
+#: templates/main/sea.html:218
+msgid ""
+"Veuillez noter que les tarifs seront mis à jour dès l'obtention des "
+"informations réelles sur les marchandises, les formalités exports ainsi que "
+"le Pick up seront déterminés au cas par cas en fonction de la localisation "
+"du fournisseur. La validité des tarifs est d'une (01) semaine pour le fret "
+"aérien et un (01) mois pour le fret maritime"
+msgstr ""
+"请注意，价格将根据货物实际信息、出口手续以及提货地点的供应商位置等情况进行逐 "
+"案更新。空运价格的有效期为一（01）周，海运价格的有效期为一个（01）月。"
+
+#: templates/main/cgu.html:4
+msgid "Afrilog : Conditions générales d'utilisation"
+msgstr "Afrilog：使用条款"
+
+#: templates/main/cgu.html:31
+msgid "Conditions générales d'utilisation"
+msgstr "使用条款"
+
+#: templates/main/cgu.html:37
+msgid "Conduite du client"
+msgstr "客户行为"
+
+
+#: templates/main/cgu.html:40
+msgid "Conditions générales"
+msgstr "一般条款"
+
+#: templates/main/cgu.html:43
+msgid "Services & Compte"
+msgstr "服务与账户"
+
+#: templates/main/cgu.html:48
+msgid "Conditions d'utilisation"
+msgstr "使用条件"
+
+#: templates/main/cgu.html:53
+msgid "Dernière mise à jour : 31 Mai 2024"
+msgstr "最后更新日期：2024年5月31日"
+
+#: templates/main/cgu.html:55
+msgid ""
+"Ces conditions générales (les « Conditions ») régissent la fourniture de "
+"produits par Afrilog, y compris les contenus numériques et les services. "
+"Veuillez lire attentivement ces Conditions avant d'accéder à nos contenus "
+"numériques ou d'utiliser nos services. Ces Conditions, ainsi que notre "
+"Politique de confidentialité et notre Politique relative aux cookies, "
+"détaillent comment nous vous fournirons des contenus numériques et/ou des "
+"services, comment vous et nous pouvons modifier ou mettre fin au "
+"contrat, que faire en cas de problème et d'autres informations "
+"importantes. <br>\n"
+"                        <br> Comment nous contacter - Vous pouvez nous "
+"contacter par téléphone au +227 20 73 51 00 ou par email à "
+"logistiqueafrica@gmail.com.\n"
+"                      "
+msgstr ""
+"这些通用条款（以下简称“条款”）适用于Afrilog提供的产品，包括数字内容和服务。在"
+"访问我们的数字内容或使用我们的服务之前，请仔细阅读这些条款。这些条款以及我们的隐私"
+"政策和Cookie政策详细说明了我们如何为您提供数字内容和/或服务，您和我们如何修改或终止"
+"合同，以及在出现问题时应采取的措施等重要信息。 <br>\n"
+"                        <br> 如何联系我们 - 您可以通过电话联系我们 +227 20 73 51 00 "
+"或发送电子邮件至logistiqueafrica@gmail.com。\n"
+"                      "
+
+#: templates/main/cgu.html:58
+msgid "Sommaire"
+msgstr "目录"
+
+#: templates/main/cgu.html:61 templates/main/cgu.html:150
+msgid ""
+"Votre accord à ces Conditions par votre accès au site ou votre "
+"utilisation du site."
+msgstr ""
+"通过访问网站或使用网站表示您同意这些条款。"
+
+#: templates/main/cgu.html:64 templates/main/cgu.html:154
+msgid "Contenu et services"
+msgstr "内容和服务"
+
+#: templates/main/cgu.html:67 templates/main/cgu.html:160
+msgid "Afrilog ne propose ni ne fournit de conseils juridiques"
+msgstr "Afrilog w提供法律咨询服务"
+
+#: templates/main/cgu.html:70
+msgid "Afrilog n'est pas un cabinet d'avocats"
+msgstr "Afrilog不是律师事务所"
+
+#: templates/main/cgu.html:73
+msgid "Afrilog n'est pas un service de référencement"
+msgstr "Afrilog不是引擎优化服务"
+
+#: templates/main/cgu.html:76
+msgid "Il n'y a pas de relation avocat-client entre vous et Afrilog"
+msgstr "您与Afrilog之间不存在律师客户关系"
+
+#: templates/main/cgu.html:79
+msgid "Les utilisateurs avocats ne sont pas des employés d'Afrilog"
+msgstr "律师用户不是Afrilog的雇员"
+
+#: templates/main/cgu.html:82
+msgid ""
+"Tous les frais juridiques sont payés aux utilisateurs avocats, pas à "
+"Afrilog"
+msgstr "所有法律费用由律师用户支付，而不是Afrilog支付"
+
+#: templates/main/cgu.html:85
+msgid "Il n'y a pas de frais pour Afrilog pour trouver des engagements"
+msgstr "Afrilog没有找到法律服务项目的费用"
+
+#: templates/main/cgu.html:88
+msgid "Non-contournement"
+msgstr "非规避"
+
+#: templates/main/cgu.html:91
+msgid "Attentes"
+msgstr "期望"
+
+#: templates/main/cgu.html:94
+msgid "Vos responsabilités"
+msgstr "您的责任"
+
+#: templates/main/cgu.html:97
+msgid "Votre utilisation et restrictions"
+msgstr "您的使用和限制"
+
+#: templates/main/cgu.html:100
+msgid "Confidentialité"
+msgstr "隐私"
+
+#: templates/main/cgu.html:103
+msgid "Indemnisation"
+msgstr "赔偿"
+
+#: templates/main/cgu.html:106
+msgid "Communication et autres données"
+msgstr "通信和其他数据"
+
+#: templates/main/cgu.html:109
+msgid "Notifications et accords électroniques"
+msgstr "通知和电子协议"
+
+#: templates/main/cgu.html:112
+msgid "Services premium"
+msgstr "高级服务"
+
+#: templates/main/cgu.html:115
+msgid "Hyperliens"
+msgstr "超链接"
+
+#: templates/main/cgu.html:118
+msgid "Droits d'auteur et utilisation limitée"
+msgstr "版权和受限使用"
+
+#: templates/main/cgu.html:121
+msgid "Modifications"
+msgstr "修改"
+
+#: templates/main/cgu.html:124
+msgid "Votre contenu"
+msgstr "您的内容"
+
+#: templates/main/cgu.html:127
+msgid "Plaintes en matière de droits d'auteur"
+msgstr "版权投诉"
+
+#: templates/main/cgu.html:130
+msgid "Décharge de responsabilité"
+msgstr "免责声明"
+
+#: templates/main/cgu.html:133
+msgid "Limitation de responsabilité"
+msgstr "责任限制"
+
+#: templates/main/cgu.html:136
+msgid "Accord complet"
+msgstr "完整协议"
+
+#: templates/main/cgu.html:139
+msgid "Cession"
+msgstr "转让"
+
+#: templates/main/cgu.html:142
+msgid "Arbitrage"
+msgstr "仲裁"
+
+#: templates/main/cgu.html:145
+msgid "Âge minimum pour utiliser"
+msgstr "最小使用年龄"
+
+#: templates/main/cgu.html:151
+msgid ""
+"Ces Conditions régissent votre utilisation du site, à la fois en tant que"
+" visiteur et en tant qu'utilisateur enregistré (chaque visiteur et chaque"
+" utilisateur enregistré étant désigné généralement aux fins de ces "
+"Conditions comme un « Utilisateur Client »). EN UTILISANT LE SITE ET/OU EN VOUS INSCRIVANT CHEZ NOUS, VOUS ACCEPTEZ CES CONDITIONS D'UTILISATION."
+msgstr ""
+"使用本网站，无论是作为访问者还是注册用户（每个访问者和每个注册用户通常被称为“客户用户”），"
+"即表示您同意这些使用条款。"
+
+#: templates/main/cgu.html:155
+msgid ""
+"Tout ce que nous offrons sur et à travers le site est désigné dans ces "
+"Conditions collectivement comme les « Services ». <br>\n"
+"                            <br> Une partie du contenu du site est "
+"visible sans s'inscrire chez nous, mais pour participer activement ou "
+"stocker vos informations, vous devez vous inscrire en tant que membre et "
+"autoriser l'utilisation et la divulgation de vos informations "
+"personnelles et légales conformément aux termes de notre Politique de "
+"confidentialité aux fins de nous permettre de fournir les Services et tel"
+" que divulgué par ailleurs dans notre Politique de confidentialité "
+"disponible. Afrilog est une plateforme en ligne qui connecte les "
+"professionnels du droit (« Utilisateurs Avocats ») avec des Utilisateurs "
+"Clients potentiels recherchant des services juridiques. Afrilog ne "
+"fournit pas de conseils juridiques et ne fournit en aucun cas des "
+"services juridiques de quelque nature que ce soit. Afrilog ne garantit "
+"pas que les Utilisateurs Clients trouveront une représentation juridique "
+"via son système. Afrilog ne donne pas d'opinion ni ne prend position sur "
+"le moment où une relation avocat-client a été formée entre ses "
+"Utilisateurs Clients et ses Utilisateurs Avocats. Afrilog n'est pas "
+"partie aux accords entre les Utilisateurs Clients et les Utilisateurs "
+"Avocats régissant la relation avocat-client et Afrilog n'est pas impliqué"
+" dans la représentation effective des clients. Par conséquent, Afrilog ne"
+" peut garantir l'exécution des accords entre l'Utilisateur Client et "
+"l'Utilisateur Avocat, l'exactitude ou l'exhaustivité du travail de "
+"l'Utilisateur Avocat ou l'intégrité de l'une ou l'autre des parties. "
+"L'Utilisateur Client est responsable de l'évaluation de l'intégrité et "
+"des capacités de tous les Utilisateurs Avocats avec lesquels il "
+"communique en utilisant le site. Vous reconnaissez que bien qu'une partie"
+" du contenu, texte, données, graphiques, images, informations, "
+"suggestions, conseils et autres matériels (collectivement, « Informations"
+" ») qui vous est fourni sur le site (y compris les Informations fournies "
+"en réponse directe à vos questions ou publications) puisse être fournie "
+"par des individus de la profession juridique, la fourniture de telles "
+"Informations ne crée pas une relation avocat-client et ne constitue pas "
+"une opinion ou un conseil juridique, mais est fournie pour vous aider à "
+"localiser un professionnel du droit approprié. Toute utilisation du site "
+"par des clients potentiels ou des Utilisateurs Avocats abonnés n'est pas "
+"destinée à et ne créera pas une relation avocat-client entre ou parmi "
+"toute personne, entité et Afrilog. Toute communication électronique "
+"envoyée à quiconque chez Afrilog autre qu'un Utilisateur Avocat ne créera"
+" pas une relation avocat-client entre l'Utilisateur Client et Afrilog.\n"
+"                          "
+msgstr ""
+"我们在网站上提供的一切都在这些条款中被统称为“服务”。<br>\n"
+"                            <br> 网站的部分内容可以在不注册的情况下查看，但要积极参与或存储您"
+"的信息，您必须注册为会员并根据我们的隐私政策的条款允许我们使用和披露您的个人和法律信息，以便我"
+"们能够提供服务，并如隐私政策中披露的那样。 Afrilog是一个在线平台，将法律专业人士（“律师用户”"
+"）与寻找法律服务的潜在客户连接起来。 Afrilog不提供法律建议，也绝不提供任何形式的法律服务。 Afrilog"
+"不保证用户客户会通过其系统找到法律代表。 Afrilog不对其用户客户和用户律师之间形成律师-客户关系的时"
+"间发表意见或立场。 Afrilog不是用户客户和用户律师之间调节律师-客户关系的协议的一方，Afrilog也不涉"
+"及客户的实际代表。因此，Afrilog不能保证用户客户和用户律师之间的协议的执行，用户律师的工作的准确性"
+"或完整性，或任何一方的诚实。用户客户负责评估与他们通过网站联系的所有用户律师的诚实和能力。您承认，"
+"虽然您在网站上提供给您的内容、文本、数据、图形、图像、信息、建议、意见和其他材料（统称为“信息”）"
+"的一部分（包括直接回答您的问题或发布的信息），可能由法律专业人员提供，但提供此类信息不会形成律师-客户"
+"关系，也不构成法律建议或意见，而是为了帮助您找到合适的法律专业人士。任何潜在客户或已订阅律师用户通过"
+"网站使用的内容不适用于在任何人、实体和Afrilog之间或之间建立律师-客户关系。除非用户律师以外的任何人向"
+"Afrilog的任何人发送的电子通信都不会在用户客户和Afrilog之间建立律师-客户关系。\n"
+"                          "
+
+#: templates/main/cgu.html:161
+msgid ""
+"vous recevez de la part d'Afrilog et de ses affiliés sont uniquement à des fins d'information et de programmation. Afrilog n'est pas une société de conception ni ne vous offre de conseils, recommandations, consultations ou toute forme de conseil en design. Afrilog met ses concepteurs à votre disposition et toute information que vous recevez d'Afrilog (autre que par un concepteur que vous engagez pour travailler avec vous) est (i) fournie par des professionnels et organisations de conception indépendants représentant les intérêts d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit aucune relation de concepteur-client entre vous et Afrilog."
+msgstr ""
+"您从Afrilog及其关联公司那里收到的信息仅供信息和编程目的使用。Afrilog不是设计公司，也不提供设计方面的建议、推荐、咨询或任何形式的设计指导。Afrilog为您提供设计师，并且您从Afrilog那里获得的任何信息（除非您雇佣设计师与您合作）：(i)由独立的设计专业人员和组织代表Afrilog的利益提供，(ii)仅供信息目的使用，以及(iii)不建立您与Afrilog之间的设计师-客户关系。"
+
+#: templates/main/home.html:58
+msgid ""
+"Nous fournissons des solutions logistiques innovantes et fiables pour "
+"répondre à tous vos besoins de transport et de transit. Faites confiance "
+"à notre expertise pour optimiser votre chaîne d'approvisionnement."
+msgstr ""
+"我们提供创新可靠的物流解决方案，满足您所有的运输和过境需求。相信我们的专业知识，优化您的供应链。"
+
+#: templates/main/home.html:62
+msgid "Entrer votre identifiant ou N° de suivi..."
+msgstr "输入您的用户名或跟踪号码..."
+
+#: templates/main/home.html:72
+msgid "dashboard"
+msgstr "仪表板"
+
+#: templates/main/home.html:86
+msgid "Nous ont fait confiance"
+msgstr "我们值得信赖"
+
+#: templates/main/home.html:114
+msgid "Une vision nouvelle pour la logistique et le transport"
+msgstr "物流和运输的新视野"
+
+#: templates/main/home.html:116 templates/main/home.html:372
+msgid ""
+"Nous apportons une approche novatrice à la chaîne logistique, au transit "
+"et à l'import-export. Nos services sont conçus pour répondre aux besoins "
+"spécifiques de nos clients et aux défis de la globalisation des échanges."
+msgstr ""
+"我们为物流、过境和进出口带来创新的方法。我们的服务旨在满足客户的特定需求，应对全球交流的挑战。"
+
+#: templates/main/home.html:308
+msgid "Nos valeurs fondamentales"
+msgstr "我们的核心价值观"
+
+#: templates/main/home.html:311
+msgid "Ce qui nous guide"
+msgstr "我们的指导原则"
+
+#: templates/main/home.html:314
+msgid ""
+"Les valeurs fondamentales de notre entreprise définissent notre "
+"engagement envers nos clients et partenaires, en assurant un service de "
+"qualité exceptionnelle."
+msgstr ""
+"我们企业的核心价值观定义了我们对客户和合作伙伴的承诺，确保提供卓越的服务质量。"
+
+#: templates/main/home.html:322
+msgid "Innovation continue."
+msgstr "持续创新。"
+
+#: templates/main/home.html:324
+msgid ""
+"Nous investissons constamment dans de nouvelles technologies pour "
+"améliorer nos services et répondre aux besoins évolutifs de nos clients."
+msgstr ""
+"我们不断投资于新技术，以改善我们的服务，满足客户不断变化的需求。"
+
+#: templates/main/home.html:331
+msgid "Sécurité et fiabilité."
+msgstr "安全可靠。"
+
+#: templates/main/home.html:334
+msgid ""
+"Nous assurons la sécurité de vos marchandises à chaque étape de la chaîne"
+" logistique grâce à des systèmes robustes et fiables."
+msgstr ""
+"我们通过强大可靠的系统，确保您货物在物流链的每个环节都安全可靠。"
+
+#: templates/main/home.html:343
+msgid "Excellence opérationnelle."
+msgstr "卓越的运营。"
+
+#: templates/main/home.html:346
+msgid ""
+"Nous nous efforçons d’atteindre l’excellence dans toutes nos opérations "
+"pour garantir la satisfaction de nos clients et partenaires."
+msgstr ""
+"我们努力在所有运营中实现卓越，以确保客户和合作伙伴的满意度。"
+
+#: templates/main/home.html:352
+msgid "femme souriante"
+msgstr "微笑的女士"
+
+#: templates/main/home.html:369
+msgid "Travaillez avec nous"
+msgstr "与我们合作"
+
+#: templates/main/home.html:378
+msgid "Postes vacants"
+msgstr "职位空缺"
+
+#: templates/main/home.html:382
+msgid "Nos valeurs"
+msgstr "我们的价值观"
+
+#: templates/main/home.html:502
+msgid "Abonnez-vous à notre newsletter"
+msgstr "订阅我们的新闻简讯"
+
+#: templates/main/home.html:503
+msgid ""
+"Recevez les dernières nouvelles et mises à jour sur nos services "
+"logistiques directement dans votre boîte de réception."
+msgstr ""
+"在您的收件箱中直接获取有关我们物流服务的最新消息和更新。"
+
+#: templates/main/home.html:505
+msgid "Adresse email"
+msgstr "电子邮件地址"
+
+#: templates/main/home.html:506
+msgid "Entrez votre email"
+msgstr "输入您的电子邮件"
+
+#: templates/main/home.html:507
+msgid "S'abonner"
+msgstr "订阅"
+
+#: templates/main/home.html:517
+msgid "Articles hebdomadaires"
+msgstr "每周文章"
+
+#: templates/main/home.html:518
+msgid ""
+"Des conseils et des informations exclusives sur la logistique pour "
+"optimiser vos opérations."
+msgstr ""
+"关于物流的独家建议和信息，以优化您的运营。"
+
+#: templates/main/home.html:526
+msgid "Pas de spam"
+msgstr "无垃圾邮件"
+
+#: templates/main/home.html:527
+msgid ""
+"Nous respectons votre vie privée. Recevez uniquement des informations "
+"pertinentes et utiles."
+msgstr ""
+"我们尊重您的隐私。仅接收相关和有用的信息。"
+
+#: templates/main/layout.html:6
+msgid "Afrilog : Leader dans le domaine du Transport et de la Logistique"
+msgstr "Afrilog：领先的运输和物流公司"
+
+#: templates/main/pricing.html:237 templates/main/sea.html:73
+msgid "Notre grille tarifaire pour le fret maritime"
+msgstr "我们的海运运价表"
+
+#: templates/main/pricing.html:238 templates/main/sea.html:74
+msgid "A partir de Valencia (Espagne)"
+msgstr "从瓦伦西亚（西班牙）开始"
+
+#: templates/main/pricing.html:246 templates/main/pricing.html:277
+#: templates/main/sea.html:82 templates/main/sea.html:113
+msgid "Type de Conteneur"
+msgstr "集装箱类型"
+
+#: templates/main/pricing.html:309 templates/main/sea.html:145
+msgid "Port de débarquement"
+msgstr "卸货港口"
+
+#: templates/main/pricing.html:310 templates/main/sea.html:146
+msgid "O/F(USD)"
+msgstr "海运费(美元)"
+
+#: templates/main/pricing.html:311 templates/main/sea.html:147
+msgid "FT"
+msgstr "货运量"
+
+#: templates/main/pricing.html:312 templates/main/sea.html:148
+msgid "T/T"
+msgstr "运输时间"
+
+#: templates/main/pricing.html:342 templates/main/sea.html:178
+msgid "A partir de l' Inde"
+msgstr "从印度开始"
+
+#: templates/main/pricing.html:350 templates/main/sea.html:186
+msgid "Type de conteneur"
+msgstr "集装箱类型"
+
+#: templates/main/pricing.html:351 templates/main/sea.html:187
+msgid "Temps de transit"
+msgstr "运输时间"
+
+#: templates/main/pricing.html:352 templates/main/sea.html:188
+msgid "Prix"
+msgstr "价格"
+
+#: templates/main/pricing.html:359 templates/main/pricing.html:365
+#: templates/main/sea.html:195 templates/main/sea.html:201
+msgid "26 jours"
+msgstr "26天"
+
+#: templates/main/pricing.html:366 templates/main/sea.html:202
+msgid "5300"
+msgstr "5300"
+
+#: templates/main/sea.html:6
+msgid "Découvrez nos services de fret maritime"
+msgstr "了解我们的海运服务"
+
+#: templates/main/sea.html:7
+msgid ""
+"Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine"
+msgstr ""
+"运输、物流、海运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+
+#: templates/main/sea.html:10
+msgid "Afrilog : Fret maritime"
+msgstr "Afrilog：海运"
+
+#: templates/main/sea.html:49
+msgid ""
+"Le fret maritime est essentiel pour les échanges commerciaux "
+"internationaux, offrant des solutions efficaces pour le transport de "
+"grandes quantités de marchandises sur de longues distances. Grâce à une "
+"capacité de chargement importante et à des coûts de transport réduits, le"
+" fret maritime est une option privilégiée pour les entreprises cherchant "
+"à optimiser leurs chaînes d'approvisionnement. Découvrez comment nos "
+"services de fret maritime peuvent répondre à vos besoins de transport, en"
+" assurant la sécurité et la ponctualité de vos livraisons, même sur les "
+"routes les plus fréquentées."
+msgstr ""
+"海运对国际贸易至关重要，为长距离运输大量货物提供了有效的解决方案。"
+"凭借高装载能力和较低的运输成本，海运是寻求优化供应链的企业的首选。"
+"了解我们的海运服务如何满足您的运输需求，确保您的货物在最繁忙的航线上也能安全准时送达。"
+
+#: templates/main/sea.html:61
+msgid "fret maritime"
+msgstr "海运"
+
+#: templates/main/stats.html:7
+msgid "2.5 millions de tonnes de marchandises traitées chaque année"
+msgstr "每年处理250万吨货物"
+
+#: templates/main/stats.html:10
+msgid "2.5 M"
+msgstr "250万"
+
+#: templates/main/stats.html:15
+msgid "Clients satisfaits"
+msgstr "满意的客户"
+
+#: templates/main/stats.html:21
+msgid "Réductions des coûts logistiques"
+msgstr "降低物流成本"
+
+#: templates/main/terrestre.html:6
+msgid "Découvrez nos services de fret terrestre"
+msgstr "了解我们的陆运服务"
+
+#: templates/main/terrestre.html:7
+msgid ""
+"Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine"
+msgstr "运输、物流、货运、陆运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+
+#: templates/main/terrestre.html:10
+msgid "Afrilog : Fret terrestre"
+msgstr "Afrilog：陆运"
+
+#: templates/main/terrestre.html:49
+msgid ""
+"Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant"
+" des solutions flexibles et économiques pour le transport de "
+"marchandises. Avec des réseaux routiers bien développés et une "
+"infrastructure solide, le fret terrestre permet des livraisons rapides et"
+" ponctuelles, réduisant les temps d'attente et les coûts. En optant pour "
+"le fret terrestre, votre entreprise bénéficie d'une prestation de "
+"services fiable et efficace, adaptée à vos besoins spécifiques. Découvrez"
+" comment nos solutions de fret terrestre peuvent optimiser vos opérations"
+" logistiques."
+msgstr ""
+"陆运在物流链中发挥着关键作用，提供灵活且经济的货物运输解决方案。"
+"通过发达的道路网络和坚实的基础设施，陆运能够快速准时地交货，减少等待时间和成本。"
+"选择陆运，您的企业将受益于可靠且高效的服务，满足您的具体需求。了解我们的陆运解决方案如何优化您的物流操作。"
+
+#: templates/main/terrestre.html:61
+msgid "fret terrestre"
+msgstr "陆运"
+
+#: templates/main/testimonial.html:10
+msgid ""
+"Grâce à leur expertise et leur maîtrise des opérations logistiques, nous "
+"avons pu améliorer considérablement notre efficacité. Leur équipe est "
+"dédiée et toujours à l'écoute, ce qui nous a permis de nous concentrer "
+"pleinement sur notre cœur de métier. Afrilog est un partenaire de "
+"confiance qui nous a fait gagner un temps précieux et optimisé nos coûts."
+" Nous ne pourrions pas être plus satisfaits de leur service exceptionnel."
+msgstr ""
+"由于他们的专业知识和对物流操作的掌握，我们显著提高了效率。他们的团队敬业且随时倾听，"
+"这使我们能够全身心投入到核心业务中。Afrilog 是一个值得信赖的合作伙伴，为我们节省了宝贵的时间并优化了成本。"
+"我们对他们的出色服务感到非常满意。"
+
+#: templates/main/testimonial.html:21
+msgid "CEO of Workcation"
+msgstr "Workcation 的 CEO"
+
+#: templates/main/transit.html:6
+msgid "Découvrez nos services transit, manutention et transport"
+msgstr "了解我们的过境、装卸和运输服务"
+
+#: templates/main/transit.html:10
+msgid "Afrilog : Services de transit et manutention"
+msgstr "Afrilog：过境和装卸服务"
+
+#: templates/main/transit.html:46
+msgid "Transit, manutention et transport"
+msgstr "过境、装卸和运输"
+
+#: templates/main/transit.html:49
+msgid ""
+"Les services de transit, de manutention et de transport sont des services"
+" qui assurent la manutention, le stockage et/ou le transport de "
+"marchandises dans une certaine zone. Les services de transit, de "
+"manutention et de transport impliquent généralement l'emballage, "
+"l'étiquetage, la planification et la livraison des marchandises, ainsi "
+"que la gestion des formalités administratives associées au transport des "
+"marchandises. L’objectif principal des services de transit, de "
+"manutention et de transport est de garantir que les marchandises sont "
+"livrées à destination en toute sécurité et à temps."
+msgstr ""
+"过境、装卸和运输服务是指在特定区域内进行货物装卸、存储和/或运输的服务。"
+"这些服务通常包括包装、标签、计划和交付货物，以及管理与货物运输相关的行政手续。"
+"过境、装卸和运输服务的主要目标是确保货物安全及时地送达目的地。"
+
+#: templates/main/transit.html:62
+msgid "transit&manutention"
+msgstr "过境和装卸"
+
+#: templates/main/warehousing.html:6
+msgid "Découvrez nos services d'entrepôt de stockage"
+msgstr "了解我们的仓储服务"
+
+#: templates/main/warehousing.html:7
+msgid ""
+"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Entrepôt, Stockage, Chaîne"
+msgstr ""
+"运输、物流、空运、设备、集装箱、欧洲、非洲、大洋洲、中国、仓库、存储、链"
+
+#: templates/main/warehousing.html:10
+msgid "Afrilog : Entrepôt de stockage"
+msgstr "Afrilog：仓储"
+
+#: templates/main/warehousing.html:49
+msgid ""
+"Afrilog propose des services spécialisés d'entreposage sous douane et de "
+"transport en libre-entreposage qui permettent aux entreprises de stocker "
+"leurs marchandises en toute sécurité jusqu'à ce qu'elles soient prêtes à "
+"déménager ou à expédier. Nos services se concentrent sur le stockage et "
+"le transport des marchandises, mais nous proposons également des services"
+" supplémentaires tels que l'emballage et la gestion du stockage pour "
+"garantir que vos marchandises soient stockées dans les meilleures "
+"conditions possibles."
+msgstr ""
+"Afrilog 提供专业的保税仓储和自由仓储运输服务，使企业能够安全地存储货物，直到准备搬运或发货。"
+"我们的服务专注于货物的存储和运输，但我们还提供包装和存储管理等附加服务，以确保您的货物在最佳条件下存储。"
+
+#: templates/main/warehousing.html:62
+msgid "entrepôt et stockage"
+msgstr "仓库和存储"
+
+#: templates/views/basic_charts.html:13 templates/views/expenses_list.html:108
+msgid "Vues sur le site web"
+msgstr "网站浏览量"
+
+#: templates/views/basic_charts.html:16 templates/views/expenses_list.html:111
+msgid "Performances de la dernière campagne"
+msgstr "最近一次活动的表现"
+
+#: templates/views/basic_charts.html:36 templates/views/expenses_list.html:131
+msgid "Ventes quotidiennes"
+msgstr "每日销售"
+
+#: templates/views/basic_charts.html:37 templates/views/expenses_list.html:132
+msgid "d'augmentation dans les ventes d'aujourd'hui"
+msgstr "今日销售增长"
+
+#: templates/views/basic_charts.html:57 templates/views/expenses_list.html:152
+msgid "Tâches complètes"
+msgstr "完成的任务"
+
+#: templates/views/basic_charts.html:60 templates/views/expenses_list.html:155
+msgid "Performances de la campagne récente"
+msgstr "最近活动的表现"
+
+#: templates/views/expenses_list.html:10
+#: templates/views/weekly_gain_report.html:9
+msgid "Recettes de cette semaine"
+msgstr "本周收入"
+
+#: templates/views/expenses_list.html:21
+#: templates/views/weekly_gain_report.html:20
+msgid "par rapport à la semaine passée"
+msgstr "与上周相比"
+
+#: templates/views/expenses_list.html:34
+#: templates/views/monthly_user_report.html:9
+msgid "Utilisateurs de ce mois"
+msgstr "本月用户"
+
+#: templates/views/expenses_list.html:45
+#: templates/views/monthly_user_report.html:20
+msgid "par rapport au mois passé"
+msgstr "与上月相比"
+
+#: templates/views/expenses_list.html:58
+#: templates/views/monthly_customers_report.html:9
+msgid "Nouveaux clients"
+msgstr "新客户"
+
+#: templates/views/expenses_list.html:69 templates/views/expenses_list.html:90
+#: templates/views/monthly_customers_report.html:20
+msgid "par rapport à hier"
+msgstr "与昨天相比"
+
+#: templates/views/expenses_list.html:82
+msgid "Ventes"
+msgstr "销售"
+
+#: templates/views/invoices.html:18 templates/views/news.html:14
+msgid "Partager"
+msgstr "分享"
+
+#: templates/views/invoices.html:23 templates/views/news.html:15
+msgid "Exporter"
+msgstr "导出"
+
+#: templates/views/invoices.html:28 templates/views/news.html:16
+msgid "Télécharger"
+msgstr "下载"
+
+#: templates/views/messages.html:5
+msgid "Inbox"
+msgstr "收件箱"
+
+#: templates/views/news.html:6
+msgid "Actualités"
+msgstr "新闻"
+
+#: templates/views/empty/no_invoice.html:2
+msgid "Aucune facture"
+msgstr "没有发票"
+
+#: templates/views/empty/no_invoice.html:3
+msgid "Aucune facture pour le moment."
+msgstr "目前没有发票。"
+
+#: templates/views/empty/no_invoice.html:6
+msgid "Toutes les factures de vos récentes transactions vont s'afficher ici"
+msgstr "您最近交易的所有发票将显示在这里"

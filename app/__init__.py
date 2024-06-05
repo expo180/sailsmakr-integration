@@ -1,4 +1,6 @@
-from flask import Flask
+# app/init.py
+
+from flask import Flask, session, request, redirect
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
@@ -9,9 +11,9 @@ from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
 from flask_babel import Babel
-from .role_helpers import inject_role_helpers
 from .filters import mask_token
 from .utils import get_tasks_for_user
+from datetime import datetime
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -28,7 +30,6 @@ def create_app(development=True):
     app = Flask(__name__)
     app.config.from_object(config['development'])
     config['development'].init_app(app)
-    inject_role_helpers(app)
     bootstrap.init_app(app)
     mail.init_app(app)
     db.init_app(app)
@@ -48,10 +49,23 @@ def create_app(development=True):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    @babel.localeselector
+    def get_locale():
+        user_language = request.cookies.get('language')
+        if user_language:
+            return user_language
+        return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+
     @app.context_processor
-    def inject_tasks():
-        tasks = get_tasks_for_user(current_user.email)
-        return dict(tasks=tasks)
+    def inject_get_locale():
+        return {'get_locale': get_locale}
+
+    @app.route('/set_language', methods=['POST'])
+    def set_language():
+        language = request.form['language']
+        response = redirect(request.referrer)
+        response.set_cookie('language', language)
+        return response
 
     @app.template_filter
     def _jinja2_filter_truncate(s, length=17):
@@ -61,7 +75,35 @@ def create_app(development=True):
     
     filters.register_filters(app)
 
+    @app.context_processor
+    def inject_current_year():
+        return {'current_year': datetime.utcnow().year}
+
+    @app.context_processor
+    def inject_tasks():
+        user_email = session.get('email')
+        if user_email:
+            tasks = get_tasks_for_user(user_email)
+        else:
+            tasks = []
+        return dict(tasks=tasks)
     
+
+    def get_latest_article():
+        from .models import Article
+        article = Article.query.order_by(Article.id.desc()).first()
+        if article:
+            return {
+                'title': article.title,
+                'content': article.content[:10] + '...' if len(article.content) > 30 else article.content,
+                'img_url': article.img_url
+            }
+        return None
+
+    @app.context_processor
+    def inject_latest_article():
+        return {'latest_article': get_latest_article()}
+
     @app.template_filter('strftime')
     def _jinja2_filter_strftime(dt, fmt=None):
         if dt:
@@ -70,9 +112,8 @@ def create_app(development=True):
             return None
 
     with app.app_context():
-        db.create_all()
         from .models import Role
+        db.create_all()
         Role.insert_roles()
         
-
     return app

@@ -1,0 +1,205 @@
+{% extends 'main/layout.html' %}
+{% block head %}
+    {% block meta %}{% endblock %}
+    {% block title %}<title>{{ _("Afrilog : Conditions générales d'utilisation") }}</title>{% endblock %}
+    {% block styles %}
+        <!-- pagedone css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pagedone.css') }}">
+        
+        <!-- tailwind output css -->
+        <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+        
+        <!-- custom home css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/home/home.css') }}">
+        
+        <!-- flags css -->
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+        />
+    {% endblock %}
+{% endblock %}
+<body>
+    <main>
+        {% block content %}
+          <section class="w-full relative overflow-hidden lg:py-28 py-16">
+                <div class="px-12 xl:px-20">
+                  <div class="flex flex-col md:flex-row w-full gap-8">
+                    <div class="w-full md:max-w-[176px] md:border-r md:border-gray-200">
+                      <ul class="tab-nav flex flex-col md:items-start items-center lg:gap-10 gap-6">
+                        <li>
+                          <a href="#" class="font-medium text-base leading-7 text-indigo-600">{{ _("Conditions générales d'utilisation") }}</a>
+                        </li>
+                        <li>
+                          <a href="#" class="font-medium text-base leading-7 text-gray-500 hover:text-indigo-600">{{ _("Politique de confidentialité") }}</a>
+                        </li>
+                        <li>
+                          <a href="#" class="font-medium text-base leading-7 text-gray-500 hover:text-indigo-600">{{ _("Conduite du client") }}</a>
+                        </li>
+                        <li>
+                          <a href="#" class="font-medium text-base leading-7 text-gray-500 hover:text-indigo-600">{{ _("Conditions générales") }}</a>
+                        </li>
+                        <li>
+                          <a href="#" class="font-medium text-base leading-7 text-gray-500 hover:text-indigo-600">{{ _("Services & Compte") }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="w-full tab-pane max-md:px-4">
+                      <h2 class="font-manrope font-bold lg:text-4xl text-3xl text-gray-900 mb-5">{{ _("Conditions d'utilisation") }}</h2>
+                      <div class="flex items-center gap-3 lg:mb-10 mb-8">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.0054 8V12.5322C12.0054 12.8286 12.1369 13.1098 12.3645 13.2998L15 15.5M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="font-medium text-xl leading-8 text-indigo-600">{{ _("Dernière mise à jour : 31 Mai 2024") }}</p>
+                      </div>
+                      <p class="font-normal text-lg leading-8 text-gray-500 lg:mb-10 mb-8">{{ _("Ces conditions générales (les « Conditions ») régissent la fourniture de produits par Afrilog, y compris les contenus numériques et les services. Veuillez lire attentivement ces Conditions avant d'accéder à nos contenus numériques ou d'utiliser nos services. Ces Conditions, ainsi que notre Politique de confidentialité et notre Politique relative aux cookies, détaillent comment nous vous fournirons des contenus numériques et/ou des services, comment vous et nous pouvons modifier ou mettre fin au contrat, que faire en cas de problème et d'autres informations importantes. <br>
+                        <br> Comment nous contacter - Vous pouvez nous contacter par téléphone au +227 20 73 51 00 ou par email à logistiqueafrica@gmail.com.
+                      ") }}</p>
+                      <h5 class="font-manrope font-bold md:text-3xl text-2xl text-gray-900 mb-4">{{ _("Sommaire") }}</h5>
+                      <ul class="ml-8 lg:mb-10 mb-8">
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#01">{{ _("Votre accord à ces Conditions par votre accès au site ou votre utilisation du site.") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#02">{{ _("Contenu et services") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#03">{{ _("Afrilog ne propose ni ne fournit de conseils juridiques") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#04">{{ _("Afrilog n'est pas un cabinet d'avocats") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#05">{{ _("Afrilog n'est pas un service de référencement") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#06">{{ _("Il n'y a pas de relation avocat-client entre vous et Afrilog") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#07">{{ _("Les utilisateurs avocats ne sont pas des employés d'Afrilog") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#08">{{ _("Tous les frais juridiques sont payés aux utilisateurs avocats, pas à Afrilog") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#09">{{ _("Il n'y a pas de frais pour Afrilog pour trouver des engagements") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#10">{{ _("Non-contournement") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#11">{{ _("Attentes") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#12">{{ _("Vos responsabilités") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#13">{{ _("Votre utilisation et restrictions") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#14">{{ _("Confidentialité") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#15">{{ _("Indemnisation") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#16">{{ _("Communication et autres données") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#17">{{ _("Notifications et accords électroniques") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#18">{{ _("Services premium") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#19">{{ _("Hyperliens") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="20">{{ _("Droits d'auteur et utilisation limitée") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#21">{{ _("Modifications") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#22">{{ _("Votre contenu") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#23">{{ _("Plaintes en matière de droits d'auteur") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#24">{{ _("Décharge de responsabilité") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#25">{{ _("Limitation de responsabilité") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#26">{{ _("Accord complet") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#27">{{ _("Cession") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#28">{{ _("Arbitrage") }}</a>
+                        </li>
+                        <li class="list-decimal font-normal text-lg text-gray-500">
+                          <a href="#29">{{ _("Âge minimum pour utiliser") }}</a>
+                        </li>
+                      </ul>
+                      <ul class="flex flex-col ml-8 gap-10 list-outside list-decimal font-manrope font-bold text-3xl">
+                        <li id="01" class="list-decimal">
+                          <h2 class="font-manrope font-bold lg:text-3xl text-2xl text-gray-900">{{ _("Votre accord à ces Conditions par votre accès au site ou votre utilisation du site.") }}</h2>
+                          <p class="mt-5 font-normal text-lg leading-8 text-gray-500">{{ _("Ces Conditions régissent votre utilisation du site, à la fois en tant que visiteur et en tant qu'utilisateur enregistré (chaque visiteur et chaque utilisateur enregistré étant désigné généralement aux fins de ces Conditions comme un « Utilisateur Client »). EN UTILISANT LE SITE ET/OU EN VOUS INSCRIVANT CHEZ NOUS, VOUS ACCEPTEZ CES CONDITIONS D'UTILISATION. Vous consentez aux pratiques d'information divulguées dans notre Politique de confidentialité et notre Politique relative aux cookies qui sont incorporées aux présentes par référence, et vous consentez à résoudre dans l'État de New York conformément aux termes énoncés aux présentes tout litige que vous pourriez avoir avec nous ou avec le site. Veuillez noter que nous proposons le site EN L'ÉTAT et sans garanties. Si vous enregistrez un compte ou utilisez le site au nom d'un individu ou d'une entité autre que vous-même, vous déclarez que vous êtes autorisé par cet individu ou cette entité à accepter ces Conditions en son nom.") }}</p>
+                        </li>
+                        <li id="02" class="list-decimal">
+                          <h2 class="font-manrope font-bold lg:text-3xl text-2xl text-gray-900">{{ _("Contenu et services") }}</h2>
+                          <p class="mt-5 font-normal text-lg leading-8 text-gray-500">{{ _("Tout ce que nous offrons sur et à travers le site est désigné dans ces Conditions collectivement comme les « Services ». <br>
+                            <br> Une partie du contenu du site est visible sans s'inscrire chez nous, mais pour participer activement ou stocker vos informations, vous devez vous inscrire en tant que membre et autoriser l'utilisation et la divulgation de vos informations personnelles et légales conformément aux termes de notre Politique de confidentialité aux fins de nous permettre de fournir les Services et tel que divulgué par ailleurs dans notre Politique de confidentialité disponible. Afrilog est une plateforme en ligne qui connecte les professionnels du droit (« Utilisateurs Avocats ») avec des Utilisateurs Clients potentiels recherchant des services juridiques. Afrilog ne fournit pas de conseils juridiques et ne fournit en aucun cas des services juridiques de quelque nature que ce soit. Afrilog ne garantit pas que les Utilisateurs Clients trouveront une représentation juridique via son système. Afrilog ne donne pas d'opinion ni ne prend position sur le moment où une relation avocat-client a été formée entre ses Utilisateurs Clients et ses Utilisateurs Avocats. Afrilog n'est pas partie aux accords entre les Utilisateurs Clients et les Utilisateurs Avocats régissant la relation avocat-client et Afrilog n'est pas impliqué dans la représentation effective des clients. Par conséquent, Afrilog ne peut garantir l'exécution des accords entre l'Utilisateur Client et l'Utilisateur Avocat, l'exactitude ou l'exhaustivité du travail de l'Utilisateur Avocat ou l'intégrité de l'une ou l'autre des parties. L'Utilisateur Client est responsable de l'évaluation de l'intégrité et des capacités de tous les Utilisateurs Avocats avec lesquels il communique en utilisant le site. Vous reconnaissez que bien qu'une partie du contenu, texte, données, graphiques, images, informations, suggestions, conseils et autres matériels (collectivement, « Informations ») qui vous est fourni sur le site (y compris les Informations fournies en réponse directe à vos questions ou publications) puisse être fournie par des individus de la profession juridique, la fourniture de telles Informations ne crée pas une relation avocat-client et ne constitue pas une opinion ou un conseil juridique, mais est fournie pour vous aider à localiser un professionnel du droit approprié. Toute utilisation du site par des clients potentiels ou des Utilisateurs Avocats abonnés n'est pas destinée à et ne créera pas une relation avocat-client entre ou parmi toute personne, entité et Afrilog. Toute communication électronique envoyée à quiconque chez Afrilog autre qu'un Utilisateur Avocat ne créera pas une relation avocat-client entre l'Utilisateur Client et Afrilog.
+                          ") }}</p>
+                        </li>
+                        <li id="03" class="list-decimal">
+                          <h2 class="font-manrope font-bold lg:text-3xl text-2xl text-gray-900">{{ _("Afrilog ne propose ni ne fournit de conseils juridiques") }}</h2>
+                          <p class="mt-5 font-normal text-lg leading-8 text-gray-500">{{ _("Les informations que vous recevez de la part d'Afrilog et de ses affiliés sont uniquement à des fins d'information et de programmation. Afrilog n'est pas une société de conception ni ne vous offre de conseils, recommandations, consultations ou toute forme de conseil en design. Afrilog met ses concepteurs à votre disposition et toute information que vous recevez d'Afrilog (autre que par un concepteur que vous engagez pour travailler avec vous) est (i) fournie par des professionnels et organisations de conception indépendants représentant les intérêts d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit aucune relation de concepteur-client entre vous et Afrilog.") }}</p>
+                        </li>
+                      </ul>
+                      <button class="w-full rounded-full mt-10 flex items-center gap-2 justify-center bg-indigo-600 hover:bg-indigo-700 transition-all duration-700 text-white py-3.5 px-5 text-center font-semibold text-base">{{ _("Voir plus") }} <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 7.5L8.58578 11.0858C9.25245 11.7525 9.58579 12.0858 10 12.0858C10.4142 12.0858 10.7475 11.7525 11.4142 11.0858L15 7.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>              
+        {% endblock %}
+    </main>
+    {% block scripts %}
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const categoryMegamenuParent = document.querySelector('#category-megamenu-parent');
+            const categoryMegamenu = document.querySelector('#category-megamenu');
+            const collapseToggle = document.querySelector('[data-collapse-toggle="megamenu-full-width"]');
+            const megamenuFullWidth = document.querySelector('#megamenu-full-width');
+
+            categoryMegamenuParent.addEventListener('click', () => {
+              categoryMegamenu.classList.toggle('active');
+            });
+
+            collapseToggle.addEventListener('click', () => {
+              megamenuFullWidth.classList.toggle('active');
+            });
+          });
+
+          function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdown');
+            dropdownMenu.classList.toggle('hidden');
+          }
+
+
+        </script>
+
+        <!-- pagedone.js -->
+        <script type="module" src="{{ url_for('static', filename='js/lib/plugins/pagedone.js') }}"></script>
+    {% endblock %}
+</body>

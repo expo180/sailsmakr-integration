@@ -1,0 +1,181 @@
+{% extends 'main/layout.html' %}
+{% block head %}
+    <head>
+        {% block meta %}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="{{ _('Calculatrice fret aérien') }}">
+            <meta name="keywords" content="{{ _('Transport, Logistique, Fret, aérien, Equipement, Container, Europe, Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation') }}">
+            <meta content="author"  name="Afrilog SARL">
+        {% endblock %}
+        {% block title %}<title>{{ _('Afrilog : Calculatrice fret aérien') }}</title>{% endblock %}
+        {% block styles %}
+            <!-- pagedone css -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/pagedone.css') }}">
+
+            <!-- tailwind output css -->
+            <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+
+            <!-- custom home css -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/home/home.css') }}">
+            
+            <!-- bootstrap-icons-->
+            <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
+            
+            <!-- tel input css -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"> 
+
+            <!-- flags css -->
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+            />
+        {% endblock %}
+    </head>
+{% endblock %}
+<body>
+    <main>
+        {% block content %}
+
+        <!-- hero section -->
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+          <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          </div>
+          <div class="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
+            <div class="text-center">
+              <h1 class="text-4xl tracking-tight text-gray-900 sm:text-6xl">
+                {{ _('Obtenez un devis rapide pour votre fret aérien.') }}
+              </h1>
+              <div class="mt-10 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-x-6 gap-y-4">
+                <div class="w-full lg:w-auto">
+                  <div class="relative text-gray-500 focus-within:text-gray-900">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                      </svg>
+                    </div>
+                    <input type="text" id="DepartPort" class="block w-full pr-4 pl-12 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="{{ _('De') }}">
+                    <ul id="suggestions" class="absolute z-10 bg-white border border-gray-300 w-full mt-1 rounded-lg shadow-lg max-h-48 overflow-y-auto hidden"></ul>
+                  </div>
+                </div>
+                <div class="w-full lg:w-auto">
+                  <div class="relative text-gray-500 focus-within:text-gray-900">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                      </svg>
+                    </div>
+                    <input type="text" id="Arrival" class="block w-full pr-4 pl-12 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="{{ _('A') }}">
+                    <ul id="suggestions-arrival" class="absolute z-10 bg-white border border-gray-300 w-full mt-1 rounded-lg shadow-lg max-h-48 overflow-y-auto hidden"></ul>
+                  </div>
+                </div>
+                <div class="w-full lg:w-auto">
+                  <div class="relative text-gray-500 focus-within:text-gray-900 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+                      <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                    </svg>
+                    <select id="type-of-cargo" class="h-auto border border-gray-300 text-gray-600 text-base rounded-lg block w-full py-1.5 px-2 focus:outline-none">
+                      <option selected>{{ _('Choisissez le type de cargo') }}</option>
+                      <option value="general-cargo">{{ _('General cargo') }}</option>
+                      <option value="ULD-container">{{ _('ULD Container') }}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="w-full lg:w-auto">
+                  <div class="relative text-gray-500 focus-within:text-gray-900">
+                    <input type="date" id="Date" class="block w-full pr-4 pl-12 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="{{ _('Date') }}">
+                  </div>
+                </div>
+                <div class="w-full lg:w-auto flex justify-center lg:justify-end">
+                  <button type='button' class='flex items-center py-2.5 px-6 text-sm bg-blue-600 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-blue-800'>
+                    {{ _('Continuer') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-search ml-2" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          </div>
+        </div>
+        <!-- end hero section -->
+
+
+
+
+        <div class="pattern_1"></div>
+
+        {% include 'main/stats.html' %}
+
+        <div class="pattern_1"></div>
+
+
+
+        {% include 'main/testimonial.html' %}
+
+
+        <!-- 3D Globe section -->
+        {% include 'main/globle.html' %}
+        <!-- end 3D Globe section -->
+
+        <div class="pattern_1"></div>
+
+        {% include 'main/contact.html' %}
+
+        <div class="pattern_2"></div>
+
+
+        {% endblock %}
+
+    </main>
+    {% block scripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const categoryMegamenuParent = document.querySelector('#category-megamenu-parent');
+          const categoryMegamenu = document.querySelector('#category-megamenu');
+          const collapseToggle = document.querySelector('[data-collapse-toggle="megamenu-full-width"]');
+          const megamenuFullWidth = document.querySelector('#megamenu-full-width');
+          const navLinks = document.querySelector('.nav-links');
+  
+          categoryMegamenuParent.addEventListener('click', () => {
+            categoryMegamenu.classList.toggle('active');
+          });
+  
+          collapseToggle.addEventListener('click', () => {
+            megamenuFullWidth.classList.toggle('active');
+            navLinks.classList.toggle('hidden');
+          });
+        })
+  
+        function toggleDropdown() {
+          const dropdownMenu = document.getElementById('dropdown');
+          dropdownMenu.classList.toggle('hidden');
+        }
+  
+  
+      </script>
+      
+  
+      <!-- tel input js -->
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+  
+      <!-- sendQuote.js-->
+      <script src="{{ url_for('static', filename='js/async/api/customers/Messages/SendQuote.js') }}"></script>
+
+      <!-- three module.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+      <!-- Globe.js -->
+      <script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
+  
+      <!-- pagedone.js -->
+      <script type="module" src="{{ url_for('static', filename='js/lib/plugins/pagedone.js') }}"></script>
+
+      <!-- Address js -->
+      <script type="module" src="{{ url_for('static', filename='js/functions/geocoding/places.js') }}"></script>
+
+    {% endblock %}
+</body>

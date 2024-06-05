@@ -8,31 +8,77 @@ from .. import db
 import os
 from newsdataapi import NewsDataApiClient
 from dotenv import load_dotenv
-from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary
+from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary, get_user_invoices
 from datetime import datetime
+
 
 load_dotenv()
 
 
 @main.route("/")
 def home():
-    return render_template("main/home.html")
+    return render_template(
+        "main/home.html"
+    )
+
 
 @main.route("/cgu")
 def cgu():
     return render_template("main/cgu.html")
 
+@main.route("/services/transit&manutention")
+def transit():
+    return render_template("main/transit.html")
+
+@main.route("/services/customs")
+def customs():
+    return render_template("main/customs.html")
+
+@main.route("/services/warehousing")
+def warehousing():
+    return render_template("main/warehousing.html")
+
+@main.route("/fret-services/aerien")
+def aerien():
+    return render_template("main/aerien.html")
+
+@main.route("/fret-services/sea")
+def sea():
+    return render_template("main/sea.html")
+
+@main.route("/fret-services/terrestre")
+def terrestre():
+    return render_template("main/terrestre.html")
+
+@main.route("/fret-sevices/air/calculate")
+def calculate_air_freight():
+    return render_template("main/calculate_air_freight.html")
+
+@main.route("/fret-sevices/sea/calculate")
+def calculate_sea_freight():
+    return render_template("main/calculate_sea_freight.html")
+
+@main.route("/fret-sevices/see-glossary")
+def glossary():
+    return render_template("main/glossary.html")
+
 @main.route("/home")
 @login_required
 def user_home():
+
+    api = NewsDataApiClient(apikey=os.environ.get('NEWS_API_KEYS'))
+
     summary = get_weekly_financial_summary()
     user_summary = get_monthly_user_summary()
     client_summary = get_daily_client_summary()
+    invoices = get_user_invoices(current_user.id)
+
     return render_template(
         "dashboard/user_home.html",
         summary=summary,
         user_summary=user_summary,
-        client_summary=client_summary
+        client_summary=client_summary,
+        invoices=invoices
     )
 
 @main.route("/careers/job_list")
@@ -49,7 +95,6 @@ def settings():
 
 @main.route("/calendar")
 @login_required
-@employee_required
 def calendar():
     return render_template("dashboard/@support_team/calendar.html")
 

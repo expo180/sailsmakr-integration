@@ -1,44 +1,89 @@
-{% extends 'main/layout.html' %}  
-<title>{% block title %}{{ _('Afrilog: Leader dans le transport et la logistique') }}{% endblock %}</title>  
-<body>
-  {% block body %}
+{% extends 'main/layout.html' %}
+{% block head %}
+  {% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ _('Afrilog, leader dans le domaine du transport et de la logistique') }}">
+    <meta name="keywords" content="{{ _('Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, 
+    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, Marchandises, Commerce, Santé, Défense, Technologie, 
+    Équipement, MSC, Import, Export, Groupage') }}">
+    <meta name="author" content="{{ _('Afrilog SARL') }}">
+  {% endblock %}
+    <title>{% block title %}{{ _('Afrilog: Leader dans le transport et la logistique') }}{% endblock %}</title>
+  {% block styles %}
+
+    <!-- pagedone css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagedone.css') }}">
+
+    <!-- tailwind output css -->
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+
+    <!-- custom home css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/home/home.css') }}">
+    
+    <!-- bootstrap-icons-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
+    
+    <!-- tel input css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"> 
+
+    <!-- flags css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
+     
+  {% endblock %}
+{% endblock %}
+{% block body %}
+  <body>
     <main>
       {% block content %}
+        {% include 'main/cookies-consent.html' %}
         <!-- hero section -->
-<div class="relative isolate px-6 pt-14 lg:px-8 hero-afrilog-bg">
-  
-  <div class="py-5"></div>
-  
-  <!-- promotion section -->
-  <!-- end promotion section -->
-  
-
-  <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-  </div>
-  <div class="mx-4 sm:mx-8 lg:mx-24 max-w-2xl py-32 sm:py-48 lg:py-32">
-    <div class="hidden sm:mb-8 sm:flex sm:justify-start">
-      <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-white hover:ring-white">
-        {{ _('Annonce de notre prochain tour de financement.') }} <a href="#" class="text-white"><span class="absolute inset-0" aria-hidden="true"></span>{{ _('Lire la suite') }} <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-    <div class="text-start">
-      <h1 class="text-4xl tracking-tight text-white sm:text-6xl">{{ _('Leader dans le transport et la logistique') }}</h1>
-      <p class="mt-6 text-lg leading-8 text-white">{{ _('Nous fournissons des solutions logistiques innovantes et fiables pour répondre à tous vos besoins de transport et de transit. Faites confiance à notre expertise pour optimiser votre chaîne d\'approvisionnement.') }}</p>
-      <div class="mt-10 flex items-start justify-start gap-x-6">
-        <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ _('Commencer') }}</a>
-      </div>
-    </div>
-  </div>
-  <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-  </div>
-</div>
-<!-- end hero section -->
+        <section class="lg:pt-20 pt-0  lg:pl-8 h-full hero-afrilog-bg">
+          <div
+            class="rounded-2xl bg-indigo-50 overflow-hidden m-5 lg:m-0 2xl:py-16 xl:py-8  lg:rounded-tl-2xl lg:rounded-bl-2xl ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-1 gap-14 items-center lg:grid-cols-12 lg:gap32">
+                <div class="w-full xl:col-span-5 lg:col-span-6 2xl:-mx-5 xl:-mx-0">
+                  <div class="flex items-center text-sm font-medium text-gray-500 justify-center lg:justify-start">
+                    <span class="bg-blue-800 py-1 px-3 rounded-2xl text-xs font-medium text-white mr-3 ">#7</span>
+                    {{ _('Logistics company in Africa') }}
+                  </div>
+                  <h1 class="py-8 text-center text-gray-900 font-bold font-manrope text-5xl lg:text-left leading-[70px]">
+                    {{ _('Leader dans la') }} <span class="text-blue-800">{{ _('logistique') }}</span> {{ (_('et le')) }}
+                    <span class="text-blue-800">{{ _('transport') }}</span>
+                  </h1>
+                  <p class=" text-gray-500 text-lg text-center lg:text-left">
+                    {{ _('Nous fournissons des solutions logistiques innovantes et fiables pour répondre à tous vos besoins de transport et de transit. Faites confiance à notre expertise pour optimiser votre chaîne d\'approvisionnement.') }}
+                  </p>
+                  <div
+                    class="relative p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-col md:flex-row justify-between rounded-full md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] border border-transparent md:bg-white transition-all duration-500 hover:border-indigo-600 focus-within:border-indigo-600">
+                    <input type="text" name="email" placeholder="{{ _('Entrer votre identifiant ou N° de suivi...') }}"
+                      class="text-base rounded-full text-gray-900 flex-1 py-4 px-6 shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] md:shadow-none bg-white md:bg-transparent shadow-none placeholder:text-gray-400 focus:outline-none md:w-fit w-full" />
+                    <a
+                      href="{{ url_for('main.user_home') }}"
+                      class="bg-blue-800 rounded-full py-3 px-7 text-base font-semibold text-white hover:bg-blue-700 cursor-pointer transition-all duration-500 md:w-fit w-full">
+                      {{ _('Continuer') }}
+                    </a>
+                  </div>
+                </div>
+                <div class="w-full xl:col-span-7  lg:col-span-6 block">
+                  <div class="w-full  sm:w-auto lg:w-[60.8125rem] xl:ml-16">
+                    <img src="{{ (url_for('static', filename='img/hero-image.png')) }}" alt="{{ _('Logistics woman') }}"
+                      class="w-full  lg:h-auto rounded-lg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end hero section -->
 
 
         <!-- logo cloud section -->
-        <div class="bg-white py-24 sm:py-32">
+        <section id="PartnerSection" class="bg-white py-24 sm:py-32">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">{{ _('Nous ont fait confiance') }}</h2>
             <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
@@ -49,7 +94,7 @@
               <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
             </div>
           </div>
-        </div>      
+        </section>      
         <!-- end logo cloud section -->
 
         <div class="pattern_1"></div>
@@ -81,8 +126,180 @@
         </div>
         <!-- end cta section -->  
         
+        <!-- pricing plans -->
+        <section class="py-24 ">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="mb-12">
+                  <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 mb-4">Choose your plan </h2>
+                  <p class="text-gray-500 text-center leading-6 mb-9">7 Days free trial. No credit card required.</p>
+                  <!--Switch-->
+                  <div class="flex justify-center items-center">
+                      <label class="min-w-[3.5rem] text-xl relative text-gray-900 mr-4 font-medium">Bill Monthly</label>
+                      <input type="checkbox" id="basic-with-description"
+                          class="relative shrink-0 w-11 h-6 p-0.5 bg-indigo-100 checked:bg-none checked:bg-indigo-100 rounded-full cursor-pointer transition-colors ease-in-out duration-200  focus:border-blue-600  appearance-none 
+  
+                              before:inline-block before:w-5 before:h-5 before:bg-indigo-600 checked:before:bg-indigo-600 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform  before:transition before:ease-in-out before:duration-200 ">
+                      <label class="relative min-w-[3.5rem] font-medium text-xl text-gray-500 ml-4 ">
+                          Bill Yearly
+                      </label>
+                  </div>
+                  <!--Switch End-->
+              </div>
+                  <!--Grid-->
+                  <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+                      <!--Pricing Card-->
+                      <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+                          <h3 class="font-manrope text-2xl font-bold mb-3">Free</h3>
+                          <div class="flex items-center mb-6">
+                              <span class="font-manrope mr-2 text-6xl font-semibold">$0</span>
+                              <span class="text-xl text-gray-500 ">/ month</span>
+                          </div>
+                          <!--List-->
+                          <ul class="mb-12 space-y-6 text-left text-lg text-gray-500">
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>2 auto tracking</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>7 Day transaction clearing </span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>24/7 Customer support </span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>All widget access</span>
+                              </li>
+                          </ul>
+                          <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Purchase Plan</a>
+                          <!--List End-->
+                      </div> 
+                      <!--Pricing Card-->
+                      <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
+                          <div class="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl p-3 text-center text-white">
+                              MOST POPULAR
+                          </div>   
+                          <div class="p-6 xl:py-9 xl:px-12">
+                          <h3 class="font-manrope text-2xl font-bold mb-3">Advanced</h3>
+                          <div class="flex items-center mb-6">
+                              <span class="font-manrope mr-2 text-6xl font-semibold text-indigo-600">$150</span>
+                              <span class="text-xl text-gray-500 ">/ month</span>
+                          </div>
+                          <!--List-->
+                          <ul class="mb-12 space-y-6 text-left text-lg ">
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>AI Advisor</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>Unlimited auto tracking</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>1 Day transaction clearing </span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>Priority customer support</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>All Widget Access</span>
+                              </li>
+                          </ul>
+                          <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700">Purchase Plan</a>
+                          <!--List End-->
+                      </div>
+                      </div> 
+                       <!--Pricing Card-->
+                       <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+                          <h3 class="font-manrope text-2xl font-bold mb-3">Team</h3>
+                          <div class="flex items-center mb-6">
+                              <span class="font-manrope mr-2 text-6xl font-semibold">$180</span>
+                              <span class="text-xl text-gray-500 ">/ month</span>
+                          </div>
+                          <!--List-->
+                          <ul class="mb-12 space-y-6 text-left text-lg text-gray-500">
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>AI Advisor</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>Unlimited auto tracking </span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>1 Day transaction clearing </span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>Priority customer support</span>
+                              </li>
+                              <li class="flex items-center space-x-4">
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  <span>All Widget Access</span>
+                              </li>
+                          </ul>
+                          <a href="javascript:;"  class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Purchase Plan</a>
+                          <!--List End-->
+                      </div> 
+                  </div>
+                  <!--Grid End-->
+              
+          </div>
+        </section>
+                                              
+        <!-- end pricing plans -->
+
         <div class="pattern_1"></div>
 
+        
         <!-- features section -->
         <div class="overflow-hidden bg-white py-24 sm:py-32">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -92,7 +309,7 @@
                   <h2 class="text-base font-semibold leading-7 text-indigo-600">
                     {{ _('Nos valeurs fondamentales') }}
                   </h2>
-                  <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <p class="mt-2 text-3xl   tracking-tight text-gray-900 sm:text-4xl">
                     {{ _('Ce qui nous guide') }}
                   </p>
                   <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -150,7 +367,7 @@
           </div>
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-              <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl" translate="no">
+              <h2 class="text-4xl   tracking-tight text-white sm:text-6xl" translate="no">
                 {{ _('Travaillez avec nous') }}
               </h2>
               <p class="mt-6 text-lg leading-8 text-white" translate="no">
@@ -173,74 +390,19 @@
         </div>
         <!-- end header section -->
 
-        <!-- stats section -->
-        <div class="bg-white py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600" translate="no">
-                  {{ _('2.5 millions de tonnes de marchandises traitées chaque année') }}
-                </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl" translate="no">
-                  {{ _('2.5 M') }}
-                </dd>
-              </div>
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600" translate="no">
-                  {{ _('Clients satisfaits') }}
-                </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl" translate="no">99.8%</dd>
-              </div>
-              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-600" translate="no">
-                  {{ _('Réductions des coûts logistiques') }}
-                </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl" translate="no">20%</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-        <!-- end stats section -->
+        {% include 'main/stats.html' %}
 
         <!-- 3D Globe section -->
         {% include 'main/globle.html' %}
         <!-- end 3D Globe section -->
 
-        <!-- testimonials section -->
-        <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-          <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
-          <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
-          <div class="mx-auto max-w-2xl lg:max-w-4xl">
-            <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
-            <figure class="mt-10">
-              <blockquote class="text-center text-xl leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                <p>
-                  “{{ _("Grâce à leur expertise et leur maîtrise des opérations logistiques, nous avons pu améliorer considérablement notre efficacité. Leur équipe est dédiée et toujours à l'écoute, ce qui nous a permis de nous concentrer pleinement sur notre cœur de métier. Afrilog est un partenaire de confiance qui nous a fait gagner un temps précieux et optimisé nos coûts. Nous ne pourrions pas être plus satisfaits de leur service exceptionnel.") }}”
-                </p>
-              </blockquote>
-              <figcaption class="mt-10">
-                <img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                  <div class="font-semibold text-gray-900">Judith Black</div>
-                  <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
-                    <circle cx="1" cy="1" r="1" />
-                  </svg>
-                  <div class="text-gray-600">
-                    {{ _('CEO of Workcation') }}
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-                
-        <!-- end testimonials section -->
+        {% include 'main/testimonial.html' %}
 
         <!-- blog section -->
         <div class="bg-gray-300 py-24 sm:py-32">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Du blog</h2>
+              <h2 class="text-3xl   tracking-tight text-gray-900 sm:text-4xl">Du blog</h2>
               <p class="mt-2 text-lg leading-8 text-gray-600">Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à nos conseils d'experts.</p>
             </div>
             <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -332,115 +494,14 @@
 
         <div class="pattern_2"></div>
 
-      <!-- contact sales -->
-      <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
-          <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {{ _('Contactez notre service commercial') }}
-          </h2>
-          <p class="mt-2 text-lg leading-8 text-gray-600">
-            {{ _('Découvrez comment notre expertise en logistique peut propulser votre entreprise.') }}
-          </p>
-        </div>
-        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{ _('Prénom') }}
-              </label>
-              <div class="mt-2.5">
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              </div>
-            </div>
-            <div>
-              <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{_('Nom de famille')}}
-              </label>
-              <div class="mt-2.5">
-                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{ _('Entreprise') }}
-              </label>
-              <div class="mt-2.5">
-                <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{ _('Adresse E-mail') }}
-              </label>
-              <div class="mt-2.5">
-                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{ _('Numéro de téléphone') }}
-              </label>
-              <div class="relative mt-2.5">
-                <div class="absolute inset-y-0 left-0 flex items-center">
-                  <label for="country" class="sr-only">
-                    {{ _('Pays') }}
-                  </label>
-                  <select id="country" name="country" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                    <option>FR</option>
-                    <option>BE</option>
-                    <option>CH</option>
-                  </select>
-                  <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">
-                {{ _('Message') }}
-              </label>
-              <div class="mt-2.5">
-                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-              </div>
-            </div>
-            <div class="flex gap-x-4 sm:col-span-2">
-              <div class="flex h-6 items-center">
-                <button type="button" class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-                  <span class="sr-only">
-                    {{ _('Accepter les politiques') }}
-                  </span>
-                  <span aria-hidden="true" class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
-                </button>
-              </div>
-              <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
-                {{ _('En sélectionnant cette option, vous acceptez notre') }}
-                <a href="#" class="font-semibold text-indigo-600">
-                  {{ _('politique de confidentialité') }}
-                </a>.
-              </label>
-            </div>
-          </div>
-          <div class="mt-10">
-            <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-              {{ _('Envoyer') }}
-            </button>
-          </div>
-        </form>
-      </div>
-
-        <!-- end contact sales -->
+        {% include 'main/contact.html' %}
         
         <!-- newsletter section -->
         <div class="relative isolate overflow-hidden bg-blue-700 py-16 sm:py-24 lg:py-32">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
               <div class="max-w-xl lg:max-w-lg">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ _('Abonnez-vous à notre newsletter') }}</h2>
+                <h2 class="text-3xl   tracking-tight text-white sm:text-4xl">{{ _('Abonnez-vous à notre newsletter') }}</h2>
                 <p class="mt-4 text-lg leading-8 text-white">{{ _('Recevez les dernières nouvelles et mises à jour sur nos services logistiques directement dans votre boîte de réception.') }}</p>
                 <div class="mt-6 flex max-w-md gap-x-4">
                   <label for="email-address" class="sr-only">{{ _('Adresse email') }}</label>
@@ -480,5 +541,89 @@
 
       {% endblock %}
     </main>
+  {% block scripts %}
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const categoryMegamenuParent = document.querySelector('#category-megamenu-parent');
+        const categoryMegamenu = document.querySelector('#category-megamenu');
+        const resourcesMegamenu = document.querySelector('#resources-megamenu')
+        const collapseToggle = document.querySelector('[data-collapse-toggle="megamenu-full-width"]');
+        const megamenuFullWidth = document.querySelector('#megamenu-full-width');
+        const navLinks = document.querySelector('.nav-links');
+
+        categoryMegamenuParent.addEventListener('click', () => {
+          categoryMegamenu.classList.toggle('active');
+        });
+
+        collapseToggle.addEventListener('click', () => {
+          megamenuFullWidth.classList.toggle('active');
+          resourcesMegamenu.classList.toggle('active')
+          navLinks.classList.toggle('hidden');
+        });
+      })
+
+      function toggleDropdown() {
+        const dropdownMenu = document.getElementById('dropdown');
+        dropdownMenu.classList.toggle('hidden');
+      }
+
+
+    </script>
+
+    <script>
+      function setCookie(name, value, days) {
+          let expires = "";
+          if (days) {
+              const date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      function getCookie(name) {
+          const nameEQ = name + "=";
+          const ca = document.cookie.split(';');
+          for (let i = 0; i < ca.length; i++) {
+              let c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+      }
+
+      function acceptCookies() {
+          setCookie('cookieConsent', 'accepted', 365);
+          document.getElementById('cookieConsent').style.display = 'none';
+      }
+
+      window.onload = function() {
+          if (!getCookie('cookieConsent')) {
+              document.getElementById('cookieConsent').style.display = 'flex';
+          }
+      };
+    </script>
+    
+
+    <!-- tel input js -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+
+    <!-- sendQuote.js-->
+    <script src="{{ url_for('static', filename='js/async/api/customers/Messages/SendQuote.js') }}"></script>
+
+
+    <!-- three module.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+      
+    <!-- globe.js -->
+    <script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
+    
+    <!-- pagedone.js -->
+    <script type="module" src="{{ url_for('static', filename='js/lib/plugins/pagedone.js') }}"></script>
   {% endblock %}
-</body>
+
+
+  </body>
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'auth/layout.html' %}
 {% block title %}{{ _('Afrilog : Créer un nouveau compte') }}{% endblock %}    
 {% block content %}
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-white">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-10 w-auto" src="" alt="Afrilog">
       <h2 class="mt-10 text-center text-2xl leading-9 tracking-tight text-gray-900">{{ _('Créer un nouveau compte') }}</h2>
@@ -171,12 +171,12 @@
       </span>
       {{ _('Continuer avec Google') }}
     </button>
-      </form>
-  
+
       <p class="mt-10 text-center text-sm text-gray-500">
         {{ _("Avez-vous déja un compte?") }}
         <a href="{{ url_for('auth.login') }}" class="leading-6 text-blue-600 hover:text-blue-500">{{ _('Connectez vous ici') }}</a>
       </p>
+      </form>
     </div>
   </div>
   <script type="module" src="{{ url_for('static', filename='js/async/auth/SignUp.js') }}"></script>

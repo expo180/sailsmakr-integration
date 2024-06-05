@@ -1,0 +1,242 @@
+<nav class="fixed border-gray-200 w-full border-b py-3 bg-white z-50 bg-inherit border-b-default border-solid border-prime-gray-200">
+  <div class="container mx-auto">
+      <div class="w-full flex flex-col lg:flex-row">
+          <div class="flex justify-between lg:flex-row">
+              <a href="javascript:;" class="flex items-center">
+                  <img src="" alt="Afrilog logo">
+              </a>
+              <button data-collapse-toggle="megamenu-full-width" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">{{ ('Ouvrir le menu principal') }}</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+              </button>
+          </div>
+          <div class="w-full lg:flex lg:pl-11" id="megamenu-full-width">
+            <ul class="lg:flex items-center flex-col mt-4 lg:mt-0 lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
+                  <li>
+                    <a href="{{url_for('main.home')  }}" class="nav-link flex items-center justify-between text-gray-500 text-base text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mb-0 mr-auto lg:text-left ms-5 m-auto lg:m-0">{{ _('Accueil') }}</a>
+                  </li>
+                  <li>
+                    <a href="#PartnerSection" class="ms-5 flex items-center justify-between text-gray-500 text-base text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mb-0 mr-auto lg:text-left m-auto lg:m-0">{{ _('Partenaires') }}</a>
+                  </li>
+                  <li class="relative" id="category-megamenu-parent">
+                    <button data-target="category-megamenu" class="ms-5 dropdown-toggle flex items-center justify-between text-gray-500 text-sm  lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto text-center lg:m-0">{{ _('Services') }} <svg class="w-3 h-2 ml-1.5 " width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L3.58579 3.58579C4.25245 4.25245 4.58579 4.58579 5 4.58579C5.41421 4.58579 5.74755 4.25245 6.41421 3.58579L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="category-megamenu" aria-labelledby="category-megamenu" class="dropdown-menu  animate-fade z-10 mb-5 lg:mb-0 lg:absolute relative lg:top-14 top-0 left-0 lg:-left-80 bg-white rounded-lg border border-gray-200 lg:border-0 lg:shadow-[0px_15px_30px_0px_rgba(16,24,40,0.1)] xl:p-4  p-2 lg:min-w-[800px] md:min-w-[500px] min-w-full  ">
+                      <div class="lg:flex justify-between">
+                        <ul class="text-sm text-gray-700  lg:w-3/5 xl:p-4 lg:p-4 p-2" aria-labelledby="dropdownLargeButton">
+                          <h6 class="font-medium text-sm text-gray-500 mb-2">{{ _('Services') }}</h6>
+                          <li>
+                            <a href="{{ url_for('main.transit') }}" class="px-3 py-5 transition-all duration-500 hover:bg-gray-50 hover:rounded-xl flex items-center ">
+                              <div class="bg-orange-50 rounded-lg w-12 h-12 flex items-center justify-center">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path opacity="0.3" d="M23.75 16.625C23.75 15.3133 22.6867 14.25 21.375 14.25H7.125C5.81332 14.25 4.75 15.3133 4.75 16.625V30.875C4.75 32.1867 5.81332 33.25 7.125 33.25H21.375C22.6867 33.25 23.75 32.1867 23.75 30.875V16.625Z" fill="#F59E0B"></path>
+                                  <path d="M12.6665 15.0417C12.6665 20.7256 17.2742 25.3333 22.9582 25.3333C28.6421 25.3333 33.2498 20.7256 33.2498 15.0417C33.2498 9.35774 28.6421 4.75 22.9582 4.75C17.2742 4.75 12.6665 9.35774 12.6665 15.0417Z" fill="#F59E0B"></path>
+                                </svg>
+                              </div>
+                              <div class="ml-4 w-4/5">
+                                <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Transit, Manutention et Transport') }}</h5>
+                                <p class="text-xs font-medium text-gray-400">
+                                  {{ _("Les services de transit, de manutention et de transport sont des services qui assurent la manutention, le stockage et/ou le transport de marchandises dans certaines zone") }}
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="">
+                            <a href="{{ url_for('main.customs') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex items-center transition-all duration-500">
+                              <div class="bg-emerald-50 rounded-lg w-12 h-12 flex items-center justify-center">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path opacity="0.3" d="M25.3333 6.84527C25.3333 5.62971 24.3452 4.6322 23.1365 4.76127C21.1735 4.97089 19.2468 5.46081 17.416 6.21916C14.9059 7.25888 12.6251 8.78283 10.704 10.704C8.78283 12.6251 7.25888 14.9059 6.21916 17.416C5.46081 19.2468 4.97089 21.1735 4.76127 23.1365C4.6322 24.3452 5.62971 25.3333 6.84526 25.3333H23.1324C24.3479 25.3333 25.3333 24.3479 25.3333 23.1324L25.3333 6.84527Z" fill="#10B981"></path>
+                                  <path d="M31.6668 13.1788C31.6668 11.9632 30.6787 10.9657 29.47 11.0948C27.507 11.3044 25.5803 11.7943 23.7495 12.5527C21.2394 13.5924 18.9586 15.1163 17.0375 17.0375C15.1163 18.9586 13.5924 21.2394 12.5527 23.7495C11.7943 25.5803 11.3044 27.507 11.0948 29.47C10.9657 30.6787 11.9632 31.6668 13.1788 31.6668H29.4659C30.6814 31.6668 31.6668 30.6814 31.6668 29.4659V13.1788Z" fill="#10B981"></path>
+                                </svg>
+                              </div>
+                              <div class="ml-4 w-4/5">
+                                <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Dédouanement') }} <span class="bg-indigo-50 text-indigo-500 text-xs font-medium mr-2 px-2.5 py-1 rounded-full h-5 ml-4">{{ _('Nouveau') }}</span>
+                                </h5>
+                                <p class="text-xs font-medium text-gray-400">
+                                  {{ ("Pour aider nos clients à surmonter ces défis, nous fournissons des services de dédouanement complets qui garantissent un processus d’importation ou d’exportation fluide.") }}
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="">
+                            <a href="{{ url_for('main.warehousing') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex items-center transition-all duration-500">
+                              <div class="bg-blue-50 rounded-lg w-12 h-12 flex items-center justify-center">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path opacity="0.3" d="M4.75 22.1667C4.75 26.5389 8.29441 30.0833 12.6667 30.0833H22.0227C22.9767 30.0833 23.75 29.31 23.75 28.3561V15.9773C23.75 15.0233 22.9767 14.25 22.0227 14.25H12.6667C8.29441 14.25 4.75 17.7944 4.75 22.1667Z" fill="#3B82F6"></path>
+                                  <path d="M33.25 14.2502C33.25 18.6224 29.7056 22.1668 25.3333 22.1668H15.9773C15.0233 22.1668 14.25 21.3935 14.25 20.4396V8.06077C14.25 7.10682 15.0233 6.3335 15.9773 6.3335H25.3333C29.7056 6.3335 33.25 9.87791 33.25 14.2502Z" fill="#3B82F6"></path>
+                                </svg>
+                              </div>
+                              <div class="ml-4 w-4/5">
+                                <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Entrepôt de stockage') }}</h5>
+                                <p class="text-xs font-medium text-gray-400">
+                                  {{ _("Afrilog propose des services spécialisés d'entreposage sous douane et de transport en libre-entreposage") }}
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="bg-gray-50 lg:rounded-none rounded-lg xl:p-8 lg:p-4 p-2 lg:w-2/5">
+                          <h6 class="font-medium text-sm text-gray-500 mb-2">
+                            {{ _('Services de Fret') }}
+                          </h6>
+                          <ul class="">
+                            <li>
+                              <a href="{{ url_for('main.aerien') }}" class="py-3 mb-2 block text-base font-semibold text-gray-900">
+                                {{ _('Fret aérien') }}
+                              </a>
+                            </li>
+                            <li>
+                              <a href="{{ url_for('main.sea') }}" class="py-3 mb-2 block text-base font-semibold text-gray-900">
+                                {{ _('Fret maritime') }}
+                              </a>
+                            </li>
+                            <li>
+                              <a href="{{ url_for('main.terrestre') }}" class="py-3 mb-2 block text-base font-semibold text-gray-900">
+                                {{ _('Fret routier') }}
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="">
+                    <button data-target="megamenu-with-image" class="ms-5 dropdown-toggle flex items-center justify-between text-gray-500 text-sm text-center lg:text-base font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left lg:m-0">{{ _('Ressources') }} <svg class="w-3 h-2 ml-1.5 " width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L3.58579 3.58579C4.25245 4.25245 4.58579 4.58579 5 4.58579C5.41421 4.58579 5.74755 4.25245 6.41421 3.58579L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="megamenu-with-image" aria-labelledby="megamenu-with-image" class="dropdown-menu  animate-fade z-10  lg:absolute top-full left-0 right-0 m-auto bg-white rounded-lg shadow-[0px_15px_30px_0px_rgba(16,24,40,0.1)]  md:px-5 max-w-screen-2xl p-4 xl:py-8 lg:py-4 md:py-2l  ">
+                      <div class="lg:flex justify-between ">
+                        <div class="p-0 pr-4 lg:flex lg:justify-between lg:w-2/3">
+                          <ul class="text-sm text-gray-700  " aria-labelledby="dropdownLargeButton">
+                            <h6 class="font-medium text-sm text-gray-500 mb-2">{{ _('Calculatrice Fret') }}</h6>
+                            <li class="">
+                              <a href="{{ url_for('main.calculate_air_freight') }}" class="px-3 py-5 transition-all duration-500 hover:bg-gray-50 hover:rounded-xl flex  ">
+                                <div class="rounded-lg w-12 h-12 flex  justify-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-airplane-engines" viewBox="0 0 16 16">
+                                    <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0M7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1s.458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7z"/>
+                                  </svg>
+                                </div>
+                                <div class="ml-4 w-4/5">
+                                  <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Fret Aérien') }}</h5>
+                                  <p class="text-xs font-medium text-gray-400">
+                                    {{ _('Obtenez les différents tarifs provenant de plusieurs services de fret aerien') }}
+                                  </p>
+                                </div>
+                              </a>
+                            </li>
+                            <li class="">
+                              <a href="{{ url_for('main.calculate_sea_freight') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex  transition-all duration-500">
+                                <div class=" rounded-lg w-12 h-12 flex  justify-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-water" viewBox="0 0 16 16">
+                                    <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65m0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65m0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65m0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65"/>
+                                  </svg>
+                                </div>
+                                <div class="ml-4 w-4/5">
+                                  <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Fret Maritime') }}</h5>
+                                  <p class="text-xs font-medium text-gray-400">
+                                    {{ _('Obtenez de meilleurs "insights"  pour l\'expédition de vos conteneurs') }}
+                                  </p>
+                                </div>
+                              </a>
+                            </li>
+                            <li class="">
+                              <a href="{{ url_for('main.glossary') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex  transition-all duration-500">
+                                <div class=" rounded-lg w-12 h-12 flex  justify-center">
+                                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.239 18.9582H17.8748C21.1465 18.9582 23.8332 16.2823 23.8332 12.9998C23.8332 9.72817 21.1573 7.0415 17.8748 7.0415H16.239M9.74984 7.0415H8.12484C4.84234 7.0415 2.1665 9.71734 2.1665 12.9998C2.1665 16.2715 4.84234 18.9582 8.12484 18.9582H9.74984M8.6665 12.9998H17.3332" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div>
+                                <div class="ml-4 w-4/5">
+                                  <h5 class="text-gray-900 text-base mb-1.5 font-semibold"> {{ _('Glossaire') }} </h5>
+                                  <p class="text-xs font-medium text-gray-400">{{ _('Certaines notions sont-elles un peu floues? Aucun problème! nous vous aidons à comprendre l\'essentiel') }}</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                          <ul class="text-sm text-gray-700 dark:text-gray-400 " aria-labelledby="dropdownLargeButton">
+                            <h6 class="font-medium text-sm text-gray-500 mb-2">{{ _('Docs') }}</h6>
+                            <li class="">
+                              <a href="javascript:;" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex  transition-all duration-500">
+                                <div class=" rounded-lg w-12 h-12 flex  justify-center">
+                                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 14.0832H15.1667M6.5 17.3332H10.8333M14.8049 2.52753V7.22197C14.8049 8.41859 15.7749 9.38864 16.9715 9.38864H21.666M13.9081 2.1665H7.25C5.36438 2.1665 4.42157 2.1665 3.83579 2.75229C3.25 3.33808 3.25 4.28089 3.25 6.1665V21.6665C3.25 22.8631 4.22005 23.8332 5.41667 23.8332H18.0278C19.9134 23.8332 20.8562 23.8332 21.442 23.2474C22.0278 22.6616 22.0278 21.7188 22.0278 19.8332V10.2862C22.0278 9.71155 21.7995 9.16045 21.3932 8.75412L15.4402 2.80111C15.0338 2.39478 14.4827 2.1665 13.9081 2.1665Z" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round"></path>
+                                  </svg>
+                                </div>
+                                <div class="ml-4 w-4/5">
+                                  <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Blog') }} </h5>
+                                  <p class="text-xs font-medium text-gray-400">{{ _('Découvrez les dernières infos concernat l\'évolution du secteur') }}</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li class="">
+                              <a href="#" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex  transition-all duration-500">
+                                <div class=" rounded-lg w-12 h-12 flex  justify-center">
+                                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.97484 15.1665C3.97484 15.6636 4.37778 16.0665 4.87484 16.0665C5.37189 16.0665 5.77484 15.6636 5.77484 15.1665H3.97484ZM20.2248 13.5415V15.1665H22.0248V13.5415H20.2248ZM5.77484 15.1665V13.5415H3.97484V15.1665H5.77484ZM12.9998 6.3165C16.9901 6.3165 20.2248 9.55125 20.2248 13.5415H22.0248C22.0248 8.55713 17.9842 4.5165 12.9998 4.5165V6.3165ZM12.9998 4.5165C8.01547 4.5165 3.97484 8.55713 3.97484 13.5415H5.77484C5.77484 9.55125 9.00958 6.3165 12.9998 6.3165V4.5165ZM6.73682 14.2665H5.4165V16.0665H6.73682V14.2665ZM5.4165 22.5665H6.73682V20.7665H5.4165V22.5665ZM7.9415 21.3618V15.4712H6.1415V21.3618H7.9415ZM6.73682 22.5665C7.40215 22.5665 7.9415 22.0271 7.9415 21.3618H6.1415C6.1415 21.033 6.40803 20.7665 6.73682 20.7665V22.5665ZM1.2665 18.4165C1.2665 20.7085 3.12452 22.5665 5.4165 22.5665V20.7665C4.11863 20.7665 3.0665 19.7144 3.0665 18.4165H1.2665ZM5.4165 14.2665C3.12452 14.2665 1.2665 16.1245 1.2665 18.4165H3.0665C3.0665 17.1186 4.11863 16.0665 5.4165 16.0665V14.2665ZM6.73682 16.0665C6.40803 16.0665 6.1415 15.8 6.1415 15.4712H7.9415C7.9415 14.8059 7.40215 14.2665 6.73682 14.2665V16.0665ZM19.2629 16.0665H20.5832V14.2665H19.2629V16.0665ZM20.5832 20.7665H19.2629V22.5665H20.5832V20.7665ZM19.8582 21.3618V15.4712H18.0582V21.3618H19.8582ZM19.2629 20.7665C19.5916 20.7665 19.8582 21.033 19.8582 21.3618H18.0582C18.0582 22.0271 18.5975 22.5665 19.2629 22.5665V20.7665ZM22.9332 18.4165C22.9332 19.7144 21.881 20.7665 20.5832 20.7665V22.5665C22.8752 22.5665 24.7332 20.7085 24.7332 18.4165H22.9332ZM20.5832 16.0665C21.881 16.0665 22.9332 17.1186 22.9332 18.4165H24.7332C24.7332 16.1245 22.8752 14.2665 20.5832 14.2665V16.0665ZM19.2629 14.2665C18.5975 14.2665 18.0582 14.8059 18.0582 15.4712H19.8582C19.8582 15.8 19.5916 16.0665 19.2629 16.0665V14.2665Z" fill="#06B6D4"></path>
+                                  </svg>
+                                </div>
+                                <div class="ml-4 w-4/5">
+                                  <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Aide') }}</h5>
+                                  <p class="text-xs font-medium text-gray-400">
+                                    {{ _('Avez-vous besoin d\'aide? Notre service client est là pour vous aider') }}
+                                  </p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="bg-gray-50 p-8 lg:w-2/6">
+                          <h6 class="font-medium text-sm text-gray-500 mb-5">{{ _('Dernières infos') }}</h6>
+                          <div class="mb-6 relative">
+                            <img src="https://pagedone.io/asset/uploads/1700893615.png" alt="Latest News image" class="w-72 h-36">
+                          </div>
+                          <div class="block">
+                            {% if latest_article %}
+                                <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ latest_article.title }}</h5>
+                                <p class="text-sm font-medium text-gray-400">{{ latest_article.content }}</p>
+                                <a href="javascript:;" class="flex items-center mt-4 text-xs font-semibold text-indigo-600">{{ _('En savoir plus') }}
+                                  <svg class="ml-2" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8L12.6667 8M9.33333 12L12.8619 8.4714C13.0842 8.24918 13.1953 8.13807 13.1953 8C13.1953 7.86193 13.0842 7.75082 12.8619 7.5286L9.33333 4" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </a>
+                            {% else %}
+                                <h5 class="text-gray-900 text-base mb-1.5 font-semibold">{{ _('Les innovations technologiques dans la logistique') }}</h5>
+                                <p class="text-sm font-medium text-gray-400">{{ _('La technologie joue un rôle crucial dans la transformation ...') }}</p>
+                                <a href="javascript:;" class="flex items-center mt-4 text-xs font-semibold text-indigo-600">{{ _('En savoir plus') }}
+                                    <svg class="ml-2" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 8L12.6667 8M9.33333 12L12.8619 8.4714C13.0842 8.24918 13.1953 8.13807 13.1953 8C13.1953 7.86193 13.0842 7.75082 12.8619 7.5286L9.33333 4" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            {% endif %}
+                          </div>                       
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="ms-5 flex items-center justify-between nav-link text-gray-500 text-base text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mb-0 mr-auto lg:text-left m-auto lg:m-0">{{ _('A propos') }}</a>
+                  </li>
+                  <li>
+                    {% include 'includes/language_selector.html' %}
+                  </li>
+              </ul>
+              <div class="flex flex-col lg:flex-row max-lg:gap-2 lg:flex-1 lg:justify-end lg:space-y-0 mt-4 lg:mt-0">
+                  <a href="#SalesContact" class="bg-indigo-50 text-blue-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:text-base hover:bg-indigo-100 mb-2 lg:mb-0">
+                      {{ _('Service commercial') }}
+                  </a>
+                  <a href="{{ url_for('auth.login') }}" class="bg-blue-800 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:text-base lg:ml-5 hover:bg-blue-900 mb-2 lg:mb-0">
+                      {{ _('Se connecter') }}
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+

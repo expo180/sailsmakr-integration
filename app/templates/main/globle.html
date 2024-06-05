@@ -1,10 +1,7 @@
-<div class="bg-blue-900">
-    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center h-screen">
-        <div class="lg:w-1/2 lg:pl-12">
-          <h1 class="text-white text-4xl lg:text-6xl font-bold mb-4">Interactive Globe</h1>
-          <p class="text-white text-lg lg:text-xl">Explore the world with our interactive globe.</p>
-        </div>
-        <div id="globe-container" class="lg:w-1/2 lg:pr-12 mt-8 lg:mt-0"></div>
-    </div>
-</div>
-<script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
+<section class="relative isolate overflow-hidden bg-blue-900 px-6 py-24 sm:py-32 lg:px-8">
+  <div class="lg:w-1/2 lg:pl-12">
+      <h1 class="text-white text-4xl lg:text-6xl mb-4">{{ _('Ouvrez-vous au monde') }}</h1>
+      <p class="text-white text-lg lg:text-xl">{{ _('Connectez-vous à un monde plein de possibiltés.') }}</p>
+  </div>
+  <div id="globe-container" class="lg:w-1/2 lg:pr-12 mt-8 lg:mt-0"></div>
+</section>

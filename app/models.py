@@ -3,14 +3,11 @@ from datetime import datetime
 import hashlib
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import current_app, request, url_for
-from flask_login import UserMixin, AnonymousUserMixin
+from flask_login import UserMixin, AnonymousUserMixin, current_user
 from itsdangerous import Serializer
 from . import db
 from . import login_manager
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -23,9 +20,9 @@ class Role(db.Model):
     default = db.Column(db.Boolean, default=False, index=True)
     description = db.Column(db.String(255))
     users = db.relationship('User', backref='role', lazy='dynamic')
-    
-    @staticmethod
-    def insert_roles():
+
+    @classmethod
+    def insert_roles(cls):
         roles = {
             'CEO': 'Oversee all company operations and strategy',
             'HR Manager': 'Manage human resources tasks and employee relations',
@@ -37,12 +34,12 @@ class Role(db.Model):
             'Employee': 'Perform tasks and duties assigned in their specific role',
             'User': 'A generic user role'
         }
-        for r in roles:
-            role = Role.query.filter_by(name=r).first()
+        for role_name, description in roles.items():
+            role = cls.query.filter_by(name=role_name).first()
             if role is None:
-                role = Role(name=r)
-            role.description = roles[r]
-            role.default = (r == 'User')
+                role = cls(name=role_name)
+            role.description = description
+            role.default = (role_name == 'User')
             db.session.add(role)
         db.session.commit()
 
@@ -65,20 +62,14 @@ class User(UserMixin, db.Model):
     purchases = db.relationship('Purchase', back_populates='user', lazy=True)
     tasks = db.relationship('Task', lazy=True)
     docs = db.relationship('Doc', backref='user', lazy=True)
-    
+
     @property
     def password(self):
         raise AttributeError('password is not a readable attribute')
-    
+
     @password.setter
     def password(self, password):
         self.password_hash = generate_password_hash(password)
-    
-    def get_authorization_client_phone_number(self):
-        authorization = Authorization.query.filter_by(user_id=self.id).first()
-        if authorization:
-            return authorization.client_phone_number
-        return None
 
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
@@ -93,53 +84,71 @@ class User(UserMixin, db.Model):
             data = s.loads(token.encode('utf-8'))
         except:
             return False
-        
+
         if data.get('confirm') != self.id:
             return False
-        
+
         self.confirmed = True
         db.session.add(self)
         return True
 
-    def __init__(self, **kwargs):
-        super(User, self).__init__(**kwargs)
-        
+    def assign_role(self):
+        roles = {
+            current_app.config['COMPANY_CEO']: 'CEO',
+            current_app.config['COMPANY_CEO_ASSISTANT']: 'CEO',
+            current_app.config['COMPANY_HR_MANAGER']: 'HR Manager',
+            current_app.config['COMPANY_ACCOUNTANT']: 'Accountant',
+            current_app.config['COMPANY_PROJECT_MANAGER']: 'Project Manager',
+            current_app.config['COMPANY_SALES_MANAGER']: 'Sales Manager',
+            current_app.config['COMPANY_IT_ADMINISTRATOR']: 'IT Administrator'
+        }
         agents_emails = os.getenv("AGENTS_EMAILS")
         AGENTS_EMAILS = agents_emails.split(',')
 
-        if self.email == current_app.config['COMPANY_CEO']:
-            self.role = Role.query.filter_by(name='CEO').first()
-
-        if self.email == current_app.config['COMPANY_CEO_ASSISTANT']:
-            self.role = Role.query.filter_by(name='CEO').first()
-
-        elif self.email == current_app.config['COMPANY_HR_MANAGER']:
-            self.role = Role.query.filter_by(name='HR Manager').first()
-
-        elif self.email == current_app.config['COMPANY_ACCOUNTANT']:
-            self.role = Role.query.filter_by(name='Accountant').first()
-
-        elif self.email == current_app.config['COMPANY_PROJECT_MANAGER']:
-            self.role = Role.query.filter_by(name='Project Manager').first()
-
-        elif self.email == current_app.config['COMPANY_SALES_MANAGER']:
-            self.role = Role.query.filter_by(name='Sales Manager').first()
-
-        elif self.email == current_app.config['COMPANY_IT_ADMINISTRATOR']:
-            self.role = Role.query.filter_by(name='IT Administrator').first()
-
+        if self.email in roles:
+            role_name = roles[self.email]
+            self.role = Role.query.filter_by(name=role_name).first()
         elif self.email in AGENTS_EMAILS:
             self.role = Role.query.filter_by(name='Employee').first()
-
         else:
             self.role = Role.query.filter_by(default=True).first()
 
     @property
     def role_names(self):
-        return [self.role.name]
+        return [self.role.name] if self.role else []
 
     def has_role(self, role_name):
-        return self.role.name == role_name
+        return self.role and self.role.name == role_name
+
+    def is_role(self, role_name):
+        return self.has_role(role_name)
+
+    def __init__(self, **kwargs):
+        super(User, self).__init__(**kwargs)
+        self.assign_role()
+
+    def is_employee(self):
+        return self.role.name == 'Employee'
+
+    def is_hr_manager(self):
+        return self.role.name == 'HR Manager'
+
+    def is_accountant(self):
+        return self.role.name == 'Accountant'
+
+    def is_sales(self):
+        return self.role.name == 'Sales Manager'
+
+    def is_project_manager(self):
+        return self.role.name == 'Project Manager'
+
+    def is_ceo(self):
+        return self.role.name == 'CEO'
+
+    def is_user(self):
+        return self.role.name == 'User'
+    
+    
 
 
 
@@ -177,6 +186,7 @@ class Authorization(db.Model):
 class Article(db.Model):
     __tablename__ = 'posts'
     id = db.Column(db.Integer, primary_key=True)
+    img_url = db.Column(db.String)
     title = db.Column(db.String(128), nullable=False)
     content = db.Column(db.Text, nullable=False)
     likes = db.Column(db.Integer, default=0)
@@ -303,6 +313,7 @@ class Purchase(db.Model):
     service_fees = db.Column(db.Float, default=0.0)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship('User', back_populates='purchases')
+    closed = db.Column(db.Boolean, default=False)
     start_check = db.Column(db.DateTime(), default=datetime.utcnow)
 
 
@@ -339,3 +350,25 @@ class Doc(db.Model):
     doc_url = db.Column(db.String, nullable=False)
     last_modified = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+
+class New(db.Model):
+    __tablename__ = 'news'
+    id = db.Column(db.Integer, primary_key=True)
+    short_text = db.Column(db.String())
+    content = db.Column(db.Text)
+
+class ShippingMode(db.Model):
+    __tablename__ = 'shippings'
+    id = db.Column(db.Integer, primary_key=True)
+    category = db.Column(db.String, nullable=False)
+
+class Loading(db.Model):
+    __tablename__ = 'loadings'
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(db.String)
+    unity = db.Column(db.String)
+    quantity = db.Column(db.Float)
+
+
+
+

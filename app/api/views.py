@@ -9,6 +9,10 @@ from sqlalchemy.exc import SQLAlchemyError
 import secrets
 from .utils import save_files, generate_qr_code, save_authorization_request_files
 import json
+from dotenv import load_dotenv
+import os, requests
+
+load_dotenv()
 
 
 @api.route("/quotes/apply", methods=['GET', 'POST'])
@@ -623,3 +627,61 @@ def edit_quote(quote_id):
 
     db.session.commit()
     return jsonify({'success': True})
+
+# geocoding api
+@api.route("/autocomplete-address", methods=["GET"])
+def autocomplete_address():
+    query = request.args.get("query")
+    key = os.environ.get('OPENCAGE_API_KEY')
+    url = f"https://api.opencagedata.com/geocode/v1/json?q={query}&key={key}"
+    
+    response = requests.get(url)
+    data = response.json()
+
+    suggestions = []
+    if data["results"]:
+        for result in data["results"]:
+            suggestions.append(result["formatted"])
+
+    return jsonify(suggestions)
+
+@api.route("/get-rates", methods=['POST'])
+def get_rates():
+    data = request.json
+    depart_port = data['DepartPort']
+    arrival_port = data['Arrival']
+    cargo_type = data['CargoType']
+    date = data['Date']
+    
+    payload = {
+        "rateRequestTypes": ["ACCOUNT"],
+        "requestedShipment": {
+            "shipper": {
+                "address": {
+                    "city": depart_port,
+                    "countryCode": "US"
+                }
+            },
+            "recipient": {
+                "address": {
+                    "city": arrival_port,
+                    "countryCode": "US"
+                }
+            },
+            "pickupType": "DROPOFF_AT_FEDEX_LOCATION",
+            "serviceType": "FEDEX_GROUND",
+            "packagingType": cargo_type,
+            "shipmentDate": date
+        }
+    }
+    
+    headers = {
+        'Content-Type': 'application/json',
+        'X-locale': 'en_US',
+        'Authorization': f'Bearer {FEDEX_API_KEY}'
+    }
+    
+    response = requests.post(FEDEX_URL, json=payload, headers=headers)
+    rates = response.json()
+    
+    return jsonify(rates)

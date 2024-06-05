@@ -18,7 +18,7 @@
               </a>
           </li>
 
-          {% if is_employee() or is_hr_manager() or is_accountant() or is_sales() or is_project_manager() %}
+          {% if current_user.is_employee() or current_user.is_hr_manager() or current_user.is_accountant() or current_user.is_sales() or current_user.is_project_manager() %}
             <li class="nav-item">
                 <a class="nav-link text-white {% if request.path == url_for('main.new_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_quotes') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -48,7 +48,7 @@
             </li>            
           {% endif %}
 
-          {% if is_user() %}
+          {% if current_user.is_user() %}
             <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('api.apply_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.apply_quotes') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -107,7 +107,7 @@
 
 
 
-          {% if is_accountant() %}
+          {% if current_user.is_accountant() %}
           <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('main.invoices') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.invoices') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -141,7 +141,7 @@
               </div>
           </li>
 
-          {% if is_ceo() %}
+          {% if current_user.is_ceo() %}
           <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('main.tasks') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.tasks') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -160,7 +160,7 @@
           </li>
           {% endif %}
 
-          {% if is_project_manager() or is_sales() %}
+          {% if current_user.is_project_manager() or current_user.is_sales() %}
             <li class="nav-item">
               <a class="nav-link text-white {% if request.path == url_for('main.ads') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.ads') }}">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -171,7 +171,7 @@
             </li>
           {% endif %}
 
-          {% if is_sales() %}
+          {% if current_user.is_sales() %}
             <li class="nav-item">
                 <a class="nav-link text-white {% if request.path == url_for('main.new_purchases') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_purchases') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -183,7 +183,7 @@
            {% endif %}
 
 
-          {% if is_ceo() %}
+          {% if current_user.is_ceo() %}
           <li class="nav-item">
               <a class="nav-link text-white" data-bs-toggle="collapse" href="#MyNotes" role="button" aria-expanded="false" aria-controls="MyNotes">
                   <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -217,7 +217,7 @@
               </a>
               <div class="collapse" id="Careers">
                     <ul class="navbar-nav ps-3">
-                        {% if is_hr_manager() %}
+                        {% if current_user.is_hr_manager() %}
                             <li class="nav-item">
                                 <a class="nav-link text-white {% if request.path == url_for('api.create_job') %}active bg-gradient-primary{% endif %}" href="{{ url_for('api.create_job') }}">
                                     <span class="nav-link-text ms-1">{{ _('Ajouter une offre') }}</span>
@@ -240,7 +240,7 @@
                             </li>
                         {% endif %}
                     
-                      {% if not is_hr_manager() %}
+                      {% if not current_user.is_hr_manager() %}
                       <li class="nav-item">
                           <a class="nav-link text-white {% if request.path == url_for('main.new_jobs') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_jobs') }}">
                               <span class="nav-link-text ms-1">{{ _('Toutes les offres') }}</span>

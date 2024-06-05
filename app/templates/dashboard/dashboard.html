@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ get_locale() }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +26,25 @@
   
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+  <!-- flags css -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+  />
   
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ url_for('static', filename='css/customs/dashboard/material-dashboard.min.css') }}" rel="stylesheet" />
  
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css"
+    />
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css" rel="stylesheet"/>
-  {% block title %}<title>{{ _('Afrilog : Dashboard') }}</title>{% endblock %}
+  {% block title %}<title>{{ _('MyAfrilog : Dashboard') }}</title>{% endblock %}
 </head>
 <body class="g-sidenav-show bg-gray-200">
 

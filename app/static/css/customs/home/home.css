@@ -4,36 +4,105 @@
   font-family: 'Poppins', sans-serif;
 }
 .pattern_1{
-    padding:5em 5em;
+  padding:5em 5em;
 }
 .pattern_2{
-    background-image: url('../../../img/afrilog_pattern_2.png');
-    padding:8em 8em;
+  background-image: url('../../../img/afrilog_pattern_2.png');
+  padding:8em 8em;
 }
 .separator{
-    padding:0 5em;
+  padding:0 5em;
 }
 .pattern_1{
-    background-image:url('../../../img/afrilog_pattern_1.png');
+  background-image:url('../../../img/afrilog_pattern_1.png');
 }
+
 
 .hero-afrilog-bg {
-    background-image: url('../../../img/afrilog_bg_1.png');
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
+  background-image: url('../../../img/afrilog_pattern_2.png');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
-canvas{ 
-    display: block; 
+@media (min-width: 1024px) {
+  .hero-afrilog-bg {
+    background-position: center;
+  }
+
 }
 
-#globe-container{ 
-    width: 100%; 
+.iti { 
+  width: 100%; 
+}
+.iti__selected-flag { 
+  width: 100%; 
 }
 
-@media (min-width: 640px) {
-    .hero-afrilog-bg {
-        background-position: center;
-    }
+#category-megamenu {
+  display: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
+
+
+@media (max-width: 991px) {
+  nav .container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  nav .container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  nav .container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+
+
+.air-freight-calculator-hero{
+  background-image: url('../../../img/jumbo-jet-flying-hero.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+.sea-freight-calculator-hero{
+  background-image: url('../../../img/aerial-view-container-cargo-ship-sea-hero.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#category-megamenu.active {
+  display: block;
+  opacity: 1;
+}
+
+
+@media (max-width: 1024px) {
+  #globe-container {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid red;
+}
+
