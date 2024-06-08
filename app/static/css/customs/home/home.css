@@ -18,74 +18,12 @@
 }
 
 
-.hero-afrilog-bg {
-  background-image: url('../../../img/afrilog_pattern_2.png');
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-@media (min-width: 1024px) {
-  .hero-afrilog-bg {
-    background-position: center;
-  }
-
-}
-
 .iti { 
   width: 100%; 
 }
 .iti__selected-flag { 
   width: 100%; 
 }
-
-#category-megamenu {
-  display: none;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-
-@media (max-width: 991px) {
-  nav .container {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-@media (max-width: 767px) {
-  nav .container {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-@media (max-width: 575px) {
-  nav .container {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-
-
-.air-freight-calculator-hero{
-  background-image: url('../../../img/jumbo-jet-flying-hero.jpg');
-  background-position: center;
-  background-size: cover;
-
-}
-.sea-freight-calculator-hero{
-  background-image: url('../../../img/aerial-view-container-cargo-ship-sea-hero.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-#category-megamenu.active {
-  display: block;
-  opacity: 1;
-}
-
 
 @media (max-width: 1024px) {
   #globe-container {
@@ -94,15 +32,29 @@
   }
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
+.mega-menu, 
+.dropdown-menu{
+  display: none;
 }
 
-.nav-link.active {
-  border-bottom: 2px solid red;
+@media (min-width: 768px) {
+  #resources-megamenu {
+    width: 100%;
+    max-width: none;
+  }
 }
 
+
+/* Define media queries for common mobile device widths */
+@media only screen and (max-width: 480px),
+  only screen and (max-width: 767px),
+  only screen and (max-width: 1024px) {
+  /* Hide the navigation menu */
+  #navigation-menu {
+    display: none;
+  }
+  #navigation-menu li {
+    font-size: 2.5rem;
+    padding: 10px 15px;
+  }
+}

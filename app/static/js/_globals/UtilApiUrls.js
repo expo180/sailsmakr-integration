@@ -1,18 +1,21 @@
+const BaseURL = 'http://127.0.0.1:5000/api/v1/';
+
 const UtilApiURLs = {
-    GetEventsApiURL : 'http://127.0.0.1:5000/get_events',
-    ManageTaskURL : 'http://127.0.0.1:5000/api/v1/manage/task/',
-    ManageNoteURL : 'http://127.0.0.1:5000/api/v1/manage/note/',
-    DeleteEmployeeURL : 'http://127.0.0.1:5000/api/v1/careers/employees/delete_employee/',
-    DeleteAdURL : 'http://127.0.0.1:5000/api/v1/ads/delete_ad/',
-    DeletePurchaseRequestURL: 'http://127.0.0.1:5000/api/v1/my_purchases/delete/',
-    PopulatePurchaseDataListURL : 'http://127.0.0.1:5000/api/v1/my_purchases/track_my_product/user',
-    DeleteAuthorizationRequestURL: 'http://127.0.0.1:5000/api/v1/delete_request/',
-    DeletePurchaseRequestURLSales: 'http://127.0.0.1:5000/api/v1/delete_purchase/',
-    EditInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/edit_invoice/',
-    DeleteInvoiceRequestURL: 'http://127.0.0.1:5000/api/v1/delete_invoice/',
-    checkValidityQuoteURL : 'http://127.0.0.1:5000/api/v1/quote/edit/',
-    DeleteQuoteRequestURL : 'http://127.0.0.1:5000/api/v1/quote/delete/',
-    AddressAutoCompleteURL : 'http://127.0.0.1:5000/api/v1/autocomplete-address'
-}
+    GetEventsApiURL: `${BaseURL}get_events`,
+    ManageTaskURL: `${BaseURL}manage/task/`,
+    ManageNoteURL: `${BaseURL}manage/note/`,
+    DeleteEmployeeURL: `${BaseURL}careers/employees/delete_employee/`,
+    DeleteAdURL: `${BaseURL}ads/delete_ad/`,
+    DeletePurchaseRequestURL: `${BaseURL}my_purchases/delete/`,
+    PopulatePurchaseDataListURL: `${BaseURL}my_purchases/track_my_product/user`,
+    DeleteAuthorizationRequestURL: `${BaseURL}delete_request/`,
+    DeletePurchaseRequestURLSales: `${BaseURL}delete_purchase/`,
+    EditInvoiceRequestURL: `${BaseURL}edit_invoice/`,
+    DeleteInvoiceRequestURL: `${BaseURL}delete_invoice/`,
+    checkValidityQuoteURL: `${BaseURL}quote/edit/`,
+    DeleteQuoteRequestURL: `${BaseURL}quote/delete/`,
+    AddressAutoCompleteURL: `${BaseURL}autocomplete-address`,
+    GetAirFreightRatesURL : `${BaseURL}/get-air-freight-rate`
+};
 
 export default UtilApiURLs;

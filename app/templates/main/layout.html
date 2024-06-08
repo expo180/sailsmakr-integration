@@ -1,30 +1,16 @@
 <!DOCTYPE html>
     <html lang="{{ get_locale() }}">
-    {% block head %}
-        <head>
-            {% block meta %}{% endblock %}
-            <title>{% block title %}{{ _('Afrilog : Leader dans le domaine du Transport et de la Logistique') }}{% endblock %}</title>
-            {% block styles %}{% endblock %}
-        </head>
-    {% endblock %}
+    <head>
+        {% block meta %}{% endblock %}
+        <title>{% block title %}{{ _('Afrilog : Leader dans le domaine du Transport et de la Logistique') }}{% endblock %}</title>
+        {% include 'includes/main/styles.html' %}
+    </head>
     <body>
         <main>
             {% include 'includes/header.html' %}
             {% block content %}{% endblock %}
             {% include 'includes/footer.html' %}
         </main>
-        {% block scripts %}
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const links = document.querySelectorAll(".nav-link");
-                    links.forEach(link => {
-                        link.addEventListener("click", function() {
-                        links.forEach(l => l.classList.remove("active"));
-                        this.classList.add("active");
-                        });
-                    });
-                });
-            </script>
-        {% endblock %}
+        {% include 'includes/main/scripts.html' %}
     </body>
 </html>

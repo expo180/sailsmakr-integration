@@ -1,0 +1,84 @@
+<div id="services-megamenu" aria-labelledby="services-megamenu" class="dropdown-menu mega-menu animate-fade z-10 mb-5 lg:mb-0 lg:absolute relative lg:top-14 top-0 left-0 lg:-left-80 bg-white rounded-lg border border-gray-200 lg:border-0 lg:shadow-[0px_15px_30px_0px_rgba(16,24,40,0.1)] xl:p-4  p-2 lg:min-w-[800px] md:min-w-[500px] min-w-full  ">
+  <div class="lg:flex justify-between">
+    <ul class="text-sm text-gray-700  lg:w-3/5 xl:p-4 lg:p-4 p-2" aria-labelledby="dropdownLargeButton">
+      <h6 class="font-medium text-sm text-gray-500 mb-2">
+        {{ _('Services') }}
+      </h6>
+      <li class="">
+        <a href="{{ url_for('main.transit') }}" class="px-3 py-5 transition-all duration-500 hover:bg-gray-50 hover:rounded-xl flex items-center ">
+          <div class="bg-orange-50 rounded-lg w-12 h-12 flex items-center justify-center">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M23.75 16.625C23.75 15.3133 22.6867 14.25 21.375 14.25H7.125C5.81332 14.25 4.75 15.3133 4.75 16.625V30.875C4.75 32.1867 5.81332 33.25 7.125 33.25H21.375C22.6867 33.25 23.75 32.1867 23.75 30.875V16.625Z" fill="#F59E0B"></path>
+              <path d="M12.6665 15.0417C12.6665 20.7256 17.2742 25.3333 22.9582 25.3333C28.6421 25.3333 33.2498 20.7256 33.2498 15.0417C33.2498 9.35774 28.6421 4.75 22.9582 4.75C17.2742 4.75 12.6665 9.35774 12.6665 15.0417Z" fill="#F59E0B"></path>
+            </svg>
+          </div>
+          <div class="ml-4 w-4/5">
+            <h5 class="text-gray-900 text-base mb-1.5  ">
+              {{ _('Transport, Transit et Manutention') }}
+            </h5>
+            <p class="text-xs font-medium text-gray-400">
+              {{ _('Nous nous chargeons du transport de vos marchandises en toute sécurité') }}
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="">
+        <a href="{{ url_for('main.customs') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex items-center transition-all duration-500">
+          <div class="bg-emerald-50 rounded-lg w-12 h-12 flex items-center justify-center">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M25.3333 6.84527C25.3333 5.62971 24.3452 4.6322 23.1365 4.76127C21.1735 4.97089 19.2468 5.46081 17.416 6.21916C14.9059 7.25888 12.6251 8.78283 10.704 10.704C8.78283 12.6251 7.25888 14.9059 6.21916 17.416C5.46081 19.2468 4.97089 21.1735 4.76127 23.1365C4.6322 24.3452 5.62971 25.3333 6.84526 25.3333H23.1324C24.3479 25.3333 25.3333 24.3479 25.3333 23.1324L25.3333 6.84527Z" fill="#10B981"></path>
+              <path d="M31.6668 13.1788C31.6668 11.9632 30.6787 10.9657 29.47 11.0948C27.507 11.3044 25.5803 11.7943 23.7495 12.5527C21.2394 13.5924 18.9586 15.1163 17.0375 17.0375C15.1163 18.9586 13.5924 21.2394 12.5527 23.7495C11.7943 25.5803 11.3044 27.507 11.0948 29.47C10.9657 30.6787 11.9632 31.6668 13.1788 31.6668H29.4659C30.6814 31.6668 31.6668 30.6814 31.6668 29.4659V13.1788Z" fill="#10B981"></path>
+            </svg>
+          </div>
+          <div class="ml-4 w-4/5">
+            <h5 class="text-gray-900 text-base mb-1.5  ">
+              {{ _('Douanes, Taxes et Impôts') }}
+              <span class="bg-indigo-50 text-indigo-500 text-xs font-medium mr-2 px-2.5 py-1 rounded-full h-5 ml-4">
+                {{ _('Nouveau') }}
+              </span>
+            </h5>
+            <p class="text-xs font-medium text-gray-400">
+              {{ _('Vous pouvez nous confier la gestion de vos taxes') }}
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="">
+        <a href="{{ url_for('main.warehousing') }}" class="px-3 py-5 hover:bg-gray-50 hover:rounded-xl flex items-center transition-all duration-500">
+          <div class="bg-blue-50 rounded-lg w-12 h-12 flex items-center justify-center">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M4.75 22.1667C4.75 26.5389 8.29441 30.0833 12.6667 30.0833H22.0227C22.9767 30.0833 23.75 29.31 23.75 28.3561V15.9773C23.75 15.0233 22.9767 14.25 22.0227 14.25H12.6667C8.29441 14.25 4.75 17.7944 4.75 22.1667Z" fill="#3B82F6"></path>
+              <path d="M33.25 14.2502C33.25 18.6224 29.7056 22.1668 25.3333 22.1668H15.9773C15.0233 22.1668 14.25 21.3935 14.25 20.4396V8.06077C14.25 7.10682 15.0233 6.3335 15.9773 6.3335H25.3333C29.7056 6.3335 33.25 9.87791 33.25 14.2502Z" fill="#3B82F6"></path>
+            </svg>
+          </div>
+          <div class="ml-4 w-4/5">
+            <h5 class="text-gray-900 text-base mb-1.5  ">
+              {{ _('Entreposage') }}
+            </h5>
+            <p class="text-xs font-medium text-gray-400">
+              {{ _('Nous offrons également des services d\'entreposage de marchandises') }}
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="bg-gray-50 lg:rounded-none rounded-lg xl:p-8 lg:p-4 p-2 lg:w-2/5">
+      <h6 class="font-medium text-sm text-gray-500 mb-2">Fret</h6>
+      <ul class="">
+        <li>
+          <a href="{{ url_for('main.aerien') }}" class="py-3 mb-2 block text-base   text-gray-900">
+            {{ _('Fret aérien') }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('main.sea') }}" class="py-3 mb-2 block text-base   text-gray-900">
+            {{ ('Fret maritime') }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('main.terrestre') }}" class="py-3 mb-2 block text-base   text-gray-900">{{ _('Fret routier') }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

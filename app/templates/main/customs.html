@@ -7,29 +7,7 @@
             <meta name="keywords" content="{{ _('Transport, Logistique, Fret, aérien, Equipement, Container, Europe, Afrique, Oceanie, Chine, Taxes, Douanes') }}">
             <meta content="author"  name="Afrilog SARL">
         {% endblock %}
-        {% block title %}<title>{{ _('Afrilog : Aide dans le processus de dédouanement') }}</title>{% endblock %}
-        {% block styles %}
-            <!-- pagedone css -->
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/pagedone.css') }}">
-
-            <!-- tailwind output css -->
-            <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
-
-            <!-- custom home css -->
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/customs/home/home.css') }}">
-            
-            <!-- bootstrap-icons-->
-            <link rel="stylesheet" href="{{ url_for('static', filename='icons/font/bootstrap-icons.min.css') }}">
-            
-            <!-- tel input css -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"> 
-
-            <!-- flags css -->
-            <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
-            />
-        {% endblock %}
+        {% block title %}{{ _('Afrilog : Aide dans le processus de dédouanement') }}{% endblock %}
     </head>
 {% endblock %}
 <body>
@@ -100,44 +78,4 @@
         {% endblock %}
 
     </main>
-    {% block scripts %}
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const categoryMegamenuParent = document.querySelector('#category-megamenu-parent');
-          const categoryMegamenu = document.querySelector('#category-megamenu');
-          const collapseToggle = document.querySelector('[data-collapse-toggle="megamenu-full-width"]');
-          const megamenuFullWidth = document.querySelector('#megamenu-full-width');
-          const navLinks = document.querySelector('.nav-links');
-  
-          categoryMegamenuParent.addEventListener('click', () => {
-            categoryMegamenu.classList.toggle('active');
-          });
-  
-          collapseToggle.addEventListener('click', () => {
-            megamenuFullWidth.classList.toggle('active');
-            navLinks.classList.toggle('hidden');
-          });
-        })
-  
-        function toggleDropdown() {
-          const dropdownMenu = document.getElementById('dropdown');
-          dropdownMenu.classList.toggle('hidden');
-        }
-  
-  
-      </script>
-      
-  
-      <!-- tel input js -->
-      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
-  
-      <!-- sendQuote.js-->
-      <script src="{{ url_for('static', filename='js/async/api/customers/Messages/SendQuote.js') }}"></script>
-  
-      <!-- Globe.js -->
-      <script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
-  
-      <!-- pagedone.js -->
-      <script type="module" src="{{ url_for('static', filename='js/lib/plugins/pagedone.js') }}"></script>
-    {% endblock %}
 </body>

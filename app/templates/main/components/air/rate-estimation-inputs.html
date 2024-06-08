@@ -1,0 +1,69 @@
+<div class="dropdown relative inline-flex" style="z-index: 100;">
+    <button type="button" data-target="dropdown-default" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-gray-100 text-gray-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-gray-200 "> 
+        {{ _('Cargo') }}
+        <svg class="dropdown-open:rotate-180 w-2.5 h-2.5 text-white" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <div id="dropdown-default" class="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full w-100 py-3 px-3 mt-2 open" aria-labelledby="dropdown-default">
+        <div class="tabs">
+            <div class="flex ">
+                <ul class="flex bg-gray-100 rounded-2xl transition-all duration-300 p-2 overflow-hidden">
+                    <li>
+                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium  tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 active tablink whitespace-nowrap" data-tab="tabs-with-background-1" role="tab">
+                            {{ _('General Cargo') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium  tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 tablink whitespace-nowrap" data-tab="tabs-with-background-2" role="tab">
+                            {{ _('UDL container') }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-3">
+                <div id="tabs-with-background-1" role="tabpanel" aria-labelledby="tabs-with-background-item-1" class="tabcontent">
+                    <div class="py-2"></div>
+                    <div class="relative">
+                        <label for="Weight" class="flex items-center mb-2 text-gray-600 text-sm font-medium">
+                            {{ _('Poids(kg)') }}
+                        </label>
+                        <input type="number" id="Weight" class="block w-full max-w-xs px-3.5 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="2">
+                    </div>
+                    <div class="py-2"></div>
+                    <div class="relative">
+                        <label for="Volume" class="flex items-center mb-2 text-gray-600 text-sm font-medium">
+                            {{ _('Volume(m3)') }}
+                        </label>
+                        <input type="number" id="Volume" class="block w-full max-w-xs px-3.5 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="5">
+                    </div>
+                    <div class="py-2"></div>
+                </div>
+                <div id="tabs-with-background-2" class="hidden tabcontent" role="tabpanel" aria-labelledby="tabs-with-background-item-2">
+                    <div class="py-2"></div>
+                    <div class="relative">
+                        <label for="Length" class="flex items-center mb-2 text-gray-600 text-sm font-medium">
+                            {{ _('Longueur(m)') }}
+                        </label>
+                        <input type="number" id="Length" class="block w-full max-w-xs px-3.5 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="2">
+                    </div>
+                    <div class="py-2"></div>
+                    <div class="relative">
+                        <label for="width" class="flex items-center mb-2 text-gray-600 text-sm font-medium">
+                            {{ _('Largeur(m)') }}
+                        </label>
+                        <input type="number" id="width" class="block w-full max-w-xs px-3.5 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="5">
+                    </div>
+                    <div class="py-2"></div>
+                    <div class="relative">
+                        <label for="height" class="flex items-center mb-2 text-gray-600 text-sm font-medium">
+                            {{ _('Hauteur(m)') }}
+                        </label>
+                        <input type="number" id="height" class="block w-full max-w-xs px-3.5 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="5">
+                    </div>
+                    <div class="py-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

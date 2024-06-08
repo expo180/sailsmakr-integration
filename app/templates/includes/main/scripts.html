@@ -1,0 +1,98 @@
+
+
+
+<!-- tel input js -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+
+<!-- sendQuote.js-->
+<script src="{{ url_for('static', filename='js/async/api/customers/Messages/SendQuote.js') }}"></script>
+
+
+<!-- three module.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    
+<!-- globe.js -->
+<script type="module" src="{{ url_for('static', filename='js/vfx/globe/globe.js') }}"></script>
+
+<script type="text/javascript">
+    var toggleButtonNavMenu = document.querySelector('[data-collapse-toggle="navigation-menu"]');
+    var navigationMenu = document.getElementById('navigation-menu');
+    var buttonContainer = document.getElementById('button-container');
+    var toggleButtonServices = document.querySelector('[data-target="services-megamenu"]');
+    var toggleButtonResources = document.querySelector('[data-target="resources-megamenu"]');
+    var servicesMegamenu = document.getElementById('services-megamenu');
+    var resourcesMegamenu = document.getElementById('resources-megamenu');
+    var toggleButtonLanguage = document.querySelector('[data-target="language-selector"]');
+    var languageSelector = document.getElementById('language-selector');
+
+    function adjustButtonLayout() {
+        const screenWidth = window.innerWidth;
+        const buttons = document.querySelectorAll('.button');
+
+        if (screenWidth < 640) {
+            buttons.forEach(button => {
+                button.classList.add('w-full');
+                button.classList.remove('md:w-auto');
+                button.classList.add('mr-0');
+                button.classList.add('mb-2');
+                button.classList.remove('md:mr-2');
+            });
+        } else {
+            buttons.forEach(button => {
+                button.classList.remove('w-full');
+                button.classList.add('md:w-auto');
+                button.classList.remove('mr-0');
+                button.classList.remove('mb-2');
+                button.classList.add('md:mr-2');
+            });
+        }
+    }
+
+    function toggleServicesMegamenu() {
+        if (servicesMegamenu.style.display === 'block') {
+            servicesMegamenu.style.display = 'none';
+        } else {
+            servicesMegamenu.style.display = 'block';
+            // Ensure resources megamenu is collapsed
+            resourcesMegamenu.style.display = 'none';
+        }
+    }
+
+    function toggleResourcesMegamenu() {
+        if (resourcesMegamenu.style.display === 'block') {
+            resourcesMegamenu.style.display = 'none';
+        } else {
+            resourcesMegamenu.style.display = 'block';
+            // Ensure services megamenu is collapsed
+            servicesMegamenu.style.display = 'none';
+        }
+    }
+
+    function toggleLanguageSelector() {
+        if (languageSelector.style.display === 'block') {
+            languageSelector.style.display = 'none';
+        } else {
+            languageSelector.style.display = 'block';
+        }
+    }
+
+    // Call adjustButtonLayout initially
+    adjustButtonLayout();
+
+    // Call adjustButtonLayout on window resize
+    window.addEventListener('resize', adjustButtonLayout);
+
+    toggleButtonNavMenu.addEventListener('click', function() {
+        if (navigationMenu.style.display === 'block') {
+            navigationMenu.style.display = 'none';
+        } else {
+            navigationMenu.style.display = 'block';
+        }
+    });
+
+    toggleButtonServices.addEventListener('click', toggleServicesMegamenu);
+    toggleButtonResources.addEventListener('click', toggleResourcesMegamenu);
+    toggleButtonLanguage.addEventListener('click', toggleLanguageSelector);
+</script>
+  

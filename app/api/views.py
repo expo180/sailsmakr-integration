@@ -645,43 +645,43 @@ def autocomplete_address():
 
     return jsonify(suggestions)
 
-@api.route("/get-rates", methods=['POST'])
-def get_rates():
-    data = request.json
-    depart_port = data['DepartPort']
-    arrival_port = data['Arrival']
-    cargo_type = data['CargoType']
-    date = data['Date']
-    
-    payload = {
-        "rateRequestTypes": ["ACCOUNT"],
-        "requestedShipment": {
-            "shipper": {
-                "address": {
-                    "city": depart_port,
-                    "countryCode": "US"
-                }
-            },
-            "recipient": {
-                "address": {
-                    "city": arrival_port,
-                    "countryCode": "US"
-                }
-            },
-            "pickupType": "DROPOFF_AT_FEDEX_LOCATION",
-            "serviceType": "FEDEX_GROUND",
-            "packagingType": cargo_type,
-            "shipmentDate": date
+
+@api.route('/get-air-freight-rate', methods=['POST'])
+def get_air_freight_rate():
+    data = request.get_json()
+
+    request_url = "https://sandbox.freightos.com/api/v1/freightEstimates"
+
+    request_headers = {
+        "x-apikey": os.environ.get('FREIGHTOS_API_KEY'),
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    }
+
+    request_body = {
+        "legs": [
+            {
+                "origin": data['DepartPort'],
+                "destination": data['Arrival'],
+                "date": data['Date']
+            }
+        ],
+        "load": {
+            "weight": {"value": data['Weight'], "unit": "kg"} if data['Weight'] else None,
+            "volume": {"value": data['Volume'], "unit": "m3"} if data['Volume'] else None,
+            "dimensions": {
+                "length": {"value": data['Length'], "unit": "m"},
+                "width": {"value": data['Width'], "unit": "m"},
+                "height": {"value": data['Height'], "unit": "m"}
+            } if data['Length'] and data['Width'] and data['Height'] else None
         }
     }
-    
-    headers = {
-        'Content-Type': 'application/json',
-        'X-locale': 'en_US',
-        'Authorization': f'Bearer {FEDEX_API_KEY}'
-    }
-    
-    response = requests.post(FEDEX_URL, json=payload, headers=headers)
-    rates = response.json()
-    
-    return jsonify(rates)
+
+    request_body['load'] = {k: v for k, v in request_body['load'].items() if v is not None}
+
+    response = requests.post(request_url, headers=request_headers, json=request_body)
+
+    if response.status_code == 200:
+        return jsonify(response.json())
+    else:
+        return jsonify({'error': 'Failed to fetch rates', 'details': response.text}), response.status_code
