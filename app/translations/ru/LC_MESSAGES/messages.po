@@ -1,4 +1,4 @@
-# French translations for PROJECT.
+# Russian translations for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -8,11 +8,12 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-10 20:17+0100\n"
-"PO-Revision-Date: 2024-06-02 01:47+0100\n"
+"PO-Revision-Date: 2024-06-10 15:49+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,91 +21,91 @@ msgstr ""
 
 #: api/views.py:59
 msgid "Votre requête a bien été envoyé"
-msgstr "Votre requête a bien été envoyée"
+msgstr "Ваш запрос успешно отправлен"
 
 #: api/views.py:118
 msgid "Envoyé avec succès"
-msgstr "Envoyé avec succès"
+msgstr "Успешно отправлено"
 
 #: api/views.py:119
 msgid "Votre requête a été bien envoyé"
-msgstr "Votre requête a été bien envoyée"
+msgstr "Ваш запрос успешно отправлен"
 
 #: api/views.py:353
 msgid "Offre mise à jour avec succès"
-msgstr "Offre mise à jour avec succès"
+msgstr "Предложение успешно обновлено"
 
 #: api/views.py:436
 msgid "Votre candidature a été soumise avec succès!"
-msgstr "Votre candidature a été soumise avec succès!"
+msgstr "Ваша кандидатура успешно представлена!"
 
 #: api/views.py:470
 msgid "Votre campagne a été bien mise à jour"
-msgstr "Votre campagne a été mise à jour avec succès"
+msgstr "Ваша кампания успешно обновлена"
 
 #: api/views.py:483
 msgid "Campagne supprimée"
-msgstr "Campagne supprimée"
+msgstr "Кампания удалена"
 
 #: api/views.py:515
 msgid "Votre demande a bien été mise à jour"
-msgstr "Votre demande a été mise à jour avec succès"
+msgstr "Ваш запрос успешно обновлен"
 
 #: api/views.py:522 templates/errors/403.html:6
 msgid "Accès non autorisé"
-msgstr "Accès non autorisé"
+msgstr "Доступ запрещен"
 
 #: api/views.py:526
 msgid "Votre demande a été bien supprimé"
-msgstr "Votre demande a été bien supprimée"
+msgstr "Ваш запрос успешно удален"
 
 #: api/views.py:551 api/views.py:582
 msgid "La facture est introuvable."
-msgstr "La facture est introuvable."
+msgstr "Счет не найден."
 
 #: api/views.py:559
 msgid "Le titre et le montant sont requis."
-msgstr "Le titre et le montant sont requis."
+msgstr "Требуется указать заголовок и сумму."
 
 #: api/views.py:566
 msgid "Montant invalide."
-msgstr "Montant invalide."
+msgstr "Недопустимая сумма."
 
 #: api/views.py:573
 msgid "La facture a été mise à jour avec succès."
-msgstr "La facture a été mise à jour avec succès."
+msgstr "Счет успешно обновлен."
 
 #: api/views.py:587
 msgid "La facture a été supprimée avec succès."
-msgstr "La facture a été supprimée avec succès."
+msgstr "Счет успешно удален."
 
 #: api/views.py:590
 msgid "Une erreur est survenue lors de la suppression de la facture."
-msgstr "Une erreur est survenue lors de la suppression de la facture."
+msgstr "При удалении счета произошла ошибка."
 
 #: api/views.py:602 api/views.py:610
 msgid "Demande Introuvable"
-msgstr "Demande introuvable"
+msgstr "Запрос не найден"
 
 #: auth/views.py:49
 msgid "Votre compte a été créé avec succès. Veuillez vous connecter."
-msgstr "Votre compte a été créé avec succès. Veuillez vous connecter."
+msgstr "Ваша учетная запись успешно создана. Пожалуйста, войдите."
 
 #: auth/views.py:70
 msgid "Veuillez vous connecter à votre compte!"
-msgstr "Veuillez vous connecter à votre compte!"
+msgstr "Пожалуйста, войдите в свою учетную запись!"
 
 #: main/views.py:261
 msgid ""
 "Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le "
 "meilleur de votre audience"
 msgstr ""
-"Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le "
-"meilleur parti de votre audience"
+"Ваша новая кампания была добавлена, теперь вы можете получить максимум от"
+" своей аудитории"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:2
 msgid "Modifier les infos employé : Afrilog"
-msgstr "Modifier les informations de l'employé : Afrilog"
+msgstr "Изменить данные сотрудника: Afrilog"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:12
 #: templates/api/@support_team/jobs/create_job.html:12
@@ -140,14 +141,14 @@ msgstr "Modifier les informations de l'employé : Afrilog"
 #: templates/dashboard/settings.html:23 templates/includes/footer.html:10
 #: templates/includes/header.html:21
 msgid "Accueil"
-msgstr "Accueil"
+msgstr "Главная"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:18
 #: templates/api/@support_team/employees/edit_employee_infos.html:23
 #: templates/dashboard/@support_team/employees_listing.html:73
 #: templates/dashboard/customers/previous_quotes.html:164
 msgid "Modifier les infos"
-msgstr "Modifier les informations"
+msgstr "Изменить данные"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:27
 #: templates/api/customers/authorizations/apply.html:31
@@ -157,25 +158,25 @@ msgstr "Modifier les informations"
 #: templates/dashboard/@support_team/employees_listing.html:97
 #: templates/dashboard/settings.html:44 templates/main/contact.html:18
 msgid "Prénom"
-msgstr "Prénom"
+msgstr "Имя"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:31
 #: templates/api/customers/jobs/apply.html:30
 #: templates/dashboard/@support_team/applicants_list.html:83
 #: templates/dashboard/@support_team/employees_listing.html:101
 msgid "Nom de Famille"
-msgstr "Nom de famille"
+msgstr "Фамилия"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:35
 #: templates/dashboard/@support_team/employees_listing.html:29
 #: templates/dashboard/@support_team/employees_listing.html:105
 msgid "Fonction"
-msgstr "Fonction"
+msgstr "Должность"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:39
 #: templates/dashboard/@support_team/employees_listing.html:109
 msgid "Identifiant / Matricule"
-msgstr "Identifiant / Matricule"
+msgstr "Идентификатор / Табельный номер"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:50
 #: templates/api/@support_team/jobs/edit_job.html:39
@@ -185,66 +186,62 @@ msgstr "Identifiant / Matricule"
 #: templates/dashboard/@support_team/tasks.html:176
 #: templates/dashboard/customers/previous_quotes.html:213
 msgid "Enregistrer"
-msgstr "Enregistrer"
+msgstr "Сохранить"
 
 #: templates/api/@support_team/empty/no_job.html:2
 #: templates/dashboard/@support_team/empty/no_quote.html:2
 #: templates/dashboard/customers/empty/no_quote.html:2
 #: templates/dashboard/empty/no_job.html:2
-#, fuzzy
 msgid "Aucune offre àa afficher image"
-msgstr "Aucune offre à afficher"
+msgstr "Нет доступных предложений для отображения"
 
 #: templates/api/@support_team/empty/no_job.html:3
-#, fuzzy
 msgid "Aucune offre d'emploi créee"
-msgstr "Aucune offre d'emploi créée"
+msgstr "Нет созданных вакансий"
 
 #: templates/api/@support_team/empty/no_job.html:6
-#, fuzzy
 msgid "Les nouvelles offres d'emplois créees vont s'afficher ici"
-msgstr "Les nouvelles offres d'emploi créées vont s'afficher ici"
+msgstr "Новые вакансии будут отображаться здесь"
 
 #: templates/api/@support_team/empty/no_job.html:12
 msgid "Créer une nouvelle offre"
-msgstr "Créer une nouvelle offre"
+msgstr "Создать новую вакансию"
 
 #: templates/api/@support_team/empty/no_notice.html:2
 msgid "Aucune note à afficher image"
-msgstr "Aucune note à afficher"
+msgstr "Нет доступных заметок для отображения"
 
 #: templates/api/@support_team/empty/no_notice.html:3
 msgid "Aucune note à afficher"
-msgstr "Aucune note à afficher"
+msgstr "Нет доступных заметок для отображения"
 
 #: templates/api/@support_team/empty/no_notice.html:6
-#, fuzzy
 msgid "Les notes que vous créerez seront affichée ici"
-msgstr "Les notes que vous créerez seront affichées ici"
+msgstr "Заметки, которые вы создадите, будут отображаться здесь"
 
 #: templates/api/@support_team/folders/reply_to_quote.html:6
 msgid "Répondre à la demande"
-msgstr "Répondre à la demande"
+msgstr "Ответить на запрос"
 
 #: templates/api/@support_team/jobs/create_job.html:2
 msgid "Créer une offre d'emploi - Afrilog"
-msgstr "Créer une offre d'emploi - Afrilog"
+msgstr "Создать вакансию - Afrilog"
 
 #: templates/api/@support_team/jobs/create_job.html:16
 #: templates/dashboard/@support_team/previous_created_jobs.html:21
 #: templates/dashboard/jobs_listing.html:17
 #: templates/dashboard/partials/sidebar.html:216
 msgid "Careers"
-msgstr "Carrières"
+msgstr "Карьера"
 
 #: templates/api/@support_team/jobs/create_job.html:19
 #: templates/dashboard/partials/sidebar.html:223
 msgid "Ajouter une offre"
-msgstr "Ajouter une offre"
+msgstr "Добавить вакансию"
 
 #: templates/api/@support_team/jobs/create_job.html:30
 msgid "Ajouter une nouvelle offre"
-msgstr "Ajouter une nouvelle offre"
+msgstr "Добавить новую вакансию"
 
 #: templates/api/@support_team/jobs/create_job.html:38
 #: templates/api/@support_team/notice/create_notice.html:37
@@ -267,15 +264,15 @@ msgstr "Ajouter une nouvelle offre"
 #: templates/dashboard/@support_team/tasks.html:150
 #: templates/dashboard/jobs_listing.html:36 templates/views/invoices.html:44
 msgid "Titre"
-msgstr "Titre"
+msgstr "Название"
 
 #: templates/api/@support_team/jobs/create_job.html:39
 msgid "Développeur ASPNET C#"
-msgstr "Développeur ASPNET C#"
+msgstr "Разработчик ASP.NET C#"
 
 #: templates/api/@support_team/jobs/create_job.html:41
 msgid "Veuillez entrer le titre du poste"
-msgstr "Veuillez entrer le titre du poste"
+msgstr "Введите название должности"
 
 #: templates/api/@support_team/jobs/create_job.html:45
 #: templates/api/@support_team/jobs/edit_job.html:16
@@ -292,11 +289,11 @@ msgstr "Veuillez entrer le titre du poste"
 #: templates/dashboard/@support_team/tasks.html:155
 #: templates/dashboard/customers/previous_purchase_requests.html:131
 msgid "Description"
-msgstr "Description"
+msgstr "Описание"
 
 #: templates/api/@support_team/jobs/create_job.html:48
 msgid "Veuillez décrire le poste"
-msgstr "Veuillez décrire le poste"
+msgstr "Опишите должность"
 
 #: templates/api/@support_team/jobs/create_job.html:52
 #: templates/api/@support_team/jobs/edit_job.html:20
@@ -304,53 +301,53 @@ msgstr "Veuillez décrire le poste"
 #: templates/dashboard/@support_team/previous_created_jobs.html:43
 #: templates/dashboard/jobs_listing.html:39
 msgid "Lieu"
-msgstr "Lieu"
+msgstr "Местоположение"
 
 #: templates/api/@support_team/jobs/create_job.html:55
 msgid "Veuillez spécifier le lieu"
-msgstr "Veuillez spécifier le lieu"
+msgstr "Укажите местоположение"
 
 #: templates/api/@support_team/jobs/create_job.html:59
 #: templates/api/@support_team/jobs/edit_job.html:24
 #: templates/dashboard/@support_team/previous_created_jobs.html:42
 #: templates/dashboard/jobs_listing.html:38
 msgid "Salaire"
-msgstr "Salaire"
+msgstr "Зарплата"
 
 #: templates/api/@support_team/jobs/create_job.html:62
 msgid "Veuillez indiquer le salaire"
-msgstr "Veuillez indiquer le salaire"
+msgstr "Укажите зарплату"
 
 #: templates/api/@support_team/jobs/create_job.html:66
 #: templates/api/@support_team/jobs/edit_job.html:28
 msgid "Date de publication"
-msgstr "Date de publication"
+msgstr "Дата публикации"
 
 #: templates/api/@support_team/jobs/create_job.html:69
 msgid "Veuillez indiquer la date de publication"
-msgstr "Veuillez indiquer la date de publication"
+msgstr "Укажите дату публикации"
 
 #: templates/api/@support_team/jobs/create_job.html:73
 #: templates/api/@support_team/jobs/edit_job.html:32
 #: templates/dashboard/@support_team/previous_created_jobs.html:44
 #: templates/dashboard/jobs_listing.html:40
 msgid "Date de clôture"
-msgstr "Date de clôture"
+msgstr "Дата закрытия"
 
 #: templates/api/@support_team/jobs/create_job.html:76
 msgid "Veuillez indiquer la date de clôture"
-msgstr "Veuillez indiquer la date de clôture"
+msgstr "Укажите дату закрытия"
 
 #: templates/api/@support_team/jobs/create_job.html:86
 #: templates/dashboard/@support_team/ads.html:240
 #: templates/dashboard/@support_team/invoices.html:187
 #: templates/dashboard/@support_team/tasks.html:127
 msgid "Ajouter"
-msgstr "Ajouter"
+msgstr "Добавить"
 
 #: templates/api/@support_team/jobs/edit_job.html:3
 msgid "Modifier l'Offre"
-msgstr "Modifier l'Offre"
+msgstr "Изменить вакансию"
 
 #: templates/api/@support_team/jobs/edit_job.html:3
 msgid "Afrilog"
@@ -358,58 +355,58 @@ msgstr "Afrilog"
 
 #: templates/api/@support_team/jobs/edit_job.html:9
 msgid "Edit Job"
-msgstr "Modifier l'emploi"
+msgstr "Редактирование вакансии"
 
 #: templates/api/@support_team/jobs/edit_job.html:12
 msgid "Title"
-msgstr "Titre"
+msgstr "Название"
 
 #: templates/api/@support_team/notice/create_notice.html:2
 msgid "Ajouter une nouvelle note : Afrilog"
-msgstr "Ajouter une nouvelle note : Afrilog"
+msgstr "Добавить новую заметку: Afrilog"
 
 #: templates/api/@support_team/notice/create_notice.html:17
 #: templates/dashboard/@support_team/previous_notes.html:20
 #: templates/dashboard/partials/sidebar.html:192
 msgid "Notes"
-msgstr "Notes"
+msgstr "Заметки"
 
 #: templates/api/@support_team/notice/create_notice.html:20
 #: templates/api/@support_team/notice/create_notice.html:28
 msgid "Ajouter une nouvelle note"
-msgstr "Ajouter une nouvelle note"
+msgstr "Добавить новую заметку"
 
 #: templates/api/@support_team/notice/create_notice.html:40
 msgid "Politique de non-discrimination"
-msgstr "Politique de non-discrimination"
+msgstr "Политика недискриминации"
 
 #: templates/api/@support_team/notice/create_notice.html:42
 msgid "Veuillez donner un titre à votre notice"
-msgstr "Veuillez donner un titre à votre avis"
+msgstr "Укажите заголовок для вашей заметки"
 
 #: templates/api/@support_team/notice/create_notice.html:47
 #: templates/dashboard/@support_team/previous_notes.html:106
 msgid "Nature"
-msgstr "Nature"
+msgstr "Тип"
 
 #: templates/api/@support_team/notice/create_notice.html:55
 msgid "Veuillez communiquer le type d'information"
-msgstr "Veuillez spécifier le type d'information"
+msgstr "Укажите тип информации"
 
 #: templates/api/@support_team/notice/create_notice.html:65
 #: templates/dashboard/@support_team/previous_notes.html:40
 #: templates/dashboard/@support_team/previous_notes.html:101
 msgid "Contenu"
-msgstr "Contenu"
+msgstr "Содержание"
 
 #: templates/api/@support_team/notice/create_notice.html:68
 msgid "Tous les agents se doivent..."
-msgstr "Tous les agents doivent..."
+msgstr "Все агенты должны..."
 
 #: templates/api/@support_team/notice/create_notice.html:70
 #: templates/dashboard/@support_team/previous_notes.html:103
 msgid "Veuillez écrire le contenu de votre note"
-msgstr "Veuillez écrire le contenu de votre avis"
+msgstr "Пожалуйста, напишите содержание вашей заметки"
 
 #: templates/api/@support_team/notice/create_notice.html:80
 #: templates/dashboard/@support_team/ads.html:171
@@ -419,20 +416,20 @@ msgstr "Veuillez écrire le contenu de votre avis"
 #: templates/dashboard/@support_team/tasks.html:125
 #: templates/dashboard/@support_team/tasks.html:174
 msgid "En cours..."
-msgstr "En cours..."
+msgstr "В процессе..."
 
 #: templates/api/@support_team/notice/create_notice.html:82
 msgid "Publier"
-msgstr "Publier"
+msgstr "Опубликовать"
 
 #: templates/api/customers/authorizations/apply.html:2
 msgid "Formulaire de demande de procuration : Afrilog"
-msgstr "Formulaire de demande de procuration : Afrilog"
+msgstr "Форма запроса на полномочия: Afrilog"
 
 #: templates/api/customers/authorizations/apply.html:16
 #: templates/api/customers/authorizations/apply.html:24
 msgid "Demande de procuration"
-msgstr "Demande de procuration"
+msgstr "Запрос на полномочия"
 
 #: templates/api/customers/authorizations/apply.html:34
 #: templates/api/customers/authorizations/apply.html:41
@@ -442,152 +439,152 @@ msgid ""
 "Un nom doit contenir seulement des lettres, les chiffres, les espaces et "
 "les caractères spéciaux sont interdits"
 msgstr ""
-"Un nom ne peut contenir que des lettres ; les chiffres, les espaces et "
-"les caractères spéciaux ne sont pas autorisés."
+"Имя должно содержать только буквы, цифры, пробелы, и специальные символы "
+"запрещены"
 
 #: templates/api/customers/authorizations/apply.html:38
 #: templates/api/customers/goods/purchase_request.html:35
 #: templates/dashboard/settings.html:56 templates/main/contact.html:26
 msgid "Nom de famille"
-msgstr "Nom de famille"
+msgstr "Фамилия"
 
 #: templates/api/customers/authorizations/apply.html:50
 msgid "Téléphone"
-msgstr "Téléphone"
+msgstr "Телефон"
 
 #: templates/api/customers/authorizations/apply.html:53
 msgid "Veuillez entrer un numéro de téléphone valide"
-msgstr "Veuillez entrer un numéro de téléphone valide"
+msgstr "Пожалуйста, введите действительный номер телефона"
 
 #: templates/api/customers/authorizations/apply.html:57
 msgid "Votre signature"
-msgstr "Votre signature"
+msgstr "Ваша подпись"
 
 #: templates/api/customers/authorizations/apply.html:60
 msgid "Veuillez télécharger votre signature"
-msgstr "Veuillez télécharger votre signature"
+msgstr "Пожалуйста, загрузите вашу подпись"
 
 #: templates/api/customers/authorizations/apply.html:69
 msgid "Votre pays"
-msgstr "Votre pays"
+msgstr "Ваша страна"
 
 #: templates/api/customers/authorizations/apply.html:74
 #: templates/api/customers/goods/purchase_request.html:145
 msgid "Veuillez sélectionner votre pays"
-msgstr "Veuillez sélectionner votre pays"
+msgstr "Пожалуйста, выберите вашу страну"
 
 #: templates/api/customers/authorizations/apply.html:78
 msgid "Numéro de suivi"
-msgstr "Numéro de suivi"
+msgstr "Номер отслеживания"
 
 #: templates/api/customers/authorizations/apply.html:81
 msgid "Veuillez entrer un numéro de valide"
-msgstr "Veuillez entrer un numéro valide"
+msgstr "Пожалуйста, введите действительный номер"
 
 #: templates/api/customers/authorizations/apply.html:91
 #: templates/dashboard/customers/previous_quotes.html:192
 msgid "Prénom du transitaire"
-msgstr "Prénom du transitaire"
+msgstr "Имя транзитария"
 
 #: templates/api/customers/authorizations/apply.html:98
 msgid "Nom de famille du transitaire"
-msgstr "Nom de famille du transitaire"
+msgstr "Фамилия транзитария"
 
 #: templates/api/customers/authorizations/apply.html:110
 #: templates/dashboard/customers/previous_quotes.html:200
 #: templates/main/aerien.html:61 templates/main/pricing.html:11
 msgid "Compagnie"
-msgstr "Compagnie"
+msgstr "Компания"
 
 #: templates/api/customers/authorizations/apply.html:116
 msgid "Veuillez sélectionner une compagnie"
-msgstr "Veuillez sélectionner une compagnie"
+msgstr "Пожалуйста, выберите компанию"
 
 #: templates/api/customers/authorizations/apply.html:120
 #: templates/dashboard/customers/previous_quotes.html:150
 msgid "Carte d'identité"
-msgstr "Carte d'identité"
+msgstr "Удостоверение личности"
 
 #: templates/api/customers/authorizations/apply.html:123
 msgid "Veuillez télécharger votre carte d'identité"
-msgstr "Veuillez télécharger votre carte d'identité"
+msgstr "Пожалуйста, загрузите ваше удостоверение личности"
 
 #: templates/api/customers/authorizations/apply.html:134
 #: templates/api/customers/goods/purchase_request.html:172
 msgid "Envoi..."
-msgstr "Envoi..."
+msgstr "Отправка..."
 
 #: templates/api/customers/authorizations/apply.html:136
 #: templates/api/customers/goods/purchase_request.html:175
 #: templates/dashboard/@support_team/new_purchases.html:155
 #: templates/main/contact.html:84
 msgid "Envoyer"
-msgstr "Envoyer"
+msgstr "Отправить"
 
 #: templates/api/customers/authorizations/world_countries.html:1
 msgid "Sélectionnez un pays"
-msgstr "Sélectionnez un pays"
+msgstr "Выберите страну"
 
 #: templates/api/customers/blog/comment.html:6
 msgid "Commenter - Afrilog"
-msgstr "Commenter - Afrilog"
+msgstr "Комментировать - Afrilog"
 
 #: templates/api/customers/blog/saved_articles_listing.html:6
 msgid "Articles enregistrés - Afrilog"
-msgstr "Articles enregistrés - Afrilog"
+msgstr "Сохраненные статьи - Afrilog"
 
 #: templates/api/customers/goods/privacy_policy.html:7
 msgid "En utilisant nos services, vous acceptez notre "
-msgstr "En utilisant nos services, vous acceptez notre "
+msgstr "Используя наши услуги, вы соглашаетесь с нашей "
 
 #: templates/api/customers/goods/privacy_policy.html:7
 #: templates/main/contact.html:77
 msgid "politique de confidentialité"
-msgstr "politique de confidentialité"
+msgstr "политикой конфиденциальности"
 
 #: templates/api/customers/goods/privacy_policy.html:20
 msgid "Politique de Confidentialité"
-msgstr "Politique de Confidentialité"
+msgstr "Политика Конфиденциальности"
 
 #: templates/api/customers/goods/privacy_policy.html:26
 msgid ""
 "Nous collectons des informations personnelles telles que le nom, "
 "l'adresse et les coordonnées pour fournir nos services de livraison."
 msgstr ""
-"Nous collectons des informations personnelles telles que le nom, "
-"l'adresse et les coordonnées pour fournir nos services de livraison."
+"Мы собираем персональную информацию, такую как имя, адрес и контактные "
+"данные, чтобы предоставлять наши услуги доставки."
 
 #: templates/api/customers/goods/privacy_policy.html:27
 msgid ""
 "Vos données peuvent être utilisées pour suivre et améliorer nos "
 "opérations logistiques."
 msgstr ""
-"Vos données peuvent être utilisées pour suivre et améliorer nos "
-"opérations logistiques."
+"Ваши данные могут использоваться для отслеживания и улучшения наших "
+"логистических операций."
 
 #: templates/api/customers/goods/privacy_policy.html:28
 msgid ""
 "Nous pouvons partager vos informations avec des prestataires de services "
 "tiers pour les besoins de la livraison."
 msgstr ""
-"Nous pouvons partager vos informations avec des prestataires de services "
-"tiers pour les besoins de la livraison."
+"Мы можем делиться вашей информацией с поставщиками услуг третьих лиц для "
+"потребностей доставки."
 
 #: templates/api/customers/goods/privacy_policy.html:29
 msgid ""
 "Nous accordons une importance particulière à la sécurité de vos données "
 "et utilisons des mesures standard de l'industrie pour les protéger."
 msgstr ""
-"Nous accordons une importance particulière à la sécurité de vos données "
-"et utilisons des mesures standard de l'industrie pour les protéger."
+"Мы придаем особое значение безопасности ваших данных и используем "
+"стандартные меры отраслевой безопасности для их защиты."
 
 #: templates/api/customers/goods/privacy_policy.html:30
 msgid ""
 "En utilisant nos services, vous acceptez d'être majeur dans votre "
 "juridiction pour consentir à notre politique de confidentialité."
 msgstr ""
-"En utilisant nos services, vous acceptez d'être majeur dans votre "
-"juridiction pour consentir à notre politique de confidentialité."
+"Используя наши услуги, вы соглашаетесь быть совершеннолетним в вашей "
+"юрисдикции, чтобы дать согласие на нашу политику конфиденциальности."
 
 #: templates/api/customers/goods/privacy_policy.html:33
 #: templates/dashboard/@support_team/ads.html:119
@@ -602,255 +599,259 @@ msgstr ""
 #: templates/dashboard/@support_team/quotes_list.html:159
 #: templates/dashboard/customers/previous_purchase_requests.html:89
 msgid "Fermer"
-msgstr "Fermer"
+msgstr "Закрыть"
 
 #: templates/api/customers/goods/purchase_request.html:2
 msgid "Passer une commande : Afrilog"
-msgstr "Passer une commande : Afrilog"
+msgstr "Сделать заказ: Afrilog"
 
 #: templates/api/customers/goods/purchase_request.html:17
 #: templates/dashboard/customers/live_tracking.html:20
 #: templates/dashboard/customers/previous_purchase_requests.html:16
 msgid "Mes commandes"
-msgstr "Mes commandes"
+msgstr "Мои заказы"
 
 #: templates/api/customers/goods/purchase_request.html:20
 #: templates/api/customers/goods/purchase_request.html:28
 msgid "Passer une commande"
-msgstr "Passer une commande"
+msgstr "Сделать заказ"
 
 #: templates/api/customers/goods/purchase_request.html:36
 msgid "Bertram"
-msgstr "Bertram"
+msgstr "Бертрам"
 
 #: templates/api/customers/goods/purchase_request.html:39
 msgid "Veuillez entrer un nom de famille valide"
-msgstr "Veuillez entrer un nom de famille valide"
+msgstr "Пожалуйста, введите действительную фамилию"
 
 #: templates/api/customers/goods/purchase_request.html:45
 msgid "Gillfoyle"
-msgstr "Gillfoyle"
+msgstr "Гилфойл"
 
 #: templates/api/customers/goods/purchase_request.html:48
 msgid "Veuillez entrer un prénom valide"
-msgstr "Veuillez entrer un prénom valide"
+msgstr "Пожалуйста, введите действительное имя"
 
 #: templates/api/customers/goods/purchase_request.html:55
 #: templates/dashboard/customers/previous_purchase_requests.html:33
 #: templates/dashboard/customers/previous_purchase_requests.html:111
 msgid "Nom du produit"
-msgstr "Nom du produit"
+msgstr "Название продукта"
 
 #: templates/api/customers/goods/purchase_request.html:58
 msgid "Veuillez entrer le nom de votre produit"
-msgstr "Veuillez entrer le nom de votre produit"
+msgstr "Пожалуйста, введите название вашего продукта"
 
 #: templates/api/customers/goods/purchase_request.html:64
 #: templates/dashboard/@support_team/new_purchases.html:32
 msgid "Catégorie"
-msgstr "Catégorie"
+msgstr "Категория"
 
 #: templates/api/customers/goods/purchase_request.html:66
 msgid "Électronique"
-msgstr "Électronique"
+msgstr "Электроника"
 
 #: templates/api/customers/goods/purchase_request.html:67
 msgid "Vêtements"
-msgstr "Vêtements"
+msgstr "Одежда"
 
 #: templates/api/customers/goods/purchase_request.html:68
 msgid "Livres"
-msgstr "Livres"
+msgstr "Книги"
 
 #: templates/api/customers/goods/purchase_request.html:72
 msgid "Veuillez sélectionner la catégorie de votre produit"
-msgstr "Veuillez sélectionner la catégorie de votre produit"
+msgstr "Пожалуйста, выберите категорию вашего продукта"
 
 #: templates/api/customers/goods/purchase_request.html:80
 #: templates/api/customers/goods/purchase_request.html:81
 msgid "Longueur du produit"
-msgstr "Longueur du produit"
+msgstr "Длина продукта"
 
 #: templates/api/customers/goods/purchase_request.html:86
 #: templates/api/customers/goods/purchase_request.html:87
 msgid "Largeur du produit"
-msgstr "Largeur du produit"
+msgstr "Ширина продукта"
 
 #: templates/api/customers/goods/purchase_request.html:94
 #: templates/main/contact.html:50
 msgid "Numéro de téléphone"
-msgstr "Numéro de téléphone"
+msgstr "Номер телефона"
 
 #: templates/api/customers/goods/purchase_request.html:98
 msgid "Votre numéro de téléphone est requis"
-msgstr "Votre numéro de téléphone est requis"
+msgstr "Ваш номер телефона обязателен"
 
 #: templates/api/customers/goods/purchase_request.html:104
 msgid "Votre Adresse E-mail"
-msgstr "Votre Adresse E-mail"
+msgstr "Ваш адрес электронной почты"
 
 #: templates/api/customers/goods/purchase_request.html:107
 msgid "Votre adresse E-mail est requise"
-msgstr "Votre adresse e-mail est requise"
+msgstr "Ваш адрес электронной почты обязателен"
 
 #: templates/api/customers/goods/purchase_request.html:110
 msgid "Cette adresse E-mail est invalide"
-msgstr "Cette adresse e-mail est invalide"
+msgstr "Этот адрес электронной почты недействителен"
 
 #: templates/api/customers/goods/purchase_request.html:118
 #: templates/dashboard/@support_team/new_purchases.html:76
 msgid "Fournisseur"
-msgstr "Fournisseur"
+msgstr "Поставщик"
 
 #: templates/api/customers/goods/purchase_request.html:124
 #: templates/dashboard/@support_team/new_purchases.html:104
 msgid "Image du produit"
-msgstr "Image du produit"
+msgstr "Изображение продукта"
 
 #: templates/api/customers/goods/purchase_request.html:133
 msgid "Autre chose sur votre produit..."
-msgstr "Autre chose sur votre produit..."
+msgstr "Другая информация о вашем продукте..."
 
 #: templates/api/customers/goods/purchase_request.html:140
+#, fuzzy
 msgid "Votre Pays"
-msgstr "Votre Pays"
+msgstr "Ваша страна"
 
 #: templates/api/customers/goods/purchase_request.html:151
+#, fuzzy
 msgid "Adresse physique"
-msgstr "Adresse physique"
+msgstr "Адрес электронной почты"
 
 #: templates/api/customers/goods/purchase_request.html:152
+#, fuzzy
 msgid "Entrez votre adresse"
-msgstr "Entrez votre adresse"
+msgstr "Введите ваше сообщение..."
 
 #: templates/api/customers/goods/purchase_request.html:154
+#, fuzzy
 msgid "Veuillez entrer une adresse valide"
-msgstr "Veuillez entrer une adresse valide"
+msgstr "Пожалуйста, введите действительное имя"
 
 #: templates/api/customers/goods/purchase_request.html:160
+#, fuzzy
 msgid "Document ou Manuel"
-msgstr "Document ou Manuel"
+msgstr "Документация"
 
 #: templates/api/customers/jobs/apply.html:2
 msgid "Formulaire de candidature : Afrilog"
-msgstr "Formulaire de candidature : Afrilog"
+msgstr "Форма заявки на вакансию: Afrilog"
 
 #: templates/api/customers/jobs/apply.html:17
 #: templates/api/customers/jobs/apply.html:22
 msgid "Formulaire de candidature"
-msgstr "Formulaire de candidature"
+msgstr "Форма заявки"
 
 #: templates/api/customers/jobs/apply.html:34
 msgid "Email"
-msgstr "Email"
+msgstr "Электронная почта"
 
 #: templates/api/customers/jobs/apply.html:38
 msgid "Location"
-msgstr "Location"
+msgstr "Местоположение"
 
 #: templates/api/customers/jobs/apply.html:42
 #: templates/dashboard/@support_team/applicants_list.html:99
 msgid "Motivation"
-msgstr "Motivation"
+msgstr "Мотивация"
 
 #: templates/api/customers/jobs/apply.html:46
 msgid "LinkedIn URL"
-msgstr "LinkedIn URL"
+msgstr "URL-адрес LinkedIn"
 
 #: templates/api/customers/jobs/apply.html:50
 msgid "GitHub URL"
-msgstr "GitHub URL"
+msgstr "URL-адрес GitHub"
 
 #: templates/api/customers/jobs/apply.html:54
 msgid "Dribble URL"
-msgstr "Dribble URL"
+msgstr "URL-адрес Dribble"
 
 #: templates/api/customers/jobs/apply.html:58
 #: templates/dashboard/@support_team/applicants_list.html:95
 msgid "Date de Naissance"
-msgstr "Date de Naissance"
+msgstr "Дата рождения"
 
 #: templates/api/customers/jobs/apply.html:62
 msgid "Upload CV"
-msgstr "Upload CV"
+msgstr "Загрузить резюме"
 
 #: templates/api/customers/jobs/apply.html:66
 msgid "Soumettre"
-msgstr "Soumettre"
+msgstr "Отправить"
 
 #: templates/api/docs/spreadsheet_doc.html:2
 msgid "Nouvelle Feuille: Afrilog"
-msgstr "Nouvelle Feuille: Afrilog"
+msgstr "Новый Лист: Afrilog"
 
 #: templates/api/docs/spreadsheet_doc.html:17
 #: templates/api/docs/text_doc.html:17
 #: templates/dashboard/partials/sidebar.html:126
 msgid "Documents"
-msgstr "Documents"
+msgstr "Документы"
 
 #: templates/api/docs/spreadsheet_doc.html:20
 msgid "Nouvelle feuille"
-msgstr "Nouvelle feuille"
+msgstr "Новый лист"
 
 #: templates/api/docs/spreadsheet_doc.html:32
 msgid "Créer une nouvelle feuille"
-msgstr "Créer une nouvelle feuille"
+msgstr "Создать новый лист"
 
 #: templates/api/docs/text_doc.html:2
 msgid "Nouveau document: Afrilog"
-msgstr "Nouveau document: Afrilog"
+msgstr "Новый документ: Afrilog"
 
 #: templates/api/docs/text_doc.html:20
 msgid "Nouveau document"
-msgstr "Nouveau document"
+msgstr "Новый документ"
 
 #: templates/api/docs/text_doc.html:32
 msgid "Créer un nouveau document"
-msgstr "Créer un nouveau document"
+msgstr "Создать новый документ"
 
 #: templates/api/messages/new_message.html:2
 msgid "Nouveau message : Afrilog"
-msgstr "Nouveau message : Afrilog"
+msgstr "Новое сообщение: Afrilog"
 
 #: templates/api/messages/new_message.html:16
 #: templates/dashboard/customers/inbox.html:19
 #: templates/dashboard/new_messages.html:16
 #: templates/dashboard/sent_messages.html:16
 msgid "Messages"
-msgstr "Messages"
+msgstr "Сообщения"
 
 #: templates/api/messages/new_message.html:19
 #: templates/api/messages/new_message.html:31
 msgid "Nouveau message"
-msgstr "Nouveau message"
+msgstr "Новое сообщение"
 
 #: templates/auth/layout.html:6
 msgid ""
 "Afrilog, leader dans le domaine du transport et de la logistique, Page de"
 " connexion"
-msgstr ""
-"Afrilog, leader dans le domaine du transport et de la logistique, Page de"
-" connexion"
+msgstr "Afrilog, лидер в области транспорта и логистики, Страница входа"
 
 #: templates/auth/layout.html:7
+#, fuzzy
 msgid ""
 "Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
 "    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
 "Marchandises, Commerce, Santé, Défencse, Technologie, \n"
 "    Equipement, MSC, Connexion, Utilisateur, Portail"
 msgstr ""
-"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
-"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
-"Marchandises, Commerce, Santé, Défencse, Technologie, \n"
-"    Equipement, MSC, Connexion, Utilisateur, Portail"
+"Afrilog, Логистика, Транзит, Транспорт, Африка, Нигер, Европа, Азия, \n"
+" Америка, Океания, Морская, Воздушная, Наземная, Контейнеры, Грузы, "
+"Торговля, Здоровье, Оборона, Технология, \n"
+" Оборудование, MSC, Вход, Пользователь, Портал"
 
 #: templates/auth/layout.html:11 templates/auth/login.html:2
 msgid "Afrilog : Se connecter"
-msgstr "Afrilog : Se connecter"
+msgstr "Afrilog: Вход"
 
 #: templates/auth/login.html:7 templates/auth/login.html:109
 msgid "Connexion"
-msgstr "Connexion"
+msgstr "Вход"
 
 #: templates/auth/login.html:15 templates/auth/login.html:21
 #: templates/auth/signup.html:13 templates/auth/signup.html:18
@@ -858,178 +859,178 @@ msgstr "Connexion"
 #: templates/dashboard/@support_team/applicants_list.html:87
 #: templates/dashboard/settings.html:83 templates/main/contact.html:42
 msgid "Adresse E-mail"
-msgstr "Adresse E-mail"
+msgstr "Электронная почта"
 
 #: templates/auth/login.html:46 templates/auth/signup.html:43
 msgid "Adresse e-mail invalide"
-msgstr "Adresse e-mail invalide"
+msgstr "Неверный адрес электронной почты"
 
 #: templates/auth/login.html:50
 msgid "Adresse e-mail incorrect"
-msgstr "Adresse e-mail incorrect"
+msgstr "Неверный адрес электронной почты"
 
 #: templates/auth/login.html:54
 msgid "Votre adresse est e-mail est requise"
-msgstr "Votre adresse est e-mail est requise"
+msgstr "Ваш адрес электронной почты обязателен"
 
 #: templates/auth/login.html:59
 msgid "Mot de Passe"
-msgstr "Mot de Passe"
+msgstr "Пароль"
 
 #: templates/auth/login.html:61
 msgid "Mot de passe oublié?"
-msgstr "Mot de passe oublié?"
+msgstr "Забыли пароль?"
 
 #: templates/auth/login.html:68
 msgid "8 caractères min"
-msgstr "8 caractères min"
+msgstr "Минимум 8 символов"
 
 #: templates/auth/login.html:97
 msgid "Mot de passe incorrect"
-msgstr "Mot de passe incorrect"
+msgstr "Неверный пароль"
 
 #: templates/auth/login.html:101
 msgid "Votre mot de passe est requis"
-msgstr "Votre mot de passe est requis"
+msgstr "Требуется ваш пароль"
 
 #: templates/auth/login.html:149
 msgid "Se connecter avec Google"
-msgstr "Se connecter avec Google"
+msgstr "Войти через Google"
 
 #: templates/auth/login.html:153
 msgid "Vous n'avez pas de compte?"
-msgstr "Vous n'avez pas de compte?"
+msgstr "У вас нет аккаунта?"
 
 #: templates/auth/login.html:154
 msgid "Créer un compte ici"
-msgstr "Créer un compte ici"
+msgstr "Создайте аккаунт здесь"
 
 #: templates/auth/signup.html:2
 msgid "Afrilog : Créer un nouveau compte"
-msgstr "Afrilog : Créer un nouveau compte"
+msgstr "Afrilog: Создать новый аккаунт"
 
 #: templates/auth/signup.html:7
 msgid "Créer un nouveau compte"
-msgstr "Créer un nouveau compte"
+msgstr "Создать новый аккаунт"
 
 #: templates/auth/signup.html:47
 msgid "Adresse e-mail requise!"
-msgstr "Adresse e-mail requise!"
+msgstr "Требуется адрес электронной почты!"
 
 #: templates/auth/signup.html:51
 msgid "Votre compte existe déja!"
-msgstr "Votre compte existe déja!"
+msgstr "Ваш аккаунт уже существует!"
 
 #: templates/auth/signup.html:56
 msgid "Créer Mot de Passe"
-msgstr "Créer Mot de Passe"
+msgstr "Создать пароль"
 
 #: templates/auth/signup.html:58
 msgid "Au moins 08 caractères"
-msgstr "Au moins 08 caractères"
+msgstr "Минимум 08 символов"
 
 #: templates/auth/signup.html:65
 msgid "Mot de passe"
-msgstr "Mot de passe"
+msgstr "Пароль"
 
 #: templates/auth/signup.html:94
 msgid "Mot de passe requis!"
-msgstr "Mot de passe requis!"
+msgstr "Требуется пароль!"
 
 #: templates/auth/signup.html:98
 msgid "Un mot de passe doit contenir au moins 08 caractères!"
-msgstr "Un mot de passe doit contenir au moins 08 caractères!"
+msgstr "Пароль должен содержать минимум 08 символов!"
 
 #: templates/auth/signup.html:103 templates/auth/signup.html:109
 msgid "Confirmer Mot de Passe"
-msgstr "Confirmer Mot de Passe"
+msgstr "Подтвердить пароль"
 
 #: templates/auth/signup.html:116
 msgid "Les deux mots de passe ne correspondent pas"
-msgstr "Les deux mots de passe ne correspondent pas"
+msgstr "Пароли не совпадают"
 
 #: templates/auth/signup.html:120
 msgid "Confirmation requise pour continuer!"
-msgstr "Confirmation requise pour continuer!"
+msgstr "Требуется подтверждение для продолжения!"
 
 #: templates/auth/signup.html:124
 msgid "En continuant vous aviez lu et accepté nos"
-msgstr "En continuant vous aviez lu et accepté nos"
+msgstr "Продолжая, вы прочитали и приняли наши"
 
 #: templates/auth/signup.html:124
 msgid "conditions générales d'utilisation."
-msgstr "conditions générales d'utilisation."
+msgstr "условия использования."
 
 #: templates/auth/signup.html:132 templates/main/calculate_air_freight.html:65
 #: templates/main/calculate_sea_freight.html:65 templates/main/home.html:41
 msgid "Continuer"
-msgstr "Continuer"
+msgstr "Продолжить"
 
 #: templates/auth/signup.html:172
 msgid "Continuer avec Google"
-msgstr "Continuer avec Google"
+msgstr "Продолжить через Google"
 
 #: templates/auth/signup.html:176
 msgid "Avez-vous déja un compte?"
-msgstr "Avez-vous déja un compte?"
+msgstr "У вас уже есть аккаунт?"
 
 #: templates/auth/signup.html:177
 msgid "Connectez vous ici"
-msgstr "Connectez vous ici"
+msgstr "Войдите здесь"
 
 #: templates/dashboard/applied_jobs_listing.html:6
 msgid "Postes récents - Afrilog"
-msgstr "Postes récents - Afrilog"
+msgstr "Недавние вакансии - Afrilog"
 
 #: templates/dashboard/calculator.html:2
 msgid "Calculatrice : Afrilog"
-msgstr "Calculatrice : Afrilog"
+msgstr "Калькулятор: Afrilog"
 
 #: templates/dashboard/calculator.html:17
 #: templates/dashboard/calculator.html:25
 #: templates/dashboard/partials/sidebar.html:259
 msgid "Calculatrice"
-msgstr "Calculatrice"
+msgstr "Калькулятор"
 
 #: templates/dashboard/calculator.html:39
 msgid "Longueur (m)"
-msgstr "Longueur (m)"
+msgstr "Длина (м)"
 
 #: templates/dashboard/calculator.html:43
 msgid "Largeur (m)"
-msgstr "Largeur (m)"
+msgstr "Ширина (м)"
 
 #: templates/dashboard/calculator.html:47
 msgid "Hauteur (m)"
-msgstr "Hauteur (m)"
+msgstr "Высота (м)"
 
 #: templates/dashboard/calculator.html:51
 msgid "Type de transport"
-msgstr "Type de transport"
+msgstr "Тип транспорта"
 
 #: templates/dashboard/calculator.html:53
 msgid "Transport aérien"
-msgstr "Transport aérien"
+msgstr "Воздушный транспорт"
 
 #: templates/dashboard/calculator.html:54
 msgid "Transport maritime"
-msgstr "Transport maritime"
+msgstr "Морской транспорт"
 
 #: templates/dashboard/dashboard.html:47
 msgid "MyAfrilog : Dashboard"
-msgstr "MyAfrilog : Dashboard"
+msgstr "MyAfrilog: Панель управления"
 
 #: templates/dashboard/jobs_listing.html:2
 msgid "Nouvelles offres d'emploi : Afrilog"
-msgstr "Nouvelles offres d'emploi : Afrilog"
+msgstr "Новые вакансии: Afrilog"
 
 #: templates/dashboard/jobs_listing.html:20
 msgid "Nouvelles offres"
-msgstr "Nouvelles offres"
+msgstr "Новые предложения"
 
 #: templates/dashboard/jobs_listing.html:28
 msgid "Nouvelles offres d'emploi"
-msgstr "Nouvelles offres d'emploi"
+msgstr "Новые вакансии"
 
 #: templates/dashboard/@support_team/invoices.html:43
 #: templates/dashboard/@support_team/previous_created_jobs.html:39
@@ -1044,74 +1045,74 @@ msgstr "ID"
 #: templates/dashboard/@support_team/tasks.html:40
 #: templates/dashboard/jobs_listing.html:37
 msgid "Desc"
-msgstr "Desc"
+msgstr "Описание"
 
 #: templates/dashboard/jobs_listing.html:55
 msgid "postuler"
-msgstr "postuler"
+msgstr "подать заявку"
 
 #: templates/dashboard/customers/inbox.html:4
 #: templates/dashboard/new_messages.html:2
 msgid "Boîte de réception : Afrilog"
-msgstr "Boîte de réception : Afrilog"
+msgstr "Входящие: Afrilog"
 
 #: templates/dashboard/customers/inbox.html:22
 #: templates/dashboard/new_messages.html:19
 #: templates/dashboard/new_messages.html:27
 msgid "Boîte de réception"
-msgstr "Boîte de réception"
+msgstr "Входящие"
 
 #: templates/dashboard/sent_messages.html:2
 msgid "Messages envoyés : Afrilog"
-msgstr "Messages envoyés : Afrilog"
+msgstr "Отправленные сообщения: Afrilog"
 
 #: templates/dashboard/sent_messages.html:19
 #: templates/dashboard/sent_messages.html:27
 msgid "Messages envoyés"
-msgstr "Messages envoyés"
+msgstr "Отправленные сообщения"
 
 #: templates/dashboard/partials/sidebar.html:267
 #: templates/dashboard/settings.html:6 templates/dashboard/settings.html:9
 #: templates/dashboard/settings.html:27 templates/dashboard/settings.html:35
 msgid "Paramètres"
-msgstr "Paramètres"
+msgstr "Настройки"
 
 #: templates/dashboard/settings.html:72
 msgid "Nom d'utilisateur"
-msgstr "Nom d'utilisateur"
+msgstr "Имя пользователя"
 
 #: templates/dashboard/settings.html:99
 msgid "Adresse Maison"
-msgstr "Adresse Maison"
+msgstr "Домашний адрес"
 
 #: templates/dashboard/user_home.html:2
 msgid "MyAfrilog : Accueil"
-msgstr "MyAfrilog : Accueil"
+msgstr "MyAfrilog: Главная"
 
 #: templates/dashboard/@support_team/ads.html:2
 msgid "Campagnes pub : Afrilog"
-msgstr "Campagnes pub : Afrilog"
+msgstr "Рекламные кампании: Afrilog"
 
 #: templates/dashboard/@support_team/ads.html:14
 #: templates/dashboard/@support_team/ads.html:20
 #: templates/dashboard/partials/sidebar.html:169
 msgid "Ads"
-msgstr "Ads"
+msgstr "Реклама"
 
 #: templates/dashboard/@support_team/ads.html:25
 msgid "Créer une nouvelle campagnes"
-msgstr "Créer une nouvelle campagnes"
+msgstr "Создать новую кампанию"
 
 #: templates/dashboard/@support_team/ads.html:28
 msgid "Trier les campagnes"
-msgstr "Trier les campagnes"
+msgstr "Сортировать кампании"
 
 #: templates/dashboard/@support_team/ads.html:40
 #: templates/dashboard/@support_team/ads.html:92
 #: templates/dashboard/@support_team/ads.html:149
 #: templates/dashboard/@support_team/ads.html:216
 msgid "Débute"
-msgstr "Débute"
+msgstr "Начало"
 
 #: templates/dashboard/@support_team/ads.html:41
 #: templates/dashboard/@support_team/ads.html:97
@@ -1119,21 +1120,21 @@ msgstr "Débute"
 #: templates/dashboard/@support_team/ads.html:220
 #: templates/dashboard/@support_team/events.html:48
 msgid "Termine à"
-msgstr "Termine à"
+msgstr "Окончание"
 
 #: templates/dashboard/@support_team/ads.html:42
 #: templates/dashboard/@support_team/ads.html:101
 #: templates/dashboard/@support_team/ads.html:157
 #: templates/dashboard/@support_team/ads.html:224
 msgid "Budget Min"
-msgstr "Budget Min"
+msgstr "Мин. бюджет"
 
 #: templates/dashboard/@support_team/ads.html:43
 #: templates/dashboard/@support_team/ads.html:105
 #: templates/dashboard/@support_team/ads.html:161
 #: templates/dashboard/@support_team/ads.html:228
 msgid "Budget Max"
-msgstr "Budget Max"
+msgstr "Макс. бюджет"
 
 #: templates/dashboard/@support_team/ads.html:44
 #: templates/dashboard/@support_team/applicants_list.html:35
@@ -1149,7 +1150,7 @@ msgstr "Budget Max"
 #: templates/dashboard/@support_team/tasks.html:42
 #: templates/dashboard/customers/previous_quotes.html:58
 msgid "Options"
-msgstr "Options"
+msgstr "Опции"
 
 #: templates/dashboard/@support_team/ads.html:57
 #: templates/dashboard/@support_team/invoices.html:62
@@ -1157,7 +1158,7 @@ msgstr "Options"
 #: templates/dashboard/customers/previous_purchase_requests.html:59
 #: templates/dashboard/customers/previous_quotes.html:63
 msgid "Voir les détails"
-msgstr "Voir les détails"
+msgstr "Просмотреть детали"
 
 #: templates/dashboard/@support_team/ads.html:60
 #: templates/dashboard/@support_team/invoices.html:65
@@ -1167,7 +1168,7 @@ msgstr "Voir les détails"
 #: templates/dashboard/@support_team/tasks.html:66
 #: templates/dashboard/customers/previous_quotes.html:68
 msgid "Modifier"
-msgstr "Modifier"
+msgstr "Изменить"
 
 #: templates/dashboard/@support_team/ads.html:63
 #: templates/dashboard/@support_team/applicants_list.html:61
@@ -1180,186 +1181,186 @@ msgstr "Modifier"
 #: templates/dashboard/customers/previous_purchase_requests.html:61
 #: templates/dashboard/customers/previous_quotes.html:73
 msgid "Supprimer"
-msgstr "Supprimer"
+msgstr "Удалить"
 
 #: templates/dashboard/@support_team/ads.html:73
 msgid "Détails de la campagne"
-msgstr "Détails de la campagne"
+msgstr "Детали кампании"
 
 #: templates/dashboard/@support_team/ads.html:88
 #: templates/dashboard/@support_team/ads.html:145
 #: templates/dashboard/@support_team/ads.html:212
 msgid "Objectifs"
-msgstr "Objectifs"
+msgstr "Цели"
 
 #: templates/dashboard/@support_team/ads.html:109
 #: templates/dashboard/@support_team/ads.html:165
 #: templates/dashboard/@support_team/ads.html:232
 msgid "Dette"
-msgstr "Dette"
+msgstr "Задолженность"
 
 #: templates/dashboard/@support_team/ads.html:114
 msgid "Temps restant"
-msgstr "Temps restant"
+msgstr "Оставшееся время"
 
 #: templates/dashboard/@support_team/ads.html:129
 msgid "Modifier les détails de la campagne"
-msgstr "Modifier les détails de la campagne"
+msgstr "Изменить детали кампании"
 
 #: templates/dashboard/@support_team/ads.html:173
 msgid "Sauvegarder"
-msgstr "Sauvegarder"
+msgstr "Сохранить"
 
 #: templates/dashboard/@support_team/ads.html:196
 #: templates/dashboard/@support_team/empty/no_Ads.html:12
 msgid "Créer une nouvelle campagne"
-msgstr "Créer une nouvelle campagne"
+msgstr "Создать новую кампанию"
 
 #: templates/dashboard/@support_team/ads.html:205
 msgid "Campagne N°1"
-msgstr "Campagne N°1"
+msgstr "Кампания №1"
 
 #: templates/dashboard/@support_team/ads.html:209
 msgid "Entrez la description de la campagne..."
-msgstr "Entrez la description de la campagne..."
+msgstr "Введите описание кампании..."
 
 #: templates/dashboard/@support_team/ads.html:213
 msgid "Entrez les objectifs de la campagne..."
-msgstr "Entrez les objectifs de la campagne..."
+msgstr "Введите цели кампании..."
 
 #: templates/dashboard/@support_team/applicant_desc.html:6
 #: templates/dashboard/@support_team/quote_desc.html:6
 msgid " - Afrilog"
-msgstr " - Afrilog"
+msgstr "- Afrilog"
 
 #: templates/dashboard/@support_team/applicants_list.html:4
 msgid "Applications Récentes : Afrilog"
-msgstr "Applications Récentes : Afrilog"
+msgstr "Последние заявки: Afrilog"
 
 #: templates/dashboard/@support_team/applicants_list.html:7
 msgid "Applications Récentes"
-msgstr "Applications Récentes"
+msgstr "Недавние заявки"
 
 #: templates/dashboard/@support_team/applicants_list.html:12
 msgid "Sélectionner un Poste"
-msgstr "Sélectionner un Poste"
+msgstr "Выбрать должность"
 
 #: templates/dashboard/@support_team/applicants_list.html:14
 msgid "Choisir un Poste"
-msgstr "Choisir un Poste"
+msgstr "Выберите должность"
 
 #: templates/dashboard/@support_team/applicants_list.html:31
 msgid "Nom du Candidat"
-msgstr "Nom du Candidat"
+msgstr "Имя кандидата"
 
 #: templates/dashboard/@support_team/applicants_list.html:33
 #: templates/dashboard/@support_team/applicants_list.html:91
 msgid "Localisation"
-msgstr "Localisation"
+msgstr "Местоположение"
 
 #: templates/dashboard/@support_team/applicants_list.html:34
 msgid "Date de Candidature"
-msgstr "Date de Candidature"
+msgstr "Дата подачи заявки"
 
 #: templates/dashboard/@support_team/applicants_list.html:54
 #: templates/dashboard/@support_team/employees_listing.html:68
 #: templates/main/cgu.html:148
 msgid "Voir plus"
-msgstr "Voir plus"
+msgstr "Посмотреть больше"
 
 #: templates/dashboard/@support_team/applicants_list.html:107
 msgid "Accepter"
-msgstr "Accepter"
+msgstr "Принять"
 
 #: templates/dashboard/@support_team/applicants_list.html:110
 msgid "Rejeter"
-msgstr "Rejeter"
+msgstr "Отклонить"
 
 #: templates/dashboard/@support_team/applicants_list.html:114
 msgid "Imprimer fichier"
-msgstr "Imprimer fichier"
+msgstr "Печать файла"
 
 #: templates/dashboard/@support_team/authorizations_listing.html:6
 msgid "Procurations récentes - Afrilog"
-msgstr "Procurations récentes - Afrilog"
+msgstr "Последние полномочия - Afrilog"
 
 #: templates/dashboard/@support_team/calendar.html:3
 msgid "Calendrier : Afrilog"
-msgstr "Calendrier : Afrilog"
+msgstr "Календарь: Afrilog"
 
 #: templates/dashboard/@support_team/calendar.html:17
 #: templates/dashboard/@support_team/calendar.html:22
 #: templates/dashboard/partials/sidebar.html:35
 msgid "Calendrier"
-msgstr "Calendrier"
+msgstr "Календарь"
 
 #: templates/dashboard/@support_team/employees_listing.html:2
 msgid "Table des employés : Afrilog"
-msgstr "Table des employés : Afrilog"
+msgstr "Таблица сотрудников: Afrilog"
 
 #: templates/dashboard/@support_team/employees_listing.html:16
 #: templates/dashboard/@support_team/employees_listing.html:21
 #: templates/dashboard/partials/sidebar.html:238
 msgid "Table des employés"
-msgstr "Table des employés"
+msgstr "Таблица сотрудников"
 
 #: templates/dashboard/@support_team/employees_listing.html:28
 msgid "Nom & Prénom"
-msgstr "Nom & Prénom"
+msgstr "Имя и фамилия"
 
 #: templates/dashboard/@support_team/employees_listing.html:30
 msgid "Matricule/Identifiant"
-msgstr "Matricule/Identifiant"
+msgstr "Идентификатор"
 
 #: templates/dashboard/@support_team/employees_listing.html:31
 msgid "Depuis"
-msgstr "Depuis"
+msgstr "С"
 
 #: templates/dashboard/@support_team/employees_listing.html:118
 msgid "Imprimer carte"
-msgstr "Imprimer carte"
+msgstr "Печать карты"
 
 #: templates/dashboard/@support_team/events.html:3
 msgid "Réunions : Afrilog"
-msgstr "Réunions : Afrilog"
+msgstr "Встречи: Afrilog"
 
 #: templates/dashboard/@support_team/events.html:17
 #: templates/dashboard/@support_team/events.html:22
 #: templates/dashboard/partials/sidebar.html:158
 msgid "Meets"
-msgstr "Meets"
+msgstr "Встречи"
 
 #: templates/dashboard/@support_team/events.html:33
 msgid "Ajouter un événement"
-msgstr "Ajouter un événement"
+msgstr "Добавить событие"
 
 #: templates/dashboard/@support_team/events.html:44
 msgid "Commence à"
-msgstr "Commence à"
+msgstr "Начинается в"
 
 #: templates/dashboard/@support_team/finance_reports.html:4
 msgid "Rapport financier : Afrilog"
-msgstr "Rapport financier : Afrilog"
+msgstr "Финансовый отчет: Afrilog"
 
 #: templates/dashboard/@support_team/finance_reports.html:20
 #: templates/dashboard/@support_team/marketplace.html:20
 msgid "Rapports"
-msgstr "Rapports"
+msgstr "Отчеты"
 
 #: templates/dashboard/@support_team/finance_reports.html:23
 msgid "Rapport financier"
-msgstr "Rapport financier"
+msgstr "Финансовый отчет"
 
 #: templates/dashboard/@support_team/invoices.html:3
 msgid "Factures : Afrilog"
-msgstr "Factures : Afrilog"
+msgstr "Счета: Afrilog"
 
 #: templates/dashboard/@support_team/invoices.html:17
 #: templates/dashboard/@support_team/invoices.html:23
 #: templates/dashboard/partials/sidebar.html:116
 #: templates/views/invoices.html:7
 msgid "Factures"
-msgstr "Factures"
+msgstr "Счета"
 
 #: templates/dashboard/@support_team/invoices.html:45
 #: templates/dashboard/@support_team/invoices.html:100
@@ -1367,7 +1368,7 @@ msgstr "Factures"
 #: templates/dashboard/@support_team/invoices.html:176
 #: templates/views/invoices.html:45
 msgid "Montant"
-msgstr "Montant"
+msgstr "Сумма"
 
 #: templates/dashboard/@support_team/invoices.html:58
 #: templates/dashboard/@support_team/new_purchases.html:34
@@ -1377,51 +1378,51 @@ msgstr "Montant"
 #: templates/dashboard/customers/previous_purchase_requests.html:56
 #: templates/dashboard/customers/previous_quotes.html:39
 msgid "Actions"
-msgstr "Actions"
+msgstr "Действия"
 
 #: templates/dashboard/@support_team/invoices.html:80
 msgid "Détails de la facture"
-msgstr "Détails de la facture"
+msgstr "Детали счета"
 
 #: templates/dashboard/@support_team/invoices.html:90
 msgid "Titre non spécifié"
-msgstr "Titre non spécifié"
+msgstr "Без названия"
 
 #: templates/dashboard/@support_team/invoices.html:94
 msgid "Description non disponible"
-msgstr "Description non disponible"
+msgstr "Описание недоступно"
 
 #: templates/dashboard/@support_team/invoices.html:101
 msgid "Montant non spécifié"
-msgstr "Montant non spécifié"
+msgstr "Сумма не указана"
 
 #: templates/dashboard/@support_team/invoices.html:116
 msgid "Modifier la facture"
-msgstr "Modifier la facture"
+msgstr "Изменить счет"
 
 #: templates/dashboard/@support_team/invoices.html:126
 msgid "Veuillez entrer le titre de la facture"
-msgstr "Veuillez entrer le titre de la facture"
+msgstr "Пожалуйста, введите название счета"
 
 #: templates/dashboard/@support_team/invoices.html:135
 msgid "Veuillez entrer le montant de la facture"
-msgstr "Veuillez entrer le montant de la facture"
+msgstr "Пожалуйста, введите сумму счета"
 
 #: templates/dashboard/@support_team/invoices.html:136
 msgid "Veuillez entrer un montant valide"
-msgstr "Veuillez entrer un montant valide"
+msgstr "Пожалуйста, введите допустимую сумму"
 
 #: templates/dashboard/@support_team/invoices.html:159
 msgid "Créer une nouvelle facture"
-msgstr "Créer une nouvelle facture"
+msgstr "Создать новый счет"
 
 #: templates/dashboard/@support_team/invoices.html:168
 msgid "Nouveau moniteur"
-msgstr "Nouveau moniteur"
+msgstr "Новый монитор"
 
 #: templates/dashboard/@support_team/invoices.html:173
 msgid "Ajouter une description supplémentaire"
-msgstr "Ajouter une description supplémentaire"
+msgstr "Добавить дополнительное описание"
 
 #: templates/dashboard/@support_team/job_details.html:6
 msgid "- Afrilog"
@@ -1429,705 +1430,656 @@ msgstr "- Afrilog"
 
 #: templates/dashboard/@support_team/marketplace.html:4
 msgid "Marketplace : Afrilog"
-msgstr "Marketplace : Afrilog"
+msgstr "Рынок : Afrilog"
 
 #: templates/dashboard/@support_team/marketplace.html:23
 msgid "Marketplace"
-msgstr "Marketplace"
+msgstr "Рынок"
 
 #: templates/dashboard/@support_team/my_task.html:2
 msgid "Mes tâches : Afrilog"
-msgstr "Mes tâches : Afrilog"
+msgstr "Мои задачи : Afrilog"
 
 #: templates/dashboard/@support_team/my_task.html:14
 #: templates/dashboard/@support_team/my_task.html:20
 #: templates/dashboard/partials/sidebar.html:46
 msgid "Mes tâches"
-msgstr "Mes tâches"
+msgstr "Мои задачи"
 
 #: templates/dashboard/@support_team/my_task.html:40
 #: templates/dashboard/@support_team/new_purchases.html:33
 #: templates/dashboard/@support_team/tasks.html:41
 #: templates/dashboard/customers/previous_quotes.html:38
 msgid "Statut"
-msgstr "Statut"
+msgstr "Статус"
 
 #: templates/dashboard/@support_team/my_task.html:42
 #: templates/dashboard/@support_team/tasks.html:111
 #: templates/dashboard/@support_team/tasks.html:160
 msgid "Assigné à"
-msgstr "Assigné à"
+msgstr "Назначено на"
 
 #: templates/dashboard/@support_team/new_purchases.html:3
 msgid "Nouveaux achats : Afrilog"
-msgstr "Nouveaux achats : Afrilog"
+msgstr "Новые покупки : Afrilog"
 
 #: templates/dashboard/@support_team/new_purchases.html:16
 msgid "Nouveaux achats"
-msgstr "Nouveaux achats"
+msgstr "Новые покупки"
 
 #: templates/dashboard/@support_team/new_purchases.html:22
 msgid "Nouveaux Achats"
-msgstr "Nouveaux Achats"
+msgstr "Новые покупки"
 
 #: templates/dashboard/@support_team/new_purchases.html:31
 msgid "Auteur"
-msgstr "Auteur"
+msgstr "Автор"
 
 #: templates/dashboard/@support_team/new_purchases.html:43
 msgid "Répondu"
-msgstr "Répondu"
+msgstr "Ответил"
 
 #: templates/dashboard/@support_team/new_purchases.html:43
 msgid "En attente"
-msgstr "En attente"
+msgstr "Ожидает"
 
 #: templates/dashboard/@support_team/new_purchases.html:50
 msgid "Voir détails"
-msgstr "Voir détails"
+msgstr "Посмотреть подробности"
 
 #: templates/dashboard/@support_team/new_purchases.html:51
 msgid "Répondre"
-msgstr "Répondre"
+msgstr "Ответить"
 
 #: templates/dashboard/@support_team/new_purchases.html:67
 msgid "Détails de l'achat"
-msgstr "Détails de l'achat"
+msgstr "Подробности покупки"
 
 #: templates/dashboard/@support_team/new_purchases.html:80
 #: templates/dashboard/customers/previous_purchase_requests.html:157
 msgid "Adresse de l'auteur"
-msgstr "Adresse de l'auteur"
+msgstr "Адрес автора"
 
 #: templates/dashboard/@support_team/new_purchases.html:90
 #: templates/dashboard/customers/previous_purchase_requests.html:147
 msgid "Adresse e-mail de l'auteur"
-msgstr "Adresse e-mail de l'auteur"
+msgstr "Адрес электронной почты автора"
 
 #: templates/dashboard/@support_team/new_purchases.html:94
 msgid "Dimensions du produit"
-msgstr "Dimensions du produit"
+msgstr "Размеры продукта"
 
 #: templates/dashboard/@support_team/new_purchases.html:120
 msgid "Répondre à"
-msgstr "Répondre à"
+msgstr "Ответить"
 
 #: templates/dashboard/@support_team/new_purchases.html:131
 #: templates/main/calculate_air_freight.html:35
 #: templates/main/calculate_sea_freight.html:35
 msgid "De"
-msgstr "De"
+msgstr "От"
 
 #: templates/dashboard/@support_team/new_purchases.html:135
 #: templates/main/calculate_air_freight.html:46
 #: templates/main/calculate_sea_freight.html:46
 msgid "A"
-msgstr "A"
+msgstr "К"
 
 #: templates/dashboard/@support_team/new_purchases.html:139
 #: templates/main/contact.html:59
 msgid "Message"
-msgstr "Message"
+msgstr "Сообщение"
 
 #: templates/dashboard/@support_team/new_purchases.html:140
 msgid "Ecrire quelque chose..."
-msgstr "Ecrire quelque chose..."
+msgstr "Напишите что-нибудь..."
 
 #: templates/dashboard/@support_team/new_purchases.html:143
 msgid "Télécharger des fichiers"
-msgstr "Télécharger des fichiers"
+msgstr "Загрузить файлы"
 
 #: templates/dashboard/@support_team/new_purchases.html:147
 msgid "Liens utiles"
-msgstr "Liens utiles"
+msgstr "Полезные ссылки"
 
 #: templates/dashboard/@support_team/previous_created_jobs.html:4
 msgid "Offres publiées : Afrilog"
-msgstr "Offres publiées : Afrilog"
+msgstr "Опубликованные предложения: Afrilog"
 
 #: templates/dashboard/@support_team/previous_created_jobs.html:24
 #: templates/dashboard/@support_team/previous_created_jobs.html:32
 msgid "Offres publiées"
-msgstr "Offres publiées"
+msgstr "Опубликованные предложения"
 
 #: templates/dashboard/@support_team/previous_notes.html:4
 msgid "Notes récentes : Afrilog"
-msgstr "Notes récentes : Afrilog"
+msgstr "Последние заметки: Afrilog"
 
 #: templates/dashboard/@support_team/previous_notes.html:23
 #: templates/dashboard/@support_team/previous_notes.html:31
 #: templates/dashboard/partials/sidebar.html:203
 msgid "Notes récentes"
-msgstr "Notes récentes"
+msgstr "Последние заметки"
 
 #: templates/dashboard/@support_team/previous_notes.html:41
 msgid "Type"
-msgstr "Type"
+msgstr "Тип"
 
 #: templates/dashboard/@support_team/previous_notes.html:90
 msgid "Modifier la note"
-msgstr "Modifier la note"
+msgstr "Изменить заметку"
 
 #: templates/dashboard/@support_team/previous_notes.html:98
 msgid "Veuillez donner un titre à votre note"
-msgstr "Veuillez donner un titre à votre note"
+msgstr "Пожалуйста, дайте название своей заметке"
 
 #: templates/dashboard/@support_team/previous_notes.html:108
 msgid "Avertissement"
-msgstr "Avertissement"
+msgstr "Предупреждение"
 
 #: templates/dashboard/@support_team/previous_notes.html:109
 msgid "Information"
-msgstr "Information"
+msgstr "Информация"
 
 #: templates/dashboard/@support_team/previous_notes.html:115
 msgid "Annuler"
-msgstr "Annuler"
+msgstr "Отмена"
 
 #: templates/dashboard/@support_team/previous_notes.html:117
 msgid "Mettre à jour"
-msgstr "Mettre à jour"
+msgstr "Обновить"
 
 #: templates/dashboard/@support_team/quotes_list.html:4
 msgid "Demandes de procurations : Afrilog"
-msgstr "Demandes de procurations : Afrilog"
+msgstr "Запросы на предоставление: Afrilog"
 
 #: templates/dashboard/@support_team/quotes_list.html:18
 msgid "Demandes de procurations"
-msgstr "Demandes de procurations"
+msgstr "Запросы на предоставление"
 
 #: templates/dashboard/@support_team/quotes_list.html:24
 msgid "Demandes de devis"
-msgstr "Demandes de devis"
+msgstr "Запросы на предложения"
 
 #: templates/dashboard/@support_team/quotes_list.html:32
 #: templates/dashboard/@support_team/quotes_list.html:81
 #: templates/dashboard/@support_team/quotes_list.html:132
 #: templates/dashboard/customers/previous_quotes.html:176
 msgid "Nom du client"
-msgstr "Nom du client"
+msgstr "Имя клиента"
 
 #: templates/dashboard/@support_team/quotes_list.html:33
 #: templates/dashboard/@support_team/quotes_list.html:95
 #: templates/dashboard/@support_team/quotes_list.html:144
 msgid "Titre de la compagnie de transport"
-msgstr "Titre de la compagnie de transport"
+msgstr "Название транспортной компании"
 
 #: templates/dashboard/@support_team/quotes_list.html:68
 msgid "Détails de la demande de devis"
-msgstr "Détails de la demande de devis"
+msgstr "Детали запроса на предложение"
 
 #: templates/dashboard/@support_team/quotes_list.html:77
 #: templates/dashboard/@support_team/quotes_list.html:128
 #: templates/dashboard/customers/previous_quotes.html:172
 msgid "Prénom du client"
-msgstr "Prénom du client"
+msgstr "Имя клиента"
 
 #: templates/dashboard/@support_team/quotes_list.html:85
 #: templates/dashboard/@support_team/quotes_list.html:136
 msgid "Numéro de téléphone du client"
-msgstr "Numéro de téléphone du client"
+msgstr "Номер телефона клиента"
 
 #: templates/dashboard/@support_team/quotes_list.html:89
 #: templates/dashboard/@support_team/quotes_list.html:140
 msgid "Adresse e-mail du client"
-msgstr "Adresse e-mail du client"
+msgstr "Адрес электронной почты клиента"
 
 #: templates/dashboard/@support_team/quotes_list.html:99
 #: templates/dashboard/@support_team/quotes_list.html:148
 msgid "Identifiant des documents de chargement"
-msgstr "Identifiant des documents de chargement"
+msgstr "Идентификатор документов загрузки"
 
 #: templates/dashboard/@support_team/quotes_list.html:103
 #: templates/dashboard/@support_team/quotes_list.html:152
 msgid "Frais de service"
-msgstr "Frais de service"
+msgstr "Стоимость услуг"
 
 #: templates/dashboard/@support_team/quotes_list.html:120
 msgid "Modifier la demande de devis"
-msgstr "Modifier la demande de devis"
+msgstr "Изменить запрос на предложение"
 
 #: templates/dashboard/@support_team/tasks.html:3
 msgid "Tâches : Afrilog"
-msgstr "Tâches : Afrilog"
+msgstr "Задачи: Afrilog"
 
 #: templates/dashboard/@support_team/tasks.html:15
 #: templates/dashboard/@support_team/tasks.html:19
 #: templates/dashboard/partials/sidebar.html:150
 msgid "Tâches"
-msgstr "Tâches"
+msgstr "Задачи"
 
 #: templates/dashboard/@support_team/tasks.html:53
 #: templates/dashboard/customers/previous_quotes.html:52
 msgid "En cours"
-msgstr "En cours"
+msgstr "В процессе"
 
 #: templates/dashboard/@support_team/tasks.html:55
 msgid "Effectuée"
-msgstr "Effectuée"
+msgstr "Выполнено"
 
 #: templates/dashboard/@support_team/tasks.html:92
 msgid "Ajouter une nouvelle tâche"
-msgstr "Ajouter une nouvelle tâche"
+msgstr "Добавить новую задачу"
 
 #: templates/dashboard/@support_team/tasks.html:102
 msgid "Analyse concurrentielle"
-msgstr "Analyse concurrentielle"
+msgstr "Конкурентный анализ"
 
 #: templates/dashboard/@support_team/tasks.html:103
 #: templates/dashboard/@support_team/tasks.html:152
 msgid "Veuillez entrer le titre de la tâche pour continuer"
-msgstr "Veuillez entrer le titre de la tâche pour continuer"
+msgstr "Пожалуйста, введите название задачи, чтобы продолжить"
 
 #: templates/dashboard/@support_team/tasks.html:107
 msgid "Etudier les stratégies mises en place..."
-msgstr "Etudier les stratégies mises en place..."
+msgstr "Изучить реализованные стратегии..."
 
 #: templates/dashboard/@support_team/tasks.html:108
 #: templates/dashboard/@support_team/tasks.html:157
 msgid "Veuillez décrire brièvement la tâche pour continuer"
-msgstr "Veuillez décrire brièvement la tâche pour continuer"
+msgstr "Пожалуйста, кратко опишите задачу, чтобы продолжить"
 
 #: templates/dashboard/@support_team/tasks.html:118
 #: templates/dashboard/@support_team/tasks.html:167
 msgid "Aucun agent trouvé"
-msgstr "Aucun agent trouvé"
+msgstr "Агент не найден"
 
 #: templates/dashboard/@support_team/tasks.html:121
 #: templates/dashboard/@support_team/tasks.html:170
 msgid "Veuillez assigner cette tâche à un agent pour continuer"
-msgstr "Veuillez assigner cette tâche à un agent pour continuer"
+msgstr "Пожалуйста, назначьте эту задачу агенту, чтобы продолжить"
 
 #: templates/dashboard/@support_team/tasks.html:142
 msgid "Modifier la tâche"
-msgstr "Modifier la tâche"
+msgstr "Изменить задачу"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:2
 msgid "Aucune campagne commencé"
-msgstr "Aucune campagne commencé"
+msgstr "Нет начатых кампаний"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:3
 msgid "Aucune campagne disponible"
-msgstr "Aucune campagne disponible"
+msgstr "Нет доступных кампаний"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:6
 msgid ""
 "Ici vous pouvez gérer les campagnes publicitaires plus efficacement avec "
 "de puissants outils d'analyse de données"
 msgstr ""
-"Ici vous pouvez gérer les campagnes publicitaires plus efficacement avec "
-"de puissants outils d'analyse de données"
+"Здесь вы можете более эффективно управлять рекламными кампаниями с "
+"помощью мощных инструментов аналитики данных"
 
 #: templates/dashboard/@support_team/empty/no_application.html:2
 #: templates/dashboard/@support_team/empty/no_application.html:3
 msgid "Aucune candidature à afficher"
-msgstr "Aucune candidature à afficher"
+msgstr "Нет отображаемых заявок"
 
 #: templates/dashboard/@support_team/empty/no_application.html:6
 msgid "Aucune demande d'emploi disponible pour cette offre"
-msgstr "Aucune demande d'emploi disponible pour cette offre"
+msgstr "Нет доступных заявок на эту вакансию"
 
 #: templates/dashboard/@support_team/empty/no_employee.html:2
 #: templates/dashboard/@support_team/empty/no_employee.html:3
 msgid "Aucun employé à afficher"
-msgstr "Aucun employé à afficher"
+msgstr "Нет отображаемых сотрудников"
 
 #: templates/dashboard/@support_team/empty/no_employee.html:6
 msgid "Les employés vont s'afficher automatiquement ici"
-msgstr "Les employés vont s'afficher automatiquement ici"
+msgstr "Сотрудники будут отображаться автоматически здесь"
 
 #: templates/dashboard/@support_team/empty/no_job.html:6
 msgid "Aucun emploi trouvé - Afrilog"
-msgstr "Aucun emploi trouvé - Afrilog"
+msgstr "Работа не найдена - Afrilog"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:2
 msgid "Aucune achat effectué"
-msgstr "Aucune achat effectué"
+msgstr "Нет совершенных покупок"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:3
 #: templates/dashboard/customers/empty/no_purchase.html:2
 msgid "Aucun achat effectué"
-msgstr "Aucun achat effectué"
+msgstr "Нет совершенных покупок"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:6
 msgid "Aucun achat n'a été effectué pour le moment"
-msgstr "Aucun achat n'a été effectué pour le moment"
+msgstr "На данный момент покупок не было совершено"
 
 #: templates/dashboard/@support_team/empty/no_quote.html:3
 #: templates/dashboard/customers/empty/no_quote.html:3
 msgid "Aucune demande de procuration"
-msgstr "Aucune demande de procuration"
+msgstr "Нет запросов на предоставление"
 
 #: templates/dashboard/@support_team/empty/no_quote.html:6
 #: templates/dashboard/customers/empty/no_quote.html:6
 msgid "Aucune demande de procuration effectuée pour le moment"
-msgstr "Aucune demande de procuration effectuée pour le moment"
+msgstr "На данный момент не было выполнено ни одного запроса на предоставление"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:2
 msgid "Aucune tâche assignée"
-msgstr "Aucune tâche assignée"
+msgstr "Нет назначенных задач"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:3
 msgid "Aucune tâche ne vous a été assignée"
-msgstr "Aucune tâche ne vous a été assignée"
+msgstr "Вам не назначено ни одной задачи"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:6
 msgid "Ici vous pouvez gérer et organiser les tâches qu'on vous aura assigné."
-msgstr "Ici vous pouvez gérer et organiser les tâches qu'on vous aura assigné."
+msgstr "Здесь вы можете управлять и организовывать задачи, которые вам назначены."
 
 #: templates/dashboard/customers/live_tracking.html:4
-#, fuzzy
 msgid "Suivre mon colis : Afrilog"
-msgstr "Réunions : Afrilog"
+msgstr "Отследить мою посылку: Afrilog"
 
 #: templates/dashboard/customers/live_tracking.html:23
 #: templates/dashboard/customers/live_tracking.html:30
-#, fuzzy
 msgid "Suivre mon colis"
-msgstr "Suivre mon produit"
+msgstr "Отследить мою посылку"
 
 #: templates/dashboard/customers/live_tracking.html:36
 #: templates/main/pricing.html:308 templates/main/sea.html:122
-#, fuzzy
 msgid "Port de départ"
-msgstr "Aéroport de départ"
+msgstr "Порт отправления"
 
 #: templates/dashboard/customers/live_tracking.html:37
-#, fuzzy
 msgid "Entrer le port de départ"
-msgstr "Aéroport de départ"
+msgstr "Введите порт отправления"
 
 #: templates/dashboard/customers/live_tracking.html:42
-#, fuzzy
 msgid "Port de destination"
-msgstr "Politique de non-discrimination"
+msgstr "Порт назначения"
 
 #: templates/dashboard/customers/live_tracking.html:43
 msgid "Entrer le port de destination"
-msgstr ""
+msgstr "Введите порт назначения"
 
 #: templates/dashboard/customers/live_tracking.html:47
-#, fuzzy
 msgid "Sélectionner un achat"
-msgstr "Sélectionner un Poste"
+msgstr "Выберите покупку"
 
 #: templates/dashboard/customers/live_tracking.html:48
 msgid "Tapez pour rechercher"
-msgstr ""
+msgstr "Введите для поиска"
 
 #: templates/dashboard/customers/live_tracking.html:50
-#, fuzzy
 msgid "Aucun achat trouvé"
-msgstr "Aucun agent trouvé"
+msgstr "Покупка не найдена"
 
 #: templates/dashboard/customers/live_tracking.html:73
-#, fuzzy
 msgid "Suivre"
-msgstr "Livres"
+msgstr "Следить"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:2
-#, fuzzy
 msgid "Commandes récentes : Afrilog"
-msgstr "Notes récentes : Afrilog"
+msgstr "Последние заказы: Afrilog"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:19
 #: templates/dashboard/customers/previous_purchase_requests.html:26
-#, fuzzy
 msgid "Commandes récentes"
-msgstr "Notes récentes"
+msgstr "Последние заказы"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:34
 #: templates/dashboard/customers/previous_purchase_requests.html:115
 msgid "Token"
-msgstr ""
+msgstr "Токен"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:35
 #: templates/dashboard/customers/previous_purchase_requests.html:121
-#, fuzzy
 msgid "Status"
-msgstr "Statut"
+msgstr "Статус"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:36
 #: templates/dashboard/customers/previous_quotes.html:37
 #: templates/dashboard/customers/previous_quotes.html:136
-#, fuzzy
 msgid "Date"
-msgstr "Dette"
+msgstr "Дата"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:47
-#, fuzzy
 msgid "en cours..."
-msgstr "En cours..."
+msgstr "в процессе..."
 
 #: templates/dashboard/customers/previous_purchase_requests.html:49
 msgid "reçu..."
-msgstr ""
+msgstr "получено..."
 
 #: templates/dashboard/customers/previous_purchase_requests.html:80
-#, fuzzy
 msgid "Détails de la commande"
-msgstr "Détails de la campagne"
+msgstr "Детали заказа"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:125
-#, fuzzy
 msgid "Date de création"
-msgstr "Date de publication"
+msgstr "Дата создания"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:137
-#, fuzzy
 msgid "Prénom de l'auteur"
-msgstr "Adresse de l'auteur"
+msgstr "Имя автора"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:141
-#, fuzzy
 msgid "Nom de l'auteur"
-msgstr "Adresse de l'auteur"
+msgstr "Фамилия автора"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:151
-#, fuzzy
 msgid "Numéro de téléphone de l'auteur"
-msgstr "Numéro de téléphone du client"
+msgstr "Номер телефона автора"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:161
-#, fuzzy
 msgid "Pays de l'auteur"
-msgstr "Adresse de l'auteur"
+msgstr "Страна автора"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:167
 msgid "QR Code"
-msgstr ""
+msgstr "QR-код"
 
 #: templates/dashboard/customers/previous_quotes.html:2
-#, fuzzy
 msgid "Demandes récentes : Afrilog"
-msgstr "Notes récentes : Afrilog"
+msgstr "Недавние запросы: Afrilog"
 
 #: templates/dashboard/customers/previous_quotes.html:16
-#, fuzzy
 msgid "Demandes"
-msgstr "Mes commandes"
+msgstr "Запросы"
 
 #: templates/dashboard/customers/previous_quotes.html:19
 #: templates/dashboard/customers/previous_quotes.html:27
 #: templates/dashboard/partials/sidebar.html:65
-#, fuzzy
 msgid "Demandes récentes"
-msgstr "Notes récentes"
+msgstr "Последние запросы"
 
 #: templates/dashboard/customers/previous_quotes.html:35
-#, fuzzy
 msgid "Client"
-msgstr "Nom du client"
+msgstr "Клиент"
 
 #: templates/dashboard/customers/previous_quotes.html:36
 #: templates/dashboard/customers/previous_quotes.html:114
 #: templates/dashboard/customers/previous_quotes.html:188
-#, fuzzy
 msgid "Lading Number"
-msgstr "Annuler"
+msgstr "Номер погрузки"
 
 #: templates/dashboard/customers/previous_quotes.html:50
 msgid "Accordé"
-msgstr ""
+msgstr "Предоставлено"
 
 #: templates/dashboard/customers/previous_quotes.html:85
-#, fuzzy
 msgid "Details de la demande"
-msgstr "Détails de la demande de devis"
+msgstr "Подробности запроса"
 
 #: templates/dashboard/customers/previous_quotes.html:94
-#, fuzzy
 msgid "Nom complet du client"
-msgstr "Nom du client"
+msgstr "Полное имя клиента"
 
 #: templates/dashboard/customers/previous_quotes.html:100
 #: templates/dashboard/customers/previous_quotes.html:180
-#, fuzzy
 msgid "Numéro de Téléphone"
-msgstr "Numéro de téléphone"
+msgstr "Номер телефона"
 
 #: templates/dashboard/customers/previous_quotes.html:108
 #: templates/dashboard/customers/previous_quotes.html:184
 msgid "Pays"
-msgstr ""
+msgstr "Страна"
 
 #: templates/dashboard/customers/previous_quotes.html:122
-#, fuzzy
 msgid "Nom complet du transitaire"
-msgstr "Nom de famille du transitaire"
+msgstr "Полное имя экспедитора"
 
 #: templates/dashboard/customers/previous_quotes.html:128
 msgid "Shipping Company"
-msgstr ""
+msgstr "Транспортная компания"
 
 #: templates/dashboard/customers/previous_quotes.html:142
-#, fuzzy
 msgid "Signature"
-msgstr "Nature"
+msgstr "Подпись"
 
 #: templates/dashboard/customers/previous_quotes.html:196
-#, fuzzy
 msgid "Nom du transitaire"
-msgstr "Prénom du transitaire"
+msgstr "Имя экспедитора"
 
 #: templates/dashboard/customers/previous_quotes.html:204
-#, fuzzy
 msgid "Signature du client"
-msgstr "Conduite du client"
+msgstr "Подпись клиента"
 
 #: templates/dashboard/customers/previous_quotes.html:208
-#, fuzzy
 msgid "Carte d'identité du client"
-msgstr "Carte d'identité"
+msgstr "Удостоверение личности клиента"
 
 #: templates/dashboard/customers/saved_jobs_listing.html:6
-#, fuzzy
 msgid "Postes Sauvegardés - Afrilog"
-msgstr "Postes récents - Afrilog"
+msgstr "Сохраненные вакансии - Afrilog"
 
 #: templates/dashboard/customers/tracked_goods_listing.html:6
 msgid "Liste des colis que vous suivez en temps réel - Afrilog"
-msgstr ""
+msgstr "Список грузов, которые вы отслеживаете в реальном времени - Afrilog"
 
 #: templates/dashboard/customers/empty/no_application.html:6
-#, fuzzy
 msgid "Aucune procuration octroyée - Afrilog"
-msgstr "Procurations récentes - Afrilog"
+msgstr "Нет выданных доверенностей - Afrilog"
 
 #: templates/dashboard/customers/empty/no_job.html:6
-#, fuzzy
 msgid "Aucun poste trouvée - Afrilog"
-msgstr "Aucun emploi trouvé - Afrilog"
+msgstr "Не найдено ни одной вакансии - Afrilog"
 
 #: templates/dashboard/customers/empty/no_purchase.html:3
-#, fuzzy
 msgid "Aucun achat effectué pour le moment"
-msgstr "Aucun achat n'a été effectué pour le moment"
+msgstr "На данный момент ничего не куплено"
 
 #: templates/dashboard/customers/empty/no_purchase.html:6
-#, fuzzy
 msgid "Les achats que vous effectuerez vont tous s'afficher ici"
-msgstr "Les notes que vous créerez seront affichées ici"
+msgstr "Все ваши покупки будут отображаться здесь"
 
 #: templates/dashboard/customers/empty/no_purchase.html:12
 #: templates/dashboard/customers/empty/no_quote.html:12
 #: templates/includes/footer.html:46
-#, fuzzy
 msgid "Commencer"
-msgstr "Commence à"
+msgstr "Начать"
 
 #: templates/dashboard/customers/empty/no_tracked_good.html:6
-#, fuzzy
 msgid "Aucun coli suivi - Afrilog"
-msgstr "Aucun emploi trouvé - Afrilog"
+msgstr "Нет отслеживаемых грузов - Afrilog"
 
 #: templates/dashboard/empty/no_invoice.html:2
 #: templates/dashboard/empty/no_sent_messages.html:2
-#, fuzzy
 msgid "Aucun email à afficher image"
-msgstr "Aucune note à afficher"
+msgstr "Нет электронной почты для отображения"
 
 #: templates/dashboard/empty/no_invoice.html:3
-#, fuzzy
 msgid "Aucune facture à afficher"
-msgstr "Aucune candidature à afficher"
+msgstr "Нет счетов для отображения"
 
 #: templates/dashboard/empty/no_invoice.html:6
-#, fuzzy
 msgid "Vos factures vont s'afficher ici"
-msgstr "Toutes les factures de vos récentes transactions vont s'afficher ici"
+msgstr "Ваши счета будут отображаться здесь"
 
 #: templates/dashboard/empty/no_job.html:3
-#, fuzzy
 msgid "Aucune offre disponible"
-msgstr "Aucune campagne disponible"
+msgstr "Нет доступных предложений"
 
 #: templates/dashboard/empty/no_job.html:6
-#, fuzzy
 msgid "Aucune offre d'emploi disponible pour le moment"
-msgstr "Aucune demande d'emploi disponible pour cette offre"
+msgstr "На данный момент нет доступных вакансий"
 
 #: templates/dashboard/empty/no_sent_messages.html:3
-#, fuzzy
 msgid "Aucun message à afficher"
-msgstr "Aucune note à afficher"
+msgstr "Нет сообщений для отображения"
 
 #: templates/dashboard/empty/no_sent_messages.html:6
-#, fuzzy
 msgid "Vos messages vont s'afficher ici"
-msgstr "Les employés vont s'afficher automatiquement ici"
+msgstr "Ваши сообщения будут отображаться здесь"
 
 #: templates/dashboard/empty/no_task.html:2
-#, fuzzy
 msgid "Aucune tâche à afficher image"
-msgstr "Aucune note à afficher"
+msgstr "Нет задач для отображения"
 
 #: templates/dashboard/empty/no_task.html:3
-#, fuzzy
 msgid "Aucune tâche à afficher"
-msgstr "Aucune note à afficher"
+msgstr "Нет задач для отображения"
 
 #: templates/dashboard/empty/no_task.html:6
-#, fuzzy
 msgid "Les tâches que vous assignerez seront affichées ici"
-msgstr "Les notes que vous créerez seront affichées ici"
+msgstr "Задачи, которые вы назначите, будут отображаться здесь"
 
 #: templates/dashboard/partials/navigation.html:12
 msgid "Taper quelque chose..."
-msgstr "Taper quelque chose..."
+msgstr "Введите что-нибудь..."
 
 #: templates/dashboard/partials/navigation.html:19
 msgid "English"
-msgstr "Anglais"
+msgstr "Английский"
 
 #: templates/dashboard/partials/navigation.html:20
 msgid "German"
-msgstr "Allemand"
+msgstr "Немецкий"
 
 #: templates/dashboard/partials/navigation.html:21
 msgid "French"
-msgstr "Français"
+msgstr "Французский"
 
 #: templates/dashboard/partials/navigation.html:22
 msgid "Spanish"
-msgstr "Espagnol"
+msgstr "Испанский"
 
 #: templates/dashboard/partials/navigation.html:23
 msgid "Chinese"
-msgstr "Mandarin"
+msgstr "Китайский"
 
 #: templates/dashboard/partials/navigation.html:56
 #: templates/dashboard/partials/sidebar.html:276
 msgid "Se déconnecter"
-msgstr "Se déconnecter"
+msgstr "Выйти"
 
 #: templates/dashboard/partials/sidebar.html:27
 msgid "Nouvelle demandes"
-msgstr "Nouvelle demandes"
+msgstr "Новые запросы"
 
 #: templates/dashboard/partials/sidebar.html:57
 msgid "Créer une demande"
-msgstr "Créer une demande"
+msgstr "Создать запрос"
 
 #: templates/dashboard/partials/sidebar.html:73
 msgid "Mes achats"
-msgstr "Mes achats"
+msgstr "Мои покупки"
 
 #: templates/dashboard/partials/sidebar.html:82
 msgid "Nouveau achat"
-msgstr "Nouveau achat"
+msgstr "Новая покупка"
 
 #: templates/dashboard/partials/sidebar.html:90
 msgid "Achats récents"
-msgstr "Achats récents"
+msgstr "Недавние покупки"
 
 #: templates/dashboard/partials/sidebar.html:98
 msgid "Suivre mon produit"
-msgstr "Suivre mon produit"
+msgstr "Отслеживать мой продукт"
 
 #: templates/dashboard/partials/sidebar.html:132
 msgid "Text"
-msgstr "Text"
+msgstr "Текст"
 
 #: templates/dashboard/partials/sidebar.html:137
 msgid "Xlsx"
@@ -2135,51 +2087,52 @@ msgstr "Xlsx"
 
 #: templates/dashboard/partials/sidebar.html:180
 msgid "Achats"
-msgstr "Achats"
+msgstr "Покупки"
 
 #: templates/dashboard/partials/sidebar.html:198
 msgid "Ajouter une note"
-msgstr "Ajouter une note"
+msgstr "Добавить заметку"
 
 #: templates/dashboard/partials/sidebar.html:228
 msgid "Offres récentes"
-msgstr "Offres récentes"
+msgstr "Недавние предложения"
 
 #: templates/dashboard/partials/sidebar.html:233
 msgid "Applications récentes"
-msgstr "Applications récentes"
+msgstr "Недавние заявки"
 
 #: templates/dashboard/partials/sidebar.html:246
 msgid "Toutes les offres"
-msgstr "Toutes les offres"
+msgstr "Все предложения"
 
 #: templates/errors/403.html:8
 msgid "Vous n'avez pas les droits pour accéder à cette page"
-msgstr "Vous n'avez pas les droits pour accéder à cette page"
+msgstr "У вас нет прав на доступ к этой странице"
 
 #: templates/errors/403.html:12 templates/errors/404.html:58
 msgid "Retour"
-msgstr "Retour"
+msgstr "Назад"
 
 #: templates/errors/403.html:15 templates/errors/404.html:61
 msgid "Demander de l'aide"
-msgstr "Demander de l'aide"
+msgstr "Запросить помощь"
 
 #: templates/errors/404.html:6 templates/main/home.html:5
 msgid "Afrilog, leader dans le domaine du transport et de la logistique"
-msgstr "Afrilog, leader dans le domaine du transport et de la logistique"
+msgstr "Afrilog, лидер в области транспорта и логистики"
 
 #: templates/errors/404.html:7 templates/main/home.html:6
+#, fuzzy
 msgid ""
 "Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
 "    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
 "Marchandises, Commerce, Santé, Défense, Technologie, \n"
 "    Équipement, MSC, Import, Export, Groupage"
 msgstr ""
-"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
-"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
-"Marchandises, Commerce, Santé, Défense, Technologie, \n"
-"    Équipement, MSC, Import, Export, Groupage"
+"Afrilog, Логистика, Транзит, Транспорт, Африка, Нигер, Европа, Азия, \n"
+" Америка, Океания, Морской, Воздушный, Наземный, Контейнеры, Грузы, "
+"Торговля, Здравоохранение, Оборона, Технологии, \n"
+" Оборудование, МСК, Импорт, Экспорт, Группировка"
 
 #: templates/errors/404.html:10 templates/main/home.html:9
 msgid "Afrilog SARL"
@@ -2187,7 +2140,7 @@ msgstr "Afrilog SARL"
 
 #: templates/errors/404.html:12 templates/main/home.html:11
 msgid "Afrilog: Leader dans le transport et la logistique"
-msgstr "Afrilog: Leader dans le transport et la logistique"
+msgstr "Afrilog: лидер в области транспорта и логистики"
 
 #: templates/errors/404.html:51
 msgid "404"
@@ -2195,61 +2148,61 @@ msgstr "404"
 
 #: templates/errors/404.html:54
 msgid "Désolé nous n'avons pas pu trouver cette page"
-msgstr "Désolé nous n'avons pas pu trouver cette page"
+msgstr "Извините, мы не смогли найти эту страницу"
 
 #: templates/errors/404.html:67 templates/main/home.html:47
 msgid "Logistics woman"
-msgstr "Logistics woman"
+msgstr "Женщина-логист"
 
 #: templates/includes/footer.html:13
 msgid "A propos"
-msgstr "A propos"
+msgstr "О нас"
 
 #: templates/includes/footer.html:16 templates/includes/header.html:41
 msgid "Tarifs"
-msgstr "Tarifs"
+msgstr "Тарифы"
 
 #: templates/includes/footer.html:22
 msgid "Produits"
-msgstr "Produits"
+msgstr "Продукты"
 
 #: templates/includes/footer.html:25
 msgid "MyAfrilog"
-msgstr "MyAfrilog"
+msgstr "Мой Afrilog"
 
 #: templates/includes/footer.html:28
 msgid "Fret Aérien"
-msgstr "Fret Aérien"
+msgstr "Воздушные перевозки"
 
 #: templates/includes/footer.html:31
 msgid "Fret Maritime"
-msgstr "Fret Maritime"
+msgstr "Морские перевозки"
 
 #: templates/includes/footer.html:34 templates/main/terrestre.html:24
 msgid "Fret Terrestre"
-msgstr "Fret Terrestre"
+msgstr "Наземные перевозки"
 
 #: templates/includes/footer.html:40 templates/includes/header.html:46
 msgid "Ressources"
-msgstr "Ressources"
+msgstr "Ресурсы"
 
 #: templates/includes/footer.html:49
 msgid "Documentation"
-msgstr "Documentation"
+msgstr "Документация"
 
 #: templates/includes/footer.html:52
 msgid "Guide Utilisateur"
-msgstr "Guide Utilisateur"
+msgstr "Руководство пользователя"
 
 #: templates/includes/footer.html:58
 #: templates/includes/main/header/resources.html:59
 msgid "Aide"
-msgstr "Aide"
+msgstr "Помощь"
 
 #: templates/includes/footer.html:61
 #: templates/includes/main/header/resources.html:107
 msgid "Service client"
-msgstr "Service client"
+msgstr "Служба поддержки"
 
 #: templates/includes/footer.html:64
 msgid "Cookies"
@@ -2257,55 +2210,55 @@ msgstr "Cookies"
 
 #: templates/includes/footer.html:67
 msgid "License"
-msgstr "License"
+msgstr "Лицензия"
 
 #: templates/includes/footer.html:70
 msgid "Termes et conditions"
-msgstr "Termes et conditions"
+msgstr "Условия и положения"
 
 #: templates/includes/footer.html:73 templates/main/cgu.html:18
 msgid "Politique de confidentialité"
-msgstr "Politique de confidentialité"
+msgstr "Политика конфиденциальности"
 
 #: templates/includes/footer.html:84
 msgid "Tous droits réservés"
-msgstr "Tous droits réservés"
+msgstr "Все права защищены"
 
 #: templates/includes/header.html:10
 msgid "Ouvrir le menu"
-msgstr "Ouvrir le menu"
+msgstr "Открыть меню"
 
 #: templates/includes/header.html:26
 msgid "Partenaires"
-msgstr "Partenaires"
+msgstr "Партнеры"
 
 #: templates/includes/header.html:31
 #: templates/includes/main/header/services.html:5
 msgid "Services"
-msgstr "Services"
+msgstr "Услуги"
 
 #: templates/includes/header.html:60 templates/main/aerien.html:34
 #: templates/main/customs.html:34 templates/main/sea.html:33
 #: templates/main/terrestre.html:33 templates/main/transit.html:34
 #: templates/main/warehousing.html:34
 msgid "Service commercial"
-msgstr "Service commercial"
+msgstr "Коммерческий сервис"
 
 #: templates/includes/header.html:63
 msgid "Se connecter"
-msgstr "Se connecter"
+msgstr "Войти"
 
 #: templates/includes/language_selector.html:2
 msgid "Anglais"
-msgstr "Anglais"
+msgstr "Английский"
 
 #: templates/includes/language_selector.html:3
 msgid "Deutsch"
-msgstr "Deutsch"
+msgstr "Немецкий"
 
 #: templates/includes/language_selector.html:4
 msgid "Français"
-msgstr "Français"
+msgstr "Французский"
 
 #: templates/includes/language_selector.html:5
 msgid "Russe"
@@ -2314,127 +2267,124 @@ msgstr ""
 #: templates/includes/language_selector.html:6
 #, fuzzy
 msgid "Turc"
-msgstr "Retour"
+msgstr "Назад"
 
 #: templates/includes/main/header/resources.html:6
 msgid "Outils"
-msgstr "Outils"
+msgstr "Инструменты"
 
 #: templates/includes/main/header/resources.html:15
 #: templates/main/calculate_air_freight.html:6
 msgid "Calculatrice fret aérien"
-msgstr "Calculatrice fret aérien"
+msgstr "Калькулятор воздушных перевозок"
 
 #: templates/includes/main/header/resources.html:18
 msgid "Comparer les tarifs de frets aérien"
-msgstr "Comparer les tarifs de frets aérien"
+msgstr "Сравнить тарифы на воздушные перевозки"
 
 #: templates/includes/main/header/resources.html:30
 #: templates/main/calculate_sea_freight.html:6
 msgid "Calculatrice fret maritime"
-msgstr "Calculatrice fret maritime"
+msgstr "Калькулятор морских перевозок"
 
 #: templates/includes/main/header/resources.html:32
 #: templates/includes/main/header/resources.html:72
 #: templates/includes/main/header/services.html:37
 msgid "Nouveau"
-msgstr "Nouveau"
+msgstr "Новый"
 
 #: templates/includes/main/header/resources.html:36
 msgid "Obtenez de meilleurs insights pour votre fret maritime"
-msgstr "Obtenez de meilleurs insights pour votre fret maritime"
+msgstr "Получите более глубокое понимание вашего морского груза"
 
 #: templates/includes/main/header/resources.html:48
 msgid "Calculatrice fret routier"
-msgstr "Calculatrice fret routier"
+msgstr "Калькулятор наземных перевозок"
 
 #: templates/includes/main/header/resources.html:51
 msgid "Nous vous aidons à choisir judicieusement votre fret routier"
-msgstr "Nous vous aidons à choisir judicieusement votre fret routier"
+msgstr "Мы поможем вам разумно выбрать ваш наземный груз"
 
 #: templates/includes/main/header/resources.html:70
 msgid "Central d'achat"
-msgstr "Central d'achat"
+msgstr "Центр закупок"
 
 #: templates/includes/main/header/resources.html:76
 msgid "Découvrez de nombreux articles à travers notre boutique"
-msgstr "Découvrez de nombreux articles à travers notre boutique"
+msgstr "Откройте для себя множество товаров в нашем магазине"
 
 #: templates/includes/main/header/resources.html:90
 msgid "Glossaire"
-msgstr "Glossaire"
+msgstr "Глоссарий"
 
 #: templates/includes/main/header/resources.html:93
 msgid "Aviez-vous oublié certains concepts? Veuillez consulter cette page"
-msgstr "Aviez-vous oublié certains concepts? Veuillez consulter cette page"
+msgstr "Забыли некоторые понятия? Пожалуйста, обратитесь к этой странице"
 
 #: templates/includes/main/header/resources.html:110
 msgid "Aviez-vous besoin d'aide? Notre service client est là pour vous"
-msgstr "Aviez-vous besoin d'aide? Notre service client est là pour vous"
+msgstr "Вам нужна помощь? Наша служба поддержки здесь для вас"
 
 #: templates/includes/main/header/resources.html:119
 msgid "Publiés récemment"
-msgstr "Publiés récemment"
+msgstr "Недавно опубликованные"
 
 #: templates/includes/main/header/resources.html:129
 msgid "En savoir plus"
-msgstr "En savoir plus"
+msgstr "Узнать больше"
 
 #: templates/includes/main/header/resources.html:138
 msgid "Aucun article n'a encore été publié"
-msgstr "Aucun article n'a encore été publié"
+msgstr "Ни одна статья еще не была опубликована"
 
 #: templates/includes/main/header/services.html:17
-#, fuzzy
 msgid "Transport, Transit et Manutention"
-msgstr "transit&manutention"
+msgstr "Транспорт, транзит и обработка"
 
 #: templates/includes/main/header/services.html:20
 msgid "Nous nous chargeons du transport de vos marchandises en toute sécurité"
-msgstr ""
+msgstr "Мы берем на себя перевозку ваших товаров в полной безопасности"
 
 #: templates/includes/main/header/services.html:35
-#, fuzzy
 msgid "Douanes, Taxes et Impôts"
-msgstr "douanes, taxes, impôts"
+msgstr "Таможня, налоги и сборы"
 
 #: templates/includes/main/header/services.html:41
 msgid "Vous pouvez nous confier la gestion de vos taxes"
-msgstr ""
+msgstr "Вы можете поручить нам управление вашими налогами"
 
 #: templates/includes/main/header/services.html:56
-#, fuzzy
 msgid "Entreposage"
-msgstr "Entreprise"
+msgstr "Хранение"
 
 #: templates/includes/main/header/services.html:59
 msgid "Nous offrons également des services d'entreposage de marchandises"
-msgstr ""
+msgstr "Мы также предоставляем услуги по хранению товаров"
 
 #: templates/includes/main/header/services.html:70
 #: templates/main/aerien.html:24
 msgid "Fret aérien"
-msgstr "Fret aérien"
+msgstr "Воздушные перевозки"
 
 #: templates/includes/main/header/services.html:79
 msgid "Fret routier"
-msgstr "Fret routier"
+msgstr "Наземные перевозки"
 
 #: templates/main/aerien.html:6
 msgid "Découvrez nos services de fret aérien"
-msgstr "Découvrez nos services de fret aérien"
+msgstr "Познакомьтесь с нашими услугами по воздушным перевозкам"
 
 #: templates/main/aerien.html:7 templates/main/transit.html:7
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
-"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine"
+"Транспорт, Логистика, Грузоперевозки, Воздушные, Оборудование, Контейнер,"
+" Европа, Африка, Океания, Китай"
 
 #: templates/main/aerien.html:10
 msgid "Afrilog : Fret aérien"
-msgstr "Afrilog : Fret aérien"
+msgstr "Afrilog: Воздушные грузоперевозки"
 
 #: templates/main/aerien.html:27
 msgid ""
@@ -2448,42 +2398,42 @@ msgid ""
 "votre chaîne d'approvisionnement et renforcer votre avantage "
 "concurrentiel grâce à nos solutions de fret aérien de pointe."
 msgstr ""
-"Le fret aérien est la solution idéale pour le transport rapide et "
-"sécurisé de vos marchandises à l'échelle mondiale. Offrant des temps de "
-"transit réduits et une flexibilité inégalée, il permet de répondre "
-"efficacement aux exigences de délais stricts et aux demandes urgentes. "
-"Nos services de fret aérien garantissent une gestion optimale de vos "
-"envois, de la prise en charge à la livraison, assurant la rapidité et la "
-"fiabilité de chaque expédition. Découvrez comment nous pouvons accélérer "
-"votre chaîne d'approvisionnement et renforcer votre avantage "
-"concurrentiel grâce à nos solutions de fret aérien de pointe."
+"Воздушные грузоперевозки - идеальное решение для быстрой и безопасной "
+"доставки ваших товаров по всему миру. Обеспечивая сокращенные времена "
+"транзита и беспрецедентную гибкость, они эффективно отвечают строгим "
+"требованиям к срокам и срочным запросам. Наши услуги по воздушным "
+"грузоперевозкам гарантируют оптимальное управление вашими отправлениями, "
+"начиная с приема и заканчивая доставкой, обеспечивая скорость и "
+"надежность каждой отправки. Узнайте, как мы можем ускорить вашу цепочку "
+"поставок и укрепить ваше конкурентное преимущество благодаря нашим "
+"передовым решениям по воздушным грузоперевозкам."
 
 #: templates/main/aerien.html:40
 msgid "fret aérien"
-msgstr "fret aérien"
+msgstr "воздушные грузоперевозки"
 
 #: templates/main/aerien.html:52 templates/main/pricing.html:2
 msgid "Notre grille tarifaire pour le fret aérien"
-msgstr "Notre grille tarifaire pour le fret aérien"
+msgstr "Наша тарифная сетка для воздушных грузоперевозок"
 
 #: templates/main/aerien.html:53 templates/main/pricing.html:3
 #: templates/main/pricing.html:269 templates/main/sea.html:83
 msgid "A partir de la France"
-msgstr "A partir de la France"
+msgstr "Из Франции"
 
 #: templates/main/aerien.html:62 templates/main/aerien.html:125
 #: templates/main/pricing.html:12 templates/main/pricing.html:75
 msgid "Aéroport de départ"
-msgstr "Aéroport de départ"
+msgstr "Аэропорт отправления"
 
 #: templates/main/aerien.html:63 templates/main/aerien.html:126
 #: templates/main/pricing.html:13 templates/main/pricing.html:76
 msgid "Aéroport d'arrivée"
-msgstr "Aéroport d'arrivée"
+msgstr "Аэропорт прибытия"
 
 #: templates/main/aerien.html:64 templates/main/pricing.html:14
 msgid "Incoterm"
-msgstr "Incoterm"
+msgstr "Инкотермс"
 
 #: templates/main/aerien.html:65 templates/main/aerien.html:159
 #: templates/main/aerien.html:205 templates/main/aerien.html:251
@@ -2493,7 +2443,7 @@ msgstr "Incoterm"
 #: templates/main/pricing.html:353 templates/main/sea.html:62
 #: templates/main/sea.html:93 templates/main/sea.html:167
 msgid "Devise"
-msgstr "Devise"
+msgstr "Валюта"
 
 #: templates/main/aerien.html:81 templates/main/aerien.html:82
 #: templates/main/aerien.html:83 templates/main/aerien.html:84
@@ -2541,7 +2491,7 @@ msgstr "12,86"
 #: templates/main/aerien.html:117 templates/main/pricing.html:67
 #: templates/main/pricing.html:300 templates/main/sea.html:114
 msgid "A partir de la Chine"
-msgstr "A partir de la Chine"
+msgstr "Из Китая"
 
 #: templates/main/aerien.html:137 templates/main/aerien.html:138
 #: templates/main/pricing.html:87 templates/main/pricing.html:88
@@ -2555,13 +2505,13 @@ msgstr "14,91"
 
 #: templates/main/aerien.html:149 templates/main/pricing.html:99
 msgid "A partir de Tel Aviv (Israel)"
-msgstr "A partir de Tel Aviv (Israel)"
+msgstr "Из Тель-Авива (Израиль)"
 
 #: templates/main/aerien.html:157 templates/main/aerien.html:203
 #: templates/main/aerien.html:249 templates/main/pricing.html:107
 #: templates/main/pricing.html:153 templates/main/pricing.html:199
 msgid "Poids Net"
-msgstr "Poids Net"
+msgstr "Вес нетто"
 
 #: templates/main/aerien.html:158 templates/main/aerien.html:204
 #: templates/main/aerien.html:250 templates/main/pricing.html:108
@@ -2569,20 +2519,20 @@ msgstr "Poids Net"
 #: templates/main/pricing.html:247 templates/main/pricing.html:278
 #: templates/main/sea.html:61 templates/main/sea.html:92
 msgid "Prix par Kgs"
-msgstr "Prix par Kgs"
+msgstr "Цена за кг"
 
 #: templates/main/aerien.html:165 templates/main/pricing.html:115
 msgid "16,45 USD/Kg"
-msgstr "16,45 USD/Kg"
+msgstr "16,45 USD/кг"
 
 #: templates/main/aerien.html:170 templates/main/aerien.html:180
 #: templates/main/pricing.html:120 templates/main/pricing.html:130
 msgid "13,00 USD/Kg"
-msgstr "13,00 USD/Kg"
+msgstr "13,00 USD/кг"
 
 #: templates/main/aerien.html:175 templates/main/pricing.html:125
 msgid "13,85 USD/Kg"
-msgstr "13,85 USD/Kg"
+msgstr "13,85 USD/кг"
 
 #: templates/main/aerien.html:185 templates/main/pricing.html:135
 msgid "13,00 USD"
@@ -2590,23 +2540,23 @@ msgstr "13,00 USD"
 
 #: templates/main/aerien.html:195 templates/main/pricing.html:145
 msgid "A partir du Canada"
-msgstr "A partir du Canada"
+msgstr "Из Канады"
 
 #: templates/main/aerien.html:211 templates/main/pricing.html:161
 msgid "15,55 USD/Kg"
-msgstr "15,55 USD/Kg"
+msgstr "15,55 USD/кг"
 
 #: templates/main/aerien.html:216 templates/main/pricing.html:166
 msgid "13,45 USD/Kg"
-msgstr "13,45 USD/Kg"
+msgstr "13,45 USD/кг"
 
 #: templates/main/aerien.html:221 templates/main/pricing.html:171
 msgid "12,95 USD/Kg"
-msgstr "12,95 USD/Kg"
+msgstr "12,95 USD/кг"
 
 #: templates/main/aerien.html:226 templates/main/pricing.html:176
 msgid "12,25 USD/Kg"
-msgstr "12,25 USD/Kg"
+msgstr "12,25 USD/кг"
 
 #: templates/main/aerien.html:231 templates/main/pricing.html:181
 msgid "12,00 USD"
@@ -2614,36 +2564,35 @@ msgstr "12,00 USD"
 
 #: templates/main/aerien.html:241 templates/main/pricing.html:191
 msgid "A partir de l'Inde"
-msgstr "A partir de l'Inde"
+msgstr "Из Индии"
 
 #: templates/main/aerien.html:257 templates/main/pricing.html:207
 msgid "15,70 USD/Kg"
-msgstr "15,70 USD/Kg"
+msgstr "15,70 USD/кг"
 
 #: templates/main/aerien.html:262 templates/main/pricing.html:212
 msgid "17,63 USD/Kg"
-msgstr "17,63 USD/Kg"
+msgstr "17,63 USD/кг"
 
 #: templates/main/aerien.html:267 templates/main/pricing.html:217
 msgid "16,55 USD/Kg"
-msgstr "16,55 USD/Kg"
+msgstr "16,55 USD/кг"
 
 #: templates/main/aerien.html:272 templates/main/pricing.html:222
 msgid "15,50 USD/Kg"
-msgstr "15,50 USD/Kg"
+msgstr "15,50 USD/кг"
 
 #: templates/main/aerien.html:277 templates/main/pricing.html:227
 msgid "13,90 USD/Kg"
-msgstr "13,90 USD/Kg"
+msgstr "13,90 USD/кг"
 
 #: templates/main/aerien.html:293 templates/main/pricing.html:381
 #: templates/main/sea.html:195
 msgid "Pour plus d'infos veuillez contacter notre "
-msgstr "Pour plus d'informations, veuillez contacter notre "
+msgstr "Для получения дополнительной информации, пожалуйста, свяжитесь с нашим "
 
 #: templates/main/aerien.html:294 templates/main/pricing.html:382
 #: templates/main/sea.html:196
-#, fuzzy
 msgid ""
 "Veuillez noter que les tarifs seront mis à jour dès l'obtention des "
 "informations réelles sur les marchandises, les formalités exports ainsi "
@@ -2651,72 +2600,73 @@ msgid ""
 "localisation du fournisseur. La validité des tarifs est d'une (01) "
 "semaine pour le fret aérien et un (01) mois pour le fret maritime"
 msgstr ""
-"Veuillez noter que les tarifs seront mis à jour dès l'obtention des "
-"informations réelles sur les marchandises, les formalités exports ainsi "
-"que le Pick up seront déterminés au cas par cas en fonction de la "
-"localisation du fournisseur. La validité des tarifs est d'une (01) "
-"semaine pour le fret aérien et d'un (01) mois pour le fret maritime"
+"Обратите внимание, что тарифы будут обновлены после получения реальной "
+"информации о товарах, экспортных формальностях и сборе товара, "
+"определенных в каждом отдельном случае в зависимости от местоположения "
+"поставщика. Действительность тарифов составляет одну (01) неделю для "
+"воздушных грузов и один (01) месяц для морских грузов"
 
 #: templates/main/calculate_air_freight.html:7
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
 msgstr ""
-"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+"Транспорт, Логистика, Грузоперевозки, Воздушные, Оборудование, Контейнер,"
+" Европа, Африка, Океания, Китай, Налоги, Таможня, Калькулятор, "
+"Приблизительный расчет"
 
 #: templates/main/calculate_air_freight.html:10
 msgid "Afrilog : Calculatrice fret aérien"
-msgstr "Afrilog : Calculatrice de fret aérien"
+msgstr "Afrilog: Калькулятор воздушных грузоперевозок"
 
 #: templates/main/calculate_air_freight.html:25
 msgid "Obtenez un devis rapide pour votre fret aérien."
-msgstr "Obtenez rapidement un devis pour votre fret aérien."
+msgstr "Получите быстрый расчет стоимости вашей воздушной перевозки."
 
 #: templates/main/calculate_sea_freight.html:7
-#, fuzzy
 msgid ""
 "Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
 msgstr ""
-"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+"Транспорт, Логистика, Грузоперевозки, Морские, Оборудование, Контейнер, "
+"Европа, Африка, Океания, Китай, Налоги, Таможня, Калькулятор, "
+"Приблизительный расчет"
 
 #: templates/main/calculate_sea_freight.html:10
 msgid "Afrilog : Calculatrice fret maritime"
-msgstr "Afrilog : Calculatrice de fret maritime"
+msgstr "Afrilog: Калькулятор морских грузоперевозок"
 
 #: templates/main/calculate_sea_freight.html:25
 msgid "Obtenez un devis rapide pour votre fret maritime."
-msgstr "Obtenez rapidement un devis pour votre fret maritime."
+msgstr "Получите быстрый расчет стоимости вашей морской перевозки."
 
 #: templates/main/cgu.html:4
 msgid "Afrilog : Conditions générales d'utilisation"
-msgstr "Afrilog : Conditions générales d'utilisation"
+msgstr "Afrilog: Общие условия использования"
 
 #: templates/main/cgu.html:15
 msgid "Conditions générales d'utilisation"
-msgstr "Conditions générales d'utilisation"
+msgstr "Общие условия использования"
 
 #: templates/main/cgu.html:21
 msgid "Conduite du client"
-msgstr "Conduite du client"
+msgstr "Поведение клиента"
 
 #: templates/main/cgu.html:24
 msgid "Conditions générales"
-msgstr "Conditions générales"
+msgstr "Общие условия"
 
 #: templates/main/cgu.html:27
 msgid "Services & Compte"
-msgstr "Services & Compte"
+msgstr "Услуги и аккаунт"
 
 #: templates/main/cgu.html:32
 msgid "Conditions d'utilisation"
-msgstr "Conditions d'utilisation"
+msgstr "Условия использования"
 
 #: templates/main/cgu.html:37
 msgid "Dernière mise à jour : 31 Mai 2024"
-msgstr "Dernière mise à jour : 31 Mai 2024"
+msgstr "Последнее обновление: 31 мая 2024 года"
 
 #: templates/main/cgu.html:39
 #, fuzzy
@@ -2735,145 +2685,144 @@ msgid ""
 "logistiqueafrica@gmail.com.\n"
 "                      "
 msgstr ""
-"Ces conditions générales (les « Conditions ») régissent la fourniture de "
-"produits par Afrilog, y compris les contenus numériques et les services. "
-"Veuillez lire attentivement ces Conditions avant d'accéder à nos contenus"
-" numériques ou d'utiliser nos services. Ces Conditions, ainsi que notre "
-"Politique de confidentialité et notre Politique relative aux cookies, "
-"détaillent comment nous vous fournirons des contenus numériques et/ou des"
-" services, comment vous et nous pouvons modifier ou mettre fin au "
-"contrat, que faire en cas de problème et d'autres informations "
-"importantes. <br>\n"
-" <br> Comment nous contacter - Vous pouvez nous contacter par téléphone "
-"au +227 20 73 51 00 ou par email à logistiqueafrica@gmail.com.\n"
+"«Настоящие условия («Условия») регулируют поставку»«Произведено Afrilog, "
+"включая цифровой контент и услуги».«Пожалуйста, внимательно прочитайте "
+"эти Условия, прежде чем получить доступ к нашему контенту»«цифровые» или "
+"использовать наши услуги. Настоящие Условия, а также наши ««Политика "
+"конфиденциальности и наша политика использования файлов cookie».«подробно"
+" о том, как мы предоставим вам цифровой контент и/или»«услуги, как вы и "
+"мы можем изменить или прекратить действие»договор, что делать в случае "
+"проблем и другая информацияважно. <br>\n"
+" <br> Как с нами связаться - Вы можете связаться с нами связаться по "
+"телефону +227 20 73 51 00 или по электронной почте "
+"«Logisticiqueafrica@gmail.com.\n"
+"» "
 
 #: templates/main/cgu.html:42
 msgid "Sommaire"
-msgstr "Sommaire"
+msgstr "Резюме"
 
 #: templates/main/cgu.html:45 templates/main/cgu.html:134
 msgid ""
 "Votre accord à ces Conditions par votre accès au site ou votre "
 "utilisation du site."
-msgstr ""
-"Votre accord à ces Conditions par votre accès au site ou votre "
-"utilisation du site."
+msgstr "Ваше согласие на эти условия при доступе к сайту или использовании сайта."
 
 #: templates/main/cgu.html:48 templates/main/cgu.html:138
 msgid "Contenu et services"
-msgstr "Contenu et services"
+msgstr "Содержание и услуги"
 
 #: templates/main/cgu.html:51 templates/main/cgu.html:144
 msgid "Afrilog ne propose ni ne fournit de conseils juridiques"
-msgstr "Afrilog ne propose ni ne fournit de conseils juridiques"
+msgstr "Afrilog не предлагает и не предоставляет юридических консультаций"
 
 #: templates/main/cgu.html:54
 msgid "Afrilog n'est pas un cabinet d'avocats"
-msgstr "Afrilog n'est pas un cabinet d'avocats"
+msgstr "Afrilog не является юридической фирмой"
 
 #: templates/main/cgu.html:57
 msgid "Afrilog n'est pas un service de référencement"
-msgstr "Afrilog n'est pas un service de référencement"
+msgstr "Afrilog не является сервисом референсирования"
 
 #: templates/main/cgu.html:60
 msgid "Il n'y a pas de relation avocat-client entre vous et Afrilog"
-msgstr "Il n'y a pas de relation avocat-client entre vous et Afrilog"
+msgstr "Между вами и Afrilog нет отношений адвокат-клиент"
 
 #: templates/main/cgu.html:63
 msgid "Les utilisateurs avocats ne sont pas des employés d'Afrilog"
-msgstr "Les utilisateurs avocats ne sont pas des employés d'Afrilog"
+msgstr "Пользователи-адвокаты не являются сотрудниками Afrilog"
 
 #: templates/main/cgu.html:66
 msgid ""
 "Tous les frais juridiques sont payés aux utilisateurs avocats, pas à "
 "Afrilog"
 msgstr ""
-"Tous les frais juridiques sont payés aux utilisateurs avocats, pas à "
+"Все юридические расходы оплачиваются пользовательскими адвокатами, а не "
 "Afrilog"
 
 #: templates/main/cgu.html:69
 msgid "Il n'y a pas de frais pour Afrilog pour trouver des engagements"
-msgstr "Il n'y a pas de frais pour Afrilog pour trouver des engagements"
+msgstr "Afrilog не взимает плату за нахождение заказов"
 
 #: templates/main/cgu.html:72
 msgid "Non-contournement"
-msgstr "Non-contournement"
+msgstr "Невозможность обхода"
 
 #: templates/main/cgu.html:75
 msgid "Attentes"
-msgstr "Attentes"
+msgstr "Ожидания"
 
 #: templates/main/cgu.html:78
 msgid "Vos responsabilités"
-msgstr "Vos responsabilités"
+msgstr "Ваши обязанности"
 
 #: templates/main/cgu.html:81
 msgid "Votre utilisation et restrictions"
-msgstr "Votre utilisation et restrictions"
+msgstr "Ваше использование и ограничения"
 
 #: templates/main/cgu.html:84
 msgid "Confidentialité"
-msgstr "Confidentialité"
+msgstr "Конфиденциальность"
 
 #: templates/main/cgu.html:87
 msgid "Indemnisation"
-msgstr "Indemnisation"
+msgstr "Компенсация ущерба"
 
 #: templates/main/cgu.html:90
 msgid "Communication et autres données"
-msgstr "Communication et autres données"
+msgstr "Коммуникации и другие данные"
 
 #: templates/main/cgu.html:93
 msgid "Notifications et accords électroniques"
-msgstr "Notifications et accords électroniques"
+msgstr "Уведомления и электронные соглашения"
 
 #: templates/main/cgu.html:96
 msgid "Services premium"
-msgstr "Services premium"
+msgstr "Премиум-услуги"
 
 #: templates/main/cgu.html:99
 msgid "Hyperliens"
-msgstr "Hyperliens"
+msgstr "Гиперссылки"
 
 #: templates/main/cgu.html:102
 msgid "Droits d'auteur et utilisation limitée"
-msgstr "Droits d'auteur et utilisation limitée"
+msgstr "Авторские права и ограниченное использование"
 
 #: templates/main/cgu.html:105
 msgid "Modifications"
-msgstr "Modifications"
+msgstr "Изменения"
 
 #: templates/main/cgu.html:108
 msgid "Votre contenu"
-msgstr "Votre contenu"
+msgstr "Ваш контент"
 
 #: templates/main/cgu.html:111
 msgid "Plaintes en matière de droits d'auteur"
-msgstr "Plaintes en matière de droits d'auteur"
+msgstr "Жалобы на нарушения авторских прав"
 
 #: templates/main/cgu.html:114
 msgid "Décharge de responsabilité"
-msgstr "Décharge de responsabilité"
+msgstr "Освобождение от ответственности"
 
 #: templates/main/cgu.html:117
 msgid "Limitation de responsabilité"
-msgstr "Limitation de responsabilité"
+msgstr "Ограничение ответственности"
 
 #: templates/main/cgu.html:120
 msgid "Accord complet"
-msgstr "Accord complet"
+msgstr "Полное соглашение"
 
 #: templates/main/cgu.html:123
 msgid "Cession"
-msgstr "Cession"
+msgstr "Передача прав"
 
 #: templates/main/cgu.html:126
 msgid "Arbitrage"
-msgstr "Arbitrage"
+msgstr "Арбитраж"
 
 #: templates/main/cgu.html:129
 msgid "Âge minimum pour utiliser"
-msgstr "Âge minimum pour utiliser"
+msgstr "Минимальный возраст для использования"
 
 #: templates/main/cgu.html:135
 msgid ""
@@ -2892,20 +2841,22 @@ msgid ""
 "d'une entité autre que vous-même, vous déclarez que vous êtes autorisé "
 "par cet individu ou cette entité à accepter ces Conditions en son nom."
 msgstr ""
-"Ces Conditions régissent votre utilisation du site, à la fois en tant que"
-" visiteur et en tant qu'utilisateur enregistré (chaque visiteur et chaque"
-" utilisateur enregistré étant désigné généralement aux fins de ces "
-"Conditions comme un « Utilisateur Client »). EN UTILISANT LE SITE ET/OU "
-"EN VOUS INSCRIVANT CHEZ NOUS, VOUS ACCEPTEZ CES CONDITIONS D'UTILISATION."
-" Vous consentez aux pratiques d'information divulguées dans notre "
-"Politique de confidentialité et notre Politique relative aux cookies qui "
-"sont incorporées aux présentes par référence, et vous consentez à "
-"résoudre dans l'État de New York conformément aux termes énoncés aux "
-"présentes tout litige que vous pourriez avoir avec nous ou avec le site. "
-"Veuillez noter que nous proposons le site EN L'ÉTAT et sans garanties. Si"
-" vous enregistrez un compte ou utilisez le site au nom d'un individu ou "
-"d'une entité autre que vous-même, vous déclarez que vous êtes autorisé "
-"par cet individu ou cette entité à accepter ces Conditions en son nom."
+"«Настоящие Условия регулируют использование вами Сайта как»посетитель и "
+"зарегистрированный пользователь (каждый посетитель и "
+"каждый«зарегистрированный пользователь обычно назначается для этих "
+"целей»«Условия в качестве «Пользователя-клиента») ПРИ ИСПОЛЬЗОВАНИИ САЙТА"
+" И/ИЛИ «».«РЕГИСТРИРУясь У НАС, ВЫ СОГЛАШАЕТЕСЬ С ЭТИМИ УСЛОВИЯМИ "
+"ИСПОЛЬЗОВАНИЯ».«Вы соглашаетесь на практику использования информации, "
+"раскрытую в нашем»«Политика конфиденциальности и наша Политика "
+"использования файлов cookie, которая»«включены в настоящий документ "
+"посредством ссылки, и вы соглашаетесь»разрешить в штате Нью-Йорк в "
+"соответствии с условиями, изложенными в «представить любой спор, который "
+"может возникнуть у вас с нами или с Сайтом».Обратите внимание, что мы "
+"предлагаем сайт КАК ЕСТЬ и без каких-либо гарантий. Если«вы регистрируете"
+" учетную запись или используете Сайт от имени физического лица или»«от "
+"лица, отличного от вас, вы заявляете, что у вас есть полномочия»«таким "
+"физическим или юридическим лицом принять настоящие Условия от своего "
+"имени»."
 
 #: templates/main/cgu.html:139
 #, fuzzy
@@ -2952,46 +2903,87 @@ msgid ""
 " pas une relation avocat-client entre l'Utilisateur Client et Afrilog.\n"
 "                          "
 msgstr ""
-"Tout ce que nous offrons sur et à travers le site est désigné dans ces "
-"Conditions collectivement comme les « Services ». <br>\n"
-" <br> Une partie du contenu du site est visible sans s'inscrire chez "
-"nous, mais pour participer activement ou stocker vos informations, vous "
-"devez vous inscrire en tant que membre et autoriser l'utilisation et la "
-"divulgation de vos informations personnelles et légales conformément aux "
-"termes de notre Politique de confidentialité aux fins de nous permettre "
-"de fournir les Services et tel que divulgué par ailleurs dans notre "
-"Politique de confidentialité disponible. Afrilog est une plateforme en "
-"ligne qui connecte les professionnels du droit (« Utilisateurs Avocats »)"
-" avec des Utilisateurs Clients potentiels recherchant des services "
-"juridiques. Afrilog ne fournit pas de conseils juridiques et ne fournit "
-"en aucun cas des services juridiques de quelque nature que ce soit. "
-"Afrilog ne garantit pas que les Utilisateurs Clients trouveront une "
-"représentation juridique via son système. Afrilog ne donne pas d'opinion "
-"ni ne prend position sur le moment où une relation avocat-client a été "
-"formée entre ses Utilisateurs Clients et ses Utilisateurs Avocats. "
-"Afrilog n'est pas partie aux accords entre les Utilisateurs Clients et "
-"les Utilisateurs Avocats régissant la relation avocat-client et Afrilog "
-"n'est pas impliqué dans la représentation effective des clients. Par "
-"conséquent, Afrilog ne peut garantir l'exécution des accords entre "
-"l'Utilisateur Client et l'Utilisateur Avocat, l'exactitude ou "
-"l'exhaustivité du travail de l'Utilisateur Avocat ou l'intégrité de l'une"
-" ou l'autre des parties. L'Utilisateur Client est responsable de "
-"l'évaluation de l'intégrité et des capacités de tous les Utilisateurs "
-"Avocats avec lesquels il communique en utilisant le site. Vous "
-"reconnaissez que bien qu'une partie du contenu, texte, données, "
-"graphiques, images, informations, suggestions, conseils et autres "
-"matériels (collectivement, « Informations ») qui vous est fourni sur le "
-"site (y compris les Informations fournies en réponse directe à vos "
-"questions ou publications) puisse être fournie par des individus de la "
-"profession juridique, la fourniture de telles Informations ne crée pas "
-"une relation avocat-client et ne constitue pas une opinion ou un conseil "
-"juridique, mais est fournie pour vous aider à localiser un professionnel "
-"du droit approprié. Toute utilisation du site par des clients potentiels "
-"ou des Utilisateurs Avocats abonnés n'est pas destinée à et ne créera pas"
-" une relation avocat-client entre ou parmi toute personne, entité et "
-"Afrilog. Toute communication électronique envoyée à quiconque chez "
-"Afrilog autre qu'un Utilisateur Avocat ne créera pas une relation avocat-"
-"client entre l'Utilisateur Client et Afrilog.\n"
+"«Все, что мы предлагаем на Сайте и через него, обозначено в этих "
+"««Условия совместно именуются «Услуги». <br>\n"
+"» <br> Частью содержания сайта является виден без регистрации у нас, но "
+"для активного участия илихраните свою информацию, вы должны "
+"зарегистрироваться в качестве участника и «разрешить использование и "
+"раскрытие вашей информации»«личное и юридическое в соответствии с "
+"условиями нашей Политики конфиденциальности»«конфиденциальность в целях "
+"предоставления нам возможности предоставлять Услуги и т.п.»«как указано в"
+" нашей Политике конфиденциальности»доступно. Afrilog — это "
+"онлайн-платформа, которая объединяет«Юристы («Юристы-пользователи») с "
+"Пользователями»«Потенциальные клиенты, ищущие юридические услуги, не "
+"используют Afrilog».не предоставляет юридических консультаций и не "
+"предоставляет«юридические услуги любого характера. Afrilog не "
+"гарантирует»«не то, чтобы пользователи клиента нашли юридическое "
+"представительство»через свою систему. Afrilog не высказывает мнения и не "
+"занимает позицию по поводу «время, когда между ним или ней сформировались"
+" отношения адвоката и клиента»«Пользователи-клиенты и пользователи-юристы"
+" Afrilog не являются».«сторона соглашений между Пользователями Клиента и "
+"Пользователями»«Отношениями между адвокатом и клиентом управляют юристы, "
+"а Afrilog в этом не участвует»«в эффективном представительстве интересов "
+"клиентов. Следовательно, Afrilog этого не делает»«может гарантировать "
+"исполнение соглашений между Клиентом-Пользователем и»«Юрист Пользователя,"
+" достоверность или полнота работы»«Юрист пользователя или честность любой"
+" из сторон».«Пользователь Клиента несет ответственность за оценку "
+"целостности и»«возможностей всех пользователей-юристов, с которыми "
+"это»«общается с помощью Сайта. Вы признаете, что, хотя и являетесь "
+"стороной»«контент, текст, данные, графика, изображения, "
+"информация»,«предложения, советы и другие материалы (совместно именуемые "
+"«Информация»«»), предоставленный вам на Сайте (включая Информацию, "
+"предоставленную ««в прямой ответ на ваши вопросы или публикации) могут "
+"быть предоставлены»«лицами юридической профессии, предоставление "
+"таких»«Информация не создает отношений между адвокатом и клиентом и не "
+"представляет собой»«юридическое заключение или совет, но он "
+"предоставляется для того, чтобы помочь вам»«найдите подходящего юриста. "
+"Любое использование сайта»потенциальными клиентами или подписанными "
+"пользователями-юристами не«предназначено и не будет создавать отношения "
+"между адвокатом и клиентом между»«любое физическое, юридическое лицо и "
+"любое электронное сообщение Afrilog».«отправляется любому пользователю "
+"Afrilog, кроме пользователя-юриста, которого создаст»«между Пользователем"
+" клиента и Afrilog не отношения юриста и клиента.\n"
+"»«Все, что мы предлагаем на Сайте и через него, обозначено в этих "
+"««Условия совместно именуются «Услуги». <br>\n"
+"» <br> Частью содержания сайта является виден без регистрации у нас, но "
+"для активного участия илихраните свою информацию, вы должны "
+"зарегистрироваться в качестве участника и «разрешить использование и "
+"раскрытие вашей информации»«личное и юридическое в соответствии с "
+"условиями нашей Политики конфиденциальности»«конфиденциальность в целях "
+"предоставления нам возможности предоставлять Услуги и т.п.»«как указано в"
+" нашей Политике конфиденциальности»доступно. Afrilog — это "
+"онлайн-платформа, которая объединяет«Юристы («Юристы-пользователи») с "
+"Пользователями»«Потенциальные клиенты, ищущие юридические услуги, не "
+"используют Afrilog».не предоставляет юридических консультаций и не "
+"предоставляет«юридические услуги любого характера. Afrilog не "
+"гарантирует»«не то, чтобы пользователи клиента нашли юридическое "
+"представительство»через свою систему. Afrilog не высказывает мнения и не "
+"занимает позицию по поводу«время, когда между ним или ней сформировались "
+"отношения адвоката и клиента»«Пользователи-клиенты и пользователи-юристы "
+"Afrilog не являются».«сторона соглашений между Пользователями Клиента и "
+"Пользователями»«Отношениями между адвокатом и клиентом управляют юристы, "
+"а Afrilog в этом не участвует»«в эффективном представительстве интересов "
+"клиентов. Следовательно, Afrilog этого не делает»«может гарантировать "
+"исполнение соглашений между Клиентом-Пользователем и»«Юрист Пользователя,"
+" достоверность или полнота работы»«Юрист пользователя или честность любой"
+" из сторон».«Пользователь Клиента несет ответственность за оценку "
+"целостности и»«возможностей всех пользователей-юристов, с которыми "
+"это»«общается с помощью Сайта. Вы признаете, что, хотя и являетесь "
+"стороной»«контент, текст, данные, графика, изображения, "
+"информация»,«предложения, советы и другие материалы (совместно именуемые "
+"«Информация»«»), предоставленный вам на Сайте (включая Информацию, "
+"предоставленную ««в прямой ответ на ваши вопросы или публикации) могут "
+"быть предоставлены»«лицами юридической профессии, предоставление "
+"таких»«Информация не создает отношений между адвокатом и клиентом и не "
+"представляет собой»«юридическое заключение или совет, но он "
+"предоставляется для того, чтобы помочь вам»«найдите подходящего юриста. "
+"Любое использование сайта»потенциальными клиентами или подписанными "
+"пользователями-юристами не«предназначено и не будет создавать отношения "
+"между адвокатом и клиентом между»«любое физическое, юридическое лицо и "
+"любое электронное сообщение Afrilog».«отправляется любому пользователю "
+"Afrilog, кроме пользователя-юриста, которого создаст»«между Пользователем"
+" клиента и Afrilog не отношения юриста и клиента.\n"
+"»"
 
 #: templates/main/cgu.html:145
 msgid ""
@@ -3006,65 +2998,64 @@ msgid ""
 "d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit "
 "aucune relation de concepteur-client entre vous et Afrilog."
 msgstr ""
-"Les informations que vous recevez de la part d'Afrilog et de ses affiliés"
-" sont uniquement à des fins d'information et de programmation. Afrilog "
-"n'est pas une société de conception ni ne vous offre de conseils, "
-"recommandations, consultations ou toute forme de conseil en design. "
-"Afrilog met ses concepteurs à votre disposition et toute information que "
-"vous recevez d'Afrilog (autre que par un concepteur que vous engagez pour"
-" travailler avec vous) est (i) fournie par des professionnels et "
-"organisations de conception indépendants représentant les intérêts "
-"d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit "
-"aucune relation de concepteur-client entre vous et Afrilog."
+"«Информация, которую вы получаете от Afrilog и ее филиалов» предназначены"
+" только для информационных и программных целей. Afrilog «Это не "
+"дизайнерская компания и не дает вам советов»,«рекомендации, консультации "
+"или любая форма совета по дизайну».«Afrilog предоставляет в ваше "
+"распоряжение своих дизайнеров и всю необходимую информацию»«вы получаете "
+"от Afrilog (кроме дизайнера, с которым вы работаете»«работа с вами) (i) "
+"предоставляется профессионалами и»«независимые проектные организации, "
+"представляющие интересы»«Afrilog, (ii) только для информационных целей и "
+"(iii) не устанавливает»«Между вами и Afrilog нет никаких отношений между "
+"дизайнером и клиентом»."
 
 #: templates/main/contact.html:8
 msgid "Contactez notre service commercial"
-msgstr "Contactez notre service commercial"
+msgstr "Свяжитесь с нашим коммерческим отделом"
 
 #: templates/main/contact.html:11
 msgid ""
 "Découvrez comment notre expertise en logistique pourrait propulser votre "
 "entreprise."
 msgstr ""
-"Découvrez comment notre expertise en logistique pourrait propulser votre "
-"entreprise."
+"Узнайте, как наша экспертиза в логистике может поднять ваш бизнес на "
+"новый уровень."
 
 #: templates/main/contact.html:34
 msgid "Entreprise"
-msgstr "Entreprise"
+msgstr "Компания"
 
 #: templates/main/contact.html:62
 msgid "Entrez votre message..."
-msgstr "Entrez votre message..."
+msgstr "Введите ваше сообщение..."
 
 #: templates/main/contact.html:69
 msgid "Accepter les politiques"
-msgstr "Accepter les politiques"
+msgstr "Принять политику конфиденциальности"
 
 #: templates/main/contact.html:75
 msgid "En sélectionnant cette option, vous acceptez notre"
-msgstr "En sélectionnant cette option, vous acceptez notre"
+msgstr "Выбрав эту опцию, вы принимаете наши"
 
 #: templates/main/customs.html:6
 msgid "Découvrez nos services d'aide au processus de dédouanement"
-msgstr "Découvrez nos services d'aide au processus de dédouanement"
+msgstr "Ознакомьтесь с нашими услугами помощи в таможенном оформлении"
 
 #: templates/main/customs.html:7
-#, fuzzy
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Taxes, Douanes"
 msgstr ""
-"Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine, Taxes, Douanes"
+"Транспорт, Логистика, Грузоперевозки, воздушные, Оборудование, Контейнер,"
+" Европа, Африка, Океания, Китай, Налоги, Таможня"
 
 #: templates/main/customs.html:10
 msgid "Afrilog : Aide dans le processus de dédouanement"
-msgstr "Afrilog : Aide dans le processus de dédouanement"
+msgstr "Afrilog: помощь в таможенной очистке"
 
 #: templates/main/customs.html:24
 msgid "Dédouanement"
-msgstr "Dédouanement"
+msgstr "Таможенное оформление"
 
 #: templates/main/customs.html:27
 msgid ""
@@ -3083,52 +3074,51 @@ msgid ""
 "complexités du processus d'expédition et se consacrent à fournir un "
 "service exceptionnel."
 msgstr ""
-"En tant qu'entreprise logistique leader, Afrilog reconnaît l'importance "
-"du dédouanement dans le processus d'expédition. Nous comprenons le "
-"potentiel de retards coûteux et de complications qui peuvent survenir "
-"lorsque nous essayons de nous conformer aux réglementations douanières et"
-" aux formalités administratives. Pour aider nos clients à surmonter ces "
-"défis, nous fournissons des services de dédouanement complets qui "
-"garantissent un processus d’importation ou d’exportation fluide. Chez "
-"Afrilog, nous sommes fiers de notre souci du détail et de notre "
-"engagement à garantir que vos marchandises arrivent à leur destination "
-"finale à temps et dans les meilleures conditions possibles. Lorsque vous "
-"faites appel à nous pour des services de dédouanement, vous pouvez être "
-"assuré que vos envois sont entre les mains d'experts qui comprennent les "
-"complexités du processus d'expédition et se consacrent à fournir un "
-"service exceptionnel."
+"«Как ведущая логистическая компания, Afrilog осознает важность "
+"этого»Таможенное оформление в процессе доставки. Мы понимаем«потенциал "
+"дорогостоящих задержек и осложнений, которые могут возникнуть»«когда мы "
+"пытаемся соблюдать таможенные правила и»«чтобы помочь нашим клиентам "
+"преодолеть эти административные формальности.проблемы, мы предоставляем "
+"комплексные услуги по таможенному оформлению, которые гарантировать "
+"бесперебойный процесс импорта или экспорта. На «Африлог, мы гордимся "
+"своим вниманием к деталям и нашими«Обязательство обеспечить доставку "
+"ваших товаров в пункт назначения»финал вовремя и в наилучших возможных "
+"условиях. Когда ты позвоните нам для получения услуг по таможенному "
+"оформлению, вы можетегарантируем, что ваши грузы находятся в руках "
+"экспертов, которые понимают сутьсложности процесса доставки и направлены "
+"на предоставление “исключительный сервис.”"
 
 #: templates/main/customs.html:40
 msgid "douanes, taxes, impôts"
-msgstr "douanes, taxes, impôts"
+msgstr "таможня, налоги, пошлины"
 
 #: templates/main/globle.html:3
 msgid "Ouvrez-vous au monde"
-msgstr "Ouvrez-vous au monde"
+msgstr "Откройтесь для мира"
 
 #: templates/main/globle.html:4
 msgid "Connectez-vous à un monde plein de possibiltés."
-msgstr "Connectez-vous à un monde plein de possibiltés."
+msgstr "Подключитесь к миру, полному возможностей."
 
 #: templates/main/home.html:25
 msgid "Logistics company in Africa"
-msgstr "Entreprise logistique en Afrique"
+msgstr "Логистическая компания в Африке"
 
 #: templates/main/home.html:28
 msgid "Leader dans la"
-msgstr "Leader dans la"
+msgstr "Лидер в"
 
 #: templates/main/home.html:28
 msgid "logistique"
-msgstr "logistique"
+msgstr "логистике"
 
 #: templates/main/home.html:28
 msgid "et le"
-msgstr "et le"
+msgstr "и"
 
 #: templates/main/home.html:29
 msgid "transport"
-msgstr "transport"
+msgstr "транспортировке"
 
 #: templates/main/home.html:32
 msgid ""
@@ -3136,21 +3126,21 @@ msgid ""
 "répondre à tous vos besoins de transport et de transit. Faites confiance "
 "à notre expertise pour optimiser votre chaîne d'approvisionnement."
 msgstr ""
-"Nous fournissons des solutions logistiques innovantes et fiables pour "
-"répondre à tous vos besoins de transport et de transit. Faites confiance "
-"à notre expertise pour optimiser votre chaîne d'approvisionnement."
+"Мы предоставляем инновационные и надежные логистические решения "
+"дляудовлетворит все ваши транспортные и транзитные потребности. "
+"Доверьтесьнаш опыт для оптимизации вашей цепочки поставок"
 
 #: templates/main/home.html:36
 msgid "Entrer votre identifiant ou N° de suivi..."
-msgstr "Entrez votre identifiant ou numéro de suivi..."
+msgstr "Введите свой идентификатор или номер отслеживания..."
 
 #: templates/main/home.html:61
 msgid "Nous ont fait confiance"
-msgstr "Nous ont fait confiance"
+msgstr "Нам доверяли"
 
 #: templates/main/home.html:89
 msgid "Une vision nouvelle pour la logistique et le transport"
-msgstr "Une vision nouvelle pour la logistique et le transport"
+msgstr "Новое видение логистики и транспорта"
 
 #: templates/main/home.html:91 templates/main/home.html:175
 msgid ""
@@ -3158,17 +3148,18 @@ msgid ""
 "et à l'import-export. Nos services sont conçus pour répondre aux besoins "
 "spécifiques de nos clients et aux défis de la globalisation des échanges."
 msgstr ""
-"Nous apportons une approche novatrice à la chaîne logistique, au transit "
-"et à l'import-export. Nos services sont conçus pour répondre aux besoins "
-"spécifiques de nos clients et aux défis de la globalisation des échanges."
+"Мы привносим инновационный подход в цепочку поставок, транзити "
+"импорт-экспорт. Наши услуги созданы для удовлетворения "
+"потребностейспециально для наших клиентов и для решения проблем "
+"глобализации торговли."
 
 #: templates/main/home.html:112
 msgid "Nos valeurs fondamentales"
-msgstr "Nos valeurs fondamentales"
+msgstr "Наши основные ценности"
 
 #: templates/main/home.html:115
 msgid "Ce qui nous guide"
-msgstr "Ce qui nous guide"
+msgstr "Что нас ведет"
 
 #: templates/main/home.html:118
 msgid ""
@@ -3176,83 +3167,80 @@ msgid ""
 "engagement envers nos clients et partenaires, en assurant un service de "
 "qualité exceptionnelle."
 msgstr ""
-"Les valeurs fondamentales de notre entreprise définissent notre "
-"engagement envers nos clients et partenaires, en assurant un service de "
-"qualité exceptionnelle."
+"Основные ценности нашей компании определяют нашу приверженность нашим "
+"клиентам и партнерам, обеспечиваяисключительное качество обслуживания."
 
 #: templates/main/home.html:126
 msgid "Innovation continue."
-msgstr "Innovation continue."
+msgstr "Непрерывная инновация."
 
 #: templates/main/home.html:128
 msgid ""
 "Nous investissons constamment dans de nouvelles technologies pour "
 "améliorer nos services et répondre aux besoins évolutifs de nos clients."
 msgstr ""
-"Nous investissons constamment dans de nouvelles technologies pour "
-"améliorer nos services et répondre aux besoins évolutifs de nos clients."
+"Мы постоянно инвестируем в новые технологии, чтобыулучшить наши услуги и "
+"удовлетворить растущие потребности наших клиентов."
 
 #: templates/main/home.html:135
 msgid "Sécurité et fiabilité."
-msgstr "Sécurité et fiabilité."
+msgstr "Безопасность и надежность."
 
 #: templates/main/home.html:138
 msgid ""
 "Nous assurons la sécurité de vos marchandises à chaque étape de la chaîne"
 " logistique grâce à des systèmes robustes et fiables."
 msgstr ""
-"Nous assurons la sécurité de vos marchandises à chaque étape de la "
-"chaînelogistique grâce à des systèmes robustes et fiables."
+"Мы обеспечиваем безопасность вашего груза на каждом этапе логистической "
+"цепи благодаря надежным и надежным системам."
 
 #: templates/main/home.html:146
 msgid "Excellence opérationnelle."
-msgstr "Excellence opérationnelle."
+msgstr "Операционное совершенство."
 
 #: templates/main/home.html:149
 msgid ""
 "Nous nous efforçons d’atteindre l’excellence dans toutes nos opérations "
 "pour garantir la satisfaction de nos clients et partenaires."
 msgstr ""
-"Nous nous efforçons d’atteindre l’excellence dans toutes nos opérations "
-"pour garantir la satisfaction de nos clients et partenaires."
+"Мы стремимся к достижению операционного совершенства во всех наших "
+"операциях для обеспечения удовлетворенности наших клиентов и партнеров."
 
 #: templates/main/home.html:155
 msgid "femme souriante"
-msgstr "femme souriante"
+msgstr "Улыбающаяся женщина"
 
 #: templates/main/home.html:172
 msgid "Travaillez avec nous"
-msgstr "Travaillez avec nous"
+msgstr "Работайте с нами"
 
 #: templates/main/home.html:181
 msgid "Postes vacants"
-msgstr "Postes vacants"
+msgstr "Вакансии"
 
 #: templates/main/home.html:185
 msgid "Nos valeurs"
-msgstr "Nos valeurs"
+msgstr "Наши ценности"
 
 #: templates/main/home.html:206
 msgid "Depuis le blog"
-msgstr "Depuis le blog"
+msgstr "Из блога"
 
 #: templates/main/home.html:207
 msgid ""
 "Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à"
 " nos conseils d'experts."
 msgstr ""
-"Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à"
-" nos conseils d'experts."
+"Узнайте, как оптимизировать свою логистику и повысить эффективность "
+"благодаря нашим экспертным советам."
 
 #: templates/main/home.html:212
 msgid "10 mai 2023"
-msgstr "10 mai 2023"
+msgstr "10 мая 2023 г."
 
 #: templates/main/home.html:219
 msgid "Améliorer l'efficacité de la chaîne d'approvisionnement"
-msgstr ""
-"Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à"
-" nos conseils d'experts."
+msgstr "Повышение эффективности цепи поставок"
 
 #: templates/main/home.html:223
 msgid ""
@@ -3261,30 +3249,29 @@ msgid ""
 "informations sur les dernières technologies et les meilleures pratiques "
 "en gestion logistique."
 msgstr ""
-"Découvrez des stratégies pour rationaliser votre chaîne "
-"d'approvisionnement et réduire les coûts. Nos experts partagent des "
-"informations sur les dernières technologies et les meilleures pratiques "
-"en gestion logistique."
+"Узнайте стратегии по оптимизации вашей цепи поставок и снижению затрат. "
+"Наши эксперты делятся информацией о последних технологиях и лучших "
+"практиках в логистическом управлении."
 
 #: templates/main/home.html:232
 msgid "Alex Johnson"
-msgstr "Alex Johnson"
+msgstr "Алекс Джонсон"
 
 #: templates/main/home.html:236
 msgid "Expert en logistique"
-msgstr "Expert en logistique"
+msgstr "Эксперт по логистике"
 
 #: templates/main/home.html:244
 msgid "18 avr. 2023"
-msgstr "18 avr. 2023"
+msgstr "18 апр. 2023 г."
 
 #: templates/main/home.html:246
 msgid "Chaîne d'approvisionnement"
-msgstr "Chaîne d'approvisionnement"
+msgstr "Цепь поставок"
 
 #: templates/main/home.html:252
 msgid "Technologie logistique de pointe"
-msgstr "Technologie logistique de pointe"
+msgstr "Лучшая логистическая технология"
 
 #: templates/main/home.html:255
 msgid ""
@@ -3292,29 +3279,29 @@ msgid ""
 "elles peuvent améliorer les opérations de votre entreprise. De l'IA à la "
 "blockchain, restez à la pointe avec nos insights d'experts."
 msgstr ""
-"Explorez les dernières avancées en technologie logistique et comment "
-"elles peuvent améliorer les opérations de votre entreprise. De l'IA à la "
-"blockchain, restez à la pointe avec nos insights d'experts."
+"Исследуйте последние достижения в логистической технологии и как они "
+"могут улучшить операции вашего предприятия. От ИИ до блокчейна, "
+"оставайтесь на передовой с нашими экспертными знаниями."
 
 #: templates/main/home.html:263
 msgid "Jamie Lee"
-msgstr "Jamie Lee"
+msgstr "Джейми Ли"
 
 #: templates/main/home.html:266
 msgid "Innovateur technologique"
-msgstr "Innovateur technologique"
+msgstr "Технологический инноватор"
 
 #: templates/main/home.html:272
 msgid "22 mar. 2023"
-msgstr "22 mar. 2023"
+msgstr "22 мар. 2023 г."
 
 #: templates/main/home.html:273
 msgid "Transport"
-msgstr "Transport"
+msgstr "Транспорт"
 
 #: templates/main/home.html:279
 msgid "Solutions de transport durable"
-msgstr "Solutions de transport durable"
+msgstr "Решения в области устойчивого транспорта"
 
 #: templates/main/home.html:283
 msgid ""
@@ -3322,86 +3309,87 @@ msgid ""
 "bénéficier à votre entreprise et à l'environnement. Notre guide couvre "
 "tout, des véhicules électriques aux pratiques logistiques écologiques."
 msgstr ""
-"Découvrez des options de transport durable et comment elles peuvent "
-"bénéficier à votre entreprise et à l'environnement. Notre guide couvre "
-"tout, des véhicules électriques aux pratiques logistiques écologiques."
+"Узнайте о вариантах устойчивого транспорта и о том, как они могут быть "
+"полезны вашему бизнесу и окружающей среде. Наш руководство охватывает "
+"все, начиная от электромобилей до экологических логистических практик."
 
 #: templates/main/home.html:292
 msgid "Morgan Smith"
-msgstr "Morgan Smith"
+msgstr "Морган Смит"
 
 #: templates/main/home.html:295
 msgid "Consultant en durabilité"
-msgstr "Consultant en durabilité"
+msgstr "Консультант по устойчивому развитию"
 
 #: templates/main/home.html:313
 msgid "Abonnez-vous à notre newsletter"
-msgstr "Abonnez-vous à notre newsletter"
+msgstr "Подпишитесь на нашу рассылку"
 
 #: templates/main/home.html:314
 msgid ""
 "Recevez les dernières nouvelles et mises à jour sur nos services "
 "logistiques directement dans votre boîte de réception."
 msgstr ""
-"Recevez les dernières nouvelles et mises à jour sur nos services "
-"logistiques directement dans votre boîte de réception."
+"Получайте последние новости и обновления о наших логистических услугах "
+"напрямую в вашем \"Получайте последние новости и обновления о наших "
+"логистических услугах напрямую в вашем почтовом ящике."
 
 #: templates/main/home.html:316
 msgid "Adresse email"
-msgstr "Adresse email"
+msgstr "Адрес электронной почты"
 
 #: templates/main/home.html:317
 msgid "Entrez votre email"
-msgstr "Entrez votre email"
+msgstr "Введите ваш адрес электронной почты"
 
 #: templates/main/home.html:318
 msgid "S'abonner"
-msgstr "S'abonner"
+msgstr "Подписаться"
 
 #: templates/main/home.html:328
 msgid "Articles hebdomadaires"
-msgstr "Articles hebdomadaires"
+msgstr "Еженедельные статьи"
 
 #: templates/main/home.html:329
 msgid ""
 "Des conseils et des informations exclusives sur la logistique pour "
 "optimiser vos opérations."
 msgstr ""
-"Des conseils et des informations exclusives sur la logistique pour "
-"optimiser vos opérations."
+"Советы и эксклюзивная информация о логистике для оптимизации ваших "
+"операций."
 
 #: templates/main/home.html:337
 msgid "Pas de spam"
-msgstr "Pas de spam"
+msgstr "Нет спама"
 
 #: templates/main/home.html:338
 msgid ""
 "Nous respectons votre vie privée. Recevez uniquement des informations "
 "pertinentes et utiles."
 msgstr ""
-"Nous respectons votre vie privée. Recevez uniquement des informations "
-"pertinentes et utiles."
+"Мы уважаем вашу конфиденциальность. Получайте только актуальную и "
+"полезную информацию."
 
 #: templates/main/layout.html:5
 msgid "Afrilog : Leader dans le domaine du Transport et de la Logistique"
-msgstr "Afrilog : Leader dans le domaine du Transport et de la Logistique"
+msgstr "Африлог: лидер в области транспорта и логистики"
 
 #: templates/main/pricing.html:237 templates/main/sea.html:51
 msgid "Notre grille tarifaire pour le fret maritime"
-msgstr "Notre grille tarifaire pour le fret maritime"
+msgstr "Наш тариф для морских грузов"
 
 #: templates/main/pricing.html:238 templates/main/sea.html:52
 msgid "A partir de Valencia (Espagne)"
-msgstr "A partir de Valencia (Espagne)"
+msgstr "От Валенсии (Испания)"
 
 #: templates/main/pricing.html:246 templates/main/pricing.html:277
 #: templates/main/sea.html:60 templates/main/sea.html:91
 msgid "Type de Conteneur"
-msgstr "Type de Conteneur"
+msgstr "Тип контейнера"
 
 #: templates/main/pricing.html:309 templates/main/sea.html:123
 msgid "Port de débarquement"
-msgstr "Port de débarquement"
+msgstr "Порт разгрузки"
 
 #: templates/main/pricing.html:310 templates/main/sea.html:124
 msgid "O/F(USD)"
@@ -3417,24 +3405,24 @@ msgstr "T/T"
 
 #: templates/main/pricing.html:342 templates/main/sea.html:156
 msgid "A partir de l' Inde"
-msgstr ""
+msgstr "От Индии"
 
 #: templates/main/pricing.html:350 templates/main/sea.html:164
 msgid "Type de conteneur"
-msgstr "Type de conteneur"
+msgstr "Тип контейнера"
 
 #: templates/main/pricing.html:351 templates/main/sea.html:165
 msgid "Temps de transit"
-msgstr "Temps de transit"
+msgstr "Время транзита"
 
 #: templates/main/pricing.html:352 templates/main/sea.html:166
 msgid "Prix"
-msgstr "Prix"
+msgstr "Цена"
 
 #: templates/main/pricing.html:359 templates/main/pricing.html:365
 #: templates/main/sea.html:173 templates/main/sea.html:179
 msgid "26 jours"
-msgstr "26 jours"
+msgstr "26 дней"
 
 #: templates/main/pricing.html:366 templates/main/sea.html:180
 msgid "5300"
@@ -3442,23 +3430,23 @@ msgstr "5300"
 
 #: templates/main/sea.html:6
 msgid "Découvrez nos services de fret maritime"
-msgstr "Découvrez nos services de fret maritime"
+msgstr "Узнайте о наших услугах морских перевозок"
 
 #: templates/main/sea.html:7
 msgid ""
 "Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
-"Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine"
+"Транспорт, логистика, грузоперевозки, морские, оборудование, контейнеры, "
+"Европа, Африка, Океания, Китай"
 
 #: templates/main/sea.html:10
 msgid "Afrilog : Fret maritime"
-msgstr "Afrilog : Fret maritime"
+msgstr "Африлог: Морские грузы"
 
 #: templates/main/sea.html:24
 msgid "Fret maritime"
-msgstr "Fret maritime"
+msgstr "Морские грузы"
 
 #: templates/main/sea.html:27
 msgid ""
@@ -3472,53 +3460,53 @@ msgid ""
 " assurant la sécurité et la ponctualité de vos livraisons, même sur les "
 "routes les plus fréquentées."
 msgstr ""
-"Le fret maritime est essentiel pour les échanges commerciaux "
-"internationaux, offrant des solutions efficaces pour le transport de "
-"grandes quantités de marchandises sur de longues distances. Grâce à une "
-"capacité de chargement importante et à des coûts de transport réduits, le"
-" fret maritime est une option privilégiée pour les entreprises cherchant "
-"à optimiser leurs chaînes d'approvisionnement. Découvrez comment nos "
-"services de fret maritime peuvent répondre à vos besoins de transport, en"
-" assurant la sécurité et la ponctualité de vos livraisons, même sur les "
-"routes les plus fréquentées."
+"Морские грузы являются ключевыми для международной торговли, предоставляя"
+" эффективные решения для транспортировки больших объемов товаров на "
+"большие расстояния. Благодаря большой грузоподъемности и низким "
+"транспортным издержкам, морские грузы являются предпочтительным выбором "
+"для компаний, стремящихся оптимизировать свои цепи поставок. Узнайте, как"
+" наши услуги морских грузов могут удовлетворить ваши транспортные "
+"потребности, обеспечивая безопасность и своевременность поставок, даже на"
+" самых загруженных маршрутах."
 
 #: templates/main/sea.html:39
 msgid "fret maritime"
-msgstr "fret maritime"
+msgstr "морские грузы"
 
 #: templates/main/stats.html:7
 msgid "2.5 millions de tonnes de marchandises traitées chaque année"
-msgstr "2.5 millions de tonnes de marchandises traitées chaque année"
+msgstr "2,5 миллиона тонн товаров обрабатывается каждый год"
 
 #: templates/main/stats.html:10
 msgid "2.5 M"
-msgstr "2.5 M"
+msgstr "2,5 млн"
 
 #: templates/main/stats.html:15
 msgid "Clients satisfaits"
-msgstr "Clients satisfaits"
+msgstr "Довольные клиенты"
 
 #: templates/main/stats.html:21
 msgid "Réductions des coûts logistiques"
-msgstr "Réductions des coûts logistiques"
+msgstr "Снижение логистических издержек"
 
 #: templates/main/terrestre.html:6
 msgid "Découvrez nos services de fret terrestre"
-msgstr "Découvrez nos services de fret terrestre"
+msgstr "Узнайте о наших услугах наземных грузовых перевозок"
 
 #: templates/main/terrestre.html:7
 msgid ""
 "Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
-"Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine"
+"Транспорт, логистика, грузоперевозки, наземные, оборудование, контейнеры,"
+" Европа, Африка, Океания, Китай"
 
 #: templates/main/terrestre.html:10
 msgid "Afrilog : Fret terrestre"
-msgstr "Afrilog : Fret terrestre"
+msgstr "Африлог: Наземные грузы"
 
 #: templates/main/terrestre.html:27
+#, fuzzy
 msgid ""
 "Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant"
 " des solutions flexibles et économiques pour le transport de "
@@ -3530,19 +3518,18 @@ msgid ""
 " comment nos solutions de fret terrestre peuvent optimiser vos opérations"
 " logistiques."
 msgstr ""
-"Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant"
-" des solutions flexibles et économiques pour le transport de "
-"marchandises. Avec des réseaux routiers bien développés et une "
-"infrastructure solide, le fret terrestre permet des livraisons rapides et"
-" ponctuelles, réduisant les temps d'attente et les coûts. En optant pour "
-"le fret terrestre, votre entreprise bénéficie d'une prestation de "
-"services fiable et efficace, adaptée à vos besoins spécifiques. Découvrez"
-" comment nos solutions de fret terrestre peuvent optimiser vos opérations"
-" logistiques."
+"Наземные перевозки играют решающую роль в цепочке поставок, обеспечивая "
+"гибкие и экономичные решения для транспортировки товаров. Благодаря "
+"хорошо развитой дорожной сети и надежной инфраструктуре наземные "
+"перевозки обеспечивают быструю и пунктуальную доставку, сокращая время "
+"ожидания и затраты. Наземные перевозки: ваш бизнес получает выгоду от "
+"надежного и эффективного предоставления услуг, адаптированных к вашим "
+"конкретным потребностям. Узнайте, как наши решения по наземным перевозкам"
+" могут оптимизировать ваши логистические операции."
 
 #: templates/main/terrestre.html:39
 msgid "fret terrestre"
-msgstr "fret terrestre"
+msgstr "наземные грузы"
 
 #: templates/main/testimonial.html:10
 msgid ""
@@ -3553,28 +3540,28 @@ msgid ""
 "confiance qui nous a fait gagner un temps précieux et optimisé nos coûts."
 " Nous ne pourrions pas être plus satisfaits de leur service exceptionnel."
 msgstr ""
-"Grâce à leur expertise et leur maîtrise des opérations logistiques, nous "
-"avons pu améliorer considérablement notre efficacité. Leur équipe est "
-"dédiée et toujours à l'écoute, ce qui nous a permis de nous concentrer "
-"pleinement sur notre cœur de métier. Afrilog est un partenaire de "
-"confiance qui nous a fait gagner un temps précieux et optimisé nos coûts."
-" Nous ne pourrions pas être plus satisfaits de leur service exceptionnel."
+"Благодаря их экспертизе и владению логистическими операциями, мы смогли "
+"значительно повысить эффективность. Их команда предана и всегда на связи,"
+" что позволило нам полностью сосредоточиться на своей основной "
+"деятельности. Afrilog - это надежный партнер, который помог нам "
+"сэкономить много времени и оптимизировать наши расходы. Мы не могли быть "
+"более удовлетворены их исключительным сервисом."
 
 #: templates/main/testimonial.html:21
 msgid "CEO of Workcation"
-msgstr "CEO of Workcation"
+msgstr "Генеральный директор Workcation"
 
 #: templates/main/transit.html:6
 msgid "Découvrez nos services transit, manutention et transport"
-msgstr "Découvrez nos services transit, manutention et transport"
+msgstr "Узнайте о наших услугах транзита, обработки и транспортировки"
 
 #: templates/main/transit.html:10
 msgid "Afrilog : Services de transit et manutention"
-msgstr "Afrilog : Services de transit et manutention"
+msgstr "Африлог: услуги транзита и обработки"
 
 #: templates/main/transit.html:24
 msgid "Transit, manutention et transport"
-msgstr "Transit, manutention et transport"
+msgstr "Транзит, обработка и транспортировка"
 
 #: templates/main/transit.html:27
 msgid ""
@@ -3588,39 +3575,38 @@ msgid ""
 "manutention et de transport est de garantir que les marchandises sont "
 "livrées à destination en toute sécurité et à temps."
 msgstr ""
-"Les services de transit, de manutention et de transport sont des services"
-" qui assurent la manutention, le stockage et/ou le transport de "
-"marchandises dans une certaine zone. Les services de transit, de "
-"manutention et de transport impliquent généralement l'emballage, "
-"l'étiquetage, la planification et la livraison des marchandises, ainsi "
-"que la gestion des formalités administratives associées au transport des "
-"marchandises. L’objectif principal des services de transit, de "
-"manutention et de transport est de garantir que les marchandises sont "
-"livrées à destination en toute sécurité et à temps."
+"Услуги транзита, обработки и транспортировки - это услуги, которые "
+"обеспечивают обработку, хранение и/или транспортировку грузов в "
+"определенной зоне. Услуги транзита, обработки и транспортировки обычно "
+"включают упаковку, маркировку, планирование и доставку грузов, а также "
+"управление административными формальностями, связанными с "
+"транспортировкой грузов. Основная цель услуг транзита, обработки и "
+"транспортировки - гарантировать, что грузы будут доставлены в пункт "
+"назначения в безопасности и вовремя."
 
 #: templates/main/transit.html:40
 msgid "transit&manutention"
-msgstr "transit&manutention"
+msgstr "транзит и обработка"
 
 #: templates/main/warehousing.html:6
 msgid "Découvrez nos services d'entrepôt de stockage"
-msgstr "Découvrez nos services d'entrepôt de stockage"
+msgstr "Узнайте о наших услугах складского хранения"
 
 #: templates/main/warehousing.html:7
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Entrepôt, Stockage, Chaîne"
 msgstr ""
-"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
-"Afrique, Oceanie, Chine, Entrepôt, Stockage, Chaîne"
+"Транспорт, логистика, грузоперевозки, воздушные, оборудование, "
+"контейнеры, Европа, Африка, Океания, Китай, Склад, Хранение, Цепь"
 
 #: templates/main/warehousing.html:10
 msgid "Afrilog : Entrepôt de stockage"
-msgstr "Afrilog : Entrepôt de stockage"
+msgstr "Африлог: Складское хранение"
 
 #: templates/main/warehousing.html:24
 msgid "Entrepôt de stockage"
-msgstr "Entrepôt de stockage"
+msgstr "Складское хранение"
 
 #: templates/main/warehousing.html:27
 msgid ""
@@ -3633,163 +3619,151 @@ msgid ""
 "garantir que vos marchandises soient stockées dans les meilleures "
 "conditions possibles."
 msgstr ""
-"Afrilog propose des services spécialisés d'entreposage sous douane et de "
-"transport en libre-entreposage qui permettent aux entreprises de stocker "
-"leurs marchandises en toute sécurité jusqu'à ce qu'elles soient prêtes à "
-"déménager ou à expédier. Nos services se concentrent sur le stockage et "
-"le transport des marchandises, mais nous proposons également des services"
-" supplémentaires tels que l'emballage et la gestion du stockage pour "
-"garantir que vos marchandises soient stockées dans les meilleures "
-"conditions possibles."
+"Afrilog предлагает специализированные услуги по таможенному хранению и "
+"свобод \"ному хранению, которые позволяют компаниям безопасно хранить "
+"свои товары до их готовности к перемещению или отправке. Наши услуги "
+"фокусируются на хранении и транспортировке товаров, но мы также "
+"предлагаем дополнительные услуги, такие как упаковка и управление "
+"складским хранением, чтобы гарантировать, что ваши товары будут храниться"
+" в наилучших условиях."
 
 #: templates/main/warehousing.html:40
 msgid "entrepôt et stockage"
-msgstr "entrepôt et stockage"
+msgstr "склад и хранение"
 
 #: templates/main/components/air/rate-estimation-inputs.html:3
 #: templates/main/components/sea/rate-estimation-inputs.html:3
 msgid "Cargo"
-msgstr "Cargo"
+msgstr "Груз"
 
 #: templates/main/components/air/rate-estimation-inputs.html:14
 #: templates/main/components/sea/rate-estimation-inputs.html:14
 msgid "General Cargo"
-msgstr "General Cargo"
+msgstr "Общий груз"
 
 #: templates/main/components/air/rate-estimation-inputs.html:19
 #: templates/main/components/sea/rate-estimation-inputs.html:19
 msgid "UDL container"
-msgstr "UDL container"
+msgstr "Контейнер UDL"
 
 #: templates/main/components/air/rate-estimation-inputs.html:29
 #: templates/main/components/sea/rate-estimation-inputs.html:29
 msgid "Poids(kg)"
-msgstr "Poids(kg)"
+msgstr "Вес(кг)"
 
 #: templates/main/components/air/rate-estimation-inputs.html:36
 #: templates/main/components/sea/rate-estimation-inputs.html:36
 msgid "Volume(m3)"
-msgstr "Volume(m3)"
+msgstr "Объем(м3)"
 
 #: templates/main/components/air/rate-estimation-inputs.html:46
 #: templates/main/components/sea/rate-estimation-inputs.html:46
 msgid "Longueur(m)"
-msgstr "Longueur(m)"
+msgstr "Длина(м)"
 
 #: templates/main/components/air/rate-estimation-inputs.html:53
 #: templates/main/components/sea/rate-estimation-inputs.html:53
 msgid "Largeur(m)"
-msgstr "Largeur(m)"
+msgstr "Ширина(м)"
 
 #: templates/main/components/air/rate-estimation-inputs.html:60
 #: templates/main/components/sea/rate-estimation-inputs.html:60
 msgid "Hauteur(m)"
-msgstr "Hauteur(m)"
+msgstr "Высота(м)"
 
 #: templates/views/basic_charts.html:13 templates/views/expenses_list.html:108
 msgid "Vues sur le site web"
-msgstr "Vues sur le site web"
+msgstr "Просмотры на сайте"
 
 #: templates/views/basic_charts.html:16 templates/views/expenses_list.html:111
 msgid "Performances de la dernière campagne"
-msgstr "Performances de la dernière campagne"
+msgstr "Результаты последней кампании"
 
 #: templates/views/basic_charts.html:36 templates/views/expenses_list.html:131
 msgid "Ventes quotidiennes"
-msgstr "Ventes quotidiennes"
+msgstr "Ежедневные продажи"
 
 #: templates/views/basic_charts.html:37 templates/views/expenses_list.html:132
 msgid "d'augmentation dans les ventes d'aujourd'hui"
-msgstr "d'augmentation dans les ventes d'aujourd'hui"
+msgstr "повышение продаж сегодня"
 
 #: templates/views/basic_charts.html:57 templates/views/expenses_list.html:152
 msgid "Tâches complètes"
-msgstr "Tâches complètes"
+msgstr "Завершенные задачи"
 
 #: templates/views/basic_charts.html:60 templates/views/expenses_list.html:155
 msgid "Performances de la campagne récente"
-msgstr "Performances de la campagne récente"
+msgstr "Результаты последней кампании"
 
 #: templates/views/expenses_list.html:10
 #: templates/views/weekly_gain_report.html:9
 msgid "Recettes de cette semaine"
-msgstr "Recettes de cette semaine"
+msgstr "Доходы на этой неделе"
 
 #: templates/views/expenses_list.html:21
 #: templates/views/weekly_gain_report.html:20
 msgid "par rapport à la semaine passée"
-msgstr "par rapport à la semaine passée"
+msgstr "по сравнению с прошлой неделей"
 
 #: templates/views/expenses_list.html:34
 #: templates/views/monthly_user_report.html:9
 msgid "Utilisateurs de ce mois"
-msgstr "Utilisateurs de ce mois"
+msgstr "Пользователи за этот месяц"
 
 #: templates/views/expenses_list.html:45
 #: templates/views/monthly_user_report.html:20
 msgid "par rapport au mois passé"
-msgstr "par rapport au mois passé"
+msgstr "по сравнению с прошлым месяцем"
 
 #: templates/views/expenses_list.html:58
 #: templates/views/monthly_customers_report.html:9
 msgid "Nouveaux clients"
-msgstr "Nouveaux clients"
+msgstr "Новые клиенты"
 
 #: templates/views/expenses_list.html:69 templates/views/expenses_list.html:90
 #: templates/views/monthly_customers_report.html:20
 msgid "par rapport à hier"
-msgstr "par rapport à hier"
+msgstr "по сравнению с вчера"
 
 #: templates/views/expenses_list.html:82
 msgid "Ventes"
-msgstr "Ventes"
+msgstr "Продажи"
 
 #: templates/views/invoices.html:18 templates/views/news.html:14
 msgid "Partager"
-msgstr "Partager"
+msgstr "Поделиться"
 
 #: templates/views/invoices.html:23 templates/views/news.html:15
 msgid "Exporter"
-msgstr "Exporter"
+msgstr "Экспортировать"
 
 #: templates/views/invoices.html:28 templates/views/news.html:16
 msgid "Télécharger"
-msgstr "Télécharger"
+msgstr "Скачать"
 
 #: templates/views/messages.html:5
 msgid "Inbox"
-msgstr "Boîte de réception"
+msgstr "Входящие"
 
 #: templates/views/news.html:6
 msgid "Actualités"
-msgstr "Actualités"
+msgstr "Новости"
 
 #: templates/views/empty/no_invoice.html:2
 msgid "Aucune facture"
-msgstr "Aucune facture"
+msgstr "Нет счетов"
 
 #: templates/views/empty/no_invoice.html:3
 msgid "Aucune facture pour le moment."
-msgstr "Aucune facture pour le moment."
+msgstr "На данный момент нет счетов."
 
 #: templates/views/empty/no_invoice.html:6
 msgid "Toutes les factures de vos récentes transactions vont s'afficher ici"
-msgstr "Toutes les factures de vos récentes transactions vont s'afficher ici"
+msgstr "Все счета за последние транзакции будут отображаться здесь"
 
 #~ msgid "Espagnol"
-#~ msgstr "Espagnol"
+#~ msgstr "Испанский"
 
 #~ msgid "Mandarin"
-#~ msgstr "Mandarin"
-
-#~ msgid ""
-#~ "Transport, Logistique, Fret, maritime, "
-#~ "Équipement, Conteneur, Europe, Afrique, "
-#~ "Océanie, Chine, Taxes, Douanes, Calculatrice,"
-#~ " Approximation"
-#~ msgstr ""
-#~ "Transport, Logistique, Fret, maritime, "
-#~ "Équipement, Conteneur, Europe, Afrique, "
-#~ "Océanie, Chine, Taxes, Douanes, Calculatrice,"
-#~ " Approximation"
+#~ msgstr "Китайский"
 

@@ -1,4 +1,5 @@
-import os
+import os, requests
+from flask import jsonify
 import qrcode
 from PIL import Image
 from werkzeug.utils import secure_filename

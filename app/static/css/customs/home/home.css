@@ -17,6 +17,10 @@
   background-image:url('../../../img/afrilog_pattern_1.png');
 }
 
+.hidden {
+  display: none;
+}
+
 
 .iti { 
   width: 100%; 
@@ -32,10 +36,28 @@
   }
 }
 
-.mega-menu, 
-.dropdown-menu{
+
+@media (max-width: 767px) {
+  nav {
+    overflow-y: auto;
+    max-height: calc(100vh - 3rem);
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.mega-menu,
+#language-selector
+{
   display: none;
 }
+
+
 
 @media (min-width: 768px) {
   #resources-megamenu {

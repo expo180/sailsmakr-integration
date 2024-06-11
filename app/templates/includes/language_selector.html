@@ -1,9 +1,9 @@
 {% set languages = {
-    'en': {'name': _('English'), 'flag': 'gb'},
-    'de': {'name': _('German'), 'flag': 'de'},
-    'fr': {'name': _('French'), 'flag': 'fr'},
-    'es': {'name': _('Spanish'), 'flag': 'es'},
-    'zh': {'name': _('Chinese'), 'flag': 'cn'}
+    'en': {'name': _('Anglais'), 'flag': 'gb'},
+    'de': {'name': _('Deutsch'), 'flag': 'de'},
+    'fr': {'name': _('Français'), 'flag': 'fr'},
+    'tr': {'name': _('Türkçe'), 'flag': 'tr'},
+    'ru': {'name': _('Русский'), 'flag': 'ru'}
 } %}
 {% set current_language = get_locale() %}
 {% set current_language_data = languages[current_language] %}
@@ -11,7 +11,7 @@
 {% set current_language_flag = current_language_data.flag %}
 
 <div class="dropdown relative inline-flex">
-    <button data-target="language-selector" type="button" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-slate-100 text-gray-800 rounded-full cursor-pointer   text-center shadow-xs transition-all duration-500 hover:bg-slate-200"> 
+    <button data-target="language-selector" type="button" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-slate-100 text-gray-800 rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg-slate-200"> 
         <span class="fi fi-{{ current_language_flag }}"></span>
         {{ current_language_name }}
         <svg class="dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-800" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

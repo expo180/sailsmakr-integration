@@ -19,8 +19,9 @@
               'en': {'name': _('English'), 'flag': 'gb'},
               'de': {'name': _('German'), 'flag': 'de'},
               'fr': {'name': _('French'), 'flag': 'fr'},
-              'es': {'name': _('Spanish'), 'flag': 'es'},
-              'zh': {'name': _('Chinese'), 'flag': 'cn'}
+              'zh': {'name': _('Chinese'), 'flag': 'cn'},
+              'tr': {'name': _('Turkish'), 'flag': 'tr'},
+              'ru': {'name': _('Russian'), 'flag': 'ru'}
           } %}
           {% set current_language = get_locale() %}
           {% set current_language_data = languages[current_language] %}
@@ -28,7 +29,7 @@
           {% set current_language_flag = current_language_data.flag %}
 
           <div class="dropdown">
-            <button type="button" on class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdownMenuLink2"> 
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdownMenuLink2"> 
               <span class="fi fi-{{ current_language_flag }}"></span>
               {{ current_language_name }}
             </button>

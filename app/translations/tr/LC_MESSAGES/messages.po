@@ -1,4 +1,4 @@
-# Spanish translations for PROJECT.
+# Turkish translations for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -7,102 +7,104 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-02 01:45+0100\n"
-"PO-Revision-Date: 2024-06-02 01:47+0100\n"
+"POT-Creation-Date: 2024-06-10 20:17+0100\n"
+"PO-Revision-Date: 2024-06-10 15:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
-"Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: tr\n"
+"Language-Team: tr <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: api/views.py:55
+#: api/views.py:59
 msgid "Votre requête a bien été envoyé"
-msgstr ""
+msgstr "Talebiniz başarıyla gönderildi"
 
-#: api/views.py:114
+#: api/views.py:118
 msgid "Envoyé avec succès"
-msgstr ""
+msgstr "Başarıyla gönderildi"
 
-#: api/views.py:115
+#: api/views.py:119
 msgid "Votre requête a été bien envoyé"
-msgstr ""
+msgstr "Talebiniz başarıyla gönderildi"
 
-#: api/views.py:349
+#: api/views.py:353
 msgid "Offre mise à jour avec succès"
-msgstr ""
+msgstr "Teklif başarıyla güncellendi"
 
-#: api/views.py:432
+#: api/views.py:436
 msgid "Votre candidature a été soumise avec succès!"
-msgstr ""
+msgstr "Başvurunuz başarıyla gönderildi!"
 
-#: api/views.py:466
+#: api/views.py:470
 msgid "Votre campagne a été bien mise à jour"
-msgstr ""
+msgstr "Kampanyanız başarıyla güncellendi"
 
-#: api/views.py:479
+#: api/views.py:483
 msgid "Campagne supprimée"
-msgstr ""
+msgstr "Kampanya silindi"
 
-#: api/views.py:511
+#: api/views.py:515
 msgid "Votre demande a bien été mise à jour"
-msgstr ""
+msgstr "Talebiniz başarıyla güncellendi"
 
-#: api/views.py:518 templates/errors/403.html:6
+#: api/views.py:522 templates/errors/403.html:6
 msgid "Accès non autorisé"
-msgstr ""
+msgstr "Erişim izni yok"
 
-#: api/views.py:522
+#: api/views.py:526
 msgid "Votre demande a été bien supprimé"
-msgstr ""
+msgstr "Talebiniz başarıyla silindi"
 
-#: api/views.py:547 api/views.py:578
+#: api/views.py:551 api/views.py:582
 msgid "La facture est introuvable."
-msgstr ""
+msgstr "Fatura bulunamadı."
 
-#: api/views.py:555
+#: api/views.py:559
 msgid "Le titre et le montant sont requis."
-msgstr ""
+msgstr "Başlık ve tutar gereklidir."
 
-#: api/views.py:562
+#: api/views.py:566
 msgid "Montant invalide."
-msgstr ""
+msgstr "Geçersiz tutar."
 
-#: api/views.py:569
+#: api/views.py:573
 msgid "La facture a été mise à jour avec succès."
-msgstr ""
+msgstr "Fatura başarıyla güncellendi."
 
-#: api/views.py:583
+#: api/views.py:587
 msgid "La facture a été supprimée avec succès."
-msgstr ""
+msgstr "Fatura başarıyla silindi."
 
-#: api/views.py:586
+#: api/views.py:590
 msgid "Une erreur est survenue lors de la suppression de la facture."
-msgstr ""
+msgstr "Fatura silinirken bir hata oluştu."
 
-#: api/views.py:598 api/views.py:606
+#: api/views.py:602 api/views.py:610
 msgid "Demande Introuvable"
-msgstr ""
+msgstr "Talep Bulunamadı"
 
 #: auth/views.py:49
 msgid "Votre compte a été créé avec succès. Veuillez vous connecter."
-msgstr ""
+msgstr "Hesabınız başarıyla oluşturuldu. Lütfen giriş yapın."
 
 #: auth/views.py:70
 msgid "Veuillez vous connecter à votre compte!"
-msgstr ""
+msgstr "Lütfen hesabınıza giriş yapın!"
 
-#: main/views.py:244
+#: main/views.py:261
 msgid ""
 "Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le "
 "meilleur de votre audience"
 msgstr ""
+"Yeni kampanyanız eklendi, artık kitlenizden en iyi şekilde "
+"yararlanabilirsiniz"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:2
 msgid "Modifier les infos employé : Afrilog"
-msgstr ""
+msgstr "Çalışan bilgilerini düzenle: Afrilog"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:12
 #: templates/api/@support_team/jobs/create_job.html:12
@@ -136,16 +138,16 @@ msgstr ""
 #: templates/dashboard/partials/sidebar.html:17
 #: templates/dashboard/sent_messages.html:12
 #: templates/dashboard/settings.html:23 templates/includes/footer.html:10
-#: templates/includes/header.html:18
+#: templates/includes/header.html:21
 msgid "Accueil"
-msgstr ""
+msgstr "Ana Sayfa"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:18
 #: templates/api/@support_team/employees/edit_employee_infos.html:23
 #: templates/dashboard/@support_team/employees_listing.html:73
 #: templates/dashboard/customers/previous_quotes.html:164
 msgid "Modifier les infos"
-msgstr ""
+msgstr "Bilgileri düzenle"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:27
 #: templates/api/customers/authorizations/apply.html:31
@@ -155,25 +157,25 @@ msgstr ""
 #: templates/dashboard/@support_team/employees_listing.html:97
 #: templates/dashboard/settings.html:44 templates/main/contact.html:18
 msgid "Prénom"
-msgstr ""
+msgstr "Ad"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:31
 #: templates/api/customers/jobs/apply.html:30
 #: templates/dashboard/@support_team/applicants_list.html:83
 #: templates/dashboard/@support_team/employees_listing.html:101
 msgid "Nom de Famille"
-msgstr ""
+msgstr "Soyad"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:35
 #: templates/dashboard/@support_team/employees_listing.html:29
 #: templates/dashboard/@support_team/employees_listing.html:105
 msgid "Fonction"
-msgstr ""
+msgstr "Pozisyon"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:39
 #: templates/dashboard/@support_team/employees_listing.html:109
 msgid "Identifiant / Matricule"
-msgstr ""
+msgstr "Kimlik / Sicil No"
 
 #: templates/api/@support_team/employees/edit_employee_infos.html:50
 #: templates/api/@support_team/jobs/edit_job.html:39
@@ -183,62 +185,62 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:176
 #: templates/dashboard/customers/previous_quotes.html:213
 msgid "Enregistrer"
-msgstr ""
+msgstr "Kaydet"
 
 #: templates/api/@support_team/empty/no_job.html:2
 #: templates/dashboard/@support_team/empty/no_quote.html:2
 #: templates/dashboard/customers/empty/no_quote.html:2
 #: templates/dashboard/empty/no_job.html:2
 msgid "Aucune offre àa afficher image"
-msgstr ""
+msgstr "Gösterilecek teklif yok resim"
 
 #: templates/api/@support_team/empty/no_job.html:3
 msgid "Aucune offre d'emploi créee"
-msgstr ""
+msgstr "Oluşturulan iş teklifi yok"
 
 #: templates/api/@support_team/empty/no_job.html:6
 msgid "Les nouvelles offres d'emplois créees vont s'afficher ici"
-msgstr ""
+msgstr "Oluşturulan yeni iş teklifleri burada görünecek"
 
 #: templates/api/@support_team/empty/no_job.html:12
 msgid "Créer une nouvelle offre"
-msgstr ""
+msgstr "Yeni teklif oluştur"
 
 #: templates/api/@support_team/empty/no_notice.html:2
 msgid "Aucune note à afficher image"
-msgstr ""
+msgstr "Gösterilecek not yok resim"
 
 #: templates/api/@support_team/empty/no_notice.html:3
 msgid "Aucune note à afficher"
-msgstr ""
+msgstr "Gösterilecek not yok"
 
 #: templates/api/@support_team/empty/no_notice.html:6
 msgid "Les notes que vous créerez seront affichée ici"
-msgstr ""
+msgstr "Oluşturduğunuz notlar burada görünecek"
 
 #: templates/api/@support_team/folders/reply_to_quote.html:6
 msgid "Répondre à la demande"
-msgstr ""
+msgstr "Talebi yanıtla"
 
 #: templates/api/@support_team/jobs/create_job.html:2
 msgid "Créer une offre d'emploi - Afrilog"
-msgstr ""
+msgstr "İş teklifi oluştur - Afrilog"
 
 #: templates/api/@support_team/jobs/create_job.html:16
 #: templates/dashboard/@support_team/previous_created_jobs.html:21
 #: templates/dashboard/jobs_listing.html:17
 #: templates/dashboard/partials/sidebar.html:216
 msgid "Careers"
-msgstr ""
+msgstr "Kariyer"
 
 #: templates/api/@support_team/jobs/create_job.html:19
 #: templates/dashboard/partials/sidebar.html:223
 msgid "Ajouter une offre"
-msgstr ""
+msgstr "Teklif ekle"
 
 #: templates/api/@support_team/jobs/create_job.html:30
 msgid "Ajouter une nouvelle offre"
-msgstr ""
+msgstr "Yeni teklif ekle"
 
 #: templates/api/@support_team/jobs/create_job.html:38
 #: templates/api/@support_team/notice/create_notice.html:37
@@ -261,15 +263,15 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:150
 #: templates/dashboard/jobs_listing.html:36 templates/views/invoices.html:44
 msgid "Titre"
-msgstr ""
+msgstr "Başlık"
 
 #: templates/api/@support_team/jobs/create_job.html:39
 msgid "Développeur ASPNET C#"
-msgstr ""
+msgstr "ASPNET C# Geliştiricisi"
 
 #: templates/api/@support_team/jobs/create_job.html:41
 msgid "Veuillez entrer le titre du poste"
-msgstr ""
+msgstr "Lütfen iş başlığını girin"
 
 #: templates/api/@support_team/jobs/create_job.html:45
 #: templates/api/@support_team/jobs/edit_job.html:16
@@ -286,11 +288,11 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:155
 #: templates/dashboard/customers/previous_purchase_requests.html:131
 msgid "Description"
-msgstr ""
+msgstr "Açıklama"
 
 #: templates/api/@support_team/jobs/create_job.html:48
 msgid "Veuillez décrire le poste"
-msgstr ""
+msgstr "Lütfen işi tanımlayın"
 
 #: templates/api/@support_team/jobs/create_job.html:52
 #: templates/api/@support_team/jobs/edit_job.html:20
@@ -298,112 +300,112 @@ msgstr ""
 #: templates/dashboard/@support_team/previous_created_jobs.html:43
 #: templates/dashboard/jobs_listing.html:39
 msgid "Lieu"
-msgstr ""
+msgstr "Yer"
 
 #: templates/api/@support_team/jobs/create_job.html:55
 msgid "Veuillez spécifier le lieu"
-msgstr ""
+msgstr "Lütfen yeri belirtin"
 
 #: templates/api/@support_team/jobs/create_job.html:59
 #: templates/api/@support_team/jobs/edit_job.html:24
 #: templates/dashboard/@support_team/previous_created_jobs.html:42
 #: templates/dashboard/jobs_listing.html:38
 msgid "Salaire"
-msgstr ""
+msgstr "Maaş"
 
 #: templates/api/@support_team/jobs/create_job.html:62
 msgid "Veuillez indiquer le salaire"
-msgstr ""
+msgstr "Lütfen maaşı belirtin"
 
 #: templates/api/@support_team/jobs/create_job.html:66
 #: templates/api/@support_team/jobs/edit_job.html:28
 msgid "Date de publication"
-msgstr ""
+msgstr "Yayın Tarihi"
 
 #: templates/api/@support_team/jobs/create_job.html:69
 msgid "Veuillez indiquer la date de publication"
-msgstr ""
+msgstr "Lütfen yayın tarihini belirtin"
 
 #: templates/api/@support_team/jobs/create_job.html:73
 #: templates/api/@support_team/jobs/edit_job.html:32
 #: templates/dashboard/@support_team/previous_created_jobs.html:44
 #: templates/dashboard/jobs_listing.html:40
 msgid "Date de clôture"
-msgstr ""
+msgstr "Kapanış Tarihi"
 
 #: templates/api/@support_team/jobs/create_job.html:76
 msgid "Veuillez indiquer la date de clôture"
-msgstr ""
+msgstr "Lütfen kapanış tarihini belirtin"
 
 #: templates/api/@support_team/jobs/create_job.html:86
 #: templates/dashboard/@support_team/ads.html:240
 #: templates/dashboard/@support_team/invoices.html:187
 #: templates/dashboard/@support_team/tasks.html:127
 msgid "Ajouter"
-msgstr ""
+msgstr "Ekle"
 
 #: templates/api/@support_team/jobs/edit_job.html:3
 msgid "Modifier l'Offre"
-msgstr ""
+msgstr "Teklifi Düzenle"
 
 #: templates/api/@support_team/jobs/edit_job.html:3
 msgid "Afrilog"
-msgstr ""
+msgstr "Afrilog"
 
 #: templates/api/@support_team/jobs/edit_job.html:9
 msgid "Edit Job"
-msgstr ""
+msgstr "İşi Düzenle"
 
 #: templates/api/@support_team/jobs/edit_job.html:12
 msgid "Title"
-msgstr ""
+msgstr "Başlık"
 
 #: templates/api/@support_team/notice/create_notice.html:2
 msgid "Ajouter une nouvelle note : Afrilog"
-msgstr ""
+msgstr "Yeni not ekle: Afrilog"
 
 #: templates/api/@support_team/notice/create_notice.html:17
 #: templates/dashboard/@support_team/previous_notes.html:20
 #: templates/dashboard/partials/sidebar.html:192
 msgid "Notes"
-msgstr ""
+msgstr "Notlar"
 
 #: templates/api/@support_team/notice/create_notice.html:20
 #: templates/api/@support_team/notice/create_notice.html:28
 msgid "Ajouter une nouvelle note"
-msgstr ""
+msgstr "Yeni not ekle"
 
 #: templates/api/@support_team/notice/create_notice.html:40
 msgid "Politique de non-discrimination"
-msgstr ""
+msgstr "Ayrımcılık Yapmama Politikası"
 
 #: templates/api/@support_team/notice/create_notice.html:42
 msgid "Veuillez donner un titre à votre notice"
-msgstr ""
+msgstr "Lütfen notunuza bir başlık verin"
 
 #: templates/api/@support_team/notice/create_notice.html:47
 #: templates/dashboard/@support_team/previous_notes.html:106
 msgid "Nature"
-msgstr ""
+msgstr "Doğa"
 
 #: templates/api/@support_team/notice/create_notice.html:55
 msgid "Veuillez communiquer le type d'information"
-msgstr ""
+msgstr "Lütfen bilgi türünü belirtin"
 
 #: templates/api/@support_team/notice/create_notice.html:65
 #: templates/dashboard/@support_team/previous_notes.html:40
 #: templates/dashboard/@support_team/previous_notes.html:101
 msgid "Contenu"
-msgstr ""
+msgstr "İçerik"
 
 #: templates/api/@support_team/notice/create_notice.html:68
 msgid "Tous les agents se doivent..."
-msgstr ""
+msgstr "Tüm ajanlar zorundadır..."
 
 #: templates/api/@support_team/notice/create_notice.html:70
 #: templates/dashboard/@support_team/previous_notes.html:103
 msgid "Veuillez écrire le contenu de votre note"
-msgstr ""
+msgstr "Lütfen notunuzun içeriğini yazın"
 
 #: templates/api/@support_team/notice/create_notice.html:80
 #: templates/dashboard/@support_team/ads.html:171
@@ -413,20 +415,20 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:125
 #: templates/dashboard/@support_team/tasks.html:174
 msgid "En cours..."
-msgstr ""
+msgstr "Devam ediyor..."
 
 #: templates/api/@support_team/notice/create_notice.html:82
 msgid "Publier"
-msgstr ""
+msgstr "Yayınla"
 
 #: templates/api/customers/authorizations/apply.html:2
 msgid "Formulaire de demande de procuration : Afrilog"
-msgstr ""
+msgstr "Vekaletname Başvuru Formu: Afrilog"
 
 #: templates/api/customers/authorizations/apply.html:16
 #: templates/api/customers/authorizations/apply.html:24
 msgid "Demande de procuration"
-msgstr ""
+msgstr "Vekaletname Başvurusu"
 
 #: templates/api/customers/authorizations/apply.html:34
 #: templates/api/customers/authorizations/apply.html:41
@@ -436,140 +438,152 @@ msgid ""
 "Un nom doit contenir seulement des lettres, les chiffres, les espaces et "
 "les caractères spéciaux sont interdits"
 msgstr ""
+"Bir isim yalnızca harf içermelidir, rakamlar, boşluklar ve özel "
+"karakterler yasaktır"
 
 #: templates/api/customers/authorizations/apply.html:38
 #: templates/api/customers/goods/purchase_request.html:35
 #: templates/dashboard/settings.html:56 templates/main/contact.html:26
 msgid "Nom de famille"
-msgstr ""
+msgstr "Soyadı"
 
 #: templates/api/customers/authorizations/apply.html:50
 msgid "Téléphone"
-msgstr ""
+msgstr "Telefon"
 
 #: templates/api/customers/authorizations/apply.html:53
 msgid "Veuillez entrer un numéro de téléphone valide"
-msgstr ""
+msgstr "Lütfen geçerli bir telefon numarası girin"
 
 #: templates/api/customers/authorizations/apply.html:57
 msgid "Votre signature"
-msgstr ""
+msgstr "İmzanız"
 
 #: templates/api/customers/authorizations/apply.html:60
 msgid "Veuillez télécharger votre signature"
-msgstr ""
+msgstr "Lütfen imzanızı yükleyin"
 
 #: templates/api/customers/authorizations/apply.html:69
 msgid "Votre pays"
-msgstr ""
+msgstr "Ülkeniz"
 
 #: templates/api/customers/authorizations/apply.html:74
 #: templates/api/customers/goods/purchase_request.html:145
 msgid "Veuillez sélectionner votre pays"
-msgstr ""
+msgstr "Lütfen ülkenizi seçin"
 
 #: templates/api/customers/authorizations/apply.html:78
 msgid "Numéro de suivi"
-msgstr ""
+msgstr "Takip Numarası"
 
 #: templates/api/customers/authorizations/apply.html:81
 msgid "Veuillez entrer un numéro de valide"
-msgstr ""
+msgstr "Lütfen geçerli bir numara girin"
 
 #: templates/api/customers/authorizations/apply.html:91
 #: templates/dashboard/customers/previous_quotes.html:192
 msgid "Prénom du transitaire"
-msgstr ""
+msgstr "Taşıyıcının adı"
 
 #: templates/api/customers/authorizations/apply.html:98
 msgid "Nom de famille du transitaire"
-msgstr ""
+msgstr "Taşıyıcının soyadı"
 
 #: templates/api/customers/authorizations/apply.html:110
 #: templates/dashboard/customers/previous_quotes.html:200
-#: templates/main/aerien.html:83 templates/main/pricing.html:11
+#: templates/main/aerien.html:61 templates/main/pricing.html:11
 msgid "Compagnie"
-msgstr ""
+msgstr "Şirket"
 
 #: templates/api/customers/authorizations/apply.html:116
 msgid "Veuillez sélectionner une compagnie"
-msgstr ""
+msgstr "Lütfen bir şirket seçin"
 
 #: templates/api/customers/authorizations/apply.html:120
 #: templates/dashboard/customers/previous_quotes.html:150
 msgid "Carte d'identité"
-msgstr ""
+msgstr "Kimlik Kartı"
 
 #: templates/api/customers/authorizations/apply.html:123
 msgid "Veuillez télécharger votre carte d'identité"
-msgstr ""
+msgstr "Lütfen kimlik kartınızı yükleyin"
 
 #: templates/api/customers/authorizations/apply.html:134
 #: templates/api/customers/goods/purchase_request.html:172
 msgid "Envoi..."
-msgstr ""
+msgstr "Gönderiliyor..."
 
 #: templates/api/customers/authorizations/apply.html:136
 #: templates/api/customers/goods/purchase_request.html:175
 #: templates/dashboard/@support_team/new_purchases.html:155
 #: templates/main/contact.html:84
 msgid "Envoyer"
-msgstr ""
+msgstr "Gönder"
 
 #: templates/api/customers/authorizations/world_countries.html:1
 msgid "Sélectionnez un pays"
-msgstr ""
+msgstr "Bir ülke seçin"
 
 #: templates/api/customers/blog/comment.html:6
 msgid "Commenter - Afrilog"
-msgstr ""
+msgstr "Yorum Yap - Afrilog"
 
 #: templates/api/customers/blog/saved_articles_listing.html:6
 msgid "Articles enregistrés - Afrilog"
-msgstr ""
+msgstr "Kaydedilen Makaleler - Afrilog"
 
 #: templates/api/customers/goods/privacy_policy.html:7
 msgid "En utilisant nos services, vous acceptez notre "
-msgstr ""
+msgstr "Hizmetlerimizi kullanarak bizim "
 
 #: templates/api/customers/goods/privacy_policy.html:7
 #: templates/main/contact.html:77
 msgid "politique de confidentialité"
-msgstr ""
+msgstr "gizlilik politikamızı kabul etmiş olursunuz"
 
 #: templates/api/customers/goods/privacy_policy.html:20
 msgid "Politique de Confidentialité"
-msgstr ""
+msgstr "Gizlilik Politikası"
 
 #: templates/api/customers/goods/privacy_policy.html:26
 msgid ""
 "Nous collectons des informations personnelles telles que le nom, "
 "l'adresse et les coordonnées pour fournir nos services de livraison."
 msgstr ""
+"Ad, adres ve iletişim bilgileri gibi kişisel bilgileri, teslimat "
+"hizmetlerimizi sağlamak için topluyoruz."
 
 #: templates/api/customers/goods/privacy_policy.html:27
 msgid ""
 "Vos données peuvent être utilisées pour suivre et améliorer nos "
 "opérations logistiques."
 msgstr ""
+"Verileriniz, lojistik operasyonlarımızı izlemek ve iyileştirmek için "
+"kullanılabilir."
 
 #: templates/api/customers/goods/privacy_policy.html:28
 msgid ""
 "Nous pouvons partager vos informations avec des prestataires de services "
 "tiers pour les besoins de la livraison."
 msgstr ""
+"Bilgilerinizi teslimat ihtiyaçları için üçüncü taraf hizmet "
+"sağlayıcılarla paylaşabiliriz."
 
 #: templates/api/customers/goods/privacy_policy.html:29
 msgid ""
 "Nous accordons une importance particulière à la sécurité de vos données "
 "et utilisons des mesures standard de l'industrie pour les protéger."
 msgstr ""
+"Verilerinizin güvenliğine büyük önem veriyoruz ve korumak için endüstri "
+"standartlarında önlemler kullanıyoruz."
 
 #: templates/api/customers/goods/privacy_policy.html:30
 msgid ""
 "En utilisant nos services, vous acceptez d'être majeur dans votre "
 "juridiction pour consentir à notre politique de confidentialité."
 msgstr ""
+"Hizmetlerimizi kullanarak, gizlilik politikamıza rıza göstermek için "
+"yasal olarak reşit olduğunuzu kabul etmiş olursunuz."
 
 #: templates/api/customers/goods/privacy_policy.html:33
 #: templates/dashboard/@support_team/ads.html:119
@@ -584,233 +598,233 @@ msgstr ""
 #: templates/dashboard/@support_team/quotes_list.html:159
 #: templates/dashboard/customers/previous_purchase_requests.html:89
 msgid "Fermer"
-msgstr ""
+msgstr "Kapat"
 
 #: templates/api/customers/goods/purchase_request.html:2
 msgid "Passer une commande : Afrilog"
-msgstr ""
+msgstr "Sipariş Ver : Afrilog"
 
 #: templates/api/customers/goods/purchase_request.html:17
 #: templates/dashboard/customers/live_tracking.html:20
 #: templates/dashboard/customers/previous_purchase_requests.html:16
 msgid "Mes commandes"
-msgstr ""
+msgstr "Siparişlerim"
 
 #: templates/api/customers/goods/purchase_request.html:20
 #: templates/api/customers/goods/purchase_request.html:28
 msgid "Passer une commande"
-msgstr ""
+msgstr "Sipariş Ver"
 
 #: templates/api/customers/goods/purchase_request.html:36
 msgid "Bertram"
-msgstr ""
+msgstr "Bertram"
 
 #: templates/api/customers/goods/purchase_request.html:39
 msgid "Veuillez entrer un nom de famille valide"
-msgstr ""
+msgstr "Lütfen geçerli bir soyadı girin"
 
 #: templates/api/customers/goods/purchase_request.html:45
 msgid "Gillfoyle"
-msgstr ""
+msgstr "Gillfoyle"
 
 #: templates/api/customers/goods/purchase_request.html:48
 msgid "Veuillez entrer un prénom valide"
-msgstr ""
+msgstr "Lütfen geçerli bir ad girin"
 
 #: templates/api/customers/goods/purchase_request.html:55
 #: templates/dashboard/customers/previous_purchase_requests.html:33
 #: templates/dashboard/customers/previous_purchase_requests.html:111
 msgid "Nom du produit"
-msgstr ""
+msgstr "Ürün Adı"
 
 #: templates/api/customers/goods/purchase_request.html:58
 msgid "Veuillez entrer le nom de votre produit"
-msgstr ""
+msgstr "Lütfen ürününüzün adını girin"
 
 #: templates/api/customers/goods/purchase_request.html:64
 #: templates/dashboard/@support_team/new_purchases.html:32
 msgid "Catégorie"
-msgstr ""
+msgstr "Kategori"
 
 #: templates/api/customers/goods/purchase_request.html:66
 msgid "Électronique"
-msgstr ""
+msgstr "Elektronik"
 
 #: templates/api/customers/goods/purchase_request.html:67
 msgid "Vêtements"
-msgstr ""
+msgstr "Giyim"
 
 #: templates/api/customers/goods/purchase_request.html:68
 msgid "Livres"
-msgstr ""
+msgstr "Kitaplar"
 
 #: templates/api/customers/goods/purchase_request.html:72
 msgid "Veuillez sélectionner la catégorie de votre produit"
-msgstr ""
+msgstr "Lütfen ürününüzün kategorisini seçin"
 
 #: templates/api/customers/goods/purchase_request.html:80
 #: templates/api/customers/goods/purchase_request.html:81
 msgid "Longueur du produit"
-msgstr ""
+msgstr "Ürün Uzunluğu"
 
 #: templates/api/customers/goods/purchase_request.html:86
 #: templates/api/customers/goods/purchase_request.html:87
 msgid "Largeur du produit"
-msgstr ""
+msgstr "Ürün Genişliği"
 
 #: templates/api/customers/goods/purchase_request.html:94
 #: templates/main/contact.html:50
 msgid "Numéro de téléphone"
-msgstr ""
+msgstr "Telefon Numarası"
 
 #: templates/api/customers/goods/purchase_request.html:98
 msgid "Votre numéro de téléphone est requis"
-msgstr ""
+msgstr "Telefon numaranız gereklidir"
 
 #: templates/api/customers/goods/purchase_request.html:104
 msgid "Votre Adresse E-mail"
-msgstr ""
+msgstr "E-posta Adresiniz"
 
 #: templates/api/customers/goods/purchase_request.html:107
 msgid "Votre adresse E-mail est requise"
-msgstr ""
+msgstr "E-posta adresiniz gereklidir"
 
 #: templates/api/customers/goods/purchase_request.html:110
 msgid "Cette adresse E-mail est invalide"
-msgstr ""
+msgstr "Bu e-posta adresi geçersiz"
 
 #: templates/api/customers/goods/purchase_request.html:118
 #: templates/dashboard/@support_team/new_purchases.html:76
 msgid "Fournisseur"
-msgstr ""
+msgstr "Tedarikçi"
 
 #: templates/api/customers/goods/purchase_request.html:124
 #: templates/dashboard/@support_team/new_purchases.html:104
 msgid "Image du produit"
-msgstr ""
+msgstr "Ürün Resmi"
 
 #: templates/api/customers/goods/purchase_request.html:133
 msgid "Autre chose sur votre produit..."
-msgstr ""
+msgstr "Ürününüz hakkında başka bir şey..."
 
 #: templates/api/customers/goods/purchase_request.html:140
 msgid "Votre Pays"
-msgstr ""
+msgstr "Ülkeniz"
 
 #: templates/api/customers/goods/purchase_request.html:151
 msgid "Adresse physique"
-msgstr ""
+msgstr "Fiziksel Adres"
 
 #: templates/api/customers/goods/purchase_request.html:152
 msgid "Entrez votre adresse"
-msgstr ""
+msgstr "Adresinizi girin"
 
 #: templates/api/customers/goods/purchase_request.html:154
 msgid "Veuillez entrer une adresse valide"
-msgstr ""
+msgstr "Lütfen geçerli bir adres girin"
 
 #: templates/api/customers/goods/purchase_request.html:160
 msgid "Document ou Manuel"
-msgstr ""
+msgstr "Belge veya Kılavuz"
 
 #: templates/api/customers/jobs/apply.html:2
 msgid "Formulaire de candidature : Afrilog"
-msgstr ""
+msgstr "Başvuru Formu: Afrilog"
 
 #: templates/api/customers/jobs/apply.html:17
 #: templates/api/customers/jobs/apply.html:22
 msgid "Formulaire de candidature"
-msgstr ""
+msgstr "Başvuru Formu"
 
 #: templates/api/customers/jobs/apply.html:34
 msgid "Email"
-msgstr ""
+msgstr "E-posta"
 
 #: templates/api/customers/jobs/apply.html:38
 msgid "Location"
-msgstr ""
+msgstr "Konum"
 
 #: templates/api/customers/jobs/apply.html:42
 #: templates/dashboard/@support_team/applicants_list.html:99
 msgid "Motivation"
-msgstr ""
+msgstr "Motivasyon"
 
 #: templates/api/customers/jobs/apply.html:46
 msgid "LinkedIn URL"
-msgstr ""
+msgstr "LinkedIn URL'si"
 
 #: templates/api/customers/jobs/apply.html:50
 msgid "GitHub URL"
-msgstr ""
+msgstr "GitHub URL'si"
 
 #: templates/api/customers/jobs/apply.html:54
 msgid "Dribble URL"
-msgstr ""
+msgstr "Dribble URL'si"
 
 #: templates/api/customers/jobs/apply.html:58
 #: templates/dashboard/@support_team/applicants_list.html:95
 msgid "Date de Naissance"
-msgstr ""
+msgstr "Doğum Tarihi"
 
 #: templates/api/customers/jobs/apply.html:62
 msgid "Upload CV"
-msgstr ""
+msgstr "CV Yükle"
 
 #: templates/api/customers/jobs/apply.html:66
 msgid "Soumettre"
-msgstr ""
+msgstr "Göndermek"
 
 #: templates/api/docs/spreadsheet_doc.html:2
 msgid "Nouvelle Feuille: Afrilog"
-msgstr ""
+msgstr "Yeni Sayfa: Afrilog"
 
 #: templates/api/docs/spreadsheet_doc.html:17
 #: templates/api/docs/text_doc.html:17
 #: templates/dashboard/partials/sidebar.html:126
 msgid "Documents"
-msgstr ""
+msgstr "Belgeler"
 
 #: templates/api/docs/spreadsheet_doc.html:20
 msgid "Nouvelle feuille"
-msgstr ""
+msgstr "Yeni sayfa"
 
 #: templates/api/docs/spreadsheet_doc.html:32
 msgid "Créer une nouvelle feuille"
-msgstr ""
+msgstr "Yeni bir sayfa oluştur"
 
 #: templates/api/docs/text_doc.html:2
 msgid "Nouveau document: Afrilog"
-msgstr ""
+msgstr "Yeni belge: Afrilog"
 
 #: templates/api/docs/text_doc.html:20
 msgid "Nouveau document"
-msgstr ""
+msgstr "Yeni belge"
 
 #: templates/api/docs/text_doc.html:32
 msgid "Créer un nouveau document"
-msgstr ""
+msgstr "Yeni bir belge oluştur"
 
 #: templates/api/messages/new_message.html:2
 msgid "Nouveau message : Afrilog"
-msgstr ""
+msgstr "Yeni mesaj: Afrilog"
 
 #: templates/api/messages/new_message.html:16
 #: templates/dashboard/customers/inbox.html:19
 #: templates/dashboard/new_messages.html:16
 #: templates/dashboard/sent_messages.html:16
 msgid "Messages"
-msgstr ""
+msgstr "Mesajlar"
 
 #: templates/api/messages/new_message.html:19
 #: templates/api/messages/new_message.html:31
 msgid "Nouveau message"
-msgstr ""
+msgstr "Yeni mesaj"
 
 #: templates/auth/layout.html:6
 msgid ""
 "Afrilog, leader dans le domaine du transport et de la logistique, Page de"
 " connexion"
-msgstr ""
+msgstr "Afrilog, taşımacılık ve lojistik alanında lider, Giriş sayfası"
 
 #: templates/auth/layout.html:7
 msgid ""
@@ -819,14 +833,18 @@ msgid ""
 "Marchandises, Commerce, Santé, Défencse, Technologie, \n"
 "    Equipement, MSC, Connexion, Utilisateur, Portail"
 msgstr ""
+"Afrilog, Lojistik, Transit, Taşımacılık, Afrika, Nijer, Avrupa, Asya, \n"
+"    Amerika, Okyanusya, Deniz, Hava, Kara, Konteynerler, Mallar, Ticaret,"
+" Sağlık, Savunma, Teknoloji, \n"
+"    Ekipman, MSC, Bağlantı, Kullanıcı, Portal"
 
 #: templates/auth/layout.html:11 templates/auth/login.html:2
 msgid "Afrilog : Se connecter"
-msgstr ""
+msgstr "Afrilog: Giriş yap"
 
 #: templates/auth/login.html:7 templates/auth/login.html:109
 msgid "Connexion"
-msgstr ""
+msgstr "Bağlantı"
 
 #: templates/auth/login.html:15 templates/auth/login.html:21
 #: templates/auth/signup.html:13 templates/auth/signup.html:18
@@ -834,177 +852,178 @@ msgstr ""
 #: templates/dashboard/@support_team/applicants_list.html:87
 #: templates/dashboard/settings.html:83 templates/main/contact.html:42
 msgid "Adresse E-mail"
-msgstr ""
+msgstr "E-posta Adresi"
 
 #: templates/auth/login.html:46 templates/auth/signup.html:43
 msgid "Adresse e-mail invalide"
-msgstr ""
+msgstr "Geçersiz e-posta adresi"
 
 #: templates/auth/login.html:50
 msgid "Adresse e-mail incorrect"
-msgstr ""
+msgstr "Yanlış e-posta adresi"
 
 #: templates/auth/login.html:54
 msgid "Votre adresse est e-mail est requise"
-msgstr ""
+msgstr "E-posta adresiniz gerekli"
 
 #: templates/auth/login.html:59
 msgid "Mot de Passe"
-msgstr ""
+msgstr "Şifre"
 
 #: templates/auth/login.html:61
 msgid "Mot de passe oublié?"
-msgstr ""
+msgstr "Şifrenizi mi unuttunuz?"
 
 #: templates/auth/login.html:68
 msgid "8 caractères min"
-msgstr ""
+msgstr "En az 8 karakter"
 
 #: templates/auth/login.html:97
 msgid "Mot de passe incorrect"
-msgstr ""
+msgstr "Yanlış şifre"
 
 #: templates/auth/login.html:101
 msgid "Votre mot de passe est requis"
-msgstr ""
+msgstr "Şifreniz gerekli"
 
 #: templates/auth/login.html:149
 msgid "Se connecter avec Google"
-msgstr ""
+msgstr "Google ile giriş yap"
 
 #: templates/auth/login.html:153
 msgid "Vous n'avez pas de compte?"
-msgstr ""
+msgstr "Hesabınız yok mu?"
 
 #: templates/auth/login.html:154
 msgid "Créer un compte ici"
-msgstr ""
+msgstr "Buradan hesap oluşturun"
 
 #: templates/auth/signup.html:2
 msgid "Afrilog : Créer un nouveau compte"
-msgstr ""
+msgstr "Afrilog: Yeni bir hesap oluştur"
 
 #: templates/auth/signup.html:7
 msgid "Créer un nouveau compte"
-msgstr ""
+msgstr "Yeni bir hesap oluştur"
 
 #: templates/auth/signup.html:47
 msgid "Adresse e-mail requise!"
-msgstr ""
+msgstr "E-posta adresi gerekli!"
 
 #: templates/auth/signup.html:51
 msgid "Votre compte existe déja!"
-msgstr ""
+msgstr "Hesabınız zaten var!"
 
 #: templates/auth/signup.html:56
 msgid "Créer Mot de Passe"
-msgstr ""
+msgstr "Şifre oluştur"
 
 #: templates/auth/signup.html:58
 msgid "Au moins 08 caractères"
-msgstr ""
+msgstr "En az 08 karakter"
 
 #: templates/auth/signup.html:65
 msgid "Mot de passe"
-msgstr ""
+msgstr "Şifre"
 
 #: templates/auth/signup.html:94
 msgid "Mot de passe requis!"
-msgstr ""
+msgstr "Şifre gerekli!"
 
 #: templates/auth/signup.html:98
 msgid "Un mot de passe doit contenir au moins 08 caractères!"
-msgstr ""
+msgstr "Bir şifre en az 08 karakter içermelidir!"
 
 #: templates/auth/signup.html:103 templates/auth/signup.html:109
 msgid "Confirmer Mot de Passe"
-msgstr ""
+msgstr "Şifreyi Onayla"
 
 #: templates/auth/signup.html:116
 msgid "Les deux mots de passe ne correspondent pas"
-msgstr ""
+msgstr "İki şifre uyuşmuyor"
 
 #: templates/auth/signup.html:120
 msgid "Confirmation requise pour continuer!"
-msgstr ""
+msgstr "Devam etmek için onay gerekli!"
 
 #: templates/auth/signup.html:124
 msgid "En continuant vous aviez lu et accepté nos"
-msgstr ""
+msgstr "Devam ederek, şunları okuduğunuzu ve kabul ettiğinizi beyan edersiniz"
 
 #: templates/auth/signup.html:124
 msgid "conditions générales d'utilisation."
-msgstr ""
+msgstr "kullanım şartları."
 
-#: templates/auth/signup.html:132 templates/main/home.html:66
+#: templates/auth/signup.html:132 templates/main/calculate_air_freight.html:65
+#: templates/main/calculate_sea_freight.html:65 templates/main/home.html:41
 msgid "Continuer"
-msgstr ""
+msgstr "Devam et"
 
 #: templates/auth/signup.html:172
 msgid "Continuer avec Google"
-msgstr ""
+msgstr "Google ile devam et"
 
 #: templates/auth/signup.html:176
 msgid "Avez-vous déja un compte?"
-msgstr ""
+msgstr "Zaten hesabınız var mı?"
 
 #: templates/auth/signup.html:177
 msgid "Connectez vous ici"
-msgstr ""
+msgstr "Buradan giriş yapın"
 
 #: templates/dashboard/applied_jobs_listing.html:6
 msgid "Postes récents - Afrilog"
-msgstr ""
+msgstr "Son iş ilanları - Afrilog"
 
 #: templates/dashboard/calculator.html:2
 msgid "Calculatrice : Afrilog"
-msgstr ""
+msgstr "Hesap Makinesi: Afrilog"
 
 #: templates/dashboard/calculator.html:17
 #: templates/dashboard/calculator.html:25
 #: templates/dashboard/partials/sidebar.html:259
 msgid "Calculatrice"
-msgstr ""
+msgstr "Hesap Makinesi"
 
 #: templates/dashboard/calculator.html:39
 msgid "Longueur (m)"
-msgstr ""
+msgstr "Uzunluk (m)"
 
 #: templates/dashboard/calculator.html:43
 msgid "Largeur (m)"
-msgstr ""
+msgstr "Genişlik (m)"
 
 #: templates/dashboard/calculator.html:47
 msgid "Hauteur (m)"
-msgstr ""
+msgstr "Yükseklik (m)"
 
 #: templates/dashboard/calculator.html:51
 msgid "Type de transport"
-msgstr ""
+msgstr "Taşımacılık türü"
 
 #: templates/dashboard/calculator.html:53
 msgid "Transport aérien"
-msgstr ""
+msgstr "Hava taşımacılığı"
 
 #: templates/dashboard/calculator.html:54
 msgid "Transport maritime"
-msgstr ""
+msgstr "Deniz taşımacılığı"
 
-#: templates/dashboard/dashboard.html:41
+#: templates/dashboard/dashboard.html:47
 msgid "MyAfrilog : Dashboard"
-msgstr ""
+msgstr "MyAfrilog: Gösterge Paneli"
 
 #: templates/dashboard/jobs_listing.html:2
 msgid "Nouvelles offres d'emploi : Afrilog"
-msgstr ""
+msgstr "Yeni iş ilanları: Afrilog"
 
 #: templates/dashboard/jobs_listing.html:20
 msgid "Nouvelles offres"
-msgstr ""
+msgstr "Yeni teklifler"
 
 #: templates/dashboard/jobs_listing.html:28
 msgid "Nouvelles offres d'emploi"
-msgstr ""
+msgstr "Yeni iş ilanları"
 
 #: templates/dashboard/@support_team/invoices.html:43
 #: templates/dashboard/@support_team/previous_created_jobs.html:39
@@ -1013,80 +1032,80 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:38
 #: templates/dashboard/jobs_listing.html:35 templates/views/invoices.html:43
 msgid "ID"
-msgstr ""
+msgstr "Kimlik"
 
 #: templates/dashboard/@support_team/previous_created_jobs.html:41
 #: templates/dashboard/@support_team/tasks.html:40
 #: templates/dashboard/jobs_listing.html:37
 msgid "Desc"
-msgstr ""
+msgstr "Açıklama"
 
 #: templates/dashboard/jobs_listing.html:55
 msgid "postuler"
-msgstr ""
+msgstr "başvur"
 
 #: templates/dashboard/customers/inbox.html:4
 #: templates/dashboard/new_messages.html:2
 msgid "Boîte de réception : Afrilog"
-msgstr ""
+msgstr "Gelen Kutusu: Afrilog"
 
 #: templates/dashboard/customers/inbox.html:22
 #: templates/dashboard/new_messages.html:19
 #: templates/dashboard/new_messages.html:27
 msgid "Boîte de réception"
-msgstr ""
+msgstr "Gelen Kutusu"
 
 #: templates/dashboard/sent_messages.html:2
 msgid "Messages envoyés : Afrilog"
-msgstr ""
+msgstr "Gönderilen Mesajlar: Afrilog"
 
 #: templates/dashboard/sent_messages.html:19
 #: templates/dashboard/sent_messages.html:27
 msgid "Messages envoyés"
-msgstr ""
+msgstr "Gönderilen Mesajlar"
 
 #: templates/dashboard/partials/sidebar.html:267
 #: templates/dashboard/settings.html:6 templates/dashboard/settings.html:9
 #: templates/dashboard/settings.html:27 templates/dashboard/settings.html:35
 msgid "Paramètres"
-msgstr ""
+msgstr "Ayarlar"
 
 #: templates/dashboard/settings.html:72
 msgid "Nom d'utilisateur"
-msgstr ""
+msgstr "Kullanıcı Adı"
 
 #: templates/dashboard/settings.html:99
 msgid "Adresse Maison"
-msgstr ""
+msgstr "Ev Adresi"
 
 #: templates/dashboard/user_home.html:2
 msgid "MyAfrilog : Accueil"
-msgstr ""
+msgstr "MyAfrilog: Anasayfa"
 
 #: templates/dashboard/@support_team/ads.html:2
 msgid "Campagnes pub : Afrilog"
-msgstr ""
+msgstr "Reklam Kampanyaları: Afrilog"
 
 #: templates/dashboard/@support_team/ads.html:14
 #: templates/dashboard/@support_team/ads.html:20
 #: templates/dashboard/partials/sidebar.html:169
 msgid "Ads"
-msgstr ""
+msgstr "Reklamlar"
 
 #: templates/dashboard/@support_team/ads.html:25
 msgid "Créer une nouvelle campagnes"
-msgstr ""
+msgstr "Yeni bir kampanya oluştur"
 
 #: templates/dashboard/@support_team/ads.html:28
 msgid "Trier les campagnes"
-msgstr ""
+msgstr "Kampanyaları sırala"
 
 #: templates/dashboard/@support_team/ads.html:40
 #: templates/dashboard/@support_team/ads.html:92
 #: templates/dashboard/@support_team/ads.html:149
 #: templates/dashboard/@support_team/ads.html:216
 msgid "Débute"
-msgstr ""
+msgstr "Başlangıç"
 
 #: templates/dashboard/@support_team/ads.html:41
 #: templates/dashboard/@support_team/ads.html:97
@@ -1094,21 +1113,21 @@ msgstr ""
 #: templates/dashboard/@support_team/ads.html:220
 #: templates/dashboard/@support_team/events.html:48
 msgid "Termine à"
-msgstr ""
+msgstr "Bitiş"
 
 #: templates/dashboard/@support_team/ads.html:42
 #: templates/dashboard/@support_team/ads.html:101
 #: templates/dashboard/@support_team/ads.html:157
 #: templates/dashboard/@support_team/ads.html:224
 msgid "Budget Min"
-msgstr ""
+msgstr "Minimum Bütçe"
 
 #: templates/dashboard/@support_team/ads.html:43
 #: templates/dashboard/@support_team/ads.html:105
 #: templates/dashboard/@support_team/ads.html:161
 #: templates/dashboard/@support_team/ads.html:228
 msgid "Budget Max"
-msgstr ""
+msgstr "Maksimum Bütçe"
 
 #: templates/dashboard/@support_team/ads.html:44
 #: templates/dashboard/@support_team/applicants_list.html:35
@@ -1124,7 +1143,7 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:42
 #: templates/dashboard/customers/previous_quotes.html:58
 msgid "Options"
-msgstr ""
+msgstr "Seçenekler"
 
 #: templates/dashboard/@support_team/ads.html:57
 #: templates/dashboard/@support_team/invoices.html:62
@@ -1132,7 +1151,7 @@ msgstr ""
 #: templates/dashboard/customers/previous_purchase_requests.html:59
 #: templates/dashboard/customers/previous_quotes.html:63
 msgid "Voir les détails"
-msgstr ""
+msgstr "Detayları Görüntüle"
 
 #: templates/dashboard/@support_team/ads.html:60
 #: templates/dashboard/@support_team/invoices.html:65
@@ -1142,7 +1161,7 @@ msgstr ""
 #: templates/dashboard/@support_team/tasks.html:66
 #: templates/dashboard/customers/previous_quotes.html:68
 msgid "Modifier"
-msgstr ""
+msgstr "Düzenle"
 
 #: templates/dashboard/@support_team/ads.html:63
 #: templates/dashboard/@support_team/applicants_list.html:61
@@ -1155,186 +1174,186 @@ msgstr ""
 #: templates/dashboard/customers/previous_purchase_requests.html:61
 #: templates/dashboard/customers/previous_quotes.html:73
 msgid "Supprimer"
-msgstr ""
+msgstr "Sil"
 
 #: templates/dashboard/@support_team/ads.html:73
 msgid "Détails de la campagne"
-msgstr ""
+msgstr "Kampanya Detayları"
 
 #: templates/dashboard/@support_team/ads.html:88
 #: templates/dashboard/@support_team/ads.html:145
 #: templates/dashboard/@support_team/ads.html:212
 msgid "Objectifs"
-msgstr ""
+msgstr "Hedefler"
 
 #: templates/dashboard/@support_team/ads.html:109
 #: templates/dashboard/@support_team/ads.html:165
 #: templates/dashboard/@support_team/ads.html:232
 msgid "Dette"
-msgstr ""
+msgstr "Borç"
 
 #: templates/dashboard/@support_team/ads.html:114
 msgid "Temps restant"
-msgstr ""
+msgstr "Kalan Süre"
 
 #: templates/dashboard/@support_team/ads.html:129
 msgid "Modifier les détails de la campagne"
-msgstr ""
+msgstr "Kampanya Detaylarını Düzenle"
 
 #: templates/dashboard/@support_team/ads.html:173
 msgid "Sauvegarder"
-msgstr ""
+msgstr "Kaydet"
 
 #: templates/dashboard/@support_team/ads.html:196
 #: templates/dashboard/@support_team/empty/no_Ads.html:12
 msgid "Créer une nouvelle campagne"
-msgstr ""
+msgstr "Yeni bir kampanya oluştur"
 
 #: templates/dashboard/@support_team/ads.html:205
 msgid "Campagne N°1"
-msgstr ""
+msgstr "Kampanya N°1"
 
 #: templates/dashboard/@support_team/ads.html:209
 msgid "Entrez la description de la campagne..."
-msgstr ""
+msgstr "Kampanya açıklamasını girin..."
 
 #: templates/dashboard/@support_team/ads.html:213
 msgid "Entrez les objectifs de la campagne..."
-msgstr ""
+msgstr "Kampanya hedeflerini girin..."
 
 #: templates/dashboard/@support_team/applicant_desc.html:6
 #: templates/dashboard/@support_team/quote_desc.html:6
 msgid " - Afrilog"
-msgstr ""
+msgstr " - Afrilog"
 
 #: templates/dashboard/@support_team/applicants_list.html:4
 msgid "Applications Récentes : Afrilog"
-msgstr ""
+msgstr "Son Başvurular: Afrilog"
 
 #: templates/dashboard/@support_team/applicants_list.html:7
 msgid "Applications Récentes"
-msgstr ""
+msgstr "Son Başvurular"
 
 #: templates/dashboard/@support_team/applicants_list.html:12
 msgid "Sélectionner un Poste"
-msgstr ""
+msgstr "Bir Pozisyon Seçin"
 
 #: templates/dashboard/@support_team/applicants_list.html:14
 msgid "Choisir un Poste"
-msgstr ""
+msgstr "Bir Pozisyon Seçin"
 
 #: templates/dashboard/@support_team/applicants_list.html:31
 msgid "Nom du Candidat"
-msgstr ""
+msgstr "Aday Adı"
 
 #: templates/dashboard/@support_team/applicants_list.html:33
 #: templates/dashboard/@support_team/applicants_list.html:91
 msgid "Localisation"
-msgstr ""
+msgstr "Konum"
 
 #: templates/dashboard/@support_team/applicants_list.html:34
 msgid "Date de Candidature"
-msgstr ""
+msgstr "Başvuru Tarihi"
 
 #: templates/dashboard/@support_team/applicants_list.html:54
 #: templates/dashboard/@support_team/employees_listing.html:68
-#: templates/main/cgu.html:164
+#: templates/main/cgu.html:148
 msgid "Voir plus"
-msgstr ""
+msgstr "Daha Fazla Gör"
 
 #: templates/dashboard/@support_team/applicants_list.html:107
 msgid "Accepter"
-msgstr ""
+msgstr "Kabul Et"
 
 #: templates/dashboard/@support_team/applicants_list.html:110
 msgid "Rejeter"
-msgstr ""
+msgstr "Reddet"
 
 #: templates/dashboard/@support_team/applicants_list.html:114
 msgid "Imprimer fichier"
-msgstr ""
+msgstr "Dosyayı Yazdır"
 
 #: templates/dashboard/@support_team/authorizations_listing.html:6
 msgid "Procurations récentes - Afrilog"
-msgstr ""
+msgstr "Son Yetkilendirmeler - Afrilog"
 
 #: templates/dashboard/@support_team/calendar.html:3
 msgid "Calendrier : Afrilog"
-msgstr ""
+msgstr "Takvim: Afrilog"
 
 #: templates/dashboard/@support_team/calendar.html:17
 #: templates/dashboard/@support_team/calendar.html:22
 #: templates/dashboard/partials/sidebar.html:35
 msgid "Calendrier"
-msgstr ""
+msgstr "Takvim"
 
 #: templates/dashboard/@support_team/employees_listing.html:2
 msgid "Table des employés : Afrilog"
-msgstr ""
+msgstr "Çalışanlar Tablosu: Afrilog"
 
 #: templates/dashboard/@support_team/employees_listing.html:16
 #: templates/dashboard/@support_team/employees_listing.html:21
 #: templates/dashboard/partials/sidebar.html:238
 msgid "Table des employés"
-msgstr ""
+msgstr "Çalışanlar Tablosu"
 
 #: templates/dashboard/@support_team/employees_listing.html:28
 msgid "Nom & Prénom"
-msgstr ""
+msgstr "Ad & Soyad"
 
 #: templates/dashboard/@support_team/employees_listing.html:30
 msgid "Matricule/Identifiant"
-msgstr ""
+msgstr "Sicil/Numara"
 
 #: templates/dashboard/@support_team/employees_listing.html:31
 msgid "Depuis"
-msgstr ""
+msgstr "Başlangıç"
 
 #: templates/dashboard/@support_team/employees_listing.html:118
 msgid "Imprimer carte"
-msgstr ""
+msgstr "Kartı Yazdır"
 
 #: templates/dashboard/@support_team/events.html:3
 msgid "Réunions : Afrilog"
-msgstr ""
+msgstr "Toplantılar: Afrilog"
 
 #: templates/dashboard/@support_team/events.html:17
 #: templates/dashboard/@support_team/events.html:22
 #: templates/dashboard/partials/sidebar.html:158
 msgid "Meets"
-msgstr ""
+msgstr "Toplantılar"
 
 #: templates/dashboard/@support_team/events.html:33
 msgid "Ajouter un événement"
-msgstr ""
+msgstr "Etkinlik Ekle"
 
 #: templates/dashboard/@support_team/events.html:44
 msgid "Commence à"
-msgstr ""
+msgstr "Başlama"
 
 #: templates/dashboard/@support_team/finance_reports.html:4
 msgid "Rapport financier : Afrilog"
-msgstr ""
+msgstr "Finansal Rapor: Afrilog"
 
 #: templates/dashboard/@support_team/finance_reports.html:20
 #: templates/dashboard/@support_team/marketplace.html:20
 msgid "Rapports"
-msgstr ""
+msgstr "Raporlar"
 
 #: templates/dashboard/@support_team/finance_reports.html:23
 msgid "Rapport financier"
-msgstr ""
+msgstr "Finansal Rapor"
 
 #: templates/dashboard/@support_team/invoices.html:3
 msgid "Factures : Afrilog"
-msgstr ""
+msgstr "Faturalar: Afrilog"
 
 #: templates/dashboard/@support_team/invoices.html:17
 #: templates/dashboard/@support_team/invoices.html:23
 #: templates/dashboard/partials/sidebar.html:116
 #: templates/views/invoices.html:7
 msgid "Factures"
-msgstr ""
+msgstr "Faturalar"
 
 #: templates/dashboard/@support_team/invoices.html:45
 #: templates/dashboard/@support_team/invoices.html:100
@@ -1342,7 +1361,7 @@ msgstr ""
 #: templates/dashboard/@support_team/invoices.html:176
 #: templates/views/invoices.html:45
 msgid "Montant"
-msgstr ""
+msgstr "Tutar"
 
 #: templates/dashboard/@support_team/invoices.html:58
 #: templates/dashboard/@support_team/new_purchases.html:34
@@ -1352,894 +1371,1014 @@ msgstr ""
 #: templates/dashboard/customers/previous_purchase_requests.html:56
 #: templates/dashboard/customers/previous_quotes.html:39
 msgid "Actions"
-msgstr ""
+msgstr "Eylemler"
 
 #: templates/dashboard/@support_team/invoices.html:80
 msgid "Détails de la facture"
-msgstr ""
+msgstr "Fatura Detayları"
 
 #: templates/dashboard/@support_team/invoices.html:90
 msgid "Titre non spécifié"
-msgstr ""
+msgstr "Başlık Belirtilmemiş"
 
 #: templates/dashboard/@support_team/invoices.html:94
 msgid "Description non disponible"
-msgstr ""
+msgstr "Açıklama Mevcut Değil"
 
 #: templates/dashboard/@support_team/invoices.html:101
 msgid "Montant non spécifié"
-msgstr ""
+msgstr "Tutar Belirtilmemiş"
 
 #: templates/dashboard/@support_team/invoices.html:116
 msgid "Modifier la facture"
-msgstr ""
+msgstr "Faturayı Düzenle"
 
 #: templates/dashboard/@support_team/invoices.html:126
 msgid "Veuillez entrer le titre de la facture"
-msgstr ""
+msgstr "Lütfen faturanın başlığını girin"
 
 #: templates/dashboard/@support_team/invoices.html:135
 msgid "Veuillez entrer le montant de la facture"
-msgstr ""
+msgstr "Lütfen faturanın tutarını girin"
 
 #: templates/dashboard/@support_team/invoices.html:136
 msgid "Veuillez entrer un montant valide"
-msgstr ""
+msgstr "Lütfen geçerli bir tutar girin"
 
 #: templates/dashboard/@support_team/invoices.html:159
 msgid "Créer une nouvelle facture"
-msgstr ""
+msgstr "Yeni bir fatura oluştur"
 
 #: templates/dashboard/@support_team/invoices.html:168
 msgid "Nouveau moniteur"
-msgstr ""
+msgstr "Yeni monitör"
 
 #: templates/dashboard/@support_team/invoices.html:173
 msgid "Ajouter une description supplémentaire"
-msgstr ""
+msgstr "Ek açıklama ekle"
 
 #: templates/dashboard/@support_team/job_details.html:6
 msgid "- Afrilog"
-msgstr ""
+msgstr "- Afrilog"
 
 #: templates/dashboard/@support_team/marketplace.html:4
 msgid "Marketplace : Afrilog"
-msgstr ""
+msgstr "Pazar Yeri: Afrilog"
 
 #: templates/dashboard/@support_team/marketplace.html:23
 msgid "Marketplace"
-msgstr ""
+msgstr "Pazar Yeri"
 
 #: templates/dashboard/@support_team/my_task.html:2
 msgid "Mes tâches : Afrilog"
-msgstr ""
+msgstr "Görevlerim: Afrilog"
 
 #: templates/dashboard/@support_team/my_task.html:14
 #: templates/dashboard/@support_team/my_task.html:20
 #: templates/dashboard/partials/sidebar.html:46
 msgid "Mes tâches"
-msgstr ""
+msgstr "Görevlerim"
 
 #: templates/dashboard/@support_team/my_task.html:40
 #: templates/dashboard/@support_team/new_purchases.html:33
 #: templates/dashboard/@support_team/tasks.html:41
 #: templates/dashboard/customers/previous_quotes.html:38
 msgid "Statut"
-msgstr ""
+msgstr "Durum"
 
 #: templates/dashboard/@support_team/my_task.html:42
 #: templates/dashboard/@support_team/tasks.html:111
 #: templates/dashboard/@support_team/tasks.html:160
 msgid "Assigné à"
-msgstr ""
+msgstr "Atanan"
 
 #: templates/dashboard/@support_team/new_purchases.html:3
 msgid "Nouveaux achats : Afrilog"
-msgstr ""
+msgstr "Yeni Satın Alımlar: Afrilog"
 
 #: templates/dashboard/@support_team/new_purchases.html:16
 msgid "Nouveaux achats"
-msgstr ""
+msgstr "Yeni Satın Alımlar"
 
 #: templates/dashboard/@support_team/new_purchases.html:22
 msgid "Nouveaux Achats"
-msgstr ""
+msgstr "Yeni Alımlar"
 
 #: templates/dashboard/@support_team/new_purchases.html:31
 msgid "Auteur"
-msgstr ""
+msgstr "Yazar"
 
 #: templates/dashboard/@support_team/new_purchases.html:43
 msgid "Répondu"
-msgstr ""
+msgstr "Yanıtlandı"
 
 #: templates/dashboard/@support_team/new_purchases.html:43
 msgid "En attente"
-msgstr ""
+msgstr "Beklemede"
 
 #: templates/dashboard/@support_team/new_purchases.html:50
 msgid "Voir détails"
-msgstr ""
+msgstr "Detayları Görüntüle"
 
 #: templates/dashboard/@support_team/new_purchases.html:51
 msgid "Répondre"
-msgstr ""
+msgstr "Yanıtla"
 
 #: templates/dashboard/@support_team/new_purchases.html:67
 msgid "Détails de l'achat"
-msgstr ""
+msgstr "Satın Alım Detayları"
 
 #: templates/dashboard/@support_team/new_purchases.html:80
 #: templates/dashboard/customers/previous_purchase_requests.html:157
 msgid "Adresse de l'auteur"
-msgstr ""
+msgstr "Yazarın Adresi"
 
 #: templates/dashboard/@support_team/new_purchases.html:90
 #: templates/dashboard/customers/previous_purchase_requests.html:147
 msgid "Adresse e-mail de l'auteur"
-msgstr ""
+msgstr "Yazarın E-posta Adresi"
 
 #: templates/dashboard/@support_team/new_purchases.html:94
 msgid "Dimensions du produit"
-msgstr ""
+msgstr "Ürünün Boyutları"
 
 #: templates/dashboard/@support_team/new_purchases.html:120
 msgid "Répondre à"
-msgstr ""
+msgstr "Yanıtla"
 
 #: templates/dashboard/@support_team/new_purchases.html:131
+#: templates/main/calculate_air_freight.html:35
+#: templates/main/calculate_sea_freight.html:35
 msgid "De"
-msgstr ""
+msgstr "Kimden"
 
 #: templates/dashboard/@support_team/new_purchases.html:135
+#: templates/main/calculate_air_freight.html:46
+#: templates/main/calculate_sea_freight.html:46
 msgid "A"
-msgstr ""
+msgstr "Kime"
 
 #: templates/dashboard/@support_team/new_purchases.html:139
 #: templates/main/contact.html:59
 msgid "Message"
-msgstr ""
+msgstr "Mesaj"
 
 #: templates/dashboard/@support_team/new_purchases.html:140
 msgid "Ecrire quelque chose..."
-msgstr ""
+msgstr "Bir şeyler yaz..."
 
 #: templates/dashboard/@support_team/new_purchases.html:143
 msgid "Télécharger des fichiers"
-msgstr ""
+msgstr "Dosyaları Yükle"
 
 #: templates/dashboard/@support_team/new_purchases.html:147
 msgid "Liens utiles"
-msgstr ""
+msgstr "Faydalı Bağlantılar"
 
 #: templates/dashboard/@support_team/previous_created_jobs.html:4
 msgid "Offres publiées : Afrilog"
-msgstr ""
+msgstr "Yayınlanan Teklifler: Afrilog"
 
 #: templates/dashboard/@support_team/previous_created_jobs.html:24
 #: templates/dashboard/@support_team/previous_created_jobs.html:32
 msgid "Offres publiées"
-msgstr ""
+msgstr "Yayınlanan Teklifler"
 
 #: templates/dashboard/@support_team/previous_notes.html:4
 msgid "Notes récentes : Afrilog"
-msgstr ""
+msgstr "Son Notlar: Afrilog"
 
 #: templates/dashboard/@support_team/previous_notes.html:23
 #: templates/dashboard/@support_team/previous_notes.html:31
 #: templates/dashboard/partials/sidebar.html:203
 msgid "Notes récentes"
-msgstr ""
+msgstr "Son Notlar"
 
 #: templates/dashboard/@support_team/previous_notes.html:41
 msgid "Type"
-msgstr ""
+msgstr "Tür"
 
 #: templates/dashboard/@support_team/previous_notes.html:90
 msgid "Modifier la note"
-msgstr ""
+msgstr "Notu Düzenle"
 
 #: templates/dashboard/@support_team/previous_notes.html:98
 msgid "Veuillez donner un titre à votre note"
-msgstr ""
+msgstr "Lütfen notunuza bir başlık verin"
 
 #: templates/dashboard/@support_team/previous_notes.html:108
 msgid "Avertissement"
-msgstr ""
+msgstr "Uyarı"
 
 #: templates/dashboard/@support_team/previous_notes.html:109
 msgid "Information"
-msgstr ""
+msgstr "Bilgi"
 
 #: templates/dashboard/@support_team/previous_notes.html:115
 msgid "Annuler"
-msgstr ""
+msgstr "İptal"
 
 #: templates/dashboard/@support_team/previous_notes.html:117
 msgid "Mettre à jour"
-msgstr ""
+msgstr "Güncelle"
 
 #: templates/dashboard/@support_team/quotes_list.html:4
 msgid "Demandes de procurations : Afrilog"
-msgstr ""
+msgstr "Prokürasyon Talepleri: Afrilog"
 
 #: templates/dashboard/@support_team/quotes_list.html:18
 msgid "Demandes de procurations"
-msgstr ""
+msgstr "Prokürasyon Talepleri"
 
 #: templates/dashboard/@support_team/quotes_list.html:24
 msgid "Demandes de devis"
-msgstr ""
+msgstr "Teklif Talepleri"
 
 #: templates/dashboard/@support_team/quotes_list.html:32
 #: templates/dashboard/@support_team/quotes_list.html:81
 #: templates/dashboard/@support_team/quotes_list.html:132
 #: templates/dashboard/customers/previous_quotes.html:176
 msgid "Nom du client"
-msgstr ""
+msgstr "Müşteri Adı"
 
 #: templates/dashboard/@support_team/quotes_list.html:33
 #: templates/dashboard/@support_team/quotes_list.html:95
 #: templates/dashboard/@support_team/quotes_list.html:144
 msgid "Titre de la compagnie de transport"
-msgstr ""
+msgstr "Taşıma Şirketi Başlığı"
 
 #: templates/dashboard/@support_team/quotes_list.html:68
 msgid "Détails de la demande de devis"
-msgstr ""
+msgstr "Teklif Talebinin Detayları"
 
 #: templates/dashboard/@support_team/quotes_list.html:77
 #: templates/dashboard/@support_team/quotes_list.html:128
 #: templates/dashboard/customers/previous_quotes.html:172
 msgid "Prénom du client"
-msgstr ""
+msgstr "Müşterinin Adı"
 
 #: templates/dashboard/@support_team/quotes_list.html:85
 #: templates/dashboard/@support_team/quotes_list.html:136
 msgid "Numéro de téléphone du client"
-msgstr ""
+msgstr "Müşterinin Telefon Numarası"
 
 #: templates/dashboard/@support_team/quotes_list.html:89
 #: templates/dashboard/@support_team/quotes_list.html:140
 msgid "Adresse e-mail du client"
-msgstr ""
+msgstr "Müşterinin E-posta Adresi"
 
 #: templates/dashboard/@support_team/quotes_list.html:99
 #: templates/dashboard/@support_team/quotes_list.html:148
 msgid "Identifiant des documents de chargement"
-msgstr ""
+msgstr "Yükleme Belgeleri Kimliği"
 
 #: templates/dashboard/@support_team/quotes_list.html:103
 #: templates/dashboard/@support_team/quotes_list.html:152
 msgid "Frais de service"
-msgstr ""
+msgstr "Hizmet Ücreti"
 
 #: templates/dashboard/@support_team/quotes_list.html:120
 msgid "Modifier la demande de devis"
-msgstr ""
+msgstr "Teklif Talebini Düzenle"
 
 #: templates/dashboard/@support_team/tasks.html:3
 msgid "Tâches : Afrilog"
-msgstr ""
+msgstr "Görevler: Afrilog"
 
 #: templates/dashboard/@support_team/tasks.html:15
 #: templates/dashboard/@support_team/tasks.html:19
 #: templates/dashboard/partials/sidebar.html:150
 msgid "Tâches"
-msgstr ""
+msgstr "Görevler"
 
 #: templates/dashboard/@support_team/tasks.html:53
 #: templates/dashboard/customers/previous_quotes.html:52
 msgid "En cours"
-msgstr ""
+msgstr "Devam Ediyor"
 
 #: templates/dashboard/@support_team/tasks.html:55
 msgid "Effectuée"
-msgstr ""
+msgstr "Tamamlandı"
 
 #: templates/dashboard/@support_team/tasks.html:92
 msgid "Ajouter une nouvelle tâche"
-msgstr ""
+msgstr "Yeni Bir Görev Ekle"
 
 #: templates/dashboard/@support_team/tasks.html:102
 msgid "Analyse concurrentielle"
-msgstr ""
+msgstr "Rekabet Analizi"
 
 #: templates/dashboard/@support_team/tasks.html:103
 #: templates/dashboard/@support_team/tasks.html:152
 msgid "Veuillez entrer le titre de la tâche pour continuer"
-msgstr ""
+msgstr "Devam etmek için lütfen görevin başlığını girin"
 
 #: templates/dashboard/@support_team/tasks.html:107
 msgid "Etudier les stratégies mises en place..."
-msgstr ""
+msgstr "Uygulanan stratejileri inceleyin..."
 
 #: templates/dashboard/@support_team/tasks.html:108
 #: templates/dashboard/@support_team/tasks.html:157
 msgid "Veuillez décrire brièvement la tâche pour continuer"
-msgstr ""
+msgstr "Devam etmek için lütfen görevi kısaca açıklayın"
 
 #: templates/dashboard/@support_team/tasks.html:118
 #: templates/dashboard/@support_team/tasks.html:167
 msgid "Aucun agent trouvé"
-msgstr ""
+msgstr "Hiçbir ajan bulunamadı"
 
 #: templates/dashboard/@support_team/tasks.html:121
 #: templates/dashboard/@support_team/tasks.html:170
 msgid "Veuillez assigner cette tâche à un agent pour continuer"
-msgstr ""
+msgstr "Devam etmek için lütfen bu görevi bir ajana atayın"
 
 #: templates/dashboard/@support_team/tasks.html:142
 msgid "Modifier la tâche"
-msgstr ""
+msgstr "Görevi Düzenle"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:2
 msgid "Aucune campagne commencé"
-msgstr ""
+msgstr "Başlatılmış Kampanya Yok"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:3
 msgid "Aucune campagne disponible"
-msgstr ""
+msgstr "Mevcut Kampanya Yok"
 
 #: templates/dashboard/@support_team/empty/no_Ads.html:6
 msgid ""
 "Ici vous pouvez gérer les campagnes publicitaires plus efficacement avec "
 "de puissants outils d'analyse de données"
 msgstr ""
+"Burada güçlü veri analizi araçlarıyla reklam kampanyalarını daha etkili "
+"bir şekilde yönetebilirsiniz"
 
 #: templates/dashboard/@support_team/empty/no_application.html:2
 #: templates/dashboard/@support_team/empty/no_application.html:3
 msgid "Aucune candidature à afficher"
-msgstr ""
+msgstr "Gösterilecek Başvuru Yok"
 
 #: templates/dashboard/@support_team/empty/no_application.html:6
 msgid "Aucune demande d'emploi disponible pour cette offre"
-msgstr ""
+msgstr "Bu pozisyon için mevcut iş başvurusu yok"
 
 #: templates/dashboard/@support_team/empty/no_employee.html:2
 #: templates/dashboard/@support_team/empty/no_employee.html:3
 msgid "Aucun employé à afficher"
-msgstr ""
+msgstr "Gösterilecek Çalışan Yok"
 
 #: templates/dashboard/@support_team/empty/no_employee.html:6
 msgid "Les employés vont s'afficher automatiquement ici"
-msgstr ""
+msgstr "Çalışanlar burada otomatik olarak görüntülenecektir"
 
 #: templates/dashboard/@support_team/empty/no_job.html:6
 msgid "Aucun emploi trouvé - Afrilog"
-msgstr ""
+msgstr "Hiçbir İş Bulunamadı - Afrilog"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:2
 msgid "Aucune achat effectué"
-msgstr ""
+msgstr "Yapılmış Satın Alma Yok"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:3
 #: templates/dashboard/customers/empty/no_purchase.html:2
 msgid "Aucun achat effectué"
-msgstr ""
+msgstr "Yapılmış Satın Alma Yok"
 
 #: templates/dashboard/@support_team/empty/no_purchase.html:6
 msgid "Aucun achat n'a été effectué pour le moment"
-msgstr ""
+msgstr "Şu ana kadar yapılmış bir satın alma yok"
 
 #: templates/dashboard/@support_team/empty/no_quote.html:3
 #: templates/dashboard/customers/empty/no_quote.html:3
 msgid "Aucune demande de procuration"
-msgstr ""
+msgstr "Vekalet Talebi Yok"
 
 #: templates/dashboard/@support_team/empty/no_quote.html:6
 #: templates/dashboard/customers/empty/no_quote.html:6
 msgid "Aucune demande de procuration effectuée pour le moment"
-msgstr ""
+msgstr "Şu anda yapılmış vekalet talebi yok"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:2
 msgid "Aucune tâche assignée"
-msgstr ""
+msgstr "Atanmış Görev Yok"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:3
 msgid "Aucune tâche ne vous a été assignée"
-msgstr ""
+msgstr "Size atanmış görev yok"
 
 #: templates/dashboard/@support_team/empty/no_tasks.html:6
 msgid "Ici vous pouvez gérer et organiser les tâches qu'on vous aura assigné."
-msgstr ""
+msgstr "Burada size atanan görevleri yönetebilir ve düzenleyebilirsiniz."
 
 #: templates/dashboard/customers/live_tracking.html:4
 msgid "Suivre mon colis : Afrilog"
-msgstr ""
+msgstr "Paketimi Takip Et: Afrilog"
 
 #: templates/dashboard/customers/live_tracking.html:23
 #: templates/dashboard/customers/live_tracking.html:30
 msgid "Suivre mon colis"
-msgstr ""
+msgstr "Paketimi Takip Et"
 
 #: templates/dashboard/customers/live_tracking.html:36
-#: templates/main/pricing.html:308 templates/main/sea.html:144
+#: templates/main/pricing.html:308 templates/main/sea.html:122
 msgid "Port de départ"
-msgstr ""
+msgstr "Çıkış Limanı"
 
 #: templates/dashboard/customers/live_tracking.html:37
 msgid "Entrer le port de départ"
-msgstr ""
+msgstr "Çıkış Limanını Girin"
 
 #: templates/dashboard/customers/live_tracking.html:42
 msgid "Port de destination"
-msgstr ""
+msgstr "Varış Limanı"
 
 #: templates/dashboard/customers/live_tracking.html:43
 msgid "Entrer le port de destination"
-msgstr ""
+msgstr "Varış Limanını Girin"
 
 #: templates/dashboard/customers/live_tracking.html:47
 msgid "Sélectionner un achat"
-msgstr ""
+msgstr "Bir Satın Alma Seçin"
 
 #: templates/dashboard/customers/live_tracking.html:48
 msgid "Tapez pour rechercher"
-msgstr ""
+msgstr "Aramak İçin Yazın"
 
 #: templates/dashboard/customers/live_tracking.html:50
 msgid "Aucun achat trouvé"
-msgstr ""
+msgstr "Hiçbir satın alma bulunamadı"
 
 #: templates/dashboard/customers/live_tracking.html:73
 msgid "Suivre"
-msgstr ""
+msgstr "Takip Et"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:2
 msgid "Commandes récentes : Afrilog"
-msgstr ""
+msgstr "Son Siparişler: Afrilog"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:19
 #: templates/dashboard/customers/previous_purchase_requests.html:26
 msgid "Commandes récentes"
-msgstr ""
+msgstr "Son Siparişler"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:34
 #: templates/dashboard/customers/previous_purchase_requests.html:115
 msgid "Token"
-msgstr ""
+msgstr "Jeton"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:35
 #: templates/dashboard/customers/previous_purchase_requests.html:121
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:36
 #: templates/dashboard/customers/previous_quotes.html:37
 #: templates/dashboard/customers/previous_quotes.html:136
 msgid "Date"
-msgstr ""
+msgstr "Tarih"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:47
 msgid "en cours..."
-msgstr ""
+msgstr "devam ediyor..."
 
 #: templates/dashboard/customers/previous_purchase_requests.html:49
 msgid "reçu..."
-msgstr ""
+msgstr "alındı..."
 
 #: templates/dashboard/customers/previous_purchase_requests.html:80
 msgid "Détails de la commande"
-msgstr ""
+msgstr "Sipariş Detayları"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:125
 msgid "Date de création"
-msgstr ""
+msgstr "Oluşturulma Tarihi"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:137
 msgid "Prénom de l'auteur"
-msgstr ""
+msgstr "Yazarın Adı"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:141
 msgid "Nom de l'auteur"
-msgstr ""
+msgstr "Yazarın Soyadı"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:151
 msgid "Numéro de téléphone de l'auteur"
-msgstr ""
+msgstr "Yazarın Telefon Numarası"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:161
 msgid "Pays de l'auteur"
-msgstr ""
+msgstr "Yazarın Ülkesi"
 
 #: templates/dashboard/customers/previous_purchase_requests.html:167
 msgid "QR Code"
-msgstr ""
+msgstr "QR Kodu"
 
 #: templates/dashboard/customers/previous_quotes.html:2
 msgid "Demandes récentes : Afrilog"
-msgstr ""
+msgstr "Son Talepler: Afrilog"
 
 #: templates/dashboard/customers/previous_quotes.html:16
 msgid "Demandes"
-msgstr ""
+msgstr "Talepler"
 
 #: templates/dashboard/customers/previous_quotes.html:19
 #: templates/dashboard/customers/previous_quotes.html:27
 #: templates/dashboard/partials/sidebar.html:65
 msgid "Demandes récentes"
-msgstr ""
+msgstr "Son Talepler"
 
 #: templates/dashboard/customers/previous_quotes.html:35
 msgid "Client"
-msgstr ""
+msgstr "Müşteri"
 
 #: templates/dashboard/customers/previous_quotes.html:36
 #: templates/dashboard/customers/previous_quotes.html:114
 #: templates/dashboard/customers/previous_quotes.html:188
 msgid "Lading Number"
-msgstr ""
+msgstr "Yükleme Numarası"
 
 #: templates/dashboard/customers/previous_quotes.html:50
 msgid "Accordé"
-msgstr ""
+msgstr "Onaylandı"
 
 #: templates/dashboard/customers/previous_quotes.html:85
 msgid "Details de la demande"
-msgstr ""
+msgstr "Talebin Detayları"
 
 #: templates/dashboard/customers/previous_quotes.html:94
 msgid "Nom complet du client"
-msgstr ""
+msgstr "Müşterinin Tam Adı"
 
 #: templates/dashboard/customers/previous_quotes.html:100
 #: templates/dashboard/customers/previous_quotes.html:180
 msgid "Numéro de Téléphone"
-msgstr ""
+msgstr "Telefon Numarası"
 
 #: templates/dashboard/customers/previous_quotes.html:108
 #: templates/dashboard/customers/previous_quotes.html:184
 msgid "Pays"
-msgstr ""
+msgstr "Ülke"
 
 #: templates/dashboard/customers/previous_quotes.html:122
 msgid "Nom complet du transitaire"
-msgstr ""
+msgstr "Taşıma Acentesinin Tam Adı"
 
 #: templates/dashboard/customers/previous_quotes.html:128
 msgid "Shipping Company"
-msgstr ""
+msgstr "Nakliye Şirketi"
 
 #: templates/dashboard/customers/previous_quotes.html:142
 msgid "Signature"
-msgstr ""
+msgstr "İmza"
 
 #: templates/dashboard/customers/previous_quotes.html:196
 msgid "Nom du transitaire"
-msgstr ""
+msgstr "Taşıma Acentesinin Adı"
 
 #: templates/dashboard/customers/previous_quotes.html:204
 msgid "Signature du client"
-msgstr ""
+msgstr "Müşterinin İmzası"
 
 #: templates/dashboard/customers/previous_quotes.html:208
 msgid "Carte d'identité du client"
-msgstr ""
+msgstr "Müşterinin Kimlik Kartı"
 
 #: templates/dashboard/customers/saved_jobs_listing.html:6
 msgid "Postes Sauvegardés - Afrilog"
-msgstr ""
+msgstr "Kaydedilen İşler - Afrilog"
 
 #: templates/dashboard/customers/tracked_goods_listing.html:6
 msgid "Liste des colis que vous suivez en temps réel - Afrilog"
-msgstr ""
+msgstr "Gerçek Zamanlı Olarak Takip Ettiğiniz Paketlerin Listesi - Afrilog"
 
 #: templates/dashboard/customers/empty/no_application.html:6
 msgid "Aucune procuration octroyée - Afrilog"
-msgstr ""
+msgstr "Verilmiş Vekalet Yok - Afrilog"
 
 #: templates/dashboard/customers/empty/no_job.html:6
 msgid "Aucun poste trouvée - Afrilog"
-msgstr ""
+msgstr "Hiçbir Pozisyon Bulunamadı - Afrilog"
 
 #: templates/dashboard/customers/empty/no_purchase.html:3
 msgid "Aucun achat effectué pour le moment"
-msgstr ""
+msgstr "Şu ana kadar yapılmış bir satın alma yok"
 
 #: templates/dashboard/customers/empty/no_purchase.html:6
 msgid "Les achats que vous effectuerez vont tous s'afficher ici"
-msgstr ""
+msgstr "Yapacağınız tüm satın alımlar burada görüntülenecektir"
 
 #: templates/dashboard/customers/empty/no_purchase.html:12
 #: templates/dashboard/customers/empty/no_quote.html:12
 #: templates/includes/footer.html:46
 msgid "Commencer"
-msgstr ""
+msgstr "Başla"
 
 #: templates/dashboard/customers/empty/no_tracked_good.html:6
 msgid "Aucun coli suivi - Afrilog"
-msgstr ""
+msgstr "Takip Edilen Paket Yok - Afrilog"
 
 #: templates/dashboard/empty/no_invoice.html:2
 #: templates/dashboard/empty/no_sent_messages.html:2
 msgid "Aucun email à afficher image"
-msgstr ""
+msgstr "Görüntülenecek e-posta yok"
 
 #: templates/dashboard/empty/no_invoice.html:3
 msgid "Aucune facture à afficher"
-msgstr ""
+msgstr "Görüntülenecek fatura yok"
 
 #: templates/dashboard/empty/no_invoice.html:6
 msgid "Vos factures vont s'afficher ici"
-msgstr ""
+msgstr "Faturalarınız burada görüntülenecek"
 
 #: templates/dashboard/empty/no_job.html:3
 msgid "Aucune offre disponible"
-msgstr ""
+msgstr "Mevcut teklif yok"
 
 #: templates/dashboard/empty/no_job.html:6
 msgid "Aucune offre d'emploi disponible pour le moment"
-msgstr ""
+msgstr "Şu anda mevcut iş teklifi yok"
 
 #: templates/dashboard/empty/no_sent_messages.html:3
 msgid "Aucun message à afficher"
-msgstr ""
+msgstr "Görüntülenecek mesaj yok"
 
 #: templates/dashboard/empty/no_sent_messages.html:6
 msgid "Vos messages vont s'afficher ici"
-msgstr ""
+msgstr "Mesajlarınız burada görüntülenecek"
 
 #: templates/dashboard/empty/no_task.html:2
 msgid "Aucune tâche à afficher image"
-msgstr ""
+msgstr "Görüntülenecek görev yok resim"
 
 #: templates/dashboard/empty/no_task.html:3
 msgid "Aucune tâche à afficher"
-msgstr ""
+msgstr "Görüntülenecek görev yok"
 
 #: templates/dashboard/empty/no_task.html:6
 msgid "Les tâches que vous assignerez seront affichées ici"
-msgstr ""
+msgstr "Atadığınız görevler burada görüntülenecek"
 
 #: templates/dashboard/partials/navigation.html:12
 msgid "Taper quelque chose..."
-msgstr ""
+msgstr "Bir şeyler yazın..."
+
+#: templates/dashboard/partials/navigation.html:19
+msgid "English"
+msgstr "İngilizce"
 
 #: templates/dashboard/partials/navigation.html:20
+msgid "German"
+msgstr "Almanca"
+
+#: templates/dashboard/partials/navigation.html:21
+msgid "French"
+msgstr "Fransızca"
+
+#: templates/dashboard/partials/navigation.html:22
+msgid "Spanish"
+msgstr "İspanyolca"
+
+#: templates/dashboard/partials/navigation.html:23
+msgid "Chinese"
+msgstr "Çince"
+
+#: templates/dashboard/partials/navigation.html:56
 #: templates/dashboard/partials/sidebar.html:276
 msgid "Se déconnecter"
-msgstr ""
+msgstr "Çıkış Yap"
 
 #: templates/dashboard/partials/sidebar.html:27
 msgid "Nouvelle demandes"
-msgstr ""
+msgstr "Yeni Talepler"
 
 #: templates/dashboard/partials/sidebar.html:57
 msgid "Créer une demande"
-msgstr ""
+msgstr "Bir Talep Oluştur"
 
 #: templates/dashboard/partials/sidebar.html:73
 msgid "Mes achats"
-msgstr ""
+msgstr "Satın Alımlarım"
 
 #: templates/dashboard/partials/sidebar.html:82
 msgid "Nouveau achat"
-msgstr ""
+msgstr "Yeni Satın Alma"
 
 #: templates/dashboard/partials/sidebar.html:90
 msgid "Achats récents"
-msgstr ""
+msgstr "Son Satın Alımlar"
 
 #: templates/dashboard/partials/sidebar.html:98
 msgid "Suivre mon produit"
-msgstr ""
+msgstr "Ürünümü Takip Et"
 
 #: templates/dashboard/partials/sidebar.html:132
 msgid "Text"
-msgstr ""
+msgstr "Metin"
 
 #: templates/dashboard/partials/sidebar.html:137
 msgid "Xlsx"
-msgstr ""
+msgstr "Xlsx"
 
 #: templates/dashboard/partials/sidebar.html:180
 msgid "Achats"
-msgstr ""
+msgstr "Satın Alımlar"
 
 #: templates/dashboard/partials/sidebar.html:198
 msgid "Ajouter une note"
-msgstr ""
+msgstr "Bir Not Ekle"
 
 #: templates/dashboard/partials/sidebar.html:228
 msgid "Offres récentes"
-msgstr ""
+msgstr "Son Teklifler"
 
 #: templates/dashboard/partials/sidebar.html:233
 msgid "Applications récentes"
-msgstr ""
+msgstr "Son Başvurular"
 
 #: templates/dashboard/partials/sidebar.html:246
 msgid "Toutes les offres"
-msgstr ""
+msgstr "Tüm Teklifler"
 
 #: templates/errors/403.html:8
 msgid "Vous n'avez pas les droits pour accéder à cette page"
-msgstr ""
+msgstr "Bu sayfaya erişim hakkınız yok"
 
-#: templates/errors/403.html:12 templates/errors/404.html:12
+#: templates/errors/403.html:12 templates/errors/404.html:58
 msgid "Retour"
-msgstr ""
+msgstr "Geri Dön"
 
-#: templates/errors/403.html:15 templates/errors/404.html:15
+#: templates/errors/403.html:15 templates/errors/404.html:61
 msgid "Demander de l'aide"
-msgstr ""
+msgstr "Yardım İste"
 
-#: templates/errors/404.html:6
-msgid "Page Introuvable"
-msgstr ""
+#: templates/errors/404.html:6 templates/main/home.html:5
+msgid "Afrilog, leader dans le domaine du transport et de la logistique"
+msgstr "Afrilog, taşımacılık ve lojistik alanında lider"
 
-#: templates/errors/404.html:8
-msgid "Désolé nous n'avons pas trouvé cette page"
+#: templates/errors/404.html:7 templates/main/home.html:6
+msgid ""
+"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
+"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
+"Marchandises, Commerce, Santé, Défense, Technologie, \n"
+"    Équipement, MSC, Import, Export, Groupage"
 msgstr ""
+"Afrilog, Lojistik, Transit, Taşımacılık, Afrika, Nijer, Avrupa, Asya, \n"
+"    Amerika, Okyanusya, Deniz, Hava, Kara, Konteynerler, Mallar, Ticaret,"
+" Sağlık, Savunma, Teknoloji, \n"
+"    Ekipman, MSC, İthalat, İhracat, Grupaj"
 
-#: templates/includes/footer.html:13 templates/includes/header.html:112
+#: templates/errors/404.html:10 templates/main/home.html:9
+msgid "Afrilog SARL"
+msgstr "Afrilog SARL"
+
+#: templates/errors/404.html:12 templates/main/home.html:11
+msgid "Afrilog: Leader dans le transport et la logistique"
+msgstr "Afrilog: Taşımacılık ve Lojistikte Lider"
+
+#: templates/errors/404.html:51
+msgid "404"
+msgstr "404"
+
+#: templates/errors/404.html:54
+msgid "Désolé nous n'avons pas pu trouver cette page"
+msgstr "Üzgünüz, bu sayfayı bulamadık"
+
+#: templates/errors/404.html:67 templates/main/home.html:47
+msgid "Logistics woman"
+msgstr "Lojistik kadın"
+
+#: templates/includes/footer.html:13
 msgid "A propos"
-msgstr ""
+msgstr "Hakkında"
 
-#: templates/includes/footer.html:16 templates/includes/header.html:109
+#: templates/includes/footer.html:16 templates/includes/header.html:41
 msgid "Tarifs"
-msgstr ""
+msgstr "Ücretler"
 
 #: templates/includes/footer.html:22
 msgid "Produits"
-msgstr ""
+msgstr "Ürünler"
 
 #: templates/includes/footer.html:25
 msgid "MyAfrilog"
-msgstr ""
+msgstr "MyAfrilog"
 
 #: templates/includes/footer.html:28
 msgid "Fret Aérien"
-msgstr ""
+msgstr "Hava Yükü"
 
 #: templates/includes/footer.html:31
 msgid "Fret Maritime"
-msgstr ""
+msgstr "Deniz Yükü"
 
-#: templates/includes/footer.html:34 templates/main/terrestre.html:46
+#: templates/includes/footer.html:34 templates/main/terrestre.html:24
 msgid "Fret Terrestre"
-msgstr ""
+msgstr "Kara Yükü"
 
-#: templates/includes/footer.html:40
+#: templates/includes/footer.html:40 templates/includes/header.html:46
 msgid "Ressources"
-msgstr ""
+msgstr "Kaynaklar"
 
 #: templates/includes/footer.html:49
 msgid "Documentation"
-msgstr ""
+msgstr "Dokümantasyon"
 
 #: templates/includes/footer.html:52
 msgid "Guide Utilisateur"
-msgstr ""
+msgstr "Kullanıcı Kılavuzu"
 
 #: templates/includes/footer.html:58
+#: templates/includes/main/header/resources.html:59
 msgid "Aide"
-msgstr ""
+msgstr "Yardım"
 
 #: templates/includes/footer.html:61
+#: templates/includes/main/header/resources.html:107
 msgid "Service client"
-msgstr ""
+msgstr "Müşteri Hizmetleri"
 
 #: templates/includes/footer.html:64
 msgid "Cookies"
-msgstr ""
+msgstr "Çerezler"
 
 #: templates/includes/footer.html:67
 msgid "License"
-msgstr ""
+msgstr "Lisans"
 
 #: templates/includes/footer.html:70
 msgid "Termes et conditions"
-msgstr ""
+msgstr "Şartlar ve Koşullar"
 
-#: templates/includes/footer.html:73 templates/main/cgu.html:34
+#: templates/includes/footer.html:73 templates/main/cgu.html:18
 msgid "Politique de confidentialité"
-msgstr ""
+msgstr "Gizlilik Politikası"
 
 #: templates/includes/footer.html:84
 msgid "Tous droits réservés"
-msgstr ""
+msgstr "Tüm hakları saklıdır"
 
-#: templates/includes/header.html:21
+#: templates/includes/header.html:10
+msgid "Ouvrir le menu"
+msgstr "Menüyü Aç"
+
+#: templates/includes/header.html:26
 msgid "Partenaires"
-msgstr ""
+msgstr "Ortaklar"
 
-#: templates/includes/header.html:24 templates/includes/header.html:32
+#: templates/includes/header.html:31
+#: templates/includes/main/header/services.html:5
 msgid "Services"
-msgstr ""
+msgstr "Hizmetler"
 
-#: templates/includes/header.html:42
-msgid "Transit, Manutention et Transport"
-msgstr ""
-
-#: templates/includes/header.html:44
-msgid ""
-"Les services de transit, de manutention et de transport sont des services"
-" qui assurent la manutention, le stockage et/ou le transport de "
-"marchandises dans certaines zone"
-msgstr ""
-
-#: templates/includes/header.html:58 templates/main/customs.html:46
-msgid "Dédouanement"
-msgstr ""
-
-#: templates/includes/header.html:58
-msgid "Nouveau"
-msgstr ""
-
-#: templates/includes/header.html:75 templates/main/warehousing.html:46
-msgid "Entrepôt de stockage"
-msgstr ""
-
-#: templates/includes/header.html:77
-msgid ""
-"Afrilog propose des services spécialisés d'entreposage sous douane et de "
-"transport en libre-entreposage"
-msgstr ""
-
-#: templates/includes/header.html:85
-msgid "Services de Fret"
-msgstr ""
-
-#: templates/includes/header.html:90 templates/main/aerien.html:46
-msgid "Fret aérien"
-msgstr ""
-
-#: templates/includes/header.html:95 templates/main/sea.html:46
-msgid "Fret maritime"
-msgstr ""
-
-#: templates/includes/header.html:100
-msgid "Fret terrestre"
-msgstr ""
-
-#: templates/includes/header.html:120 templates/main/aerien.html:56
-#: templates/main/customs.html:56 templates/main/sea.html:55
-#: templates/main/terrestre.html:55 templates/main/transit.html:56
-#: templates/main/warehousing.html:56
+#: templates/includes/header.html:60 templates/main/aerien.html:34
+#: templates/main/customs.html:34 templates/main/sea.html:33
+#: templates/main/terrestre.html:33 templates/main/transit.html:34
+#: templates/main/warehousing.html:34
 msgid "Service commercial"
-msgstr ""
+msgstr "Ticari Hizmet"
 
-#: templates/includes/header.html:123
+#: templates/includes/header.html:63
 msgid "Se connecter"
-msgstr ""
+msgstr "Giriş Yap"
 
 #: templates/includes/language_selector.html:2
 msgid "Anglais"
-msgstr ""
+msgstr "İngilizce"
 
 #: templates/includes/language_selector.html:3
-msgid "Allemand"
-msgstr ""
+msgid "Deutsch"
+msgstr "Almanca"
 
 #: templates/includes/language_selector.html:4
 msgid "Français"
-msgstr ""
+msgstr "Fransızca"
 
 #: templates/includes/language_selector.html:5
-msgid "Espagnol"
+msgid "Russe"
 msgstr ""
 
 #: templates/includes/language_selector.html:6
-msgid "Chinois"
-msgstr ""
+#, fuzzy
+msgid "Turc"
+msgstr "Geri Dön"
+
+#: templates/includes/main/header/resources.html:6
+msgid "Outils"
+msgstr "Araçlar"
+
+#: templates/includes/main/header/resources.html:15
+#: templates/main/calculate_air_freight.html:6
+msgid "Calculatrice fret aérien"
+msgstr "Hava Yükü Hesaplayıcı"
+
+#: templates/includes/main/header/resources.html:18
+msgid "Comparer les tarifs de frets aérien"
+msgstr "Hava Yükü Ücretlerini Karşılaştır"
+
+#: templates/includes/main/header/resources.html:30
+#: templates/main/calculate_sea_freight.html:6
+msgid "Calculatrice fret maritime"
+msgstr "Deniz Yükü Hesaplayıcı"
+
+#: templates/includes/main/header/resources.html:32
+#: templates/includes/main/header/resources.html:72
+#: templates/includes/main/header/services.html:37
+msgid "Nouveau"
+msgstr "Yeni"
+
+#: templates/includes/main/header/resources.html:36
+msgid "Obtenez de meilleurs insights pour votre fret maritime"
+msgstr "Deniz Yükünüz İçin Daha İyi Bilgiler Edinin"
+
+#: templates/includes/main/header/resources.html:48
+msgid "Calculatrice fret routier"
+msgstr "Kara Yükü Hesaplayıcı"
+
+#: templates/includes/main/header/resources.html:51
+msgid "Nous vous aidons à choisir judicieusement votre fret routier"
+msgstr "Kara Yükünüzü Akıllıca Seçmenize Yardımcı Oluyoruz"
+
+#: templates/includes/main/header/resources.html:70
+msgid "Central d'achat"
+msgstr "Satın Alma Merkezi"
+
+#: templates/includes/main/header/resources.html:76
+msgid "Découvrez de nombreux articles à travers notre boutique"
+msgstr "Mağazamızda Birçok Ürünü Keşfedin"
+
+#: templates/includes/main/header/resources.html:90
+msgid "Glossaire"
+msgstr "Sözlük"
+
+#: templates/includes/main/header/resources.html:93
+msgid "Aviez-vous oublié certains concepts? Veuillez consulter cette page"
+msgstr "Bazı kavramları mı unuttunuz? Lütfen bu sayfayı kontrol edin"
+
+#: templates/includes/main/header/resources.html:110
+msgid "Aviez-vous besoin d'aide? Notre service client est là pour vous"
+msgstr "Yardıma mı ihtiyacınız var? Müşteri hizmetlerimiz sizin için burada"
+
+#: templates/includes/main/header/resources.html:119
+msgid "Publiés récemment"
+msgstr "Yeni Yayınlananlar"
+
+#: templates/includes/main/header/resources.html:129
+msgid "En savoir plus"
+msgstr "Daha fazla bilgi"
+
+#: templates/includes/main/header/resources.html:138
+msgid "Aucun article n'a encore été publié"
+msgstr "Henüz bir makale yayınlanmadı"
+
+#: templates/includes/main/header/services.html:17
+msgid "Transport, Transit et Manutention"
+msgstr "Taşımacılık, Transit ve Elleçleme"
+
+#: templates/includes/main/header/services.html:20
+msgid "Nous nous chargeons du transport de vos marchandises en toute sécurité"
+msgstr "Malllarınızın güvenli bir şekilde taşınmasını sağlıyoruz"
+
+#: templates/includes/main/header/services.html:35
+msgid "Douanes, Taxes et Impôts"
+msgstr "Gümrük, Vergiler ve Harçlar"
+
+#: templates/includes/main/header/services.html:41
+msgid "Vous pouvez nous confier la gestion de vos taxes"
+msgstr "Vergilerinizin yönetimini bize emanet edebilirsiniz"
+
+#: templates/includes/main/header/services.html:56
+msgid "Entreposage"
+msgstr "Depolama"
+
+#: templates/includes/main/header/services.html:59
+msgid "Nous offrons également des services d'entreposage de marchandises"
+msgstr "Ayrıca mal depolama hizmetleri de sunuyoruz"
+
+#: templates/includes/main/header/services.html:70
+#: templates/main/aerien.html:24
+msgid "Fret aérien"
+msgstr "Hava Yükü"
+
+#: templates/includes/main/header/services.html:79
+msgid "Fret routier"
+msgstr "Kara Yükü"
 
 #: templates/main/aerien.html:6
 msgid "Découvrez nos services de fret aérien"
-msgstr ""
+msgstr "Hava yükü hizmetlerimizi keşfedin"
 
 #: templates/main/aerien.html:7 templates/main/transit.html:7
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
+"Taşımacılık, Lojistik, Hava Yükü, Ekipman, Konteyner, Avrupa, Afrika, "
+"Okyanusya, Çin"
 
 #: templates/main/aerien.html:10
 msgid "Afrilog : Fret aérien"
-msgstr ""
+msgstr "Afrilog: Hava Yükü"
 
-#: templates/main/aerien.html:49
+#: templates/main/aerien.html:27
 msgid ""
 "Le fret aérien est la solution idéale pour le transport rapide et "
 "sécurisé de vos marchandises à l'échelle mondiale. Offrant des temps de "
@@ -2251,192 +2390,200 @@ msgid ""
 "votre chaîne d'approvisionnement et renforcer votre avantage "
 "concurrentiel grâce à nos solutions de fret aérien de pointe."
 msgstr ""
+"Hava yükü, mallarınızın dünya çapında hızlı ve güvenli bir şekilde "
+"taşınması için ideal çözümdür. Azaltılmış transit süreleri ve eşsiz "
+"esneklik sunarak katı teslimat sürelerine ve acil taleplere etkin bir "
+"şekilde yanıt verir. Hava yükü hizmetlerimiz, gönderilerinizin "
+"alınmasından teslimine kadar optimal yönetim sağlar ve her sevkiyatın "
+"hızını ve güvenilirliğini garanti eder. Hava yükü çözümlerimizle tedarik "
+"zincirinizi nasıl hızlandırabileceğimizi ve rekabet avantajınızı nasıl "
+"güçlendirebileceğimizi keşfedin."
 
-#: templates/main/aerien.html:62
+#: templates/main/aerien.html:40
 msgid "fret aérien"
-msgstr ""
+msgstr "hava yükü"
 
-#: templates/main/aerien.html:74 templates/main/pricing.html:2
+#: templates/main/aerien.html:52 templates/main/pricing.html:2
 msgid "Notre grille tarifaire pour le fret aérien"
-msgstr ""
+msgstr "Hava yükü için fiyat listemiz"
 
-#: templates/main/aerien.html:75 templates/main/pricing.html:3
-#: templates/main/pricing.html:269 templates/main/sea.html:105
+#: templates/main/aerien.html:53 templates/main/pricing.html:3
+#: templates/main/pricing.html:269 templates/main/sea.html:83
 msgid "A partir de la France"
-msgstr ""
+msgstr "Fransa'dan itibaren"
 
-#: templates/main/aerien.html:84 templates/main/aerien.html:147
+#: templates/main/aerien.html:62 templates/main/aerien.html:125
 #: templates/main/pricing.html:12 templates/main/pricing.html:75
 msgid "Aéroport de départ"
-msgstr ""
+msgstr "Kalkış Havalimanı"
 
-#: templates/main/aerien.html:85 templates/main/aerien.html:148
+#: templates/main/aerien.html:63 templates/main/aerien.html:126
 #: templates/main/pricing.html:13 templates/main/pricing.html:76
 msgid "Aéroport d'arrivée"
-msgstr ""
+msgstr "Varış Havalimanı"
 
-#: templates/main/aerien.html:86 templates/main/pricing.html:14
+#: templates/main/aerien.html:64 templates/main/pricing.html:14
 msgid "Incoterm"
-msgstr ""
+msgstr "Incoterm"
 
-#: templates/main/aerien.html:87 templates/main/aerien.html:181
-#: templates/main/aerien.html:227 templates/main/aerien.html:273
+#: templates/main/aerien.html:65 templates/main/aerien.html:159
+#: templates/main/aerien.html:205 templates/main/aerien.html:251
 #: templates/main/pricing.html:15 templates/main/pricing.html:109
 #: templates/main/pricing.html:155 templates/main/pricing.html:201
 #: templates/main/pricing.html:248 templates/main/pricing.html:279
-#: templates/main/pricing.html:353 templates/main/sea.html:84
-#: templates/main/sea.html:115 templates/main/sea.html:189
+#: templates/main/pricing.html:353 templates/main/sea.html:62
+#: templates/main/sea.html:93 templates/main/sea.html:167
 msgid "Devise"
-msgstr ""
+msgstr "Para Birimi"
 
-#: templates/main/aerien.html:103 templates/main/aerien.html:104
-#: templates/main/aerien.html:105 templates/main/aerien.html:106
+#: templates/main/aerien.html:81 templates/main/aerien.html:82
+#: templates/main/aerien.html:83 templates/main/aerien.html:84
 #: templates/main/pricing.html:31 templates/main/pricing.html:32
 #: templates/main/pricing.html:33 templates/main/pricing.html:34
 msgid "8,70"
-msgstr ""
+msgstr "8,70"
 
-#: templates/main/aerien.html:115 templates/main/pricing.html:43
+#: templates/main/aerien.html:93 templates/main/pricing.html:43
 msgid "9,15"
-msgstr ""
+msgstr "9,15"
 
-#: templates/main/aerien.html:116 templates/main/pricing.html:44
+#: templates/main/aerien.html:94 templates/main/pricing.html:44
 msgid "7,75"
-msgstr ""
+msgstr "7,75"
 
-#: templates/main/aerien.html:117 templates/main/pricing.html:45
+#: templates/main/aerien.html:95 templates/main/pricing.html:45
 msgid "7,25"
-msgstr ""
+msgstr "7,25"
 
-#: templates/main/aerien.html:118 templates/main/pricing.html:46
+#: templates/main/aerien.html:96 templates/main/pricing.html:46
 msgid "7,10"
-msgstr ""
+msgstr "7,10"
 
-#: templates/main/aerien.html:126 templates/main/pricing.html:54
+#: templates/main/aerien.html:104 templates/main/pricing.html:54
 msgid "18,34"
-msgstr ""
+msgstr "18,34"
 
-#: templates/main/aerien.html:127 templates/main/pricing.html:55
+#: templates/main/aerien.html:105 templates/main/pricing.html:55
 msgid "14,23"
-msgstr ""
+msgstr "14,23"
 
-#: templates/main/aerien.html:128 templates/main/pricing.html:56
+#: templates/main/aerien.html:106 templates/main/pricing.html:56
 msgid "13,59"
-msgstr ""
+msgstr "13,59"
 
-#: templates/main/aerien.html:129 templates/main/pricing.html:57
+#: templates/main/aerien.html:107 templates/main/pricing.html:57
 msgid "13,23"
-msgstr ""
+msgstr "13,23"
 
-#: templates/main/aerien.html:130 templates/main/pricing.html:58
+#: templates/main/aerien.html:108 templates/main/pricing.html:58
 msgid "12,86"
-msgstr ""
+msgstr "12,86"
 
-#: templates/main/aerien.html:139 templates/main/pricing.html:67
-#: templates/main/pricing.html:300 templates/main/sea.html:136
+#: templates/main/aerien.html:117 templates/main/pricing.html:67
+#: templates/main/pricing.html:300 templates/main/sea.html:114
 msgid "A partir de la Chine"
-msgstr ""
+msgstr "Çin'den itibaren"
 
-#: templates/main/aerien.html:159 templates/main/aerien.html:160
+#: templates/main/aerien.html:137 templates/main/aerien.html:138
 #: templates/main/pricing.html:87 templates/main/pricing.html:88
 msgid "15,06"
-msgstr ""
+msgstr "15,06"
 
-#: templates/main/aerien.html:161 templates/main/aerien.html:162
+#: templates/main/aerien.html:139 templates/main/aerien.html:140
 #: templates/main/pricing.html:89 templates/main/pricing.html:90
 msgid "14,91"
-msgstr ""
+msgstr "14,91"
 
-#: templates/main/aerien.html:171 templates/main/pricing.html:99
+#: templates/main/aerien.html:149 templates/main/pricing.html:99
 msgid "A partir de Tel Aviv (Israel)"
-msgstr ""
+msgstr "Tel Aviv'den (İsrail) itibaren"
 
-#: templates/main/aerien.html:179 templates/main/aerien.html:225
-#: templates/main/aerien.html:271 templates/main/pricing.html:107
+#: templates/main/aerien.html:157 templates/main/aerien.html:203
+#: templates/main/aerien.html:249 templates/main/pricing.html:107
 #: templates/main/pricing.html:153 templates/main/pricing.html:199
 msgid "Poids Net"
-msgstr ""
+msgstr "Net Ağırlık"
 
-#: templates/main/aerien.html:180 templates/main/aerien.html:226
-#: templates/main/aerien.html:272 templates/main/pricing.html:108
+#: templates/main/aerien.html:158 templates/main/aerien.html:204
+#: templates/main/aerien.html:250 templates/main/pricing.html:108
 #: templates/main/pricing.html:154 templates/main/pricing.html:200
 #: templates/main/pricing.html:247 templates/main/pricing.html:278
-#: templates/main/sea.html:83 templates/main/sea.html:114
+#: templates/main/sea.html:61 templates/main/sea.html:92
 msgid "Prix par Kgs"
-msgstr ""
+msgstr "Kg Başına Fiyat"
 
-#: templates/main/aerien.html:187 templates/main/pricing.html:115
+#: templates/main/aerien.html:165 templates/main/pricing.html:115
 msgid "16,45 USD/Kg"
-msgstr ""
+msgstr "16,45 USD/Kg"
 
-#: templates/main/aerien.html:192 templates/main/aerien.html:202
+#: templates/main/aerien.html:170 templates/main/aerien.html:180
 #: templates/main/pricing.html:120 templates/main/pricing.html:130
 msgid "13,00 USD/Kg"
-msgstr ""
+msgstr "13,00 USD/Kg"
 
-#: templates/main/aerien.html:197 templates/main/pricing.html:125
+#: templates/main/aerien.html:175 templates/main/pricing.html:125
 msgid "13,85 USD/Kg"
-msgstr ""
+msgstr "13,85 USD/Kg"
 
-#: templates/main/aerien.html:207 templates/main/pricing.html:135
+#: templates/main/aerien.html:185 templates/main/pricing.html:135
 msgid "13,00 USD"
-msgstr ""
+msgstr "13,00 USD"
 
-#: templates/main/aerien.html:217 templates/main/pricing.html:145
+#: templates/main/aerien.html:195 templates/main/pricing.html:145
 msgid "A partir du Canada"
-msgstr ""
+msgstr "Kanada'dan itibaren"
 
-#: templates/main/aerien.html:233 templates/main/pricing.html:161
+#: templates/main/aerien.html:211 templates/main/pricing.html:161
 msgid "15,55 USD/Kg"
-msgstr ""
+msgstr "15,55 USD/Kg"
 
-#: templates/main/aerien.html:238 templates/main/pricing.html:166
+#: templates/main/aerien.html:216 templates/main/pricing.html:166
 msgid "13,45 USD/Kg"
-msgstr ""
+msgstr "13,45 USD/Kg"
 
-#: templates/main/aerien.html:243 templates/main/pricing.html:171
+#: templates/main/aerien.html:221 templates/main/pricing.html:171
 msgid "12,95 USD/Kg"
-msgstr ""
+msgstr "12,95 USD/Kg"
 
-#: templates/main/aerien.html:248 templates/main/pricing.html:176
+#: templates/main/aerien.html:226 templates/main/pricing.html:176
 msgid "12,25 USD/Kg"
-msgstr ""
+msgstr "12,25 USD/Kg"
 
-#: templates/main/aerien.html:253 templates/main/pricing.html:181
+#: templates/main/aerien.html:231 templates/main/pricing.html:181
 msgid "12,00 USD"
-msgstr ""
+msgstr "12,00 USD"
 
-#: templates/main/aerien.html:263 templates/main/pricing.html:191
+#: templates/main/aerien.html:241 templates/main/pricing.html:191
 msgid "A partir de l'Inde"
-msgstr ""
+msgstr "Hindistan'dan itibaren"
 
-#: templates/main/aerien.html:279 templates/main/pricing.html:207
+#: templates/main/aerien.html:257 templates/main/pricing.html:207
 msgid "15,70 USD/Kg"
-msgstr ""
+msgstr "15,70 USD/Kg"
 
-#: templates/main/aerien.html:284 templates/main/pricing.html:212
+#: templates/main/aerien.html:262 templates/main/pricing.html:212
 msgid "17,63 USD/Kg"
-msgstr ""
+msgstr "17,63 USD/Kg"
 
-#: templates/main/aerien.html:289 templates/main/pricing.html:217
+#: templates/main/aerien.html:267 templates/main/pricing.html:217
 msgid "16,55 USD/Kg"
-msgstr ""
+msgstr "16,55 USD/Kg"
 
-#: templates/main/aerien.html:294 templates/main/pricing.html:222
+#: templates/main/aerien.html:272 templates/main/pricing.html:222
 msgid "15,50 USD/Kg"
-msgstr ""
+msgstr "15,50 USD/Kg"
 
-#: templates/main/aerien.html:299 templates/main/pricing.html:227
+#: templates/main/aerien.html:277 templates/main/pricing.html:227
 msgid "13,90 USD/Kg"
-msgstr ""
+msgstr "13,90 USD/Kg"
 
-#: templates/main/aerien.html:315 templates/main/pricing.html:381
-#: templates/main/sea.html:217
+#: templates/main/aerien.html:293 templates/main/pricing.html:381
+#: templates/main/sea.html:195
 msgid "Pour plus d'infos veuillez contacter notre "
-msgstr ""
+msgstr "Daha fazla bilgi için lütfen bize ulaşın"
 
-#: templates/main/aerien.html:316 templates/main/pricing.html:382
-#: templates/main/sea.html:218
+#: templates/main/aerien.html:294 templates/main/pricing.html:382
+#: templates/main/sea.html:196
 msgid ""
 "Veuillez noter que les tarifs seront mis à jour dès l'obtention des "
 "informations réelles sur les marchandises, les formalités exports ainsi "
@@ -2444,36 +2591,72 @@ msgid ""
 "localisation du fournisseur. La validité des tarifs est d'une (01) "
 "semaine pour le fret aérien et un (01) mois pour le fret maritime"
 msgstr ""
+"Lütfen not edin ki, fiyatlar, malzeme hakkında gerçek bilgilerin, ihracat"
+" formalitelerinin ve tedarikçi konumuna bağlı olarak belirlenen Pick up "
+"sezgisinin alınmasıyla güncellenecektir. Fiyatların geçerlilik süresi "
+"hava yükü için bir (01) hafta ve deniz yükü için bir (01) aydır."
+
+#: templates/main/calculate_air_freight.html:7
+msgid ""
+"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+msgstr ""
+"Taşımacılık, Lojistik, Hava Yükü, Ekipman, Konteyner, Avrupa, Afrika, "
+"Okyanusya, Çin, Vergiler, Gümrük, Hesap Makinesi, Yaklaşık"
+
+#: templates/main/calculate_air_freight.html:10
+msgid "Afrilog : Calculatrice fret aérien"
+msgstr "Afrilog: Hava Yükü Hesap Makinesi"
+
+#: templates/main/calculate_air_freight.html:25
+msgid "Obtenez un devis rapide pour votre fret aérien."
+msgstr "Hava yükü için hızlı bir fiyat teklifi alın."
+
+#: templates/main/calculate_sea_freight.html:7
+msgid ""
+"Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+msgstr ""
+"Taşımacılık, Lojistik, Deniz Yükü, Ekipman, Konteyner, Avrupa, Afrika, "
+"Okyanusya, Çin, Vergiler, Gümrük, Hesap Makinesi, Yaklaşık"
+
+#: templates/main/calculate_sea_freight.html:10
+msgid "Afrilog : Calculatrice fret maritime"
+msgstr "Afrilog: Deniz Yükü Hesap Makinesi"
+
+#: templates/main/calculate_sea_freight.html:25
+msgid "Obtenez un devis rapide pour votre fret maritime."
+msgstr "Deniz yükü için hızlı bir fiyat teklifi alın."
 
 #: templates/main/cgu.html:4
 msgid "Afrilog : Conditions générales d'utilisation"
-msgstr ""
+msgstr "Afrilog: Kullanım Koşulları"
 
-#: templates/main/cgu.html:31
+#: templates/main/cgu.html:15
 msgid "Conditions générales d'utilisation"
-msgstr ""
+msgstr "Kullanım Koşulları"
+
+#: templates/main/cgu.html:21
+msgid "Conduite du client"
+msgstr "Müşteri Davranışı"
+
+#: templates/main/cgu.html:24
+msgid "Conditions générales"
+msgstr "Genel Koşullar"
+
+#: templates/main/cgu.html:27
+msgid "Services & Compte"
+msgstr "Hizmetler ve Hesap"
+
+#: templates/main/cgu.html:32
+msgid "Conditions d'utilisation"
+msgstr "Kullanım Koşulları"
 
 #: templates/main/cgu.html:37
-msgid "Conduite du client"
-msgstr ""
-
-#: templates/main/cgu.html:40
-msgid "Conditions générales"
-msgstr ""
-
-#: templates/main/cgu.html:43
-msgid "Services & Compte"
-msgstr ""
-
-#: templates/main/cgu.html:48
-msgid "Conditions d'utilisation"
-msgstr ""
-
-#: templates/main/cgu.html:53
 msgid "Dernière mise à jour : 31 Mai 2024"
-msgstr ""
+msgstr "Son güncelleme: 31 Mayıs 2024"
 
-#: templates/main/cgu.html:55
+#: templates/main/cgu.html:39
 msgid ""
 "Ces conditions générales (les « Conditions ») régissent la fourniture de "
 "produits par Afrilog, y compris les contenus numériques et les services. "
@@ -2489,132 +2672,144 @@ msgid ""
 "logistiqueafrica@gmail.com.\n"
 "                      "
 msgstr ""
+"Bu genel koşullar (« Koşullar »), Afrilog tarafından ürünlerin sunumunu, "
+"dijital içerikleri ve hizmetleri de içerecek şekilde düzenler. Lütfen "
+"dijital içeriklerimize erişmeden veya hizmetlerimizi kullanmadan önce bu "
+"Koşulları dikkatlice okuyun. Bu Koşullar ve gizlilik politikamız ve çerez"
+" politikamız, sizin için nasıl dijital içerikler ve/veya hizmetler "
+"sunacağımızı, sizin ve bizim nasıl sözleşmeyi değiştirebileceğimizi veya "
+"sona erdirebileceğimizi, sorunlarla karşılaşıldığında ne yapılacağını ve "
+"diğer önemli bilgileri açıklar. <br>\n"
+"                        <br> Bize nasıl ulaşabilirsiniz - Bize telefonla "
+"+227 20 73 51 00 veya e-posta ile logistiqueafrica@gmail.com adresinden "
+"ulaşabilirsiniz.\n"
+"                      "
 
-#: templates/main/cgu.html:58
+#: templates/main/cgu.html:42
 msgid "Sommaire"
-msgstr ""
+msgstr "Özet"
 
-#: templates/main/cgu.html:61 templates/main/cgu.html:150
+#: templates/main/cgu.html:45 templates/main/cgu.html:134
 msgid ""
 "Votre accord à ces Conditions par votre accès au site ou votre "
 "utilisation du site."
-msgstr ""
+msgstr "Bu Koşullara siteye erişim veya siteyi kullanımınızla olan onayınız."
 
-#: templates/main/cgu.html:64 templates/main/cgu.html:154
+#: templates/main/cgu.html:48 templates/main/cgu.html:138
 msgid "Contenu et services"
-msgstr ""
+msgstr "İçerik ve Hizmetler"
 
-#: templates/main/cgu.html:67 templates/main/cgu.html:160
+#: templates/main/cgu.html:51 templates/main/cgu.html:144
 msgid "Afrilog ne propose ni ne fournit de conseils juridiques"
-msgstr ""
+msgstr "Afrilog hukuki tavsiyeler sunmaz veya sağlamaz"
 
-#: templates/main/cgu.html:70
+#: templates/main/cgu.html:54
 msgid "Afrilog n'est pas un cabinet d'avocats"
-msgstr ""
+msgstr "Afrilog bir avukatlık bürosu değildir"
 
-#: templates/main/cgu.html:73
+#: templates/main/cgu.html:57
 msgid "Afrilog n'est pas un service de référencement"
-msgstr ""
+msgstr "Afrilog bir referans hizmeti değildir"
 
-#: templates/main/cgu.html:76
+#: templates/main/cgu.html:60
 msgid "Il n'y a pas de relation avocat-client entre vous et Afrilog"
-msgstr ""
+msgstr "Sizin ve Afrilog arasında avukat-müvekkil ilişkisi yoktur"
 
-#: templates/main/cgu.html:79
+#: templates/main/cgu.html:63
 msgid "Les utilisateurs avocats ne sont pas des employés d'Afrilog"
-msgstr ""
+msgstr "Avukat kullanıcılar Afrilog'un çalışanları değildir"
 
-#: templates/main/cgu.html:82
+#: templates/main/cgu.html:66
 msgid ""
 "Tous les frais juridiques sont payés aux utilisateurs avocats, pas à "
 "Afrilog"
-msgstr ""
+msgstr "Tüm hukuk ücretleri avukat kullanıcılara ödenir, Afrilog'a değil"
 
-#: templates/main/cgu.html:85
+#: templates/main/cgu.html:69
 msgid "Il n'y a pas de frais pour Afrilog pour trouver des engagements"
-msgstr ""
+msgstr "Afrilog'un taahhüt bulmak için hiçbir ücreti yoktur"
 
-#: templates/main/cgu.html:88
+#: templates/main/cgu.html:72
 msgid "Non-contournement"
-msgstr ""
+msgstr "Dönüşü Engelleme"
 
-#: templates/main/cgu.html:91
+#: templates/main/cgu.html:75
 msgid "Attentes"
-msgstr ""
+msgstr "Beklentiler"
 
-#: templates/main/cgu.html:94
+#: templates/main/cgu.html:78
 msgid "Vos responsabilités"
-msgstr ""
+msgstr "Sorumluluklarınız"
 
-#: templates/main/cgu.html:97
+#: templates/main/cgu.html:81
 msgid "Votre utilisation et restrictions"
-msgstr ""
+msgstr "Kullanımınız ve kısıtlamalar"
 
-#: templates/main/cgu.html:100
+#: templates/main/cgu.html:84
 msgid "Confidentialité"
-msgstr ""
+msgstr "Gizlilik"
 
-#: templates/main/cgu.html:103
+#: templates/main/cgu.html:87
 msgid "Indemnisation"
-msgstr ""
+msgstr "Tazminat"
 
-#: templates/main/cgu.html:106
+#: templates/main/cgu.html:90
 msgid "Communication et autres données"
-msgstr ""
+msgstr "İletişim ve diğer veriler"
 
-#: templates/main/cgu.html:109
+#: templates/main/cgu.html:93
 msgid "Notifications et accords électroniques"
-msgstr ""
+msgstr "Bildirimler ve elektronik anlaşmalar"
 
-#: templates/main/cgu.html:112
+#: templates/main/cgu.html:96
 msgid "Services premium"
-msgstr ""
+msgstr "Premium hizmetler"
 
-#: templates/main/cgu.html:115
+#: templates/main/cgu.html:99
 msgid "Hyperliens"
-msgstr ""
+msgstr "Hyperlinkler"
 
-#: templates/main/cgu.html:118
+#: templates/main/cgu.html:102
 msgid "Droits d'auteur et utilisation limitée"
-msgstr ""
+msgstr "Telif hakları ve sınırlı kullanım"
 
-#: templates/main/cgu.html:121
+#: templates/main/cgu.html:105
 msgid "Modifications"
-msgstr ""
+msgstr "Değişiklikler"
 
-#: templates/main/cgu.html:124
+#: templates/main/cgu.html:108
 msgid "Votre contenu"
-msgstr ""
+msgstr "İçeriğiniz"
 
-#: templates/main/cgu.html:127
+#: templates/main/cgu.html:111
 msgid "Plaintes en matière de droits d'auteur"
-msgstr ""
+msgstr "Telif hakkı ihlali şikayetleri"
 
-#: templates/main/cgu.html:130
+#: templates/main/cgu.html:114
 msgid "Décharge de responsabilité"
-msgstr ""
+msgstr "Sorumluluktan kurtarma"
 
-#: templates/main/cgu.html:133
+#: templates/main/cgu.html:117
 msgid "Limitation de responsabilité"
-msgstr ""
+msgstr "Sorumluluk sınırlaması"
 
-#: templates/main/cgu.html:136
+#: templates/main/cgu.html:120
 msgid "Accord complet"
-msgstr ""
+msgstr "Tam anlaşma"
 
-#: templates/main/cgu.html:139
+#: templates/main/cgu.html:123
 msgid "Cession"
-msgstr ""
+msgstr "Devir"
 
-#: templates/main/cgu.html:142
+#: templates/main/cgu.html:126
 msgid "Arbitrage"
-msgstr ""
+msgstr "Tahkim"
 
-#: templates/main/cgu.html:145
+#: templates/main/cgu.html:129
 msgid "Âge minimum pour utiliser"
-msgstr ""
+msgstr "Kullanım için minimum yaş"
 
-#: templates/main/cgu.html:151
+#: templates/main/cgu.html:135
 msgid ""
 "Ces Conditions régissent votre utilisation du site, à la fois en tant que"
 " visiteur et en tant qu'utilisateur enregistré (chaque visiteur et chaque"
@@ -2631,8 +2826,22 @@ msgid ""
 "d'une entité autre que vous-même, vous déclarez que vous êtes autorisé "
 "par cet individu ou cette entité à accepter ces Conditions en son nom."
 msgstr ""
+"Bu Şartlar, Siteyi kullanımınızı hem şu şekilde yönetir ziyaretçi ve "
+"kayıtlı kullanıcı olarak (her ziyaretçi ve her birikayıtlı kullanıcı "
+"genel olarak bu amaçlar için atanmıştırMüşteri Kullanıcı Olarak SİTEYİ "
+"KULLANMA KOŞULLARI VE/VEYA”.BİZE KAYIT OLURSANIZ BU KULLANIM ŞARTLARINI "
+"KABUL ETMİŞ OLURSUNUZ.Bizim belgemizde açıklanan bilgi uygulamalarına "
+"izin veriyorsunuzGizlilik Politikası ve Çerez Politikamızburaya referans "
+"yoluyla dahil edilmiştir ve şunu kabul edersinizNew York Eyaleti'nde "
+"belirtilen şartlara uygun olarak çözümlemekBizimle veya Site ile "
+"yaşayabileceğiniz herhangi bir anlaşmazlığı bildirin.Siteyi OLDUĞU GİBİ "
+"ve hiçbir garanti olmaksızın sunduğumuzu lütfen unutmayın. Eğerbir birey "
+"adına bir hesap açıyorsunuz veya Siteyi kullanıyorsunuz veyakendiniz "
+"dışında bir kuruluştan yetkili olduğunuzu beyan edersinizböyle bir kişi "
+"veya kuruluş tarafından bu Şartları kendi adına kabul etmek."
 
-#: templates/main/cgu.html:155
+#: templates/main/cgu.html:139
+#, fuzzy
 msgid ""
 "Tout ce que nous offrons sur et à travers le site est désigné dans ces "
 "Conditions collectivement comme les « Services ». <br>\n"
@@ -2676,8 +2885,45 @@ msgid ""
 " pas une relation avocat-client entre l'Utilisateur Client et Afrilog.\n"
 "                          "
 msgstr ""
+"Site üzerinde ve Site aracılığıyla sunduğumuz her şey burada "
+"belirtilmişti Şartlar topluca Hizmetler olarak anılır. <br>\n"
+" Site içeriğinin bir kısmıBize kayıt olmadan görülebilir ancak aktif "
+"olarak katılabilirsiniz veyaBilgilerinizi saklayın, üye olarak kayıt "
+"olmalısınız veBilgilerinizin kullanılmasına ve ifşa edilmesine izin "
+"verinGizlilik Politikamızın şartlarına uygun olarak kişisel ve "
+"hukukiHizmetleri ve benzerlerini sunmamızı sağlamak amacıyla "
+"gizlilikGizlilik Politikamızda aksi açıklandığı şekildeMevcut. Afrilog, "
+"bağlantı kuran çevrimiçi bir platformdur Kullanıcılarla birlikte hukuk "
+"uzmanları (“Avukat Kullanıcılar”)Yasal hizmet arayan potansiyel "
+"müşteriler bunu yapmaz”.hukuki tavsiye vermez ve sağlamazher ne nitelikte"
+" olursa olsun hukuki hizmetler. Afrilog garanti vermezMüşteri "
+"Kullanıcılarının yasal temsil bulacağı anlamına gelmezkendi sistemi "
+"aracılığıyla. Afrilog bu konuda görüş vermez veya pozisyon "
+"almazAralarında avukat-müvekkil ilişkisinin kurulduğu dönemMüşteri "
+"Kullanıcılar ve Avukat Kullanıcılar değildir.Müşteri Kullanıcıları ile "
+"Kullanıcılar arasındaki sözleşmelerin tarafıAvukat-müvekkil ilişkisini "
+"avukatlar yönetiyor ve Afrilog bu işin içinde değilmüşterilerin etkin "
+"temsilinde. Sonuç olarak Afrilog bunu yapmazMüşteri Kullanıcısı ile "
+"Müşteri arasındaki sözleşmelerin yerine getirilmesini garanti "
+"edebilirAvukat Kullanıcının yaptığı işin doğruluğu veya tamlığıKullanıcı "
+"Avukatı veya her iki tarafın dürüstlüğü.Müşteri Kullanıcısı bütünlüğün "
+"değerlendirilmesinden sorumludur ve birlikte çalıştığı tüm Avukat "
+"Kullanıcıların yeteneklerindenSiteyi kullanarak iletişim kurar. Taraf "
+"olmasına rağmen bunu kabul edersiniziçerik, metin, veri, grafik, resim, "
+"bilgiöneriler, tavsiyeler ve diğer materyaller (toplu olarak BilgiSitede "
+"size sağlanan bilgiler (sağlanan Bilgiler dahil)Sorularınıza veya "
+"yayınlarınıza doğrudan yanıt olarak) sağlanabilirHukuk mesleğindeki "
+"bireyler tarafından bu tür hükümlerin sağlanmasıBilgi avukat-müvekkil "
+"ilişkisi oluşturmaz ve teşkil etmezHukuksal bir görüş veya tavsiyedir, "
+"ancak size yardımcı olmak için sağlanmıştıruygun bir hukuk uzmanı bulun. "
+"Sitenin herhangi bir şekilde kullanılması potansiyel müşteriler veya "
+"abone olan Avukat Kullanıcılar tarafından değildirAralarında avukat-"
+"müvekkil ilişkisi yaratmayı amaçlayan ve yaratmayanherhangi bir kişi, "
+"kuruluş ve Afrilog.Afrilog'da Avukat Kullanıcının oluşturacağı herkese "
+"gönderilirMüşteri Kullanıcısı ile Afrilog arasında bir avukat-müvekkil "
+"ilişkisi değildir.\n"
 
-#: templates/main/cgu.html:161
+#: templates/main/cgu.html:145
 msgid ""
 "Les informations que vous recevez de la part d'Afrilog et de ses affiliés"
 " sont uniquement à des fins d'information et de programmation. Afrilog "
@@ -2693,33 +2939,33 @@ msgstr ""
 
 #: templates/main/contact.html:8
 msgid "Contactez notre service commercial"
-msgstr ""
+msgstr "Ticari hizmetlerimizle iletişime geçin"
 
 #: templates/main/contact.html:11
 msgid ""
 "Découvrez comment notre expertise en logistique pourrait propulser votre "
 "entreprise."
-msgstr ""
+msgstr "Lojistik uzmanlığımızın işinizi nasıl ilerletebileceğini öğrenin."
 
 #: templates/main/contact.html:34
 msgid "Entreprise"
-msgstr ""
+msgstr "İşletme"
 
 #: templates/main/contact.html:62
 msgid "Entrez votre message..."
-msgstr ""
+msgstr "Mesajınızı girin..."
 
 #: templates/main/contact.html:69
 msgid "Accepter les politiques"
-msgstr ""
+msgstr "Politikaları kabul et"
 
 #: templates/main/contact.html:75
 msgid "En sélectionnant cette option, vous acceptez notre"
-msgstr ""
+msgstr "Bu seçeneği seçerek, kabul ediyorsunuz"
 
 #: templates/main/customs.html:6
 msgid "Découvrez nos services d'aide au processus de dédouanement"
-msgstr ""
+msgstr "Gümrükleme sürecine yardım etme hizmetlerimizi keşfedin"
 
 #: templates/main/customs.html:7
 msgid ""
@@ -2731,7 +2977,11 @@ msgstr ""
 msgid "Afrilog : Aide dans le processus de dédouanement"
 msgstr ""
 
-#: templates/main/customs.html:49
+#: templates/main/customs.html:24
+msgid "Dédouanement"
+msgstr "Gümrükleme"
+
+#: templates/main/customs.html:27
 msgid ""
 "En tant qu'entreprise logistique leader, Afrilog reconnaît l'importance "
 "du dédouanement dans le processus d'expédition. Nous comprenons le "
@@ -2748,265 +2998,379 @@ msgid ""
 "complexités du processus d'expédition et se consacrent à fournir un "
 "service exceptionnel."
 msgstr ""
+"Lider bir lojistik şirketi olarak Afrilog bunun öneminin farkındaNakliye "
+"sürecinde gümrükleme. AnlıyoruzDoğabilecek maliyetli gecikmeler ve "
+"komplikasyonlar potansiyeliGümrük mevzuatına uymaya çalıştığımızda "
+"veMüşterilerimizin bu idari formalitelerin üstesinden gelmelerine "
+"yardımcı olmakzorluklara karşı kapsamlı gümrükleme hizmetleri "
+"sağlıyoruzsorunsuz bir ithalat veya ihracat sürecini garanti ediyoruz. "
+"Afrilog, detaylara gösterdiğimiz özen ve Mallarınızın varış noktasına "
+"ulaşmasını sağlama taahhüdüZamanında ve mümkün olan en iyi koşullarda "
+"final yapın. Ne zaman Gümrükleme hizmetleri için bizi arayın, siz "
+"olunGönderilerinizin işi anlayan uzmanların ellerinde olduğundan emin "
+"olun Nakliye sürecinin karmaşıklığını ve bir çözüm sağlamaya "
+"adanmıştırOlağanüstü hizmet."
 
-#: templates/main/customs.html:62
+#: templates/main/customs.html:40
 msgid "douanes, taxes, impôts"
-msgstr ""
+msgstr "gümrükler, vergiler, harçlar"
 
 #: templates/main/globle.html:3
 msgid "Ouvrez-vous au monde"
-msgstr ""
+msgstr "Dünyaya açılın"
 
 #: templates/main/globle.html:4
 msgid "Connectez-vous à un monde plein de possibiltés."
-msgstr ""
+msgstr "Fırsatlarla dolu bir dünyaya bağlanın."
 
-#: templates/main/home.html:6
-msgid "Afrilog, leader dans le domaine du transport et de la logistique"
-msgstr ""
-
-#: templates/main/home.html:7
-msgid ""
-"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
-"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
-"Marchandises, Commerce, Santé, Défense, Technologie, \n"
-"    Équipement, MSC"
-msgstr ""
-
-#: templates/main/home.html:10
-msgid "Afrilog SARL"
-msgstr ""
-
-#: templates/main/home.html:12
-msgid "Afrilog: Leader dans le transport et la logistique"
-msgstr ""
-
-#: templates/main/home.html:51
+#: templates/main/home.html:25
 msgid "Logistics company in Africa"
-msgstr ""
+msgstr "Afrika'da Lojistik şirketi"
 
-#: templates/main/home.html:54
+#: templates/main/home.html:28
 msgid "Leader dans la"
-msgstr ""
+msgstr "Önde gelen"
 
-#: templates/main/home.html:54
+#: templates/main/home.html:28
 msgid "logistique"
-msgstr ""
+msgstr "lojistik"
 
-#: templates/main/home.html:54
+#: templates/main/home.html:28
 msgid "et le"
-msgstr ""
+msgstr "ve"
 
-#: templates/main/home.html:55
+#: templates/main/home.html:29
 msgid "transport"
-msgstr ""
+msgstr "taşıma"
 
-#: templates/main/home.html:58
+#: templates/main/home.html:32
 msgid ""
 "Nous fournissons des solutions logistiques innovantes et fiables pour "
 "répondre à tous vos besoins de transport et de transit. Faites confiance "
 "à notre expertise pour optimiser votre chaîne d'approvisionnement."
 msgstr ""
+"Yenilikçi ve güvenilir lojistik çözümler sunuyoruztüm ulaşım ve transit "
+"ihtiyaçlarınızı karşılayın. Güvenintedarik zincirinizi optimize etmek "
+"için uzmanlığımıza."
 
-#: templates/main/home.html:62
+#: templates/main/home.html:36
 msgid "Entrer votre identifiant ou N° de suivi..."
-msgstr ""
+msgstr "Kimliğinizi veya takip numaranızı girin..."
 
-#: templates/main/home.html:72
-msgid "dashboard"
-msgstr ""
-
-#: templates/main/home.html:86
+#: templates/main/home.html:61
 msgid "Nous ont fait confiance"
-msgstr ""
+msgstr "Bize güvendiniz"
 
-#: templates/main/home.html:114
+#: templates/main/home.html:89
 msgid "Une vision nouvelle pour la logistique et le transport"
-msgstr ""
+msgstr "Lojistik ve taşımacılıkta yeni bir vizyon"
 
-#: templates/main/home.html:116 templates/main/home.html:372
+#: templates/main/home.html:91 templates/main/home.html:175
 msgid ""
 "Nous apportons une approche novatrice à la chaîne logistique, au transit "
 "et à l'import-export. Nos services sont conçus pour répondre aux besoins "
 "spécifiques de nos clients et aux défis de la globalisation des échanges."
 msgstr ""
+"Lojistik zincirine ve transite yenilikçi bir yaklaşım getiriyoruzve "
+"ithalat-ihracat. Hizmetlerimiz ihtiyaçları karşılayacak şekilde "
+"tasarlanmıştırMüşterilerimize ve ticaretin küreselleşmesinin getirdiği "
+"zorluklara özel."
 
-#: templates/main/home.html:308
+#: templates/main/home.html:112
 msgid "Nos valeurs fondamentales"
-msgstr ""
+msgstr "Temel değerlerimiz"
 
-#: templates/main/home.html:311
+#: templates/main/home.html:115
 msgid "Ce qui nous guide"
-msgstr ""
+msgstr "Bizim Yolumuz"
 
-#: templates/main/home.html:314
+#: templates/main/home.html:118
 msgid ""
 "Les valeurs fondamentales de notre entreprise définissent notre "
 "engagement envers nos clients et partenaires, en assurant un service de "
 "qualité exceptionnelle."
 msgstr ""
+"Şirketimizin temel değerleri, müşterilerimize ve ortaklarımıza karşı "
+"taahhütümüzü belirler ve olağanüstü kaliteli bir hizmet sunar."
 
-#: templates/main/home.html:322
+#: templates/main/home.html:126
 msgid "Innovation continue."
-msgstr ""
+msgstr "Sürekli İnovasyon."
 
-#: templates/main/home.html:324
+#: templates/main/home.html:128
 msgid ""
 "Nous investissons constamment dans de nouvelles technologies pour "
 "améliorer nos services et répondre aux besoins évolutifs de nos clients."
 msgstr ""
+"Müşterilerimizin değişen ihtiyaçlarına cevap vermek ve hizmetlerimizi "
+"iyileştirmek için sürekli olarak yeni teknolojilere yatırım yapıyoruz."
 
-#: templates/main/home.html:331
+#: templates/main/home.html:135
 msgid "Sécurité et fiabilité."
-msgstr ""
+msgstr "Güvenlik ve Güvenilirlik."
 
-#: templates/main/home.html:334
+#: templates/main/home.html:138
 msgid ""
 "Nous assurons la sécurité de vos marchandises à chaque étape de la chaîne"
 " logistique grâce à des systèmes robustes et fiables."
 msgstr ""
+"Sağlam ve güvenilir sistemlerimizle, lojistik zincirinin her aşamasında "
+"yüklerinizin güvenliğini sağlıyoruz."
 
-#: templates/main/home.html:343
+#: templates/main/home.html:146
 msgid "Excellence opérationnelle."
-msgstr ""
+msgstr "Operasyonel Mükemmellik."
 
-#: templates/main/home.html:346
+#: templates/main/home.html:149
 msgid ""
 "Nous nous efforçons d’atteindre l’excellence dans toutes nos opérations "
 "pour garantir la satisfaction de nos clients et partenaires."
 msgstr ""
+"Müşteri ve ortaklarımızın memnuniyetini sağlamak için tüm "
+"operasyonlarımızda mükemmelliği hedefliyoruz."
 
-#: templates/main/home.html:352
+#: templates/main/home.html:155
 msgid "femme souriante"
-msgstr ""
+msgstr "gülümseyen kadın"
 
-#: templates/main/home.html:369
+#: templates/main/home.html:172
 msgid "Travaillez avec nous"
-msgstr ""
+msgstr "Bizimle Çalışın"
 
-#: templates/main/home.html:378
+#: templates/main/home.html:181
 msgid "Postes vacants"
-msgstr ""
+msgstr "Boş Pozisyonlar"
 
-#: templates/main/home.html:382
+#: templates/main/home.html:185
 msgid "Nos valeurs"
-msgstr ""
+msgstr "Değerlerimiz"
 
-#: templates/main/home.html:502
+#: templates/main/home.html:206
+msgid "Depuis le blog"
+msgstr "Blog'dan"
+
+#: templates/main/home.html:207
+msgid ""
+"Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à"
+" nos conseils d'experts."
+msgstr ""
+"Lojistiğinizi optimize etmek ve verimliliği artırmak için uzman "
+"tavsiyelerimizi öğrenin."
+
+#: templates/main/home.html:212
+msgid "10 mai 2023"
+msgstr "10 Mayıs 2023"
+
+#: templates/main/home.html:219
+msgid "Améliorer l'efficacité de la chaîne d'approvisionnement"
+msgstr "Tedarik zincirinin verimliliğini artırın"
+
+#: templates/main/home.html:223
+msgid ""
+"Découvrez des stratégies pour rationaliser votre chaîne "
+"d'approvisionnement et réduire les coûts. Nos experts partagent des "
+"informations sur les dernières technologies et les meilleures pratiques "
+"en gestion logistique."
+msgstr ""
+"Tedarik zincirinizi optimize etmek ve maliyetleri azaltmak için "
+"stratejiler keşfedin. Uzmanlarımız en son teknolojiler ve lojistik "
+"yönetimindeki en iyi uygulamalar hakkında bilgi paylaşıyor."
+
+#: templates/main/home.html:232
+msgid "Alex Johnson"
+msgstr "Alex Johnson"
+
+#: templates/main/home.html:236
+msgid "Expert en logistique"
+msgstr "Lojistik uzmanı"
+
+#: templates/main/home.html:244
+msgid "18 avr. 2023"
+msgstr "18 Nisan 2023"
+
+#: templates/main/home.html:246
+msgid "Chaîne d'approvisionnement"
+msgstr "Tedarik Zinciri"
+
+#: templates/main/home.html:252
+msgid "Technologie logistique de pointe"
+msgstr "Öncü Lojistik Teknolojisi"
+
+#: templates/main/home.html:255
+msgid ""
+"Explorez les dernières avancées en technologie logistique et comment "
+"elles peuvent améliorer les opérations de votre entreprise. De l'IA à la "
+"blockchain, restez à la pointe avec nos insights d'experts."
+msgstr ""
+"En son lojistik teknolojilerinin nasıl işletme operasyonlarınızı "
+"iyileştirebileceğini keşfedin. AI'dan blok zincire kadar, uzman "
+"görüşlerimizle en son teknolojide kalın."
+
+#: templates/main/home.html:263
+msgid "Jamie Lee"
+msgstr "Jamie Lee"
+
+#: templates/main/home.html:266
+msgid "Innovateur technologique"
+msgstr "Teknoloji İnovatörü"
+
+#: templates/main/home.html:272
+msgid "22 mar. 2023"
+msgstr "22 Mart 2023"
+
+#: templates/main/home.html:273
+msgid "Transport"
+msgstr "Taşıma"
+
+#: templates/main/home.html:279
+msgid "Solutions de transport durable"
+msgstr "Sürdürülebilir taşıma çözümleri"
+
+#: templates/main/home.html:283
+msgid ""
+"Découvrez des options de transport durable et comment elles peuvent "
+"bénéficier à votre entreprise et à l'environnement. Notre guide couvre "
+"tout, des véhicules électriques aux pratiques logistiques écologiques."
+msgstr ""
+"Sürdürülebilir taşıma seçeneklerini ve işletmenizin ve çevrenin nasıl "
+"faydalanabileceğini keşfedin. Kılavuzumuz, elektrikli araçlardan ekolojik"
+" lojistik uygulamalarına kadar her şeyi kapsıyor."
+
+#: templates/main/home.html:292
+msgid "Morgan Smith"
+msgstr "Morgan Smith"
+
+#: templates/main/home.html:295
+msgid "Consultant en durabilité"
+msgstr "Sürdürülebilirlik Danışmanı"
+
+#: templates/main/home.html:313
 msgid "Abonnez-vous à notre newsletter"
-msgstr ""
+msgstr "Bültenimize abone olun"
 
-#: templates/main/home.html:503
+#: templates/main/home.html:314
 msgid ""
 "Recevez les dernières nouvelles et mises à jour sur nos services "
 "logistiques directement dans votre boîte de réception."
 msgstr ""
+"Lojistik hizmetlerimizle ilgili en son haberleri ve güncellemeleri "
+"doğrudan e-posta kutunuza alın."
 
-#: templates/main/home.html:505
+#: templates/main/home.html:316
 msgid "Adresse email"
-msgstr ""
+msgstr "E-posta adresi"
 
-#: templates/main/home.html:506
+#: templates/main/home.html:317
 msgid "Entrez votre email"
-msgstr ""
+msgstr "E-posta adresinizi girin"
 
-#: templates/main/home.html:507
+#: templates/main/home.html:318
 msgid "S'abonner"
-msgstr ""
+msgstr "Abone ol"
 
-#: templates/main/home.html:517
+#: templates/main/home.html:328
 msgid "Articles hebdomadaires"
-msgstr ""
+msgstr "Haftalık Makaleler"
 
-#: templates/main/home.html:518
+#: templates/main/home.html:329
 msgid ""
 "Des conseils et des informations exclusives sur la logistique pour "
 "optimiser vos opérations."
 msgstr ""
+"Operasyonlarınızı optimize etmek için lojistikle ilgili özel ipuçları ve "
+"bilgiler."
 
-#: templates/main/home.html:526
+#: templates/main/home.html:337
 msgid "Pas de spam"
-msgstr ""
+msgstr "Spam yok"
 
-#: templates/main/home.html:527
+#: templates/main/home.html:338
 msgid ""
 "Nous respectons votre vie privée. Recevez uniquement des informations "
 "pertinentes et utiles."
 msgstr ""
+"Gizliliğinizi saygıyla karşılıyoruz. Sadece ilgili ve faydalı bilgiler "
+"alacaksınız."
 
-#: templates/main/layout.html:6
+#: templates/main/layout.html:5
 msgid "Afrilog : Leader dans le domaine du Transport et de la Logistique"
-msgstr ""
+msgstr "Afrilog: Taşımacılık ve Lojistik Alanında Lider"
 
-#: templates/main/pricing.html:237 templates/main/sea.html:73
+#: templates/main/pricing.html:237 templates/main/sea.html:51
 msgid "Notre grille tarifaire pour le fret maritime"
-msgstr ""
+msgstr "Denizyolu navlun fiyatlarımız"
 
-#: templates/main/pricing.html:238 templates/main/sea.html:74
+#: templates/main/pricing.html:238 templates/main/sea.html:52
 msgid "A partir de Valencia (Espagne)"
-msgstr ""
+msgstr "Valencia'dan başlayarak (İspanya)"
 
 #: templates/main/pricing.html:246 templates/main/pricing.html:277
-#: templates/main/sea.html:82 templates/main/sea.html:113
+#: templates/main/sea.html:60 templates/main/sea.html:91
 msgid "Type de Conteneur"
-msgstr ""
+msgstr "Konteyner Türü"
 
-#: templates/main/pricing.html:309 templates/main/sea.html:145
+#: templates/main/pricing.html:309 templates/main/sea.html:123
 msgid "Port de débarquement"
-msgstr ""
+msgstr "Liman"
 
-#: templates/main/pricing.html:310 templates/main/sea.html:146
+#: templates/main/pricing.html:310 templates/main/sea.html:124
 msgid "O/F(USD)"
-msgstr ""
+msgstr "Fiyat/Freight (USD)"
 
-#: templates/main/pricing.html:311 templates/main/sea.html:147
+#: templates/main/pricing.html:311 templates/main/sea.html:125
 msgid "FT"
-msgstr ""
+msgstr "FT"
 
-#: templates/main/pricing.html:312 templates/main/sea.html:148
+#: templates/main/pricing.html:312 templates/main/sea.html:126
 msgid "T/T"
-msgstr ""
+msgstr "T/T"
 
-#: templates/main/pricing.html:342 templates/main/sea.html:178
+#: templates/main/pricing.html:342 templates/main/sea.html:156
 msgid "A partir de l' Inde"
-msgstr ""
+msgstr "Hindistan'dan başlayarak"
 
-#: templates/main/pricing.html:350 templates/main/sea.html:186
+#: templates/main/pricing.html:350 templates/main/sea.html:164
 msgid "Type de conteneur"
-msgstr ""
+msgstr "Konteyner Türü"
 
-#: templates/main/pricing.html:351 templates/main/sea.html:187
+#: templates/main/pricing.html:351 templates/main/sea.html:165
 msgid "Temps de transit"
-msgstr ""
+msgstr "Transit Süresi"
 
-#: templates/main/pricing.html:352 templates/main/sea.html:188
+#: templates/main/pricing.html:352 templates/main/sea.html:166
 msgid "Prix"
-msgstr ""
+msgstr "Fiyat"
 
 #: templates/main/pricing.html:359 templates/main/pricing.html:365
-#: templates/main/sea.html:195 templates/main/sea.html:201
+#: templates/main/sea.html:173 templates/main/sea.html:179
 msgid "26 jours"
-msgstr ""
+msgstr "26 gün"
 
-#: templates/main/pricing.html:366 templates/main/sea.html:202
+#: templates/main/pricing.html:366 templates/main/sea.html:180
 msgid "5300"
-msgstr ""
+msgstr "5300"
 
 #: templates/main/sea.html:6
 msgid "Découvrez nos services de fret maritime"
-msgstr ""
+msgstr "Denizyolu navlun hizmetlerimizi keşfedin"
 
 #: templates/main/sea.html:7
 msgid ""
 "Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
+"Taşımacılık, Lojistik, Navlun, Denizyolu, Ekipman, Konteyner, Avrupa, "
+"Afrika, Okyanusya, Çin"
 
 #: templates/main/sea.html:10
 msgid "Afrilog : Fret maritime"
-msgstr ""
+msgstr "Afrilog: Denizyolu Navlunu"
 
-#: templates/main/sea.html:49
+#: templates/main/sea.html:24
+msgid "Fret maritime"
+msgstr "Denizyolu Navlunu"
+
+#: templates/main/sea.html:27
 msgid ""
 "Le fret maritime est essentiel pour les échanges commerciaux "
 "internationaux, offrant des solutions efficaces pour le transport de "
@@ -3018,42 +3382,51 @@ msgid ""
 " assurant la sécurité et la ponctualité de vos livraisons, même sur les "
 "routes les plus fréquentées."
 msgstr ""
+"Denizyolu navlunu, uluslararası ticaret için hayati öneme sahiptir; uzun "
+"mesafelerde büyük miktarlarda mal taşıma için etkili çözümler sunar. "
+"Yüksek kapasite ve düşük taşıma maliyetleri sayesinde, denizyolu navlunu,"
+" tedarik zincirlerini optimize etmeyi amaçlayan işletmeler için tercih "
+"edilen bir seçenektir. Denizyolu navlun hizmetlerimizin, taşımanızın "
+"güvenliğini ve zamanında teslimatını sağlayarak, ihtiyaçlarınıza nasıl "
+"cevap verebileceğini keşfedin, hatta en yoğun yollarda bile."
 
-#: templates/main/sea.html:61
+#: templates/main/sea.html:39
 msgid "fret maritime"
-msgstr ""
+msgstr "denizyolu navlunu"
 
 #: templates/main/stats.html:7
 msgid "2.5 millions de tonnes de marchandises traitées chaque année"
-msgstr ""
+msgstr "Yılda 2.5 milyon ton mal işlenir"
 
 #: templates/main/stats.html:10
 msgid "2.5 M"
-msgstr ""
+msgstr "2.5 M"
 
 #: templates/main/stats.html:15
 msgid "Clients satisfaits"
-msgstr ""
+msgstr "Memnun müşteriler"
 
 #: templates/main/stats.html:21
 msgid "Réductions des coûts logistiques"
-msgstr ""
+msgstr "Lojistik maliyetlerin azaltılması"
 
 #: templates/main/terrestre.html:6
 msgid "Découvrez nos services de fret terrestre"
-msgstr ""
+msgstr "Kara yolu navlun hizmet"
 
 #: templates/main/terrestre.html:7
 msgid ""
 "Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
 msgstr ""
+"Taşımacılık, Lojistik, Navlun, Kara, Ekipman, Konteyner, Avrupa, Afrika, "
+"Okyanusya, Çin"
 
 #: templates/main/terrestre.html:10
 msgid "Afrilog : Fret terrestre"
-msgstr ""
+msgstr "Afrilog: Kara Yolu Navlunu"
 
-#: templates/main/terrestre.html:49
+#: templates/main/terrestre.html:27
 msgid ""
 "Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant"
 " des solutions flexibles et économiques pour le transport de "
@@ -3065,10 +3438,17 @@ msgid ""
 " comment nos solutions de fret terrestre peuvent optimiser vos opérations"
 " logistiques."
 msgstr ""
+"Kara yolu navlunu, lojistik zincirinde kritik bir rol oynar, mal "
+"taşımacılığı için esnek ve ekonomik çözümler sunar. İyi geliştirilmiş yol"
+" ağı ve sağlam altyapı ile, kara yolu navlunu hızlı ve zamanında "
+"teslimatları sağlar, bekleme sürelerini ve maliyetleri azaltır. Kara yolu"
+" navlunu tercih ederek, işletmeniz özel ihtiyaçlarınıza uygun güvenilir "
+"ve etkili bir hizmet alır. Kara yolu navlun hizmetlerimizin, lojistik "
+"operasyonlarınızı nasıl optimize edebileceğini keşfedin."
 
-#: templates/main/terrestre.html:61
+#: templates/main/terrestre.html:39
 msgid "fret terrestre"
-msgstr ""
+msgstr "kara yolu navlunu"
 
 #: templates/main/testimonial.html:10
 msgid ""
@@ -3079,24 +3459,29 @@ msgid ""
 "confiance qui nous a fait gagner un temps précieux et optimisé nos coûts."
 " Nous ne pourrions pas être plus satisfaits de leur service exceptionnel."
 msgstr ""
+"Lojistik operasyonlardaki uzmanlıkları ve deneyimleri sayesinde, "
+"verimliliğimizi önemli ölçüde artırabildik. Ekibi özverili ve her zaman "
+"dinlemeye hazır, bu da bize işimize odaklanmamıza olanak tanıdı. Afrilog,"
+" bize değerli zaman kazandıran ve maliyetlerimizi optimize eden güvenilir"
+" bir ortak. Hizmetlerinden daha memnun olamazdık."
 
 #: templates/main/testimonial.html:21
 msgid "CEO of Workcation"
-msgstr ""
+msgstr "Workcation'ın CEO'su"
 
 #: templates/main/transit.html:6
 msgid "Découvrez nos services transit, manutention et transport"
-msgstr ""
+msgstr "Transit, elleçleme ve taşıma hizmetlerimizi keşfedin"
 
 #: templates/main/transit.html:10
 msgid "Afrilog : Services de transit et manutention"
-msgstr ""
+msgstr "Afrilog: Transit ve elleçleme hizmetleri"
 
-#: templates/main/transit.html:46
+#: templates/main/transit.html:24
 msgid "Transit, manutention et transport"
-msgstr ""
+msgstr "Transit, elleçleme ve taşıma"
 
-#: templates/main/transit.html:49
+#: templates/main/transit.html:27
 msgid ""
 "Les services de transit, de manutention et de transport sont des services"
 " qui assurent la manutention, le stockage et/ou le transport de "
@@ -3108,26 +3493,39 @@ msgid ""
 "manutention et de transport est de garantir que les marchandises sont "
 "livrées à destination en toute sécurité et à temps."
 msgstr ""
+"Transit, elleçleme ve taşıma hizmetleri, belirli bir bölgede mal taşıma, "
+"elleçleme ve/veya taşıma işlemlerini sağlayan hizmetlerdir. Transit, "
+"elleçleme ve taşıma hizmetleri genellikle malzemelerin paketlenmesi, "
+"etiketlenmesi, planlanması ve teslimatı ile birlikte, malzemelerin "
+"taşınmasıyla ilişkili idari işlemlerin yönetimini içerir. Transit, "
+"elleçleme ve taşıma hizmetlerinin temel amacı, malzemelerin güvenli ve "
+"zamanında bir şekilde varış noktasına ulaştırılmasını sağlamaktır."
 
-#: templates/main/transit.html:62
+#: templates/main/transit.html:40
 msgid "transit&manutention"
-msgstr ""
+msgstr "transit&elleçleme"
 
 #: templates/main/warehousing.html:6
 msgid "Découvrez nos services d'entrepôt de stockage"
-msgstr ""
+msgstr "Depolama hizmetlerimizi keşfedin"
 
 #: templates/main/warehousing.html:7
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Entrepôt, Stockage, Chaîne"
 msgstr ""
+"Taşımacılık, Lojistik, Navlun, hava, Ekipman, Konteyner, Avrupa, Afrika, "
+"Okyanusya, Çin, Depo, Depolama, Zincir"
 
 #: templates/main/warehousing.html:10
 msgid "Afrilog : Entrepôt de stockage"
-msgstr ""
+msgstr "Afrilog: Depo ve depolama hizmet"
 
-#: templates/main/warehousing.html:49
+#: templates/main/warehousing.html:24
+msgid "Entrepôt de stockage"
+msgstr "Depo ve Depolama"
+
+#: templates/main/warehousing.html:27
 msgid ""
 "Afrilog propose des services spécialisés d'entreposage sous douane et de "
 "transport en libre-entreposage qui permettent aux entreprises de stocker "
@@ -3138,98 +3536,150 @@ msgid ""
 "garantir que vos marchandises soient stockées dans les meilleures "
 "conditions possibles."
 msgstr ""
+"Afrilog, şirketlerin mallarını güvenli bir şekilde saklamalarını ve hazır"
+" olduklarında taşımalarını veya göndermelerini sağlayan özel gümrük altı "
+"depolama ve serbest depolama taşıma hizmetleri sunmaktadır. "
+"Hizmetlerimiz, malların depolanması ve taşınması üzerine odaklanmış "
+"olmasına rağmen, mallarınızın en iyi koşullarda depolanmasını sağlamak "
+"için ambalajlama ve depolama yönetimi gibi ek hizmetler de sunmaktayız."
 
-#: templates/main/warehousing.html:62
+#: templates/main/warehousing.html:40
 msgid "entrepôt et stockage"
-msgstr ""
+msgstr "depo ve depolama"
+
+#: templates/main/components/air/rate-estimation-inputs.html:3
+#: templates/main/components/sea/rate-estimation-inputs.html:3
+msgid "Cargo"
+msgstr "Kargo"
+
+#: templates/main/components/air/rate-estimation-inputs.html:14
+#: templates/main/components/sea/rate-estimation-inputs.html:14
+msgid "General Cargo"
+msgstr "Genel Kargo"
+
+#: templates/main/components/air/rate-estimation-inputs.html:19
+#: templates/main/components/sea/rate-estimation-inputs.html:19
+msgid "UDL container"
+msgstr "UDL konteyner"
+
+#: templates/main/components/air/rate-estimation-inputs.html:29
+#: templates/main/components/sea/rate-estimation-inputs.html:29
+msgid "Poids(kg)"
+msgstr "Ağırlık(kg)"
+
+#: templates/main/components/air/rate-estimation-inputs.html:36
+#: templates/main/components/sea/rate-estimation-inputs.html:36
+msgid "Volume(m3)"
+msgstr "Hacim(m3)"
+
+#: templates/main/components/air/rate-estimation-inputs.html:46
+#: templates/main/components/sea/rate-estimation-inputs.html:46
+msgid "Longueur(m)"
+msgstr "Uzunluk(m)"
+
+#: templates/main/components/air/rate-estimation-inputs.html:53
+#: templates/main/components/sea/rate-estimation-inputs.html:53
+msgid "Largeur(m)"
+msgstr "Genişlik(m)"
+
+#: templates/main/components/air/rate-estimation-inputs.html:60
+#: templates/main/components/sea/rate-estimation-inputs.html:60
+msgid "Hauteur(m)"
+msgstr "Yükseklik(m)"
 
 #: templates/views/basic_charts.html:13 templates/views/expenses_list.html:108
 msgid "Vues sur le site web"
-msgstr ""
+msgstr "Web sitesinde görüntülenme"
 
 #: templates/views/basic_charts.html:16 templates/views/expenses_list.html:111
 msgid "Performances de la dernière campagne"
-msgstr ""
+msgstr "Son kampanya performansı"
 
 #: templates/views/basic_charts.html:36 templates/views/expenses_list.html:131
 msgid "Ventes quotidiennes"
-msgstr ""
+msgstr "Günlük satışlar"
 
 #: templates/views/basic_charts.html:37 templates/views/expenses_list.html:132
 msgid "d'augmentation dans les ventes d'aujourd'hui"
-msgstr ""
+msgstr "bugünkü satışlardaki artış"
 
 #: templates/views/basic_charts.html:57 templates/views/expenses_list.html:152
 msgid "Tâches complètes"
-msgstr ""
+msgstr "Tamamlanan görevler"
 
 #: templates/views/basic_charts.html:60 templates/views/expenses_list.html:155
 msgid "Performances de la campagne récente"
-msgstr ""
+msgstr "Son kampanya performansı"
 
 #: templates/views/expenses_list.html:10
 #: templates/views/weekly_gain_report.html:9
 msgid "Recettes de cette semaine"
-msgstr ""
+msgstr "Bu haftanın geliri"
 
 #: templates/views/expenses_list.html:21
 #: templates/views/weekly_gain_report.html:20
 msgid "par rapport à la semaine passée"
-msgstr ""
+msgstr "geçen haftaya göre"
 
 #: templates/views/expenses_list.html:34
 #: templates/views/monthly_user_report.html:9
 msgid "Utilisateurs de ce mois"
-msgstr ""
+msgstr "Bu ay kullanıcılar"
 
 #: templates/views/expenses_list.html:45
 #: templates/views/monthly_user_report.html:20
 msgid "par rapport au mois passé"
-msgstr ""
+msgstr "geçen aya göre"
 
 #: templates/views/expenses_list.html:58
 #: templates/views/monthly_customers_report.html:9
 msgid "Nouveaux clients"
-msgstr ""
+msgstr "Yeni müşteriler"
 
 #: templates/views/expenses_list.html:69 templates/views/expenses_list.html:90
 #: templates/views/monthly_customers_report.html:20
 msgid "par rapport à hier"
-msgstr ""
+msgstr "dünküne göre"
 
 #: templates/views/expenses_list.html:82
 msgid "Ventes"
-msgstr ""
+msgstr "Satışlar"
 
 #: templates/views/invoices.html:18 templates/views/news.html:14
 msgid "Partager"
-msgstr ""
+msgstr "Paylaş"
 
 #: templates/views/invoices.html:23 templates/views/news.html:15
 msgid "Exporter"
-msgstr ""
+msgstr "Dışa aktar"
 
 #: templates/views/invoices.html:28 templates/views/news.html:16
 msgid "Télécharger"
-msgstr ""
+msgstr "İndir"
 
 #: templates/views/messages.html:5
 msgid "Inbox"
-msgstr ""
+msgstr "Gelen kutusu"
 
 #: templates/views/news.html:6
 msgid "Actualités"
-msgstr ""
+msgstr "Haberler"
 
 #: templates/views/empty/no_invoice.html:2
 msgid "Aucune facture"
-msgstr ""
+msgstr "Fatura yok"
 
 #: templates/views/empty/no_invoice.html:3
 msgid "Aucune facture pour le moment."
-msgstr ""
+msgstr "Şu anda hiç fatura yok."
 
 #: templates/views/empty/no_invoice.html:6
 msgid "Toutes les factures de vos récentes transactions vont s'afficher ici"
-msgstr ""
+msgstr "Tüm son işlemlerinizin faturaları burada görüntülenecek"
+
+#~ msgid "Espagnol"
+#~ msgstr "İspanyolca"
+
+#~ msgid "Mandarin"
+#~ msgstr "Mandarin"
 

@@ -1092,6 +1092,11 @@ select {
   margin-bottom: auto;
 }
 
+.my-3\.5 {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1272,6 +1277,10 @@ select {
   margin-top: 2rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -1405,6 +1414,10 @@ select {
 
 .h-full {
   height: 100%;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .max-h-12 {
@@ -2261,6 +2274,11 @@ select {
   padding-bottom: 2rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2741,6 +2759,12 @@ select {
 
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -3341,6 +3365,10 @@ select {
     max-width: 176px;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3399,6 +3427,14 @@ select {
 
   .lg\:left-1\/2 {
     left: 50%;
+  }
+
+  .lg\:left-auto {
+    left: auto;
+  }
+
+  .lg\:right-0 {
+    right: 0px;
   }
 
   .lg\:top-14 {
@@ -3755,6 +3791,10 @@ select {
 
   .xl\:origin-center {
     transform-origin: center;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:gap-8 {

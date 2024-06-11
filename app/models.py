@@ -32,7 +32,8 @@ class Role(db.Model):
             'IT Administrator': 'Manage and support IT infrastructure and systems',
             'Team Leader': 'Lead and coordinate tasks within a specific team',
             'Employee': 'Perform tasks and duties assigned in their specific role',
-            'User': 'A generic user role'
+            'User': 'A generic user role',
+            'Reseller': 'Offer and manage products for other users'
         }
         for role_name, description in roles.items():
             role = cls.query.filter_by(name=role_name).first()
@@ -42,6 +43,7 @@ class Role(db.Model):
             role.default = (role_name == 'User')
             db.session.add(role)
         db.session.commit()
+
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
@@ -147,10 +149,9 @@ class User(UserMixin, db.Model):
 
     def is_user(self):
         return self.role.name == 'User'
-    
-    
 
-
+    def is_reseller(self):
+        return self.role.name == 'Reseller'
 
 
 class Authorization(db.Model):
@@ -342,6 +343,14 @@ class Note(db.Model):
     content = db.Column(db.String, nullable=False)
     nature = db.Column(db.String)
 
+
+class Talk(db.Model):
+    __tablename__ = 'talks'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    content = db.Column(db.String, nullable=False)
+    client_email = db.Column(db.String)
+    client_phone = db.Column(db.String)
 
 class Doc(db.Model):
     __tablename__ = 'docs'

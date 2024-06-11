@@ -58,9 +58,18 @@ def calculate_air_freight():
 def calculate_sea_freight():
     return render_template("main/calculate_sea_freight.html")
 
+@main.route("/fret-sevices/sea/calculate")
+def calculate_truck_freight():
+    return render_template("main/calculate_truck_freight.html")
+
 @main.route("/fret-sevices/see-glossary")
 def glossary():
     return render_template("main/glossary.html")
+
+
+@main.route("/sailsmakr-services/shop")
+def shop():
+    return render_template("main/shop.html")
 
 @main.route("/home")
 @login_required

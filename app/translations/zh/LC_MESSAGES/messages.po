@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-02 01:45+0100\n"
+"POT-Creation-Date: 2024-06-10 20:17+0100\n"
 "PO-Revision-Date: 2024-06-02 01:47+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -18,71 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: api/views.py:55
+#: api/views.py:59
 msgid "Votre requête a bien été envoyé"
 msgstr "您的请求已成功发送"
 
-#: api/views.py:114
+#: api/views.py:118
 msgid "Envoyé avec succès"
 msgstr "发送成功"
 
-#: api/views.py:115
+#: api/views.py:119
 msgid "Votre requête a été bien envoyé"
 msgstr "您的请求已成功发送"
 
-#: api/views.py:349
+#: api/views.py:353
 msgid "Offre mise à jour avec succès"
 msgstr "报价已成功更新"
 
-#: api/views.py:432
+#: api/views.py:436
 msgid "Votre candidature a été soumise avec succès!"
 msgstr "您的申请已成功提交！"
 
-#: api/views.py:466
+#: api/views.py:470
 msgid "Votre campagne a été bien mise à jour"
 msgstr "您的活动已成功更新"
 
-#: api/views.py:479
+#: api/views.py:483
 msgid "Campagne supprimée"
 msgstr "活动已删除"
 
-#: api/views.py:511
+#: api/views.py:515
 msgid "Votre demande a bien été mise à jour"
 msgstr "您的请求已成功更新"
 
-#: api/views.py:518 templates/errors/403.html:6
+#: api/views.py:522 templates/errors/403.html:6
 msgid "Accès non autorisé"
 msgstr "未经授权的访问"
 
-#: api/views.py:522
+#: api/views.py:526
 msgid "Votre demande a été bien supprimé"
 msgstr "您的请求已成功删除"
 
-#: api/views.py:547 api/views.py:578
+#: api/views.py:551 api/views.py:582
 msgid "La facture est introuvable."
 msgstr "找不到发票。"
 
-#: api/views.py:555
+#: api/views.py:559
 msgid "Le titre et le montant sont requis."
 msgstr "需要标题和金额。"
 
-#: api/views.py:562
+#: api/views.py:566
 msgid "Montant invalide."
 msgstr "无效金额。"
 
-#: api/views.py:569
+#: api/views.py:573
 msgid "La facture a été mise à jour avec succès."
 msgstr "发票已成功更新。"
 
-#: api/views.py:583
+#: api/views.py:587
 msgid "La facture a été supprimée avec succès."
 msgstr "发票已成功删除。"
 
-#: api/views.py:586
+#: api/views.py:590
 msgid "Une erreur est survenue lors de la suppression de la facture."
 msgstr "删除发票时发生错误。"
 
-#: api/views.py:598 api/views.py:606
+#: api/views.py:602 api/views.py:610
 msgid "Demande Introuvable"
 msgstr "找不到请求"
 
@@ -94,7 +94,7 @@ msgstr "您的账户已成功创建。请登录。"
 msgid "Veuillez vous connecter à votre compte!"
 msgstr "请登录您的账户！"
 
-#: main/views.py:244
+#: main/views.py:261
 msgid ""
 "Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le "
 "meilleur de votre audience"
@@ -136,7 +136,7 @@ msgstr "修改员工信息：Afrilog"
 #: templates/dashboard/partials/sidebar.html:17
 #: templates/dashboard/sent_messages.html:12
 #: templates/dashboard/settings.html:23 templates/includes/footer.html:10
-#: templates/includes/header.html:18
+#: templates/includes/header.html:21
 msgid "Accueil"
 msgstr "主页"
 
@@ -331,11 +331,11 @@ msgstr "请注明发布日期"
 msgid "Date de clôture"
 msgstr "截止日期"
 
-#: templates/api/@support_team/jobs_create_job.html:76
+#: templates/api/@support_team/jobs/create_job.html:76
 msgid "Veuillez indiquer la date de clôture"
 msgstr "请注明截止日期"
 
-#: templates/api/@support_team/jobs_create_job.html:86
+#: templates/api/@support_team/jobs/create_job.html:86
 #: templates/dashboard/@support_team/ads.html:240
 #: templates/dashboard/@support_team/invoices.html:187
 #: templates/dashboard/@support_team/tasks.html:127
@@ -435,8 +435,7 @@ msgstr "授权请求"
 msgid ""
 "Un nom doit contenir seulement des lettres, les chiffres, les espaces et "
 "les caractères spéciaux sont interdits"
-msgstr ""
-"姓名只能包含字母，数字，空格，不允许使用特殊字符"
+msgstr "姓名只能包含字母，数字，空格，不允许使用特殊字符"
 
 #: templates/api/customers/authorizations/apply.html:38
 #: templates/api/customers/goods/purchase_request.html:35
@@ -488,7 +487,7 @@ msgstr "承运人姓氏"
 
 #: templates/api/customers/authorizations/apply.html:110
 #: templates/dashboard/customers/previous_quotes.html:200
-#: templates/main/aerien.html:83 templates/main/pricing.html:11
+#: templates/main/aerien.html:61 templates/main/pricing.html:11
 msgid "Compagnie"
 msgstr "公司"
 
@@ -546,36 +545,31 @@ msgstr "隐私政策"
 msgid ""
 "Nous collectons des informations personnelles telles que le nom, "
 "l'adresse et les coordonnées pour fournir nos services de livraison."
-msgstr ""
-"我们收集个人信息，如姓名、地址和联系方式，以提供我们的交付服务。"
+msgstr "我们收集个人信息，如姓名、地址和联系方式，以提供我们的交付服务。"
 
 #: templates/api/customers/goods/privacy_policy.html:27
 msgid ""
 "Vos données peuvent être utilisées pour suivre et améliorer nos "
 "opérations logistiques."
-msgstr ""
-"我们可能使用您的数据来跟踪并改进我们的物流运营。"
+msgstr "我们可能使用您的数据来跟踪并改进我们的物流运营。"
 
 #: templates/api/customers/goods/privacy_policy.html:28
 msgid ""
 "Nous pouvons partager vos informations avec des prestataires de services "
 "tiers pour les besoins de la livraison."
-msgstr ""
-"为了交付需求，我们可能与第三方服务提供商分享您的信息。"
+msgstr "为了交付需求，我们可能与第三方服务提供商分享您的信息。"
 
 #: templates/api/customers/goods/privacy_policy.html:29
 msgid ""
 "Nous accordons une importance particulière à la sécurité de vos données "
 "et utilisons des mesures standard de l'industrie pour les protéger."
-msgstr ""
-"我们非常重视您数据的安全，并采取行业标准的措施来保护您的数据。"
+msgstr "我们非常重视您数据的安全，并采取行业标准的措施来保护您的数据。"
 
 #: templates/api/customers/goods/privacy_policy.html:30
 msgid ""
 "En utilisant nos services, vous acceptez d'être majeur dans votre "
 "juridiction pour consentir à notre politique de confidentialité."
-msgstr ""
-"通过使用我们的服务，您同意在您的司法管辖区内已年满法定年龄并同意我们的隐私政策。"
+msgstr "通过使用我们的服务，您同意在您的司法管辖区内已年满法定年龄并同意我们的隐私政策。"
 
 #: templates/api/customers/goods/privacy_policy.html:33
 #: templates/dashboard/@support_team/ads.html:119
@@ -654,10 +648,6 @@ msgstr "书籍"
 msgid "Veuillez sélectionner la catégorie de votre produit"
 msgstr "请选择您产品的类别"
 
-#: templates/api/customers/goods/purchase_request.html:72
-msgid "Veuillez sélectionner la catégorie de votre produit"
-msgstr "请选择您产品的类别"
-
 #: templates/api/customers/goods/purchase_request.html:80
 #: templates/api/customers/goods/purchase_request.html:81
 msgid "Longueur du produit"
@@ -710,6 +700,7 @@ msgstr "您的国家"
 #: templates/api/customers/goods/purchase_request.html:151
 msgid "Adresse physique"
 msgstr "实际地址"
+
 #: templates/api/customers/goods/purchase_request.html:152
 msgid "Entrez votre adresse"
 msgstr "请输入您的地址"
@@ -815,13 +806,11 @@ msgstr "消息"
 msgid "Nouveau message"
 msgstr "新消息"
 
-
 #: templates/auth/layout.html:6
 msgid ""
 "Afrilog, leader dans le domaine du transport et de la logistique, Page de"
 " connexion"
-msgstr ""
-"Afrilog，在运输和物流领域的领导者，连接页面"
+msgstr "Afrilog，在运输和物流领域的领导者，连接页面"
 
 #: templates/auth/layout.html:7
 msgid ""
@@ -831,8 +820,7 @@ msgid ""
 "    Equipement, MSC, Connexion, Utilisateur, Portail"
 msgstr ""
 "Afrilog，物流，过境，运输，非洲，尼日尔，欧洲，亚洲， \n"
-"    美洲，大洋洲，海洋，航空，陆地，集装箱， "
-"商品，商业，健康，防御，技术， \n"
+"    美洲，大洋洲，海洋，航空，陆地，集装箱， 商品，商业，健康，防御，技术， \n"
 "    设备，MSC，连接，用户，门户"
 
 #: templates/auth/layout.html:11 templates/auth/login.html:2
@@ -951,7 +939,8 @@ msgstr "继续，您已阅读并接受我们的"
 msgid "conditions générales d'utilisation."
 msgstr "使用条款和条件。"
 
-#: templates/auth/signup.html:132 templates/main/home.html:66
+#: templates/auth/signup.html:132 templates/main/calculate_air_freight.html:65
+#: templates/main/calculate_sea_freight.html:65 templates/main/home.html:41
 msgid "Continuer"
 msgstr "继续"
 
@@ -1005,51 +994,13 @@ msgstr "航空运输"
 msgid "Transport maritime"
 msgstr "海洋运输"
 
-#: templates/dashboard/dashboard.html:41
+#: templates/dashboard/dashboard.html:47
 msgid "MyAfrilog : Dashboard"
 msgstr "MyAfrilog：仪表板"
 
 #: templates/dashboard/jobs_listing.html:2
 msgid "Nouvelles offres d'emploi : Afrilog"
-msgstr "Afrilog的
-
-#: templates/dashboard/calculator.html:17
-#: templates/dashboard/calculator.html:25
-#: templates/dashboard/partials/sidebar.html:259
-msgid "Calculatrice"
-msgstr "计算器"
-
-#: templates/dashboard/calculator.html:39
-msgid "Longueur (m)"
-msgstr "长度（米）"
-
-#: templates/dashboard/calculator.html:43
-msgid "Largeur (m)"
-msgstr "宽度（米）"
-
-#: templates/dashboard/calculator.html:47
-msgid "Hauteur (m)"
-msgstr "高度（米）"
-
-#: templates/dashboard/calculator.html:51
-msgid "Type de transport"
-msgstr "运输类型"
-
-#: templates/dashboard/calculator.html:53
-msgid "Transport aérien"
-msgstr "航空运输"
-
-#: templates/dashboard/calculator.html:54
-msgid "Transport maritime"
-msgstr "海洋运输"
-
-#: templates/dashboard/dashboard.html:41
-msgid "MyAfrilog : Dashboard"
-msgstr "MyAfrilog：仪表板"
-
-#: templates/dashboard/jobs_listing.html:2
-msgid "Nouvelles offres d'emploi : Afrilog"
-msgstr "Afrilog的最新职位"
+msgstr "Afrilog"
 
 #: templates/dashboard/jobs_listing.html:20
 msgid "Nouvelles offres"
@@ -1291,7 +1242,7 @@ msgstr "申请日期"
 
 #: templates/dashboard/@support_team/applicants_list.html:54
 #: templates/dashboard/@support_team/employees_listing.html:68
-#: templates/main/cgu.html:164
+#: templates/main/cgu.html:148
 msgid "Voir plus"
 msgstr "查看更多"
 
@@ -1343,7 +1294,6 @@ msgstr "工号/标识符"
 msgid "Depuis"
 msgstr "从"
 
-
 #: templates/dashboard/@support_team/employees_listing.html:118
 msgid "Imprimer carte"
 msgstr "打印卡片"
@@ -1361,6 +1311,11 @@ msgstr "会议"
 #: templates/dashboard/@support_team/events.html:33
 msgid "Ajouter un événement"
 msgstr "添加事件"
+
+#: templates/dashboard/@support_team/events.html:44
+#, fuzzy
+msgid "Commence à"
+msgstr "开始"
 
 #: templates/dashboard/@support_team/finance_reports.html:4
 msgid "Rapport financier : Afrilog"
@@ -1538,10 +1493,14 @@ msgid "Répondre à"
 msgstr "回复给"
 
 #: templates/dashboard/@support_team/new_purchases.html:131
+#: templates/main/calculate_air_freight.html:35
+#: templates/main/calculate_sea_freight.html:35
 msgid "De"
 msgstr "从"
 
 #: templates/dashboard/@support_team/new_purchases.html:135
+#: templates/main/calculate_air_freight.html:46
+#: templates/main/calculate_sea_freight.html:46
 msgid "A"
 msgstr "至"
 
@@ -1588,7 +1547,6 @@ msgstr "类型"
 #: templates/dashboard/@support_team/previous_notes.html:90
 msgid "Modifier la note"
 msgstr "编辑备注"
-
 
 #: templates/dashboard/@support_team/previous_notes.html:98
 msgid "Veuillez donner un titre à votre note"
@@ -1805,7 +1763,7 @@ msgid "Suivre mon colis"
 msgstr "跟踪我的包裹"
 
 #: templates/dashboard/customers/live_tracking.html:36
-#: templates/main/pricing.html:308 templates/main/sea.html:144
+#: templates/main/pricing.html:308 templates/main/sea.html:122
 msgid "Port de départ"
 msgstr "出发港口"
 
@@ -1949,8 +1907,8 @@ msgid "Nom complet du transitaire"
 msgstr "承运人全名"
 
 #: templates/dashboard/customers/previous_quotes.html:128
-msgid "Nom du transitaire"
-msgstr "承运人名称"
+msgid "Shipping Company"
+msgstr ""
 
 #: templates/dashboard/customers/previous_quotes.html:142
 msgid "Signature"
@@ -2047,7 +2005,29 @@ msgstr "您分配的任务将显示在这里"
 msgid "Taper quelque chose..."
 msgstr "输入内容..."
 
+#: templates/dashboard/partials/navigation.html:19
+#, fuzzy
+msgid "English"
+msgstr "英语"
+
 #: templates/dashboard/partials/navigation.html:20
+msgid "German"
+msgstr ""
+
+#: templates/dashboard/partials/navigation.html:21
+msgid "French"
+msgstr ""
+
+#: templates/dashboard/partials/navigation.html:22
+msgid "Spanish"
+msgstr ""
+
+#: templates/dashboard/partials/navigation.html:23
+#, fuzzy
+msgid "Chinese"
+msgstr "中文"
+
+#: templates/dashboard/partials/navigation.html:56
 #: templates/dashboard/partials/sidebar.html:276
 msgid "Se déconnecter"
 msgstr "退出登录"
@@ -2108,27 +2088,59 @@ msgstr "所有职位"
 msgid "Vous n'avez pas les droits pour accéder à cette page"
 msgstr "您没有权限访问此页面"
 
-#: templates/errors/403.html:12 templates/errors/404.html:12
+#: templates/errors/403.html:12 templates/errors/404.html:58
 msgid "Retour"
 msgstr "返回"
 
-#: templates/errors/403.html:15 templates/errors/404.html:15
+#: templates/errors/403.html:15 templates/errors/404.html:61
 msgid "Demander de l'aide"
 msgstr "请求帮助"
 
-#: templates/errors/404.html:6
-msgid "Page Introuvable"
-msgstr "页面未找到"
+#: templates/errors/404.html:6 templates/main/home.html:5
+#, fuzzy
+msgid "Afrilog, leader dans le domaine du transport et de la logistique"
+msgstr "Afrilog：领先的运输和物流公司"
 
-#: templates/errors/404.html:8
-msgid "Désolé nous n'avons pas trouvé cette page"
+#: templates/errors/404.html:7 templates/main/home.html:6
+#, fuzzy
+msgid ""
+"Afrilog, Logistique, Transit, Transport, Afrique, Niger, Europe, Asie, \n"
+"    Amérique, Oceanie, Maritime, Aérien, Terrestre, Containeurs, "
+"Marchandises, Commerce, Santé, Défense, Technologie, \n"
+"    Équipement, MSC, Import, Export, Groupage"
+msgstr ""
+"Afrilog，物流，过境，运输，非洲，尼日尔，欧洲，亚洲， \n"
+"    美洲，大洋洲，海洋，航空，陆地，集装箱， 商品，商业，健康，防御，技术， \n"
+"    设备，MSC，连接，用户，门户"
+
+#: templates/errors/404.html:10 templates/main/home.html:9
+#, fuzzy
+msgid "Afrilog SARL"
+msgstr "Afrilog"
+
+#: templates/errors/404.html:12 templates/main/home.html:11
+#, fuzzy
+msgid "Afrilog: Leader dans le transport et la logistique"
+msgstr "Afrilog：领先的运输和物流公司"
+
+#: templates/errors/404.html:51
+msgid "404"
+msgstr "404"
+
+#: templates/errors/404.html:54
+#, fuzzy
+msgid "Désolé nous n'avons pas pu trouver cette page"
 msgstr "抱歉，我们找不到这个页面"
 
-#: templates/includes/footer.html:13 templates/includes/header.html:112
+#: templates/errors/404.html:67 templates/main/home.html:47
+msgid "Logistics woman"
+msgstr ""
+
+#: templates/includes/footer.html:13
 msgid "A propos"
 msgstr "关于"
 
-#: templates/includes/footer.html:16 templates/includes/header.html:109
+#: templates/includes/footer.html:16 templates/includes/header.html:41
 msgid "Tarifs"
 msgstr "价格"
 
@@ -2148,11 +2160,11 @@ msgstr "空运货物"
 msgid "Fret Maritime"
 msgstr "海运货物"
 
-#: templates/includes/footer.html:34 templates/main/terrestre.html:46
+#: templates/includes/footer.html:34 templates/main/terrestre.html:24
 msgid "Fret Terrestre"
 msgstr "陆运货物"
 
-#: templates/includes/footer.html:40
+#: templates/includes/footer.html:40 templates/includes/header.html:46
 msgid "Ressources"
 msgstr "资源"
 
@@ -2165,10 +2177,12 @@ msgid "Guide Utilisateur"
 msgstr "用户指南"
 
 #: templates/includes/footer.html:58
+#: templates/includes/main/header/resources.html:59
 msgid "Aide"
 msgstr "帮助"
 
 #: templates/includes/footer.html:61
+#: templates/includes/main/header/resources.html:107
 msgid "Service client"
 msgstr "客户服务"
 
@@ -2184,7 +2198,7 @@ msgstr "许可证"
 msgid "Termes et conditions"
 msgstr "条款和条件"
 
-#: templates/includes/footer.html:73 templates/main/cgu.html:34
+#: templates/includes/footer.html:73 templates/main/cgu.html:18
 msgid "Politique de confidentialité"
 msgstr "隐私政策"
 
@@ -2192,89 +2206,165 @@ msgstr "隐私政策"
 msgid "Tous droits réservés"
 msgstr "保留所有权利"
 
-#: templates/includes/header.html:21
+#: templates/includes/header.html:10
+msgid "Ouvrir le menu"
+msgstr ""
+
+#: templates/includes/header.html:26
 msgid "Partenaires"
 msgstr "合作伙伴"
 
-#: templates/includes/header.html:24 templates/includes/header.html:32
+#: templates/includes/header.html:31
+#: templates/includes/main/header/services.html:5
 msgid "Services"
 msgstr "服务"
 
-#: templates/includes/header.html:42
-msgid "Transit, Manutention et Transport"
-msgstr "过境、装卸和运输"
-
-#: templates/includes/header.html:44
-msgid ""
-"Les services de transit, de manutention et de transport sont des services "
-"qui assurent la manutention, le stockage et/ou le transport de marchandises "
-"dans certaines zones"
-msgstr "过境、装卸和运输服务是指在某些区域进行货物装卸、储存和/或运输的服务"
-
-#: templates/includes/header.html:58 templates/main/customs.html:46
-msgid "Dédouanement"
-msgstr "报关"
-
-#: templates/includes/header.html:58
-msgid "Nouveau"
-msgstr "新"
-
-#: templates/includes/header.html:75 templates/main/warehousing.html:46
-msgid "Entrepôt de stockage"
-msgstr "仓储"
-
-#: templates/includes/header.html:77
-msgid ""
-"Afrilog propose des services spécialisés d'entreposage sous douane et de "
-"transport en libre-entreposage"
-msgstr "Afrilog提供专业的海关监管仓储服务和自由仓储运输服务"
-
-#: templates/includes/header.html:85
-msgid "Services de Fret"
-msgstr "货运服务"
-
-#: templates/includes/header.html:90 templates/main/aerien.html:46
-msgid "Fret aérien"
-msgstr "空运"
-
-#: templates/includes/header.html:95 templates/main/sea.html:46
-msgid "Fret maritime"
-msgstr "海运"
-
-#: templates/includes/header.html:100
-msgid "Fret terrestre"
-msgstr "陆运"
-
-#: templates/includes/header.html:120 templates/main/aerien.html:56
-#: templates/main/customs.html:56 templates/main/sea.html:55
-#: templates/main/terrestre.html:55 templates/main/transit.html:56
-#: templates/main/warehousing.html:56
+#: templates/includes/header.html:60 templates/main/aerien.html:34
+#: templates/main/customs.html:34 templates/main/sea.html:33
+#: templates/main/terrestre.html:33 templates/main/transit.html:34
+#: templates/main/warehousing.html:34
 msgid "Service commercial"
 msgstr "商业服务"
 
-#: templates/includes/header.html:123
+#: templates/includes/header.html:63
 msgid "Se connecter"
 msgstr "登录"
 
 #: templates/includes/language_selector.html:2
+#, fuzzy
 msgid "Anglais"
 msgstr "英语"
 
 #: templates/includes/language_selector.html:3
-msgid "Allemand"
-msgstr "德语"
+#, fuzzy
+msgid "Deutsch"
+msgstr "描述"
 
 #: templates/includes/language_selector.html:4
 msgid "Français"
 msgstr "法语"
 
 #: templates/includes/language_selector.html:5
-msgid "Espagnol"
-msgstr "西班牙语"
+msgid "Russe"
+msgstr ""
 
 #: templates/includes/language_selector.html:6
-msgid "Chinois"
-msgstr "中文"
+#, fuzzy
+msgid "Turc"
+msgstr "返回"
+
+#: templates/includes/main/header/resources.html:6
+#, fuzzy
+msgid "Outils"
+msgstr "选项"
+
+#: templates/includes/main/header/resources.html:15
+#: templates/main/calculate_air_freight.html:6
+#, fuzzy
+msgid "Calculatrice fret aérien"
+msgstr "空运运费计算器"
+
+#: templates/includes/main/header/resources.html:18
+#, fuzzy
+msgid "Comparer les tarifs de frets aérien"
+msgstr "了解我们的空运货物服务"
+
+#: templates/includes/main/header/resources.html:30
+#: templates/main/calculate_sea_freight.html:6
+#, fuzzy
+msgid "Calculatrice fret maritime"
+msgstr "海运费计算器"
+
+#: templates/includes/main/header/resources.html:32
+#: templates/includes/main/header/resources.html:72
+#: templates/includes/main/header/services.html:37
+msgid "Nouveau"
+msgstr "新"
+
+#: templates/includes/main/header/resources.html:36
+#, fuzzy
+msgid "Obtenez de meilleurs insights pour votre fret maritime"
+msgstr "我们的海运运价表"
+
+#: templates/includes/main/header/resources.html:48
+#, fuzzy
+msgid "Calculatrice fret routier"
+msgstr "计算器：Afrilog"
+
+#: templates/includes/main/header/resources.html:51
+msgid "Nous vous aidons à choisir judicieusement votre fret routier"
+msgstr "我们帮助您明智地选择公路货运"
+
+#: templates/includes/main/header/resources.html:70
+#, fuzzy
+msgid "Central d'achat"
+msgstr "采购详情"
+
+#: templates/includes/main/header/resources.html:76
+msgid "Découvrez de nombreux articles à travers notre boutique"
+msgstr "通过我们的商店发现许多商品"
+
+#: templates/includes/main/header/resources.html:90
+#, fuzzy
+msgid "Glossaire"
+msgstr "薪资"
+
+#: templates/includes/main/header/resources.html:93
+msgid "Aviez-vous oublié certains concepts? Veuillez consulter cette page"
+msgstr "你忘记了什么概念吗？请参阅此页面"
+
+#: templates/includes/main/header/resources.html:110
+msgid "Aviez-vous besoin d'aide? Notre service client est là pour vous"
+msgstr "您需要帮助吗？我们的客户服务随时为您服务"
+
+#: templates/includes/main/header/resources.html:119
+msgid "Publiés récemment"
+msgstr "最近发表"
+
+#: templates/includes/main/header/resources.html:129
+#, fuzzy
+msgid "En savoir plus"
+msgstr "查看更多"
+
+#: templates/includes/main/header/resources.html:138
+msgid "Aucun article n'a encore été publié"
+msgstr "尚未发表任何文章"
+
+#: templates/includes/main/header/services.html:17
+#, fuzzy
+msgid "Transport, Transit et Manutention"
+msgstr "过境和装卸"
+
+#: templates/includes/main/header/services.html:20
+msgid "Nous nous chargeons du transport de vos marchandises en toute sécurité"
+msgstr "我们负责您货物的安全运输"
+
+#: templates/includes/main/header/services.html:35
+msgid "Douanes, Taxes et Impôts"
+msgstr "关税、税费和税金"
+
+#: templates/includes/main/header/services.html:41
+msgid "Vous pouvez nous confier la gestion de vos taxes"
+msgstr "您可以委托我们管理您的税务"
+
+#: templates/includes/main/header/services.html:56
+#, fuzzy
+msgid "Entreposage"
+msgstr "仓库和存储"
+
+#: templates/includes/main/header/services.html:59
+msgid "Nous offrons également des services d'entreposage de marchandises"
+msgstr "我们还提供商品仓储服务"
+
+#: templates/includes/main/header/services.html:70
+#: templates/main/aerien.html:24
+msgid "Fret aérien"
+msgstr "空运"
+
+#: templates/includes/main/header/services.html:79
+#, fuzzy
+msgid "Fret routier"
+msgstr "海运"
 
 #: templates/main/aerien.html:6
 msgid "Découvrez nos services de fret aérien"
@@ -2284,262 +2374,290 @@ msgstr "了解我们的空运货物服务"
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
-msgstr ""
-"运输、物流、货运、空运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+msgstr "运输、物流、货运、空运、设备、集装箱、欧洲、非洲、大洋洲、中国"
 
 #: templates/main/aerien.html:10
 msgid "Afrilog : Fret aérien"
 msgstr "Afrilog：空运货物"
 
-#: templates/main/aerien.html:49
+#: templates/main/aerien.html:27
 msgid ""
-"Le fret aérien est la solution idéale pour le transport rapide et sécurisé "
-"de vos marchandises à l'échelle mondiale. Offrant des temps de transit "
-"réduits et une flexibilité inégalée, il permet de répondre efficacement aux "
-"exigences de délais stricts et aux demandes urgentes. Nos services de fret "
-"aérien garantissent une gestion optimale de vos envois, de la prise en "
-"charge à la livraison, assurant la rapidité et la fiabilité de chaque "
-"expédition. Découvrez comment nous pouvons accélérer votre chaîne "
-"d'approvisionnement et renforcer votre avantage concurrentiel grâce à nos "
-"solutions de fret aérien de pointe."
-msgstr ""
-"空运货物是您快速、安全地全球范围内运送货物的理想选择。提供缩短运输时间和无与伦比的灵活性，"
-"它能够有效应对严格的交货期要求和紧急需求。我们的空运货物服务确保了从接收到交付的每个"
-"货件的最佳管理，确保了每次货运的快速和可靠性。了解我们如何通过我们先进的空运货物解决方案加速您的供应链并增强您的竞争优势。"
+"Le fret aérien est la solution idéale pour le transport rapide et "
+"sécurisé de vos marchandises à l'échelle mondiale. Offrant des temps de "
+"transit réduits et une flexibilité inégalée, il permet de répondre "
+"efficacement aux exigences de délais stricts et aux demandes urgentes. "
+"Nos services de fret aérien garantissent une gestion optimale de vos "
+"envois, de la prise en charge à la livraison, assurant la rapidité et la "
+"fiabilité de chaque expédition. Découvrez comment nous pouvons accélérer "
+"votre chaîne d'approvisionnement et renforcer votre avantage "
+"concurrentiel grâce à nos solutions de fret aérien de pointe."
+msgstr "空运货物是您快速、安全地全球范围内运送货物的理想选择。提供缩短运输时间和无与伦比的灵活性，它能够有效应对严格的交货期要求和紧急需求。我们的空运货物服务确保了从接收到交付的每个货件的最佳管理，确保了每次货运的快速和可靠性。了解我们如何通过我们先进的空运货物解决方案加速您的供应链并增强您的竞争优势。"
 
-#: templates/main/aerien.html:62
+#: templates/main/aerien.html:40
 msgid "fret aérien"
 msgstr "空运货物"
 
-#: templates/main/aerien.html:74 templates/main/pricing.html:2
+#: templates/main/aerien.html:52 templates/main/pricing.html:2
 msgid "Notre grille tarifaire pour le fret aérien"
 msgstr "我们的空运货物价格表"
 
-#: templates/main/aerien.html:75 templates/main/pricing.html:3
-#: templates/main/pricing.html:269 templates/main/sea.html:105
+#: templates/main/aerien.html:53 templates/main/pricing.html:3
+#: templates/main/pricing.html:269 templates/main/sea.html:83
 msgid "A partir de la France"
 msgstr "从法国出发"
 
-#: templates/main/aerien.html:84 templates/main/aerien.html:147
+#: templates/main/aerien.html:62 templates/main/aerien.html:125
 #: templates/main/pricing.html:12 templates/main/pricing.html:75
 msgid "Aéroport de départ"
 msgstr "起飞机场"
 
-#: templates/main/aerien.html:85 templates/main/aerien.html:148
+#: templates/main/aerien.html:63 templates/main/aerien.html:126
 #: templates/main/pricing.html:13 templates/main/pricing.html:76
 msgid "Aéroport d'arrivée"
 msgstr "到达机场"
 
-#: templates/main/aerien.html:86 templates/main/pricing.html:14
+#: templates/main/aerien.html:64 templates/main/pricing.html:14
 msgid "Incoterm"
 msgstr "国际贸易术语"
 
-#: templates/main/aerien.html:87 templates/main/aerien.html:181
-#: templates/main/aerien.html:227 templates/main/aerien.html:273
+#: templates/main/aerien.html:65 templates/main/aerien.html:159
+#: templates/main/aerien.html:205 templates/main/aerien.html:251
 #: templates/main/pricing.html:15 templates/main/pricing.html:109
 #: templates/main/pricing.html:155 templates/main/pricing.html:201
 #: templates/main/pricing.html:248 templates/main/pricing.html:279
-#: templates/main/pricing.html:353 templates/main/sea.html:84
-#: templates/main/sea.html:115 templates/main/sea.html:189
+#: templates/main/pricing.html:353 templates/main/sea.html:62
+#: templates/main/sea.html:93 templates/main/sea.html:167
 msgid "Devise"
 msgstr "货币"
 
-#: templates/main/aerien.html:103 templates/main/aerien.html:104
-#: templates/main/aerien.html:105 templates/main/aerien.html:106
+#: templates/main/aerien.html:81 templates/main/aerien.html:82
+#: templates/main/aerien.html:83 templates/main/aerien.html:84
 #: templates/main/pricing.html:31 templates/main/pricing.html:32
 #: templates/main/pricing.html:33 templates/main/pricing.html:34
 msgid "8,70"
 msgstr "8.70"
 
-#: templates/main/aerien.html:115 templates/main/pricing.html:43
+#: templates/main/aerien.html:93 templates/main/pricing.html:43
 msgid "9,15"
 msgstr "9.15"
 
-#: templates/main/aerien.html:116 templates/main/pricing.html:44
+#: templates/main/aerien.html:94 templates/main/pricing.html:44
 msgid "7,75"
 msgstr "7.75"
 
-#: templates/main/aerien.html:117 templates/main/pricing.html:45
+#: templates/main/aerien.html:95 templates/main/pricing.html:45
 msgid "7,25"
 msgstr "7.25"
 
-#: templates/main/aerien.html:118 templates/main/pricing.html:46
+#: templates/main/aerien.html:96 templates/main/pricing.html:46
 msgid "7,10"
 msgstr "7.10"
 
-#: templates/main/aerien.html:126 templates/main/pricing.html:54
+#: templates/main/aerien.html:104 templates/main/pricing.html:54
 msgid "18,34"
 msgstr "18.34"
 
-#: templates/main/aerien.html:127 templates/main/pricing.html:55
+#: templates/main/aerien.html:105 templates/main/pricing.html:55
 msgid "14,23"
 msgstr "14.23"
 
-#: templates/main/aerien.html:128 templates/main/pricing.html:56
+#: templates/main/aerien.html:106 templates/main/pricing.html:56
 msgid "13,59"
 msgstr "13.59"
 
-#: templates/main/aerien.html:129 templates/main/pricing.html:57
+#: templates/main/aerien.html:107 templates/main/pricing.html:57
 msgid "13,23"
 msgstr "13.23"
 
-#: templates/main/aerien.html:130 templates/main/pricing.html:58
+#: templates/main/aerien.html:108 templates/main/pricing.html:58
 msgid "12,86"
 msgstr "12.86"
 
-#: templates/main/aerien.html:139 templates/main/pricing.html:67
-#: templates/main/pricing.html:300 templates/main/sea.html:136
+#: templates/main/aerien.html:117 templates/main/pricing.html:67
+#: templates/main/pricing.html:300 templates/main/sea.html:114
 msgid "A partir de la Chine"
 msgstr "从中国出发"
 
-#: templates/main/aerien.html:159 templates/main/aerien.html:160
+#: templates/main/aerien.html:137 templates/main/aerien.html:138
 #: templates/main/pricing.html:87 templates/main/pricing.html:88
 msgid "15,06"
 msgstr "15.06"
 
-#: templates/main/aerien.html:161 templates/main/aerien.html:162
+#: templates/main/aerien.html:139 templates/main/aerien.html:140
 #: templates/main/pricing.html:89 templates/main/pricing.html:90
 msgid "14,91"
 msgstr "14.91"
 
-#: templates/main/aerien.html:171 templates/main/pricing.html:99
+#: templates/main/aerien.html:149 templates/main/pricing.html:99
 msgid "A partir de Tel Aviv (Israel)"
 msgstr "从特拉维夫（以色列）出发"
 
-#: templates/main/aerien.html:179 templates/main/aerien.html:225
-#: templates/main/aerien.html:271 templates/main/pricing.html:107
+#: templates/main/aerien.html:157 templates/main/aerien.html:203
+#: templates/main/aerien.html:249 templates/main/pricing.html:107
 #: templates/main/pricing.html:153 templates/main/pricing.html:199
 msgid "Poids Net"
 msgstr "净重"
 
-#: templates/main/aerien.html:180 templates/main/aerien.html:226
-#: templates/main/aerien.html:272 templates/main/pricing.html:108
+#: templates/main/aerien.html:158 templates/main/aerien.html:204
+#: templates/main/aerien.html:250 templates/main/pricing.html:108
 #: templates/main/pricing.html:154 templates/main/pricing.html:200
 #: templates/main/pricing.html:247 templates/main/pricing.html:278
-#: templates/main/sea.html:83 templates/main/sea.html:114
+#: templates/main/sea.html:61 templates/main/sea.html:92
 msgid "Prix par Kgs"
 msgstr "每公斤价格"
 
-#: templates/main/aerien.html:187 templates/main/pricing.html:115
+#: templates/main/aerien.html:165 templates/main/pricing.html:115
 msgid "16,45 USD/Kg"
 msgstr "每公斤16.45美元"
 
-#: templates/main/aerien.html:192 templates/main/aerien.html:202
+#: templates/main/aerien.html:170 templates/main/aerien.html:180
 #: templates/main/pricing.html:120 templates/main/pricing.html:130
 msgid "13,00 USD/Kg"
 msgstr "每公斤13.00美元"
 
-#: templates/main/aerien.html:197 templates/main/pricing.html:125
+#: templates/main/aerien.html:175 templates/main/pricing.html:125
 msgid "13,85 USD/Kg"
 msgstr "每公斤13.85美元"
 
-#: templates/main/aerien.html:207 templates/main/pricing.html:135
+#: templates/main/aerien.html:185 templates/main/pricing.html:135
 msgid "13,00 USD"
 msgstr "13.00美元"
 
-#: templates/main/aerien.html:217 templates/main/pricing.html:145
+#: templates/main/aerien.html:195 templates/main/pricing.html:145
 msgid "A partir du Canada"
 msgstr "从加拿大出发"
 
-#: templates/main/aerien.html:233 templates/main/pricing.html:161
+#: templates/main/aerien.html:211 templates/main/pricing.html:161
 msgid "15,55 USD/Kg"
 msgstr "每公斤15.55美元"
 
-#: templates/main/aerien.html:238 templates/main/pricing.html:166
+#: templates/main/aerien.html:216 templates/main/pricing.html:166
 msgid "13,45 USD/Kg"
 msgstr "每公斤13.45美元"
 
-#: templates/main/aerien.html:243 templates/main/pricing.html:171
+#: templates/main/aerien.html:221 templates/main/pricing.html:171
 msgid "12,95 USD/Kg"
 msgstr "每公斤12.95美元"
 
-#: templates/main/aerien.html:248 templates/main/pricing.html:176
+#: templates/main/aerien.html:226 templates/main/pricing.html:176
 msgid "12,25 USD/Kg"
 msgstr "每公斤12.25美元"
 
-#: templates/main/aerien.html:253 templates/main/pricing.html:181
+#: templates/main/aerien.html:231 templates/main/pricing.html:181
 msgid "12,00 USD"
 msgstr "12.00美元"
 
-#: templates/main/aerien.html:263 templates/main/pricing.html:191
+#: templates/main/aerien.html:241 templates/main/pricing.html:191
 msgid "A partir de l'Inde"
 msgstr "从印度出发"
 
-#: templates/main/aerien.html:279 templates/main/pricing.html:207
+#: templates/main/aerien.html:257 templates/main/pricing.html:207
 msgid "15,70 USD/Kg"
 msgstr "每公斤15.70美元"
 
-#: templates/main/aerien.html:284 templates/main/pricing.html:212
+#: templates/main/aerien.html:262 templates/main/pricing.html:212
 msgid "17,63 USD/Kg"
 msgstr "每公斤17.63美元"
 
-#: templates/main/aerien.html:289 templates/main/pricing.html:217
+#: templates/main/aerien.html:267 templates/main/pricing.html:217
 msgid "16,55 USD/Kg"
 msgstr "每公斤16.55美元"
 
-#: templates/main/aerien.html:294 templates/main/pricing.html:222
+#: templates/main/aerien.html:272 templates/main/pricing.html:222
 msgid "15,50 USD/Kg"
 msgstr "每公斤15.50美元"
 
-#: templates/main/aerien.html:299 templates/main/pricing.html:227
+#: templates/main/aerien.html:277 templates/main/pricing.html:227
 msgid "13,90 USD/Kg"
 msgstr "每公斤13.90美元"
 
-#: templates/main/aerien.html:315 templates/main/pricing.html:381
-#: templates/main/sea.html:217
+#: templates/main/aerien.html:293 templates/main/pricing.html:381
+#: templates/main/sea.html:195
 msgid "Pour plus d'infos veuillez contacter notre "
 msgstr "欲获取更多信息，请联系我们的"
 
-#: templates/main/aerien.html:316 templates/main/pricing.html:382
-#: templates/main/sea.html:218
+#: templates/main/aerien.html:294 templates/main/pricing.html:382
+#: templates/main/sea.html:196
+#, fuzzy
 msgid ""
 "Veuillez noter que les tarifs seront mis à jour dès l'obtention des "
-"informations réelles sur les marchandises, les formalités exports ainsi que "
-"le Pick up seront déterminés au cas par cas en fonction de la localisation "
-"du fournisseur. La validité des tarifs est d'une (01) semaine pour le fret "
-"aérien et un (01) mois pour le fret maritime"
+"informations réelles sur les marchandises, les formalités exports ainsi "
+"que le Pick up seotn déterminés au cas par cas en fonction de la "
+"localisation du fournisseur. La validité des tarifs est d'une (01) "
+"semaine pour le fret aérien et un (01) mois pour le fret maritime"
 msgstr ""
 "请注意，价格将根据货物实际信息、出口手续以及提货地点的供应商位置等情况进行逐 "
 "案更新。空运价格的有效期为一（01）周，海运价格的有效期为一个（01）月。"
+
+#: templates/main/calculate_air_freight.html:7
+#, fuzzy
+msgid ""
+"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+msgstr "运输、物流、空运、设备、集装箱、欧洲、非洲、大洋洲、中国、仓库、存储、链"
+
+#: templates/main/calculate_air_freight.html:10
+#, fuzzy
+msgid "Afrilog : Calculatrice fret aérien"
+msgstr "Afrilog：空运货物"
+
+#: templates/main/calculate_air_freight.html:25
+msgid "Obtenez un devis rapide pour votre fret aérien."
+msgstr "获取空运的快速报价。"
+
+#: templates/main/calculate_sea_freight.html:7
+#, fuzzy
+msgid ""
+"Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation"
+msgstr "运输、物流、海运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+
+#: templates/main/calculate_sea_freight.html:10
+#, fuzzy
+msgid "Afrilog : Calculatrice fret maritime"
+msgstr "Afrilog：海运"
+
+#: templates/main/calculate_sea_freight.html:25
+msgid "Obtenez un devis rapide pour votre fret maritime."
+msgstr "快速获取海运报价。"
 
 #: templates/main/cgu.html:4
 msgid "Afrilog : Conditions générales d'utilisation"
 msgstr "Afrilog：使用条款"
 
-#: templates/main/cgu.html:31
+#: templates/main/cgu.html:15
 msgid "Conditions générales d'utilisation"
 msgstr "使用条款"
 
-#: templates/main/cgu.html:37
+#: templates/main/cgu.html:21
 msgid "Conduite du client"
 msgstr "客户行为"
 
-
-#: templates/main/cgu.html:40
+#: templates/main/cgu.html:24
 msgid "Conditions générales"
 msgstr "一般条款"
 
-#: templates/main/cgu.html:43
+#: templates/main/cgu.html:27
 msgid "Services & Compte"
 msgstr "服务与账户"
 
-#: templates/main/cgu.html:48
+#: templates/main/cgu.html:32
 msgid "Conditions d'utilisation"
 msgstr "使用条件"
 
-#: templates/main/cgu.html:53
+#: templates/main/cgu.html:37
 msgid "Dernière mise à jour : 31 Mai 2024"
 msgstr "最后更新日期：2024年5月31日"
 
-#: templates/main/cgu.html:55
+#: templates/main/cgu.html:39
 msgid ""
 "Ces conditions générales (les « Conditions ») régissent la fourniture de "
 "produits par Afrilog, y compris les contenus numériques et les services. "
-"Veuillez lire attentivement ces Conditions avant d'accéder à nos contenus "
-"numériques ou d'utiliser nos services. Ces Conditions, ainsi que notre "
+"Veuillez lire attentivement ces Conditions avant d'accéder à nos contenus"
+" numériques ou d'utiliser nos services. Ces Conditions, ainsi que notre "
 "Politique de confidentialité et notre Politique relative aux cookies, "
-"détaillent comment nous vous fournirons des contenus numériques et/ou des "
-"services, comment vous et nous pouvons modifier ou mettre fin au "
+"détaillent comment nous vous fournirons des contenus numériques et/ou des"
+" services, comment vous et nous pouvons modifier ou mettre fin au "
 "contrat, que faire en cas de problème et d'autres informations "
 "importantes. <br>\n"
 "                        <br> Comment nous contacter - Vous pouvez nous "
@@ -2547,150 +2665,155 @@ msgid ""
 "logistiqueafrica@gmail.com.\n"
 "                      "
 msgstr ""
-"这些通用条款（以下简称“条款”）适用于Afrilog提供的产品，包括数字内容和服务。在"
-"访问我们的数字内容或使用我们的服务之前，请仔细阅读这些条款。这些条款以及我们的隐私"
-"政策和Cookie政策详细说明了我们如何为您提供数字内容和/或服务，您和我们如何修改或终止"
-"合同，以及在出现问题时应采取的措施等重要信息。 <br>\n"
+"这些通用条款（以下简称“条款”）适用于Afrilog提供的产品，包括数字内容和服务。在访问我们的数字内容或使用我们的服务之前，请仔细阅读这些条款。这些条款以及我们的隐私政策和Cookie政策详细说明了我们如何为您提供数字内容和/或服务，您和我们如何修改或终止合同，以及在出现问题时应采取的措施等重要信息。"
+" <br>\n"
 "                        <br> 如何联系我们 - 您可以通过电话联系我们 +227 20 73 51 00 "
 "或发送电子邮件至logistiqueafrica@gmail.com。\n"
 "                      "
 
-#: templates/main/cgu.html:58
+#: templates/main/cgu.html:42
 msgid "Sommaire"
 msgstr "目录"
 
-#: templates/main/cgu.html:61 templates/main/cgu.html:150
+#: templates/main/cgu.html:45 templates/main/cgu.html:134
 msgid ""
 "Votre accord à ces Conditions par votre accès au site ou votre "
 "utilisation du site."
-msgstr ""
-"通过访问网站或使用网站表示您同意这些条款。"
+msgstr "通过访问网站或使用网站表示您同意这些条款。"
 
-#: templates/main/cgu.html:64 templates/main/cgu.html:154
+#: templates/main/cgu.html:48 templates/main/cgu.html:138
 msgid "Contenu et services"
 msgstr "内容和服务"
 
-#: templates/main/cgu.html:67 templates/main/cgu.html:160
+#: templates/main/cgu.html:51 templates/main/cgu.html:144
 msgid "Afrilog ne propose ni ne fournit de conseils juridiques"
 msgstr "Afrilog w提供法律咨询服务"
 
-#: templates/main/cgu.html:70
+#: templates/main/cgu.html:54
 msgid "Afrilog n'est pas un cabinet d'avocats"
 msgstr "Afrilog不是律师事务所"
 
-#: templates/main/cgu.html:73
+#: templates/main/cgu.html:57
 msgid "Afrilog n'est pas un service de référencement"
 msgstr "Afrilog不是引擎优化服务"
 
-#: templates/main/cgu.html:76
+#: templates/main/cgu.html:60
 msgid "Il n'y a pas de relation avocat-client entre vous et Afrilog"
 msgstr "您与Afrilog之间不存在律师客户关系"
 
-#: templates/main/cgu.html:79
+#: templates/main/cgu.html:63
 msgid "Les utilisateurs avocats ne sont pas des employés d'Afrilog"
 msgstr "律师用户不是Afrilog的雇员"
 
-#: templates/main/cgu.html:82
+#: templates/main/cgu.html:66
 msgid ""
 "Tous les frais juridiques sont payés aux utilisateurs avocats, pas à "
 "Afrilog"
 msgstr "所有法律费用由律师用户支付，而不是Afrilog支付"
 
-#: templates/main/cgu.html:85
+#: templates/main/cgu.html:69
 msgid "Il n'y a pas de frais pour Afrilog pour trouver des engagements"
 msgstr "Afrilog没有找到法律服务项目的费用"
 
-#: templates/main/cgu.html:88
+#: templates/main/cgu.html:72
 msgid "Non-contournement"
 msgstr "非规避"
 
-#: templates/main/cgu.html:91
+#: templates/main/cgu.html:75
 msgid "Attentes"
 msgstr "期望"
 
-#: templates/main/cgu.html:94
+#: templates/main/cgu.html:78
 msgid "Vos responsabilités"
 msgstr "您的责任"
 
-#: templates/main/cgu.html:97
+#: templates/main/cgu.html:81
 msgid "Votre utilisation et restrictions"
 msgstr "您的使用和限制"
 
-#: templates/main/cgu.html:100
+#: templates/main/cgu.html:84
 msgid "Confidentialité"
 msgstr "隐私"
 
-#: templates/main/cgu.html:103
+#: templates/main/cgu.html:87
 msgid "Indemnisation"
 msgstr "赔偿"
 
-#: templates/main/cgu.html:106
+#: templates/main/cgu.html:90
 msgid "Communication et autres données"
 msgstr "通信和其他数据"
 
-#: templates/main/cgu.html:109
+#: templates/main/cgu.html:93
 msgid "Notifications et accords électroniques"
 msgstr "通知和电子协议"
 
-#: templates/main/cgu.html:112
+#: templates/main/cgu.html:96
 msgid "Services premium"
 msgstr "高级服务"
 
-#: templates/main/cgu.html:115
+#: templates/main/cgu.html:99
 msgid "Hyperliens"
 msgstr "超链接"
 
-#: templates/main/cgu.html:118
+#: templates/main/cgu.html:102
 msgid "Droits d'auteur et utilisation limitée"
 msgstr "版权和受限使用"
 
-#: templates/main/cgu.html:121
+#: templates/main/cgu.html:105
 msgid "Modifications"
 msgstr "修改"
 
-#: templates/main/cgu.html:124
+#: templates/main/cgu.html:108
 msgid "Votre contenu"
 msgstr "您的内容"
 
-#: templates/main/cgu.html:127
+#: templates/main/cgu.html:111
 msgid "Plaintes en matière de droits d'auteur"
 msgstr "版权投诉"
 
-#: templates/main/cgu.html:130
+#: templates/main/cgu.html:114
 msgid "Décharge de responsabilité"
 msgstr "免责声明"
 
-#: templates/main/cgu.html:133
+#: templates/main/cgu.html:117
 msgid "Limitation de responsabilité"
 msgstr "责任限制"
 
-#: templates/main/cgu.html:136
+#: templates/main/cgu.html:120
 msgid "Accord complet"
 msgstr "完整协议"
 
-#: templates/main/cgu.html:139
+#: templates/main/cgu.html:123
 msgid "Cession"
 msgstr "转让"
 
-#: templates/main/cgu.html:142
+#: templates/main/cgu.html:126
 msgid "Arbitrage"
 msgstr "仲裁"
 
-#: templates/main/cgu.html:145
+#: templates/main/cgu.html:129
 msgid "Âge minimum pour utiliser"
 msgstr "最小使用年龄"
 
-#: templates/main/cgu.html:151
+#: templates/main/cgu.html:135
 msgid ""
 "Ces Conditions régissent votre utilisation du site, à la fois en tant que"
 " visiteur et en tant qu'utilisateur enregistré (chaque visiteur et chaque"
 " utilisateur enregistré étant désigné généralement aux fins de ces "
-"Conditions comme un « Utilisateur Client »). EN UTILISANT LE SITE ET/OU EN VOUS INSCRIVANT CHEZ NOUS, VOUS ACCEPTEZ CES CONDITIONS D'UTILISATION."
+"Conditions comme un « Utilisateur Client »). EN UTILISANT LE SITE ET/OU "
+"EN VOUS INSCRIVANT CHEZ NOUS, VOUS ACCEPTEZ CES CONDITIONS D'UTILISATION."
+" Vous consentez aux pratiques d'information divulguées dans notre "
+"Politique de confidentialité et notre Politique relative aux cookies qui "
+"sont incorporées aux présentes par référence, et vous consentez à "
+"résoudre dans l'État de New York conformément aux termes énoncés aux "
+"présentes tout litige que vous pourriez avoir avec nous ou avec le site. "
+"Veuillez noter que nous proposons le site EN L'ÉTAT et sans garanties. Si"
+" vous enregistrez un compte ou utilisez le site au nom d'un individu ou "
+"d'une entité autre que vous-même, vous déclarez que vous êtes autorisé "
+"par cet individu ou cette entité à accepter ces Conditions en son nom."
 msgstr ""
-"使用本网站，无论是作为访问者还是注册用户（每个访问者和每个注册用户通常被称为“客户用户”），"
-"即表示您同意这些使用条款。"
 
-#: templates/main/cgu.html:155
+#: templates/main/cgu.html:139
 msgid ""
 "Tout ce que nous offrons sur et à travers le site est désigné dans ces "
 "Conditions collectivement comme les « Services ». <br>\n"
@@ -2735,224 +2858,410 @@ msgid ""
 "                          "
 msgstr ""
 "我们在网站上提供的一切都在这些条款中被统称为“服务”。<br>\n"
-"                            <br> 网站的部分内容可以在不注册的情况下查看，但要积极参与或存储您"
-"的信息，您必须注册为会员并根据我们的隐私政策的条款允许我们使用和披露您的个人和法律信息，以便我"
-"们能够提供服务，并如隐私政策中披露的那样。 Afrilog是一个在线平台，将法律专业人士（“律师用户”"
-"）与寻找法律服务的潜在客户连接起来。 Afrilog不提供法律建议，也绝不提供任何形式的法律服务。 Afrilog"
-"不保证用户客户会通过其系统找到法律代表。 Afrilog不对其用户客户和用户律师之间形成律师-客户关系的时"
-"间发表意见或立场。 Afrilog不是用户客户和用户律师之间调节律师-客户关系的协议的一方，Afrilog也不涉"
-"及客户的实际代表。因此，Afrilog不能保证用户客户和用户律师之间的协议的执行，用户律师的工作的准确性"
-"或完整性，或任何一方的诚实。用户客户负责评估与他们通过网站联系的所有用户律师的诚实和能力。您承认，"
-"虽然您在网站上提供给您的内容、文本、数据、图形、图像、信息、建议、意见和其他材料（统称为“信息”）"
-"的一部分（包括直接回答您的问题或发布的信息），可能由法律专业人员提供，但提供此类信息不会形成律师-客户"
-"关系，也不构成法律建议或意见，而是为了帮助您找到合适的法律专业人士。任何潜在客户或已订阅律师用户通过"
-"网站使用的内容不适用于在任何人、实体和Afrilog之间或之间建立律师-客户关系。除非用户律师以外的任何人向"
-"Afrilog的任何人发送的电子通信都不会在用户客户和Afrilog之间建立律师-客户关系。\n"
+"                            <br> "
+"网站的部分内容可以在不注册的情况下查看，但要积极参与或存储您的信息，您必须注册为会员并根据我们的隐私政策的条款允许我们使用和披露您的个人和法律信息，以便我们能够提供服务，并如隐私政策中披露的那样。"
+" Afrilog是一个在线平台，将法律专业人士（“律师用户”）与寻找法律服务的潜在客户连接起来。 "
+"Afrilog不提供法律建议，也绝不提供任何形式的法律服务。 Afrilog不保证用户客户会通过其系统找到法律代表。 "
+"Afrilog不对其用户客户和用户律师之间形成律师-客户关系的时间发表意见或立场。 "
+"Afrilog不是用户客户和用户律师之间调节律师-客户关系的协议的一方，Afrilog也不涉及客户的实际代表。因此，Afrilog不能保证用户客户和用户律师之间的协议的执行，用户律师的工作的准确性或完整性，或任何一方的诚实。用户客户负责评估与他们通过网站联系的所有用户律师的诚实和能力。您承认，虽然您在网站上提供给您的内容、文本、数据、图形、图像、信息、建议、意见和其他材料（统称为“信息”）的一部分（包括直接回答您的问题或发布的信息），可能由法律专业人员提供，但提供此类信息不会形成律师-客户关系，也不构成法律建议或意见，而是为了帮助您找到合适的法律专业人士。任何潜在客户或已订阅律师用户通过网站使用的内容不适用于在任何人、实体和Afrilog之间或之间建立律师-客户关系。除非用户律师以外的任何人向Afrilog的任何人发送的电子通信都不会在用户客户和Afrilog之间建立律师-客户关系。"
+"\n"
 "                          "
 
-#: templates/main/cgu.html:161
+#: templates/main/cgu.html:145
+#, fuzzy
 msgid ""
-"vous recevez de la part d'Afrilog et de ses affiliés sont uniquement à des fins d'information et de programmation. Afrilog n'est pas une société de conception ni ne vous offre de conseils, recommandations, consultations ou toute forme de conseil en design. Afrilog met ses concepteurs à votre disposition et toute information que vous recevez d'Afrilog (autre que par un concepteur que vous engagez pour travailler avec vous) est (i) fournie par des professionnels et organisations de conception indépendants représentant les intérêts d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit aucune relation de concepteur-client entre vous et Afrilog."
-msgstr ""
-"您从Afrilog及其关联公司那里收到的信息仅供信息和编程目的使用。Afrilog不是设计公司，也不提供设计方面的建议、推荐、咨询或任何形式的设计指导。Afrilog为您提供设计师，并且您从Afrilog那里获得的任何信息（除非您雇佣设计师与您合作）：(i)由独立的设计专业人员和组织代表Afrilog的利益提供，(ii)仅供信息目的使用，以及(iii)不建立您与Afrilog之间的设计师-客户关系。"
+"Les informations que vous recevez de la part d'Afrilog et de ses affiliés"
+" sont uniquement à des fins d'information et de programmation. Afrilog "
+"n'est pas une société de conception ni ne vous offre de conseils, "
+"recommandations, consultations ou toute forme de conseil en design. "
+"Afrilog met ses concepteurs à votre disposition et toute information que "
+"vous recevez d'Afrilog (autre que par un concepteur que vous engagez pour"
+" travailler avec vous) est (i) fournie par des professionnels et "
+"organisations de conception indépendants représentant les intérêts "
+"d'Afrilog, (ii) à des fins d'information uniquement, et (iii) n'établit "
+"aucune relation de concepteur-client entre vous et Afrilog."
+msgstr "您从Afrilog及其关联公司那里收到的信息仅供信息和编程目的使用。Afrilog不是设计公司，也不提供设计方面的建议、推荐、咨询或任何形式的设计指导。Afrilog为您提供设计师，并且您从Afrilog那里获得的任何信息（除非您雇佣设计师与您合作）：(i)由独立的设计专业人员和组织代表Afrilog的利益提供，(ii)仅供信息目的使用，以及(iii)不建立您与Afrilog之间的设计师-客户关系。"
 
-#: templates/main/home.html:58
+#: templates/main/contact.html:8
+#, fuzzy
+msgid "Contactez notre service commercial"
+msgstr "商业服务"
+
+#: templates/main/contact.html:11
+msgid ""
+"Découvrez comment notre expertise en logistique pourrait propulser votre "
+"entreprise."
+msgstr ""
+
+#: templates/main/contact.html:34
+#, fuzzy
+msgid "Entreprise"
+msgstr "销售"
+
+#: templates/main/contact.html:62
+#, fuzzy
+msgid "Entrez votre message..."
+msgstr "请输入您的地址"
+
+#: templates/main/contact.html:69
+msgid "Accepter les politiques"
+msgstr ""
+
+#: templates/main/contact.html:75
+#, fuzzy
+msgid "En sélectionnant cette option, vous acceptez notre"
+msgstr "通过使用我们的服务，您同意我们的 "
+
+#: templates/main/customs.html:6
+#, fuzzy
+msgid "Découvrez nos services d'aide au processus de dédouanement"
+msgstr "了解我们的空运货物服务"
+
+#: templates/main/customs.html:7
+#, fuzzy
+msgid ""
+"Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
+"Afrique, Oceanie, Chine, Taxes, Douanes"
+msgstr "运输、物流、货运、空运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+
+#: templates/main/customs.html:10
+msgid "Afrilog : Aide dans le processus de dédouanement"
+msgstr ""
+
+#: templates/main/customs.html:24
+msgid "Dédouanement"
+msgstr "报关"
+
+#: templates/main/customs.html:27
+msgid ""
+"En tant qu'entreprise logistique leader, Afrilog reconnaît l'importance "
+"du dédouanement dans le processus d'expédition. Nous comprenons le "
+"potentiel de retards coûteux et de complications qui peuvent survenir "
+"lorsque nous essayons de nous conformer aux réglementations douanières et"
+" aux formalités administratives. Pour aider nos clients à surmonter ces "
+"défis, nous fournissons des services de dédouanement complets qui "
+"garantissent un processus d’importation ou d’exportation fluide. Chez "
+"Afrilog, nous sommes fiers de notre souci du détail et de notre "
+"engagement à garantir que vos marchandises arrivent à leur destination "
+"finale à temps et dans les meilleures conditions possibles. Lorsque vous "
+"faites appel à nous pour des services de dédouanement, vous pouvez être "
+"assuré que vos envois sont entre les mains d'experts qui comprennent les "
+"complexités du processus d'expédition et se consacrent à fournir un "
+"service exceptionnel."
+msgstr ""
+"作为领先的物流公司，Afrilog "
+"认识到运输过程中的清关。我们了解可能会出现代价高昂的延误和并发症当我们努力遵守海关规定时并且帮助我们的客户克服这些行政手续。挑战，我们提供全面的清关服务保证进出口过程顺利进行。在Afrilog，我们为我们对细节的关注和我们的承诺确保您的货物到达目的地在最好的条件下准时完成决赛。当你致电我们办理清关服务，您可以确保您的货物掌握在了解情况的专家手中运输过程的复杂性，致力于提供优质的服务。"
+
+#: templates/main/customs.html:40
+msgid "douanes, taxes, impôts"
+msgstr "海关、税收、关税"
+
+#: templates/main/globle.html:3
+#, fuzzy
+msgid "Ouvrez-vous au monde"
+msgstr "新监视器"
+
+#: templates/main/globle.html:4
+msgid "Connectez-vous à un monde plein de possibiltés."
+msgstr "连接到一个充满可能性的世界。"
+
+#: templates/main/home.html:25
+msgid "Logistics company in Africa"
+msgstr "非洲物流公司"
+
+#: templates/main/home.html:28
+#, fuzzy
+msgid "Leader dans la"
+msgstr "请求帮助"
+
+#: templates/main/home.html:28
+msgid "logistique"
+msgstr "后勤"
+
+#: templates/main/home.html:28
+#, fuzzy
+msgid "et le"
+msgstr "标题"
+
+#: templates/main/home.html:29
+#, fuzzy
+msgid "transport"
+msgstr "航空运输"
+
+#: templates/main/home.html:32
 msgid ""
 "Nous fournissons des solutions logistiques innovantes et fiables pour "
 "répondre à tous vos besoins de transport et de transit. Faites confiance "
 "à notre expertise pour optimiser votre chaîne d'approvisionnement."
-msgstr ""
-"我们提供创新可靠的物流解决方案，满足您所有的运输和过境需求。相信我们的专业知识，优化您的供应链。"
+msgstr "我们提供创新可靠的物流解决方案，满足您所有的运输和过境需求。相信我们的专业知识，优化您的供应链。"
 
-#: templates/main/home.html:62
+#: templates/main/home.html:36
 msgid "Entrer votre identifiant ou N° de suivi..."
 msgstr "输入您的用户名或跟踪号码..."
 
-#: templates/main/home.html:72
-msgid "dashboard"
-msgstr "仪表板"
-
-#: templates/main/home.html:86
+#: templates/main/home.html:61
 msgid "Nous ont fait confiance"
 msgstr "我们值得信赖"
 
-#: templates/main/home.html:114
+#: templates/main/home.html:89
 msgid "Une vision nouvelle pour la logistique et le transport"
 msgstr "物流和运输的新视野"
 
-#: templates/main/home.html:116 templates/main/home.html:372
+#: templates/main/home.html:91 templates/main/home.html:175
 msgid ""
 "Nous apportons une approche novatrice à la chaîne logistique, au transit "
 "et à l'import-export. Nos services sont conçus pour répondre aux besoins "
 "spécifiques de nos clients et aux défis de la globalisation des échanges."
-msgstr ""
-"我们为物流、过境和进出口带来创新的方法。我们的服务旨在满足客户的特定需求，应对全球交流的挑战。"
+msgstr "我们为物流、过境和进出口带来创新的方法。我们的服务旨在满足客户的特定需求，应对全球交流的挑战。"
 
-#: templates/main/home.html:308
+#: templates/main/home.html:112
 msgid "Nos valeurs fondamentales"
 msgstr "我们的核心价值观"
 
-#: templates/main/home.html:311
+#: templates/main/home.html:115
 msgid "Ce qui nous guide"
 msgstr "我们的指导原则"
 
-#: templates/main/home.html:314
+#: templates/main/home.html:118
 msgid ""
 "Les valeurs fondamentales de notre entreprise définissent notre "
 "engagement envers nos clients et partenaires, en assurant un service de "
 "qualité exceptionnelle."
-msgstr ""
-"我们企业的核心价值观定义了我们对客户和合作伙伴的承诺，确保提供卓越的服务质量。"
+msgstr "我们企业的核心价值观定义了我们对客户和合作伙伴的承诺，确保提供卓越的服务质量。"
 
-#: templates/main/home.html:322
+#: templates/main/home.html:126
 msgid "Innovation continue."
 msgstr "持续创新。"
 
-#: templates/main/home.html:324
+#: templates/main/home.html:128
 msgid ""
 "Nous investissons constamment dans de nouvelles technologies pour "
 "améliorer nos services et répondre aux besoins évolutifs de nos clients."
-msgstr ""
-"我们不断投资于新技术，以改善我们的服务，满足客户不断变化的需求。"
+msgstr "我们不断投资于新技术，以改善我们的服务，满足客户不断变化的需求。"
 
-#: templates/main/home.html:331
+#: templates/main/home.html:135
 msgid "Sécurité et fiabilité."
 msgstr "安全可靠。"
 
-#: templates/main/home.html:334
+#: templates/main/home.html:138
 msgid ""
 "Nous assurons la sécurité de vos marchandises à chaque étape de la chaîne"
 " logistique grâce à des systèmes robustes et fiables."
-msgstr ""
-"我们通过强大可靠的系统，确保您货物在物流链的每个环节都安全可靠。"
+msgstr "我们通过强大可靠的系统，确保您货物在物流链的每个环节都安全可靠。"
 
-#: templates/main/home.html:343
+#: templates/main/home.html:146
 msgid "Excellence opérationnelle."
 msgstr "卓越的运营。"
 
-#: templates/main/home.html:346
+#: templates/main/home.html:149
 msgid ""
 "Nous nous efforçons d’atteindre l’excellence dans toutes nos opérations "
 "pour garantir la satisfaction de nos clients et partenaires."
-msgstr ""
-"我们努力在所有运营中实现卓越，以确保客户和合作伙伴的满意度。"
+msgstr "我们努力在所有运营中实现卓越，以确保客户和合作伙伴的满意度。"
 
-#: templates/main/home.html:352
+#: templates/main/home.html:155
 msgid "femme souriante"
 msgstr "微笑的女士"
 
-#: templates/main/home.html:369
+#: templates/main/home.html:172
 msgid "Travaillez avec nous"
 msgstr "与我们合作"
 
-#: templates/main/home.html:378
+#: templates/main/home.html:181
 msgid "Postes vacants"
 msgstr "职位空缺"
 
-#: templates/main/home.html:382
+#: templates/main/home.html:185
 msgid "Nos valeurs"
 msgstr "我们的价值观"
 
-#: templates/main/home.html:502
+#: templates/main/home.html:206
+#, fuzzy
+msgid "Depuis le blog"
+msgstr "从"
+
+#: templates/main/home.html:207
+msgid ""
+"Apprenez à optimiser votre logistique et à améliorer l'efficacité grâce à"
+" nos conseils d'experts."
+msgstr "了解如何通过“优化您的物流并提高效率 我们的专家建议。"
+
+#: templates/main/home.html:212
+msgid "10 mai 2023"
+msgstr "2023 年 5 月 10 日"
+
+#: templates/main/home.html:219
+msgid "Améliorer l'efficacité de la chaîne d'approvisionnement"
+msgstr "提高供应链效率"
+
+#: templates/main/home.html:223
+msgid ""
+"Découvrez des stratégies pour rationaliser votre chaîne "
+"d'approvisionnement et réduire les coûts. Nos experts partagent des "
+"informations sur les dernières technologies et les meilleures pratiques "
+"en gestion logistique."
+msgstr "探索简化渠道的策略《采购降低成本。我们的专家分享》有关最新技术和最佳实践的信息在物流管理方面。"
+
+#: templates/main/home.html:232
+msgid "Alex Johnson"
+msgstr "亚历克斯·约翰逊"
+
+#: templates/main/home.html:236
+msgid "Expert en logistique"
+msgstr "物流专家"
+
+#: templates/main/home.html:244
+msgid "18 avr. 2023"
+msgstr "2023 年 4 月 18 日"
+
+#: templates/main/home.html:246
+msgid "Chaîne d'approvisionnement"
+msgstr "供应链"
+
+#: templates/main/home.html:252
+msgid "Technologie logistique de pointe"
+msgstr "尖端物流技术"
+
+#: templates/main/home.html:255
+msgid ""
+"Explorez les dernières avancées en technologie logistique et comment "
+"elles peuvent améliorer les opérations de votre entreprise. De l'IA à la "
+"blockchain, restez à la pointe avec nos insights d'experts."
+msgstr "探索物流技术的最新进展以及如何他们可以改善您的业务运营。从人工智能到区块链，凭借我们的专家见解保持领先地位。"
+
+#: templates/main/home.html:263
+msgid "Jamie Lee"
+msgstr "杰米·李"
+
+#: templates/main/home.html:266
+msgid "Innovateur technologique"
+msgstr "技术创新者"
+
+#: templates/main/home.html:272
+msgid "22 mar. 2023"
+msgstr "2023 年 3 月 22 日"
+
+#: templates/main/home.html:273
+#, fuzzy
+msgid "Transport"
+msgstr "航空运输"
+
+#: templates/main/home.html:279
+msgid "Solutions de transport durable"
+msgstr "可持续交通解决方案"
+
+#: templates/main/home.html:283
+msgid ""
+"Découvrez des options de transport durable et comment elles peuvent "
+"bénéficier à votre entreprise et à l'environnement. Notre guide couvre "
+"tout, des véhicules électriques aux pratiques logistiques écologiques."
+msgstr "了解可持续交通选择及其实现方式有利于您的业务和环境。我们的指南涵盖从电动汽车到环保物流实践的一切。"
+
+#: templates/main/home.html:292
+msgid "Morgan Smith"
+msgstr "摩根·史密斯"
+
+#: templates/main/home.html:295
+msgid "Consultant en durabilité"
+msgstr "可持续发展顾问"
+
+#: templates/main/home.html:313
 msgid "Abonnez-vous à notre newsletter"
 msgstr "订阅我们的新闻简讯"
 
-#: templates/main/home.html:503
+#: templates/main/home.html:314
 msgid ""
 "Recevez les dernières nouvelles et mises à jour sur nos services "
 "logistiques directement dans votre boîte de réception."
-msgstr ""
-"在您的收件箱中直接获取有关我们物流服务的最新消息和更新。"
+msgstr "在您的收件箱中直接获取有关我们物流服务的最新消息和更新。"
 
-#: templates/main/home.html:505
+#: templates/main/home.html:316
 msgid "Adresse email"
 msgstr "电子邮件地址"
 
-#: templates/main/home.html:506
+#: templates/main/home.html:317
 msgid "Entrez votre email"
 msgstr "输入您的电子邮件"
 
-#: templates/main/home.html:507
+#: templates/main/home.html:318
 msgid "S'abonner"
 msgstr "订阅"
 
-#: templates/main/home.html:517
+#: templates/main/home.html:328
 msgid "Articles hebdomadaires"
 msgstr "每周文章"
 
-#: templates/main/home.html:518
+#: templates/main/home.html:329
 msgid ""
 "Des conseils et des informations exclusives sur la logistique pour "
 "optimiser vos opérations."
-msgstr ""
-"关于物流的独家建议和信息，以优化您的运营。"
+msgstr "关于物流的独家建议和信息，以优化您的运营。"
 
-#: templates/main/home.html:526
+#: templates/main/home.html:337
 msgid "Pas de spam"
 msgstr "无垃圾邮件"
 
-#: templates/main/home.html:527
+#: templates/main/home.html:338
 msgid ""
 "Nous respectons votre vie privée. Recevez uniquement des informations "
 "pertinentes et utiles."
-msgstr ""
-"我们尊重您的隐私。仅接收相关和有用的信息。"
+msgstr "我们尊重您的隐私。仅接收相关和有用的信息。"
 
-#: templates/main/layout.html:6
+#: templates/main/layout.html:5
 msgid "Afrilog : Leader dans le domaine du Transport et de la Logistique"
 msgstr "Afrilog：领先的运输和物流公司"
 
-#: templates/main/pricing.html:237 templates/main/sea.html:73
+#: templates/main/pricing.html:237 templates/main/sea.html:51
 msgid "Notre grille tarifaire pour le fret maritime"
 msgstr "我们的海运运价表"
 
-#: templates/main/pricing.html:238 templates/main/sea.html:74
+#: templates/main/pricing.html:238 templates/main/sea.html:52
 msgid "A partir de Valencia (Espagne)"
 msgstr "从瓦伦西亚（西班牙）开始"
 
 #: templates/main/pricing.html:246 templates/main/pricing.html:277
-#: templates/main/sea.html:82 templates/main/sea.html:113
+#: templates/main/sea.html:60 templates/main/sea.html:91
 msgid "Type de Conteneur"
 msgstr "集装箱类型"
 
-#: templates/main/pricing.html:309 templates/main/sea.html:145
+#: templates/main/pricing.html:309 templates/main/sea.html:123
 msgid "Port de débarquement"
 msgstr "卸货港口"
 
-#: templates/main/pricing.html:310 templates/main/sea.html:146
+#: templates/main/pricing.html:310 templates/main/sea.html:124
 msgid "O/F(USD)"
 msgstr "海运费(美元)"
 
-#: templates/main/pricing.html:311 templates/main/sea.html:147
+#: templates/main/pricing.html:311 templates/main/sea.html:125
 msgid "FT"
 msgstr "货运量"
 
-#: templates/main/pricing.html:312 templates/main/sea.html:148
+#: templates/main/pricing.html:312 templates/main/sea.html:126
 msgid "T/T"
 msgstr "运输时间"
 
-#: templates/main/pricing.html:342 templates/main/sea.html:178
+#: templates/main/pricing.html:342 templates/main/sea.html:156
 msgid "A partir de l' Inde"
 msgstr "从印度开始"
 
-#: templates/main/pricing.html:350 templates/main/sea.html:186
+#: templates/main/pricing.html:350 templates/main/sea.html:164
 msgid "Type de conteneur"
 msgstr "集装箱类型"
 
-#: templates/main/pricing.html:351 templates/main/sea.html:187
+#: templates/main/pricing.html:351 templates/main/sea.html:165
 msgid "Temps de transit"
 msgstr "运输时间"
 
-#: templates/main/pricing.html:352 templates/main/sea.html:188
+#: templates/main/pricing.html:352 templates/main/sea.html:166
 msgid "Prix"
 msgstr "价格"
 
 #: templates/main/pricing.html:359 templates/main/pricing.html:365
-#: templates/main/sea.html:195 templates/main/sea.html:201
+#: templates/main/sea.html:173 templates/main/sea.html:179
 msgid "26 jours"
 msgstr "26天"
 
-#: templates/main/pricing.html:366 templates/main/sea.html:202
+#: templates/main/pricing.html:366 templates/main/sea.html:180
 msgid "5300"
 msgstr "5300"
 
@@ -2964,14 +3273,17 @@ msgstr "了解我们的海运服务"
 msgid ""
 "Transport, Logistique, Fret, maritime, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine"
-msgstr ""
-"运输、物流、海运、设备、集装箱、欧洲、非洲、大洋洲、中国"
+msgstr "运输、物流、海运、设备、集装箱、欧洲、非洲、大洋洲、中国"
 
 #: templates/main/sea.html:10
 msgid "Afrilog : Fret maritime"
 msgstr "Afrilog：海运"
 
-#: templates/main/sea.html:49
+#: templates/main/sea.html:24
+msgid "Fret maritime"
+msgstr "海运"
+
+#: templates/main/sea.html:27
 msgid ""
 "Le fret maritime est essentiel pour les échanges commerciaux "
 "internationaux, offrant des solutions efficaces pour le transport de "
@@ -2982,12 +3294,9 @@ msgid ""
 "services de fret maritime peuvent répondre à vos besoins de transport, en"
 " assurant la sécurité et la ponctualité de vos livraisons, même sur les "
 "routes les plus fréquentées."
-msgstr ""
-"海运对国际贸易至关重要，为长距离运输大量货物提供了有效的解决方案。"
-"凭借高装载能力和较低的运输成本，海运是寻求优化供应链的企业的首选。"
-"了解我们的海运服务如何满足您的运输需求，确保您的货物在最繁忙的航线上也能安全准时送达。"
+msgstr "海运对国际贸易至关重要，为长距离运输大量货物提供了有效的解决方案。凭借高装载能力和较低的运输成本，海运是寻求优化供应链的企业的首选。了解我们的海运服务如何满足您的运输需求，确保您的货物在最繁忙的航线上也能安全准时送达。"
 
-#: templates/main/sea.html:61
+#: templates/main/sea.html:39
 msgid "fret maritime"
 msgstr "海运"
 
@@ -3021,7 +3330,7 @@ msgstr "运输、物流、货运、陆运、设备、集装箱、欧洲、非洲
 msgid "Afrilog : Fret terrestre"
 msgstr "Afrilog：陆运"
 
-#: templates/main/terrestre.html:49
+#: templates/main/terrestre.html:27
 msgid ""
 "Le fret terrestre joue un rôle crucial dans la chaîne logistique, offrant"
 " des solutions flexibles et économiques pour le transport de "
@@ -3032,12 +3341,9 @@ msgid ""
 "services fiable et efficace, adaptée à vos besoins spécifiques. Découvrez"
 " comment nos solutions de fret terrestre peuvent optimiser vos opérations"
 " logistiques."
-msgstr ""
-"陆运在物流链中发挥着关键作用，提供灵活且经济的货物运输解决方案。"
-"通过发达的道路网络和坚实的基础设施，陆运能够快速准时地交货，减少等待时间和成本。"
-"选择陆运，您的企业将受益于可靠且高效的服务，满足您的具体需求。了解我们的陆运解决方案如何优化您的物流操作。"
+msgstr "陆运在物流链中发挥着关键作用，提供灵活且经济的货物运输解决方案。通过发达的道路网络和坚实的基础设施，陆运能够快速准时地交货，减少等待时间和成本。选择陆运，您的企业将受益于可靠且高效的服务，满足您的具体需求。了解我们的陆运解决方案如何优化您的物流操作。"
 
-#: templates/main/terrestre.html:61
+#: templates/main/terrestre.html:39
 msgid "fret terrestre"
 msgstr "陆运"
 
@@ -3050,9 +3356,8 @@ msgid ""
 "confiance qui nous a fait gagner un temps précieux et optimisé nos coûts."
 " Nous ne pourrions pas être plus satisfaits de leur service exceptionnel."
 msgstr ""
-"由于他们的专业知识和对物流操作的掌握，我们显著提高了效率。他们的团队敬业且随时倾听，"
-"这使我们能够全身心投入到核心业务中。Afrilog 是一个值得信赖的合作伙伴，为我们节省了宝贵的时间并优化了成本。"
-"我们对他们的出色服务感到非常满意。"
+"由于他们的专业知识和对物流操作的掌握，我们显著提高了效率。他们的团队敬业且随时倾听，这使我们能够全身心投入到核心业务中。Afrilog "
+"是一个值得信赖的合作伙伴，为我们节省了宝贵的时间并优化了成本。我们对他们的出色服务感到非常满意。"
 
 #: templates/main/testimonial.html:21
 msgid "CEO of Workcation"
@@ -3066,11 +3371,11 @@ msgstr "了解我们的过境、装卸和运输服务"
 msgid "Afrilog : Services de transit et manutention"
 msgstr "Afrilog：过境和装卸服务"
 
-#: templates/main/transit.html:46
+#: templates/main/transit.html:24
 msgid "Transit, manutention et transport"
 msgstr "过境、装卸和运输"
 
-#: templates/main/transit.html:49
+#: templates/main/transit.html:27
 msgid ""
 "Les services de transit, de manutention et de transport sont des services"
 " qui assurent la manutention, le stockage et/ou le transport de "
@@ -3081,12 +3386,9 @@ msgid ""
 "marchandises. L’objectif principal des services de transit, de "
 "manutention et de transport est de garantir que les marchandises sont "
 "livrées à destination en toute sécurité et à temps."
-msgstr ""
-"过境、装卸和运输服务是指在特定区域内进行货物装卸、存储和/或运输的服务。"
-"这些服务通常包括包装、标签、计划和交付货物，以及管理与货物运输相关的行政手续。"
-"过境、装卸和运输服务的主要目标是确保货物安全及时地送达目的地。"
+msgstr "过境、装卸和运输服务是指在特定区域内进行货物装卸、存储和/或运输的服务。这些服务通常包括包装、标签、计划和交付货物，以及管理与货物运输相关的行政手续。过境、装卸和运输服务的主要目标是确保货物安全及时地送达目的地。"
 
-#: templates/main/transit.html:62
+#: templates/main/transit.html:40
 msgid "transit&manutention"
 msgstr "过境和装卸"
 
@@ -3098,14 +3400,17 @@ msgstr "了解我们的仓储服务"
 msgid ""
 "Transport, Logistique, Fret, aérien, Equipement, Container, Europe, "
 "Afrique, Oceanie, Chine, Entrepôt, Stockage, Chaîne"
-msgstr ""
-"运输、物流、空运、设备、集装箱、欧洲、非洲、大洋洲、中国、仓库、存储、链"
+msgstr "运输、物流、空运、设备、集装箱、欧洲、非洲、大洋洲、中国、仓库、存储、链"
 
 #: templates/main/warehousing.html:10
 msgid "Afrilog : Entrepôt de stockage"
 msgstr "Afrilog：仓储"
 
-#: templates/main/warehousing.html:49
+#: templates/main/warehousing.html:24
+msgid "Entrepôt de stockage"
+msgstr "仓储"
+
+#: templates/main/warehousing.html:27
 msgid ""
 "Afrilog propose des services spécialisés d'entreposage sous douane et de "
 "transport en libre-entreposage qui permettent aux entreprises de stocker "
@@ -3116,12 +3421,56 @@ msgid ""
 "garantir que vos marchandises soient stockées dans les meilleures "
 "conditions possibles."
 msgstr ""
-"Afrilog 提供专业的保税仓储和自由仓储运输服务，使企业能够安全地存储货物，直到准备搬运或发货。"
-"我们的服务专注于货物的存储和运输，但我们还提供包装和存储管理等附加服务，以确保您的货物在最佳条件下存储。"
+"Afrilog "
+"提供专业的保税仓储和自由仓储运输服务，使企业能够安全地存储货物，直到准备搬运或发货。我们的服务专注于货物的存储和运输，但我们还提供包装和存储管理等附加服务，以确保您的货物在最佳条件下存储。"
 
-#: templates/main/warehousing.html:62
+#: templates/main/warehousing.html:40
 msgid "entrepôt et stockage"
 msgstr "仓库和存储"
+
+#: templates/main/components/air/rate-estimation-inputs.html:3
+#: templates/main/components/sea/rate-estimation-inputs.html:3
+msgid "Cargo"
+msgstr "货物"
+
+#: templates/main/components/air/rate-estimation-inputs.html:14
+#: templates/main/components/sea/rate-estimation-inputs.html:14
+msgid "General Cargo"
+msgstr "普通货物"
+
+#: templates/main/components/air/rate-estimation-inputs.html:19
+#: templates/main/components/sea/rate-estimation-inputs.html:19
+#, fuzzy
+msgid "UDL container"
+msgstr "继续"
+
+#: templates/main/components/air/rate-estimation-inputs.html:29
+#: templates/main/components/sea/rate-estimation-inputs.html:29
+msgid "Poids(kg)"
+msgstr ""
+
+#: templates/main/components/air/rate-estimation-inputs.html:36
+#: templates/main/components/sea/rate-estimation-inputs.html:36
+msgid "Volume(m3)"
+msgstr ""
+
+#: templates/main/components/air/rate-estimation-inputs.html:46
+#: templates/main/components/sea/rate-estimation-inputs.html:46
+#, fuzzy
+msgid "Longueur(m)"
+msgstr "长度（米）"
+
+#: templates/main/components/air/rate-estimation-inputs.html:53
+#: templates/main/components/sea/rate-estimation-inputs.html:53
+#, fuzzy
+msgid "Largeur(m)"
+msgstr "宽度（米）"
+
+#: templates/main/components/air/rate-estimation-inputs.html:60
+#: templates/main/components/sea/rate-estimation-inputs.html:60
+#, fuzzy
+msgid "Hauteur(m)"
+msgstr "高度（米）"
 
 #: templates/views/basic_charts.html:13 templates/views/expenses_list.html:108
 msgid "Vues sur le site web"
@@ -3212,3 +3561,10 @@ msgstr "目前没有发票。"
 #: templates/views/empty/no_invoice.html:6
 msgid "Toutes les factures de vos récentes transactions vont s'afficher ici"
 msgstr "您最近交易的所有发票将显示在这里"
+
+#~ msgid "Espagnol"
+#~ msgstr "西班牙语"
+
+#~ msgid "Mandarin"
+#~ msgstr "普通话"
+

@@ -685,3 +685,27 @@ def get_air_freight_rate():
         return jsonify(response.json())
     else:
         return jsonify({'error': 'Failed to fetch rates', 'details': response.text}), response.status_code
+
+
+# weather api
+@api.route("/get-location")
+def get_location():
+    ip_info_url = "http://ipinfo.io/json"
+    response = requests.get(ip_info_url)
+    data = response.json()
+    return jsonify(data)
+
+@api.route("/get-weather/infos", methods=['GET'])
+def get_weather():
+    tomorrow_api_key = os.environ.get('TOMORROW_API_KEY')
+    ip_info_url = "http://ipinfo.io/json"
+    response = requests.get(ip_info_url)
+    location_data = response.json()
+    location = location_data['loc'] 
+
+    tomorrow_api_key = os.environ.get('TOMORROW_API_KEY')
+    weather_url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}&apikey={tomorrow_api_key}"
+    weather_response = requests.get(weather_url)
+    weather_data = weather_response.json()
+
+    return jsonify(weather_data)

@@ -1,6 +1,6 @@
-import UtilApiURLs from '../../_globals/UtilApiUrls.js';
+import UtilApiURLs from '../../../_globals/UtilApiUrls.js'
 
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('get-rates').addEventListener('click', async () => {
       console.log("Hello world");
       const DepartPort = document.getElementById('DepartPort').value;
@@ -38,12 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log(data);
           document.getElementById('results').innerHTML = JSON.stringify(data, null, 2);
         } else {
-          console.error('Error fetching freight rates:', data.details);
-          document.getElementById('results').innerHTML = 'Error fetching freight rates: ' + data.details;
+          // Check if there is a message in the response
+          const errorMessage = data.message || 'Error fetching freight rates';
+          console.error('Error fetching freight rates:', errorMessage);
+          document.getElementById('results').innerHTML = errorMessage;
+          document.getElementById('results').classList.add('error-message');
         }
       } catch (error) {
         console.error('Error fetching freight rates:', error);
         document.getElementById('results').innerHTML = 'Error fetching freight rates';
+        document.getElementById('results').classList.add('error-message');
       }
     });
   });

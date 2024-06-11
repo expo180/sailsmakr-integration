@@ -24,7 +24,7 @@ class Config:
     COMPANY_IT_ADMINISTRATOR = os.environ.get('COMPANY_IT_ADMINISTRATOR') 
     COMPANY_ACCOUNTANT = os.environ.get('COMPANY_ACCOUNTANT')
     BABEL_DEFAULT_LOCALE = 'fr'
-    BABEL_SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'zh']
+    BABEL_SUPPORTED_LOCALES = ['en', 'fr', 'de', 'zh', 'ru', 'tr']
     BABEL_TRANSLATION_DIRECTORIES = './translations'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

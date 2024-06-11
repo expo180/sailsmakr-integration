@@ -1,22 +1,23 @@
-<div class="dropdown relative inline-flex" style="z-index: 100;">
-    <button type="button" data-target="dropdown-default" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-gray-100 text-gray-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-gray-200 "> 
+
+<div class="relative inline-flex">
+    <button type="button" data-target="cargo-dropdown" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-gray-100 text-gray-600 rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg-gray-200">
         {{ _('Cargo') }}
-        <svg class="dropdown-open:rotate-180 w-2.5 h-2.5 text-white" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <svg class="dropdown-icon transition-transform duration-500" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+            <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/>
         </svg>
     </button>
-    <div id="dropdown-default" class="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full w-100 py-3 px-3 mt-2 open" aria-labelledby="dropdown-default">
+    <div id="cargo-dropdown" class="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full w-100 py-3 px-3 mt-2 hidden left-0 lg:left-auto lg:right-0" aria-labelledby="cargo-dropdown">
         <div class="tabs">
-            <div class="flex ">
+            <div class="flex">
                 <ul class="flex bg-gray-100 rounded-2xl transition-all duration-300 p-2 overflow-hidden">
                     <li>
-                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium  tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 active tablink whitespace-nowrap" data-tab="tabs-with-background-1" role="tab">
-                            {{ _('General Cargo') }}
+                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 active tablink whitespace-nowrap" data-tab="tabs-with-background-1" role="tab">
+                            {{ _('Cargo') }}
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium  tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 tablink whitespace-nowrap" data-tab="tabs-with-background-2" role="tab">
-                            {{ _('UDL container') }}
+                        <a href="javascript:void(0)" class="inline-block py-3 px-6 text-gray-500 hover:text-gray-800 font-medium tab-active:bg-white tab-active:rounded-xl tab-active:text-indigo-600 tablink whitespace-nowrap" data-tab="tabs-with-background-2" role="tab">
+                            {{ _('UDL') }}
                         </a>
                     </li>
                 </ul>
