@@ -46,7 +46,6 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
         
-        flash(_('Votre compte a été créé avec succès. Veuillez vous connecter.'), 'success')
         return jsonify({'success':True})
      
     return render_template("auth/signup.html")
