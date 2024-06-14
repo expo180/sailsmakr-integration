@@ -1,11 +1,11 @@
 {% extends 'main/layout.html' %}
-{% block head %}
-    <head>
-            <meta name="description" content="{{ _('Découvrez nos services de fret terrestre') }}">
-            <meta name="keywords" content="{{ _('Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, Afrique, Oceanie, Chine') }}">
-        {% block title %}{{ _('Afrilog : Fret terrestre') }}{% endblock %}
-    </head>
-{% endblock %}
+  <head>
+    {% block title %}{{ _('Afrilog : Fret terrestre') }}{% endblock %}
+    {% block meta_tags %}
+      <meta name="description" content="{{ _('Découvrez nos services de fret terrestre') }}">
+      <meta name="keywords" content="{{ _('Transport, Logistique, Fret, Terrestre, Equipement, Container, Europe, Afrique, Oceanie, Chine') }}">
+    {% endblock %}
+  </head>
 <body>
     <main>
         {% block content %}

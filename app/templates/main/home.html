@@ -33,12 +33,10 @@
                   </p>
                   <div
                     class="relative p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-col md:flex-row justify-between rounded-full md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] border border-transparent md:bg-white transition-all duration-500 hover:border-indigo-600 focus-within:border-indigo-600">
-                    <input type="text" name="email" placeholder="{{ _('Entrer votre identifiant ou N° de suivi...') }}"
-                      class="text-base rounded-full text-gray-900 flex-1 py-4 px-6 shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] md:shadow-none bg-white md:bg-transparent shadow-none placeholder:text-gray-400 focus:outline-none md:w-fit w-full" />
                     <a
-                      href="{{ url_for('main.user_home') }}"
+                      href="{{ url_for('main.transit') }}"
                       class="bg-blue-800 rounded-full py-3 px-7 text-base   text-white hover:bg-blue-700 cursor-pointer transition-all duration-500 md:w-fit w-full">
-                      {{ _('Continuer') }}
+                      {{ _('Commencer') }}
                     </a>
                   </div>
                 </div>

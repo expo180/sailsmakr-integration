@@ -1,11 +1,11 @@
 {% extends 'main/layout.html' %}
-{% block head %}
     <head>
-          <meta name="description" content="{{ _('Calculatrice fret maritime') }}">
-          <meta name="keywords" content="{{ _('Transport, Logistique, Fret, maritime, Equipement, Container, Europe, Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation') }}">
-        {% block title %}{{ _('Afrilog : Calculatrice fret maritime') }}{% endblock %}
+      {% block title %}{{ _('Afrilog : Calculatrice fret maritime') }}{% endblock %}
+      {% block meta_tags %}
+      <meta name="description" content="{{ _('Calculatrice fret maritime') }}">
+      <meta name="keywords" content="{{ _('Transport, Logistique, Fret, maritime, Equipement, Container, Europe, Afrique, Oceanie, Chine, Taxes, Douanes, Calculatrice, Approximation') }}">
+      {% endblock %}
     </head>
-{% endblock %}
 <body>
     <main>
         {% block content %}
