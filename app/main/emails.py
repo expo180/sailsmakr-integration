@@ -2,7 +2,7 @@
 
 from flask_mail import Message
 from flask_babelex import gettext as _
-from ... import mail
+from .. import mail
 
 
 def send_reseller_email(email, password):

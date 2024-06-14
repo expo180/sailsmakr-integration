@@ -1,9 +1,9 @@
 from flask import request, render_template, session, jsonify, url_for, redirect, flash, abort
 from flask_babel import _
 from . import main
-from ..models import User, Task, Role, Event, Invoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Store
+from ..models import User, Task, Role, Event, Invoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Store, Product
 from flask_login import current_user, login_required, login_user
-from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required, user_required, accountant_required
+from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required, user_required, accountant_required, reseller_required
 from .. import db
 import os
 from newsdataapi import NewsDataApiClient
@@ -111,6 +111,13 @@ def my_previous_applications():
         user_applications=user_applications
     )
 
+
+@main.route("/products", methods=['GET', 'POST', 'PUT', 'DELETE'])
+@login_required
+@reseller_required
+def products():
+    products = Product.query.filter_by(user_id=current_user.id).all()
+    return render_template('dashboard/@support_team/products.html', products=products)
 
 @main.route("/careers/job_list")
 @login_required

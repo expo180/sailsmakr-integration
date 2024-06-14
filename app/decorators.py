@@ -37,7 +37,10 @@ def sales_manager_required(f):
     return role_required('Sales Manager')(f)
 
 def sales_or_project_manager_required(f):
-    return role_required('Project Manager')(f) or role_required('Sales Manager')(f) 
+    return role_required('Project Manager')(f) or role_required('Sales Manager')(f)
 
 def user_required(f):
     return role_required('User')(f)
+
+def reseller_required(f):
+    return role_required('Reseller')(f)

@@ -1,0 +1,169 @@
+{% extends 'dashboard/dashboard.html' %}
+
+{% block title %}
+    <title>{{ _('Produits : Afrilog') }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active">{{ _('Produits') }}</li>
+        </ol>
+    </nav>
+
+    <!-- Title -->
+    <h2>{{ _('Produits') }}</h2>
+
+    <!-- Button Group -->
+    <div class="d-flex justify-content-end align-items-center mb-4">
+        <div class="btn-group" role="group" aria-label="Actions sur les Produits">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#NewProductModal">
+                <i class="bi bi-plus-circle"></i> {{ _('Ajouter Produit') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Products Table -->
+    {% if products %}
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>{{ _('ID') }}</th>
+                    <th>{{ _('Titre') }}</th>
+                    <th>{{ _('Coût') }}</th>
+                    <th>{{ _('Stock') }}</th>
+                    <th>{{ _('Options') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.cost }}</td>
+                        <td>{{ product.stock }}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ product.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ product.id }}">
+                                    <li>
+                                        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ViewProductModal{{ product.id }}">
+                                            <i class="bi bi-eye"></i> {{ _('Voir') }}
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#EditProductModal{{ product.id }}">
+                                            <i class="bi bi-pencil"></i> {{ _('Modifier') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- View Product Modal -->
+                    <div class="modal fade" id="ViewProductModal{{ product.id }}" tabindex="-1" aria-labelledby="ViewProductModalLabel{{ product.id }}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ViewProductModalLabel{{ product.id }}">{{ _('Détails du Produit') }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>{{ _('Titre') }}:</strong> {{ product.title }}</p>
+                                    <p><strong>{{ _('Coût') }}:</strong> {{ product.cost }}</p>
+                                    <p><strong>{{ _('Stock') }}:</strong> {{ product.stock }}</p>
+                                    <!-- Add other details as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Product Modal -->
+                    <div class="modal fade" id="EditProductModal{{ product.id }}" tabindex="-1" aria-labelledby="EditProductModalLabel{{ product.id }}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="EditProductModalLabel{{ product.id }}">{{ _('Modifier le Produit') }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Edit Form (similar to New Product Modal) -->
+                                    <form method="POST" action="">
+                                        <div class="mb-3">
+                                            <label for="EditProductTitle" class="form-label">{{ _('Titre') }}</label>
+                                            <input type="text" class="form-control" id="EditProductTitle" name="title" value="{{ product.title }}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="EditProductCost" class="form-label">{{ _('Coût') }}</label>
+                                            <input type="number" step="0.01" class="form-control" id="EditProductCost" name="cost" value="{{ product.cost }}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="EditProductStock" class="form-label">{{ _('Stock') }}</label>
+                                            <input type="number" class="form-control" id="EditProductStock" name="stock" value="{{ product.stock }}">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">{{ _('Enregistrer') }}</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Annuler') }}</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <!-- Empty State -->
+        {% include 'dashboard/empty/no_product.html' %}
+    {% endif %}
+
+    <!-- New Product Modal -->
+    <div class="modal fade" id="NewProductModal" tabindex="-1" aria-labelledby="NewProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewProductModalLabel">{{ _('Ajouter un Nouveau Produit') }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{{ url_for('main.add_product') }}">
+                        <div class="mb-3">
+                            <label for="NewProductTitle" class="form-label">{{ _('Titre') }}</label>
+                            <input type="text" class="form-control" id="NewProductTitle" name="title" placeholder="{{ _('Nom du produit') }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="NewProductCost" class="form-label">{{ _('Coût') }}</label>
+                            <input type="number" step="0.01" class="form-control" id="NewProductCost" name="cost" placeholder="{{ _('Coût du produit') }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="NewProductStock" class="form-label">{{ _('Stock') }}</label>
+                            <input type="number" class="form-control" id="NewProductStock" name="stock" placeholder="{{ _('Stock disponible') }}">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">{{ _('Ajouter') }}</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Annuler') }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/AddProduct.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/EditProduct.js') }}"></script>
+
+{% endblock %}

@@ -58,6 +58,7 @@ class User(UserMixin, db.Model):
     address = db.Column(db.String())
     profile_picture_url = db.Column(db.String)
     member_since = db.Column(db.DateTime(), default=datetime.utcnow)
+    products = db.relationship('Product', backref='author', lazy=True)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     confirmed = db.Column(db.Boolean, default=False)
     authorizations = db.relationship('Authorization', backref='user', lazy='dynamic')
@@ -66,6 +67,7 @@ class User(UserMixin, db.Model):
     docs = db.relationship('Doc', backref='user', lazy=True)
     messages_sent = db.relationship('Message', foreign_keys='Message.sender_id', backref='sender', lazy='dynamic')
     messages_received = db.relationship('Message', foreign_keys='Message.receiver_id', backref='receiver', lazy='dynamic')
+    
 
     @property
     def password(self):
@@ -400,6 +402,17 @@ class Message(db.Model):
         return f'<Message {self.body}>'
     
 
+class Product(db.Model):
+    __tablename__ = 'products'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    cost = db.Column(db.Float, nullable=False)
+    stock = db.Column(db.Integer)
+    product_img_url = db.Column(db.String, nullable=False)
+    barcode_url = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
 
+    def __repr__(self):
+        return f'<Product {self.title}>'
 
 
