@@ -12,6 +12,7 @@ from ._utils import truncate_description, get_weekly_financial_summary, get_mont
 from datetime import datetime
 from ..api.utils import save_files
 from .emails import send_reseller_email
+from werkzeug.security import generate_password_hash
 
 
 load_dotenv()
@@ -148,21 +149,24 @@ def stores():
     if request.method == 'GET':
         stores = Store.query.all()
         return render_template('dashboard/@support_team/stores.html', stores=stores)
-    
-    if request.method == 'POST':
+
+    elif request.method == 'POST':
         data = request.form
         logo_files = request.files.getlist('logo')
         logo_urls = save_files(logo_files, 'store_logos')
         logo_url = logo_urls[0] if logo_urls else None
 
-        password='alpha232$'
+        password = 'alpha256$'  
+        hashed_password = generate_password_hash(password)
+
+        reseller_role = Role.query.filter_by(name='Reseller').first()
 
         new_user = User(
             email=data['email'],
-            password=password,
-            name=data['name'],
-            role=Role.query.filter_by(name='Reseller').first()
+            password_hash=hashed_password,
+            role_id=reseller_role.id
         )
+
         db.session.add(new_user)
         db.session.commit()
 
@@ -173,6 +177,7 @@ def stores():
             phone=data.get('phone'),
             logo_file_url=logo_url
         )
+
         db.session.add(store)
         db.session.commit()
 
@@ -180,7 +185,7 @@ def stores():
 
         return jsonify(message="Le magasin a bien été ajouté."), 201
 
-    if request.method == 'PUT':
+    elif request.method == 'PUT':
         try:
             store_id = request.form['id']
             store = Store.query.get_or_404(store_id)
@@ -210,7 +215,7 @@ def stores():
             db.session.rollback()
             return jsonify(error=str(e)), 400
 
-    if request.method == 'DELETE':
+    elif request.method == 'DELETE':
         store_id = request.form['id']
         store = Store.query.get_or_404(store_id)
         db.session.delete(store)
