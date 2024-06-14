@@ -1,0 +1,186 @@
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}
+    <title>{{ _('Magasins: Afrilog') }}</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="visually-hidden">{{ _('Accueil') }}</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active">{{ _('Magasins') }}</li>
+        </ol>
+    </nav>
+
+    <h2>{{ _('Magasins') }}</h2>
+
+    <div class="d-flex justify-content-end align-items-center mb-4">
+        <div class="btn-group" role="group" aria-label="Store Actions">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#NewStore">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-sort-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="py-2"></div>
+
+    {% if stores %}
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>{{ _('ID') }}</th>
+                    <th>{{ _('Nom') }}</th>
+                    <th>{{ _('Location') }}</th>
+                    <th>{{ _('Email') }}</th>
+                    <th>{{ _('Options') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for store in stores %}
+                    <tr>
+                        <td>{{ store.id }}</td>
+                        <td>{{ store.name }}</td>
+                        <td>{{ store.location }}</td>
+                        <td>{{ store.email }}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ store.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    options
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ store.id }}">
+                                    <li>
+                                        <button type="button" data-store-id="{{ store.id }}" class="dropdown-item edit-store" data-bs-toggle="modal" data-bs-target="#EditStoreModal">
+                                            <i class="bi bi-pencil"></i> {{ _('Modifier') }}
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-store-id="{{ store.id }}" class="dropdown-item delete-store">
+                                            <i class="bi bi-trash"></i> {{ _('Supprimer') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        {% include 'dashboard/@support_team/empty/no_store.html' %}
+    {% endif %}
+
+    <!-- Modal for Adding New Store -->
+    <div class="modal fade" id="NewStore" tabindex="-1" aria-labelledby="NewStoreLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewStoreLabel">
+                        <i class="bi bi-plus-circle-dotted"></i>
+                        {{ _('Ajouter un nouveau magasin') }}
+                    </h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addStoreForm" method="POST" action="{{ url_for('main.stores') }}">
+                        <div class="mb-3">
+                            <label for="StoreName" class="col-form-label">{{ _('Nom') }}<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="StoreName" name="name" placeholder="{{ _('Nom du magasin') }}" required>
+                            <div class="invalid-feedback" id="StoreNameError">{{ _('Veuillez entrer le nom du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="StoreLocation" class="col-form-label">{{ _('Location') }}<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="StoreLocation" name="location" placeholder="{{ _('Emplacement du magasin') }}" required>
+                            <div class="invalid-feedback" id="StoreLocationError">{{ _('Veuillez entrer l\'emplacement du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="StoreEmail" class="col-form-label">{{ _('Email') }}<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="StoreEmail" name="email" placeholder="{{ _('Email du magasin') }}" required>
+                            <div class="invalid-feedback" id="StoreEmailError">{{ _('Veuillez entrer l\'email du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="StorePhone" class="col-form-label">{{ _('Téléphone') }}<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="StorePhone" name="phone" placeholder="{{ _('Téléphone du magasin') }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="StoreLogo" class="col-form-label">{{ _('Logo') }}</label>
+                            <input type="file" class="form-control" id="StoreLogo" name="logo" accept="image/*">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" id="addStoreButton" class="btn btn-info">
+                                <span id="LoadingText" class="d-none">{{ _('En cours...') }}</span>
+                                <i class="bi bi-plus-circle"></i>
+                                <span id="AddStoreText">{{ _('Ajouter') }}</span>
+                                <div class="spinner-border spinner-border-sm d-none"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Editing Store -->
+    <div class="modal fade" id="EditStoreModal" tabindex="-1" aria-labelledby="EditStoreLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditStoreLabel">{{ _('Modifier le magasin') }}</h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editStoreForm" method="POST" data-store-id="">
+                        <div class="mb-3">
+                            <label for="EditStoreName" class="col-form-label">{{ _('Nom') }}</label>
+                            <input type="text" class="form-control" id="EditStoreName" name="name" required>
+                            <div class="invalid-feedback" id="EditStoreNameError">{{ _('Veuillez entrer le nom du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditStoreLocation" class="col-form-label">{{ _('Location') }}</label>
+                            <input type="text" class="form-control" id="EditStoreLocation" name="location" required>
+                            <div class="invalid-feedback" id="EditStoreLocationError">{{ _('Veuillez entrer l\'emplacement du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditStoreEmail" class="col-form-label">{{ _('Email') }}</label>
+                            <input type="email" class="form-control" id="EditStoreEmail" name="email" required>
+                            <div class="invalid-feedback" id="EditStoreEmailError">{{ _('Veuillez entrer l\'email du magasin pour continuer') }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditStorePhone" class="col-form-label">{{ _('Téléphone') }}</label>
+                            <input type="text" class="form-control" id="EditStorePhone" name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="EditStoreLogo" class="col-form-label">{{ _('Logo') }}</label>
+                            <input type="file" class="form-control" id="EditStoreLogo" name="logo" accept="image/*">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" id="editStoreButton" class="btn btn-info">
+                                <span id="EditLoadingText" class="d-none">{{ _('En cours...') }}</span>
+                                <i class="bi bi-pencil"></i>
+                                <span id="EditStoreText">{{ _('Enregistrer') }}</span>
+                                <div class="spinner-border spinner-border-sm d-none"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="py-5"></div>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Store/CreateStore.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Store/EditStore.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Store/DeleteStore.js') }}"></script>
+{% endblock %}

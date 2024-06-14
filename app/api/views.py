@@ -2,12 +2,12 @@ from flask import request, render_template, session,  flash, redirect, url_for, 
 from flask_babel import _
 from . import api
 from flask_login import current_user, login_required
-from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice
+from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice, Store
 from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required, employee_required
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
 import secrets
-from .utils import save_files, generate_qr_code, save_authorization_request_files
+from .utils import save_files, generate_qr_code, generate_barcode, save_product_pictures, save_docs
 import json
 from dotenv import load_dotenv
 import os, requests
@@ -20,20 +20,24 @@ load_dotenv()
 @user_required
 def apply_quotes():
     if request.method == 'POST':
-        client_first_name = request.form.get('client_first_name')
-        client_last_name = request.form.get('client_last_name')
-        client_phone_number = request.form.get('client_phone_number')
-        client_location = request.form.get('client_location')
-        lading_number = request.form.get('lading_number')
-        agent_first_name = request.form.get('agent_first_name')
-        agent_last_name = request.form.get('agent_last_name')
-        shipping_company_title = request.form.get('shipping_company_title')
-        
-        client_signature_file = request.files.get('client_signature_url')
-        client_id_file = request.files.get('client_id_card_url')
+        data = request.form
+        files = request.files
 
         try:
-            saved_files = save_authorization_request_files([client_signature_file, client_id_file], client_first_name, client_last_name)
+            # Extract form data
+            client_first_name = data.get('client_first_name')
+            client_last_name = data.get('client_last_name')
+            client_phone_number = data.get('client_phone_number')
+            client_location = data.get('client_location')
+            lading_number = data.get('lading_number')
+            agent_first_name = data.get('agent_first_name')
+            agent_last_name = data.get('agent_last_name')
+            shipping_company_title = data.get('shipping_company_title')
+            
+            client_signature_file = files.get('client_signature_url')
+            client_id_file = files.get('client_id_card_url')
+
+            saved_files = save_files([client_signature_file, client_id_file], client_first_name, client_last_name)
             client_signature_url = saved_files[0] if len(saved_files) > 0 else ''
             client_id_card_url = saved_files[1] if len(saved_files) > 1 else ''
 
@@ -59,10 +63,25 @@ def apply_quotes():
             return jsonify({'success': True, 'message': _('Votre requête a bien été envoyé')}), 200
 
         except Exception as e:
+            db.session.rollback()
             return jsonify({'success': False, 'message': str(e)}), 500
 
     return render_template('api/customers/authorizations/apply.html')
 
+
+@api.route('/get-store_details/<int:store_id>', methods=['GET'])
+@login_required
+@sales_manager_required
+def get_store(store_id):
+    store = Store.query.get_or_404(store_id)
+    return jsonify({
+        'id': store.id,
+        'name': store.name,
+        'location': store.location,
+        'email': store.email,
+        'logo_file_url': store.logo_file_url,
+        'phone': store.phone
+    })
 
 
 @api.route("/my_purchases/track_my_product/user", methods=['GET'])
@@ -82,11 +101,17 @@ def purchase_request():
     if request.method == 'POST':
         data = request.form
         files = request.files
-
         token = secrets.token_urlsafe(16)
-
-        product_picture_paths = save_files(files.getlist('product_picture_url'), data['author_first_name'], data['author_last_name'])
-        doc_paths = save_files(files.getlist('doc_url'), data['author_first_name'], data['author_last_name'])
+        
+        product_picture_paths = []
+        if 'product_picture_url' in files:
+            product_picture_paths = save_product_pictures(files.getlist('product_picture_url'))
+        
+        doc_paths = []
+        if 'doc_url' in files:
+            doc_paths = save_docs(files.getlist('doc_url'))
+        
+        barcode_url = generate_barcode(token)
 
         purchase = Purchase(
             title=data['title'],
@@ -99,32 +124,36 @@ def purchase_request():
             author_phone_number=data['author_phone_number'],
             location=data['location'],
             provider=data.get('provider'),
-            product_picture_url=json.dumps(product_picture_paths),
+            product_picture_url=product_picture_paths[0] if product_picture_paths else None,
             description=data['description'],
             category=data['category'],
-            doc_url=json.dumps(doc_paths),
+            doc_url=doc_paths[0] if doc_paths else None,
             user_id=current_user.id,
             token=token,
-            qr_code_url=generate_qr_code(token, data['author_first_name'], data['author_last_name']),
+            qr_code_url=generate_qr_code(token),
+            barcode_url=barcode_url,
             start_check=datetime.utcnow()
         )
 
         db.session.add(purchase)
-        
+
         try:
             db.session.commit()
-            
+
             return jsonify({
                 'title': _('Envoyé avec succès'), 
-                'message': _('Votre requête a été bien envoyé'), 
+                'message': _('Votre requête a été bien envoyée'), 
                 'token': token
             })
-        
+
         except Exception as e:
             db.session.rollback()
             return jsonify({'error': str(e)}), 500
 
     return render_template('api/customers/goods/purchase_request.html')
+
+
+
 
 @api.route("/mailbox/new_message")
 @login_required
@@ -688,24 +717,73 @@ def get_air_freight_rate():
 
 
 # weather api
-@api.route("/get-location")
-def get_location():
-    ip_info_url = "http://ipinfo.io/json"
-    response = requests.get(ip_info_url)
-    data = response.json()
-    return jsonify(data)
-
-@api.route("/get-weather/infos", methods=['GET'])
+@api.route("/get-weather/realtime")
 def get_weather():
-    tomorrow_api_key = os.environ.get('TOMORROW_API_KEY')
-    ip_info_url = "http://ipinfo.io/json"
-    response = requests.get(ip_info_url)
-    location_data = response.json()
-    location = location_data['loc'] 
+    user_ip = request.remote_addr
+    ipinfo_response = requests.get(f"https://ipinfo.io/{user_ip}/json")
+    location_data = ipinfo_response.json()
+    location = location_data.get('loc')
+
+    if not location:
+        return jsonify({'error': 'Could not determine location'}), 400
 
     tomorrow_api_key = os.environ.get('TOMORROW_API_KEY')
-    weather_url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}&apikey={tomorrow_api_key}"
+    weather_url = f"https://api.tomorrow.io/v4/weather/realtime?location=new york&apikey={tomorrow_api_key}"
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json()
 
     return jsonify(weather_data)
+
+
+@api.route("/job-openings/apply/<int:job_id>", methods=['GET', 'POST'])
+@login_required
+@user_required
+def apply_job(job_id):
+    job = Job.query.get_or_404(job_id)
+    if request.method == 'POST':
+        try:
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
+            email = request.form['email']
+            motivation = request.form['motivation']
+            linkedin = request.form.get('linkedin', '')
+            github = request.form.get('github', '')
+            dribble = request.form.get('dribble', '')
+            date_of_birth = request.form.get('date_of_birth')
+            address = request.form['address']
+            cv = request.files.get('cv')
+            
+            date_of_birth = datetime.strptime(date_of_birth, '%Y-%m-%d') if date_of_birth else None
+            
+            if cv:
+                cv_url = save_files([cv], 'cvs')[0]
+            else:
+                cv_url = None
+
+            job_application = JobApplication(
+                applicant_first_name=first_name,
+                applicant_last_name=last_name,
+                applicant_email_address=email,
+                applicant_location=address,
+                motivation=motivation,
+                linkedin_url=linkedin,
+                github_url=github,
+                dribble_url=dribble,
+                date_of_birth=date_of_birth,
+                CV_url=cv_url,
+                user_id=current_user.id,
+                job_id=job.id
+            )
+            
+            db.session.add(job_application)
+            db.session.commit()
+            
+            return jsonify({'message': 'Votre dossier a été soumis!'}), 200
+        
+        except Exception as e:
+            return jsonify({'message': "Une erreur s'est produite lors de la soumission"}), 500
+
+    return render_template(
+        'api/customers/jobs/apply.html',
+        job=job
+    )

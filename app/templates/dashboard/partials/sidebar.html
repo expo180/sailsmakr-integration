@@ -17,7 +17,19 @@
               </a>
           </li>
 
-          {% if current_user.is_employee() or current_user.is_hr_manager() or current_user.is_accountant() or current_user.is_sales() or current_user.is_project_manager() %}
+          {% if current_user.is_sales() %}
+            <li class="nav-item">
+                <a class="nav-link text-white {% if request.path == url_for('main.stores') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.stores') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">store</i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ _('Magasins') }}</span>
+                </a>
+            </li>
+          {% endif %}
+        
+
+          {% if current_user.is_employee() %}
             <li class="nav-item">
                 <a class="nav-link text-white {% if request.path == url_for('main.new_quotes') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_quotes') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -240,11 +252,18 @@
                         {% endif %}
                     
                       {% if not current_user.is_hr_manager() %}
-                      <li class="nav-item">
-                          <a class="nav-link text-white {% if request.path == url_for('main.new_jobs') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_jobs') }}">
-                              <span class="nav-link-text ms-1">{{ _('Toutes les offres') }}</span>
-                          </a>
-                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if request.path == url_for('main.new_jobs') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.new_jobs') }}">
+                                <span class="nav-link-text ms-1">{{ _('Toutes les offres') }}</span>
+                            </a>
+                        </li>
+                      {% endif %}
+                      {% if current_user.is_user() %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if request.path == url_for('main.my_previous_applications') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.my_previous_applications') }}">
+                                <span class="nav-link-text ms-1">{{ _('Mes applications') }}</span>
+                            </a>
+                        </li>
                       {% endif %}
 
                   </ul>

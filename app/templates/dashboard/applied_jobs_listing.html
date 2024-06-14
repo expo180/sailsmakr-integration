@@ -1,11 +1,41 @@
-{% extends 'api/shared/layout.html' %}
-{% block head %}
-    <head>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        {% block title %}<title>{{ _('Postes récents - Afrilog') }}</title>{% endblock %}
-    </head>
-{% endblock %}
+{% extends 'dashboard/dashboard.html' %}
+{% block title %}<title>{{ _('Mes Candidatures : Afrilog') }}</title>{% endblock %}
 {% block content %}
-
+<div class="container">
+    <div class="my-5">
+        <h2>{{ _('Mes Candidatures') }}</h2>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{{ _('Titre') }}</th>
+                    <th scope="col">{{ _('Date de Soumission') }}</th>
+                    <th scope="col">{{ _('Statut') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in user_applications %}
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ application.job.title }}</td>
+                    <td>{{ application.apply_at.strftime('%d-%m-%Y') }}</td>
+                    <td>
+                        {% if application.status == 'pending' %}
+                        <span class="badge bg-warning text-dark">{{ _('En Attente') }}</span>
+                        {% elif application.status == 'approved' %}
+                        <span class="badge bg-success">{{ _('Approuvé') }}</span>
+                        {% elif application.status == 'rejected' %}
+                        <span class="badge bg-danger">{{ _('Rejeté') }}</span>
+                        {% else %}
+                        <span class="badge bg-secondary">{{ _('Non Défini') }}</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

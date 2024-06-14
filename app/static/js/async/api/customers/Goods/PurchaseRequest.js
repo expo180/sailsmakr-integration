@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const authorEmailAddress = document.querySelector('#author_email_address');
   const location = document.querySelector('#AuthorCountry');
   const userAddress = document.querySelector('#author_address');
+  const productPicture = document.querySelector('#product_picture_url');
+  const docUrl = document.querySelector('#doc_url');
 
   const iti = window.intlTelInput(authorPhoneNumberRaw, {
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/utils.js",
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     sendButton.disabled = !isValid;
   }
 
-  const inputs = [authorLastName, authorFirstName, title, category, authorPhoneNumberRaw, authorEmailAddress, location, userAddress];
+  const inputs = [authorLastName, authorFirstName, title, category, authorPhoneNumberRaw, authorEmailAddress, location, userAddress, productPicture, docUrl];
   inputs.forEach(input => input.addEventListener('input', validateInput));
 
   form.addEventListener('submit', function(event) {
@@ -125,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const formData = new FormData(form);
 
-    formData.set('product_picture_url', JSON.stringify([]));
-    formData.set('doc_url', JSON.stringify([]));
+    formData.append('product_picture_url', productPicture.files[0]);
+    formData.append('doc_url', docUrl.files[0]);
 
     fetch(form.action, {
       method: 'POST',
@@ -136,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       if (data.errors) {
         for (const key in data.errors) {
+         
           document.querySelector(`#${key}Error`).textContent = data.errors[key];
           document.querySelector(`#${key}Error`).style.display = 'block';
         }

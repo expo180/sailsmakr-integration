@@ -1,4 +1,4 @@
-<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+<div class="col-lg-4 col-md-6">
   <div class="card">
       <div class="card-header pb-0">
           <div class="row">
@@ -15,17 +15,14 @@
                       <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
                           <li>
                               <a class="dropdown-item border-radius-md" href="javascript:;">
-                                  {{ _('Partager') }}
+                                  <i class="sort-up"></i>
+                                  {{ _('Trier') }}
                               </a>
                           </li>
                           <li>
                               <a class="dropdown-item border-radius-md" href="javascript:;">
-                                  {{ _('Exporter') }}
-                              </a>
-                          </li>
-                          <li>
-                              <a class="dropdown-item border-radius-md" href="javascript:;">
-                                  {{ _('Télécharger') }}
+                                  <i class="bi-bi-check"></i>
+                                  {{ _('Tout Sélectionner') }}
                               </a>
                           </li>
                       </ul>
@@ -34,42 +31,44 @@
           </div>
       </div>
       <div class="card-body px-0 pb-2">
-        {% if invoices %}
-          {% for invoice in invoices %}
-            <div class="table-responsive">
+          <div class="table-responsive">
               <table class="table align-items-center mb-0">
-                <thead>
-                  <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{ _('ID') }}</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{{ _('Titre') }}</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{ _('Montant') }}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="px-2 py-1">
-                        {{ invoice.id }}
-                      </div>
-                    </td>
-                    <td>
-                      <div class="px-2 py-1">
-                        {{ invoice.title }}
-                      </div>
-                    </td>
-                    <td class="align-middle text-center text-sm">
-                      <div class="px-2 py-1">
-                        {{ invoice.amount }}
-                      </div>
-                    </td>
-                  </tr>        
-                </tbody>
+                  {% if invoices %}
+                  <thead>
+                      <tr>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{ _('ID') }}</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{{ _('Titre') }}</th>
+                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{ _('Montant') }}</th>
+                      </tr>
+                  </thead>
+                  {% endif %}
+                  <tbody>
+                      {% if invoices %}
+                      {% for invoice in invoices %}
+                      <tr>
+                          <td>
+                              <div class="px-2 py-1">
+                                  {{ invoice.id }}
+                              </div>
+                          </td>
+                          <td>
+                              <div class="px-2 py-1">
+                                  {{ invoice.title }}
+                              </div>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                              <div class="px-2 py-1">
+                                  {{ invoice.amount }}
+                              </div>
+                          </td>
+                      </tr>
+                      {% endfor %}
+                      {% else %}
+                        {% include 'views/empty/user/no_invoice.html' %}
+                      {% endif %}
+                  </tbody>
               </table>
-            </div>
-          {% endfor %}
-        {% else %}
-          {% include 'views/empty/no_invoice.html' %}
-        {% endif %}
+          </div>
       </div>
-    </div>
   </div>
+</div>

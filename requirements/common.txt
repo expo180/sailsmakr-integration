@@ -47,3 +47,5 @@ newsdataapi
 Faker
 Flask-BabelEx
 opencage
+firebase-admin
+python-barcode

@@ -15,7 +15,15 @@ const UtilApiURLs = {
     checkValidityQuoteURL: `${BaseURL}quote/edit/`,
     DeleteQuoteRequestURL: `${BaseURL}quote/delete/`,
     AddressAutoCompleteURL: `${BaseURL}autocomplete-address`,
-    GetAirFreightRatesURL : `${BaseURL}/get-air-freight-rate`
+    GetAirFreightRatesURL : `${BaseURL}get-air-freight-rate`,
+    GetRealTimeWeatherURL : `${BaseURL}get-weather/realtime`,
+    AddStoreURL: `${BaseURL}add_store`,
+    EditStoreURL: `${BaseURL}edit_store/`,
+    DeleteStoreURL: `${BaseURL}delete_store/`,
+    ApplyJobURL: `${BaseURL}job-openings/apply/`,
+    DeleteStoreURL : 'http://127.0.0.1:5000/stores',
+    EditStoreURL : 'http://127.0.0.1:5000/stores',
+    GetStoreDetailsURL : `${BaseURL}/get-store_details/`
 };
 
 export default UtilApiURLs;

@@ -8,7 +8,8 @@ const RedirectURLs = {
     EmployeeEditInfoSuccess: `${BaseURL}careers/employees_table`,
     CreateAdSuccessURL: `${BaseURL}ads/`,
     PurchaseRequestSendSuccess: `${BaseURL}my_purchases/previous_purchase_requests`,
-    AuthorizationSuccessRedirectURL: `${BaseURL}quotes/previouses`
+    AuthorizationSuccessRedirectURL: `${BaseURL}quotes/previouses`,
+    ApplyJobSuccessRedirectURL: `${BaseURL}my-previous-applications`
 };
 
 export default RedirectURLs;

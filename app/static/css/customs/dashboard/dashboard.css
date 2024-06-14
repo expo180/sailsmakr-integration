@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.container{
+  overflow-x: hidden;
+}
+
 .phone-input {
   padding: 1em 1em;
   border: 1px solid #ced4da !important;

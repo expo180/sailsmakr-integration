@@ -64,6 +64,8 @@ class User(UserMixin, db.Model):
     purchases = db.relationship('Purchase', back_populates='user', lazy=True)
     tasks = db.relationship('Task', lazy=True)
     docs = db.relationship('Doc', backref='user', lazy=True)
+    messages_sent = db.relationship('Message', foreign_keys='Message.sender_id', backref='sender', lazy='dynamic')
+    messages_received = db.relationship('Message', foreign_keys='Message.receiver_id', backref='receiver', lazy='dynamic')
 
     @property
     def password(self):
@@ -211,6 +213,7 @@ class JobApplication(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship('User', backref='job_applications')
     job_id = db.Column(db.Integer, db.ForeignKey('jobs.id'))
+    status = db.Column(db.String)
 
 class Job(db.Model):
     __tablename__ = 'jobs'
@@ -311,11 +314,21 @@ class Purchase(db.Model):
     category = db.Column(db.String)
     doc_url = db.Column(db.String)
     qr_code_url = db.Column(db.String)
+    barcode_url = db.Column(db.String)
     service_fees = db.Column(db.Float, default=0.0)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship('User', back_populates='purchases')
     closed = db.Column(db.Boolean, default=False)
     start_check = db.Column(db.DateTime(), default=datetime.utcnow)
+
+class Store(db.Model):
+    __tablename__ = 'stores'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+    location = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False)
+    logo_file_url = db.Column(db.String)
+    phone = db.Column(db.String)
 
 
 class Task(db.Model):
@@ -373,6 +386,19 @@ class Shipping(db.Model):
     unity = db.Column(db.String)
     quantity = db.Column(db.Float)
     pricing = db.Column(db.Float())
+
+
+class Message(db.Model):
+    __tablename__ = 'messages'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    sender_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    receiver_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    file_url = db.Column(db.String) 
+    def __repr__(self):
+        return f'<Message {self.body}>'
+    
 
 
 

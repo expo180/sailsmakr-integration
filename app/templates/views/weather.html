@@ -1,34 +1,34 @@
 <div class="col-lg-4 col-md-6 mb-2">
-    <div class="card text-white" style="border-radius: 40px; overflow: hidden; position: relative;">
+    <div class="card text-white" id="weather-card" style="border-radius: 40px; overflow: hidden; position: relative;">
         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw1.webp" alt="weather" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
         <div class="mask" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(190, 216, 232, .5);"></div>
         <div class="card-img-overlay text-dark p-5" style="position: relative;">
             <div class="d-flex justify-content-between">
-                <h6 class="flex-grow-1">Warsaw</h6>
-                <h6>15:07</h6>
+                <h6 class="flex-grow-1" id="location">Loading...</h6>
+                <h6 id="time">--:--</h6>
             </div>
             <div class="text-center mt-5 mb-4">
-                <h6 class="display-4 mb-0 font-weight-bold">13°C</h6>
-                <span class="small" style="color: #868B94;">Stormy</span>
+                <h6 class="display-4 mb-0 font-weight-bold" id="temperature">--°C</h6>
+                <span class="small" id="weather-condition" style="color: #868B94;">--</span>
             </div>
             <div class="py-5"></div>
             <div class="d-flex align-items-center mt-5">
                 <div class="flex-grow-1" style="font-size: 1rem;">
                     <div>
                         <i class="fas fa-wind fa-fw" style="color: #868B94;"></i>
-                        <span class="ms-1"> 40 km/h </span>
+                        <span class="ms-1" id="wind-speed">-- km/h</span>
                     </div>
                     <div>
                         <i class="fas fa-tint fa-fw" style="color: #868B94;"></i>
-                        <span class="ms-1"> 84% </span>
+                        <span class="ms-1" id="humidity">--%</span>
                     </div>
                     <div>
                         <i class="fas fa-sun fa-fw" style="color: #868B94;"></i>
-                        <span class="ms-1"> 0.2h </span>
+                        <span class="ms-1" id="sun-hours">-- h</span>
                     </div>
                 </div>
                 <div>
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px" id="weather-icon">
                 </div>
             </div>
         </div>

@@ -1,8 +1,15 @@
 {
+  "name": "sailsmakr",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
   "devDependencies": {
     "tailwindcss": "^3.4.4"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.7"
+    "@tailwindcss/forms": "^0.5.7",
+    "electron": "^31.0.1"
   }
 }

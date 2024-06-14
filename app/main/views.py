@@ -1,7 +1,7 @@
 from flask import request, render_template, session, jsonify, url_for, redirect, flash, abort
 from flask_babel import _
 from . import main
-from ..models import User, Task, Role, Event, Invoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization
+from ..models import User, Task, Role, Event, Invoice, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Store
 from flask_login import current_user, login_required, login_user
 from ..decorators import ceo_required, hr_manager_required, project_manager_required, employee_required, sales_manager_required, user_required, accountant_required
 from .. import db
@@ -10,6 +10,7 @@ from newsdataapi import NewsDataApiClient
 from dotenv import load_dotenv
 from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary, get_user_invoices
 from datetime import datetime
+from ..api.utils import save_files
 
 
 load_dotenv()
@@ -66,6 +67,14 @@ def calculate_truck_freight():
 def glossary():
     return render_template("main/glossary.html")
 
+@main.route("/job-opennings")
+def jobs():
+    job_openings = Job.query.all()
+    return render_template(
+        "main/job_opennings.html",
+        job_openings=job_openings
+    )
+
 
 @main.route("/sailsmakr-services/shop")
 def shop():
@@ -74,21 +83,33 @@ def shop():
 @main.route("/home")
 @login_required
 def user_home():
-
     api = NewsDataApiClient(apikey=os.environ.get('NEWS_API_KEYS'))
 
     summary = get_weekly_financial_summary()
     user_summary = get_monthly_user_summary()
     client_summary = get_daily_client_summary()
     invoices = get_user_invoices(current_user.id)
+    purchases = Purchase.query.filter_by(user_id=current_user.id).all()
 
     return render_template(
         "dashboard/user_home.html",
         summary=summary,
         user_summary=user_summary,
         client_summary=client_summary,
-        invoices=invoices
+        invoices=invoices,
+        purchases=purchases
+    
     )
+
+@main.route("/my-previous-applications", methods=['GET'])
+@login_required
+def my_previous_applications():
+    user_applications = JobApplication.query.filter_by(user_id=current_user.id).all()
+    return render_template(
+        'dashboard/applied_jobs_listing.html', 
+        user_applications=user_applications
+    )
+
 
 @main.route("/careers/job_list")
 @login_required
@@ -111,6 +132,60 @@ def calendar():
 @login_required
 def calculator():
     return render_template("dashboard/calculator.html")
+
+@main.route('/stores', methods=['GET', 'POST', 'PUT', 'DELETE'])
+@login_required
+@sales_manager_required
+def stores():
+    if request.method == 'GET':
+        stores = Store.query.all()
+        return render_template('dashboard/@support_team/stores.html', stores=stores)
+    
+    if request.method == 'POST':
+        data = request.form
+        logo_files = request.files.getlist('logo')
+        logo_urls = save_files(logo_files, 'store_logos')
+        logo_url = logo_urls[0] if logo_urls else None
+
+        store = Store(
+            name=data['name'],
+            location=data['location'],
+            email=data['email'],
+            phone=data.get('phone'),
+            logo_file_url=logo_url
+        )
+        db.session.add(store)
+        db.session.commit()
+        return jsonify(message="Le magasin a bien été ajouté"), 201
+
+    if request.method == 'PUT':
+        try:
+            store_id = request.form['id']
+            store = Store.query.get_or_404(store_id)
+            
+            store.name = request.form['name']
+            store.location = request.form['location']
+            store.email = request.form['email']
+            store.phone = request.form.get('phone')
+
+            logo_files = request.files.getlist('logo')
+            if logo_files:
+                logo_urls = save_files(logo_files, 'store_logos')
+                store.logo_file_url = logo_urls[0] if logo_urls else store.logo_file_url
+
+            db.session.commit()
+            return jsonify(message="Les infos du magasin ont bien été mis à jour")
+
+        except Exception as e:
+            db.session.rollback()
+            return jsonify(error=str(e)), 400
+
+    if request.method == 'DELETE':
+        store_id = request.form['id']
+        store = Store.query.get_or_404(store_id)
+        db.session.delete(store)
+        db.session.commit()
+        return jsonify(message="Le magasin a bien été retiré")
 
 @main.route("/my_purchases/previous_purchase_requests")
 @login_required
@@ -334,11 +409,12 @@ def recent_applications():
 @login_required
 @hr_manager_required
 def employee_table():
-    employees = Employee.query.all()
+    employees = User.query.join(Role).filter(~Role.name.in_(['User', 'Reseller'])).all()
     return render_template(
         'dashboard/@support_team/employees_listing.html',
         employees=employees
     )
+
 
 @main.route("/my_invoices")
 @login_required

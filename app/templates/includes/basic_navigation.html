@@ -1,0 +1,70 @@
+<nav class="fixed top-0 left-0 right-0 border-gray-200 w-full border-b py-3 bg-white z-50  bg-inherit  border-b-default border-solid border-prime-gray-200 ">
+    <div class="container mx-auto ">
+      <div class="w-full flex  flex-col lg:flex-row">
+        <div class=" flex justify-between  lg:flex-row">
+          <a href="{{ url_for('main.home') }}" class="flex items-center">
+            <img src="" alt="Afrilog logo">
+          </a>
+          <button data-collapse-toggle="navigation-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">
+                {{ _('Ouvrir le menu') }}
+            </span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class=" w-full lg:flex lg:pl-11 " id="navigation-menu">
+          <ul class="lg:flex items-center flex-col mt-4 lg:mt-0 lg:flex-row">
+            <li class="relative">
+              <a href="{{ url_for('main.home') }}" class="flex items-center justify-between text-gray-500 text-sm text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left m-auto lg:m-0">
+                {{ _('Accueil') }}
+              </a>
+            </li>
+            <li class="relative">
+              <a href="#PartnerSection" class="flex items-center justify-between text-gray-500 text-sm text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left m-auto lg:m-0">
+                {{ _('Partenaires') }}
+              </a>
+            </li>
+            <li class="relative">
+              <button data-target="services-megamenu" class="dropdown-toggle flex items-center justify-between text-gray-500 text-sm  lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto   lg:m-0">
+                  {{ _('Services') }}
+                  <svg class="w-3 h-2 ml-1.5 " width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L3.58579 3.58579C4.25245 4.25245 4.58579 4.58579 5 4.58579C5.41421 4.58579 5.74755 4.25245 6.41421 3.58579L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+              </button>
+              <!-- services menu -->
+              {% include 'includes/main/header/services.html' %}
+            </li>
+            <li class="relative">
+                <a href="javascript:;" class="flex items-center justify-between text-gray-500 text-sm text-center lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left m-auto lg:m-0">
+                  {{ _('Tarifs') }}
+                </a>
+              </li>
+            <li>
+                <button data-target="resources-megamenu" class="dropdown-toggle flex items-center justify-between text-gray-500 text-sm text-center lg:text-base font-medium hover:text-prime-blue-700 transition-all duration-500 mb-2 lg:mr-6 lg:mb-0 mr-auto lg:text-left lg:m-0">
+                    {{ _('Ressources') }}
+                    <svg class="w-3 h-2 ml-1.5 " width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L3.58579 3.58579C4.25245 4.25245 4.58579 4.58579 5 4.58579C5.41421 4.58579 5.74755 4.25245 6.41421 3.58579L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <!-- resources menu -->
+                {% include 'includes/main/header/resources.html' %}
+            </li>
+            <li class="relative">
+                {% include 'includes/language_selector.html' %}
+            </li>
+          </ul>
+          <div class="button-container flex flex-col md:flex-row items-center ml-auto">
+            <a href="#SalesContact"  class="button py-2.5 px-6 text-sm bg-indigo-50 text-blue-500 rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg--100 mb-2 md:mb-0 mr-0 md:mr-2">
+              {{ _('Service commercial') }}
+            </a>
+            <a href="{{ url_for('auth.login') }}" target="_blank" class="button py-2.5 px-6 text-sm bg-blue-700 text-white rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg-blue-700 md:ml-2">
+              {{ _('Se connecter') }}
+            </a>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+</nav>

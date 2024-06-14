@@ -1,0 +1,67 @@
+<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+  <div class="card">
+      <div class="card-header pb-0">
+          <div class="row">
+              <div class="col-lg-6 col-7">
+                  <h6>{{ _('Achats récents') }}</h6>
+              </div>
+              <div class="col-lg-6 col-5 my-auto text-end">
+                  <div class="dropdown float-lg-end pe-4">
+                      <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-secondary"></i>
+                      </a>
+                      <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">{{ _('Partager') }}</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">{{ _('Exporter') }}</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">{{ _('Télécharger') }}</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card-body px-5 pb-2">
+        {% if purchases %}
+            {% for purchase in purchases %}
+              <div class="list-group">
+                <div class="list-group-item list-group-item-action d-flex gap-3 py-3 mb-2" aria-current="true">
+                  {% if purchase.product_picture_url %}
+                    <img src="{{ purchase.product_picture_url }}" alt="" width="32" height="32" class="rounded-circle flex-shrink-0">
+                  {% else %}
+                    {% set category_icons = {
+                      'Electronics': 'monitor',
+                      'Clothing': 'Shoppingmode',
+                      'Books': 'Book',
+                      'Furniture': 'Home Repair Service',
+                      'Food': 'Restaurant',
+                      'Toys': 'Toys And Games',
+                      'Appliances': 'Drag Indicator',
+                      'Tools': 'Handyman',
+                      'Sporting Goods': 'Sports Tennis',
+                      'Jewelry': 'Diamond',
+                      'Autre': 'Diamond'
+                    } %}
+                    <i class="material-icons">{{ category_icons[purchase.category] }}</i>
+                  {% endif %}
+                  <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                      <h6 class="mb-0">
+                        {{ purchase.title }}
+                      </h6>
+                      <p class="mb-0 opacity-75">
+                        {{ purchase.token | mask_token }}
+                      </p>
+                      <small class="opacity-50 text-nowrap">
+                        {{ purchase.provider }}
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            {% include 'views/empty/user/no_purchase.html' %}
+          {% endif %}
+      </div>
+      <div class="py-5"></div>
+  </div>
+</div>

@@ -5,7 +5,7 @@
   
   {% if current_user.is_user() %}
     <div class="row">
-      {% include 'views/weather.html' %}
+      {% include 'views/purchases.html' %}
       {% include 'views/invoices.html' %}
     </div>
   {% elif current_user.is_ceo() or current_user.is_sales() or current_user.is_accountant() or current_user.is_hr_manager() %}
@@ -18,14 +18,10 @@
 
   {% if current_user.is_ceo() or current_user.is_sales() or current_user.is_accountant() or current_user.is_hr_manager() %}
     {% include 'views/basic_charts.html' %}
-    <div class="row">
-      {% include 'views/news.html' %}
-      {% include 'views/messages.html' %}
-    </div>
   {% endif %}
 
   <div class="row mt-3">
-    {% include 'views/news.html' %}
+    {% include 'views/feeds.html' %}
     {% include 'views/messages.html' %}
   </div>
 
@@ -33,6 +29,7 @@
 
 
 <script src="{{ url_for('static', filename='js/lib/plugins/chartjs.min.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/functions/geocoding/realtime_weather.js') }}"></script>
 
 <script>
 var ctx = document.getElementById("chart-bars").getContext("2d");
