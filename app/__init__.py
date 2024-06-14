@@ -1,4 +1,5 @@
 # app/init.py
+
 from flask import Flask, session, request, redirect
 from flask_mail import Mail
 from flask_moment import Moment
@@ -9,7 +10,7 @@ from flask_login import LoginManager, current_user
 from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
-from flask_babel import Babel
+from flask.ext.babelex import Babel
 from .filters import mask_token
 from .utils import get_tasks_for_user
 from datetime import datetime
@@ -23,7 +24,7 @@ moment = Moment()
 oauth = OAuth()
 rapi = CountriesAPI()
 migrate = Migrate()
-
+babel = Babel()
 
 def create_app(production=True):
     app = Flask(__name__)
@@ -37,19 +38,8 @@ def create_app(production=True):
     login_manager.init_app(app)
     oauth.init_app(app)
     rapi.init_app(app)
-
-    def get_locale():
-        user_language = request.cookies.get('language')
-        if user_language:
-            return user_language
-        return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+    babel.init_app(app)
     
-    @app.context_processor
-    def inject_get_locale():
-        return {'get_locale': get_locale}
-
-    babel = Babel(app, locale_selector=get_locale)
-
     from .api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api/v1')
 
@@ -59,6 +49,16 @@ def create_app(production=True):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    @babel.localeselector
+    def get_locale():
+        user_language = request.cookies.get('language')
+        if user_language:
+            return user_language
+        return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+
+    @app.context_processor
+    def inject_get_locale():
+        return {'get_locale': get_locale}
 
     @app.route('/set_language', methods=['POST'])
     def set_language():
