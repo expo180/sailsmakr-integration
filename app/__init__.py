@@ -10,7 +10,7 @@ from flask_login import LoginManager, current_user
 from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
-from flask_babel import Babel
+from flask_babelex import Babel
 from .filters import mask_token
 from .utils import get_tasks_for_user
 from datetime import datetime
