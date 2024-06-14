@@ -23,7 +23,6 @@ moment = Moment()
 oauth = OAuth()
 rapi = CountriesAPI()
 migrate = Migrate()
-babel = Babel()
 
 
 def create_app(production=True):
@@ -49,10 +48,8 @@ def create_app(production=True):
     def inject_get_locale():
         return {'get_locale': get_locale}
 
+    babel = Babel(app, locale_selector=get_locale)
 
-
-    babel.init_app(app, locale_selector=get_locale)
-    
     from .api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api/v1')
 
