@@ -36,6 +36,11 @@
   }
 }
 
+.flag-icon {
+  width: 20px;
+  height: 14px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;

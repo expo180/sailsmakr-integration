@@ -11,8 +11,8 @@
 {% set current_language_flag = current_language_data.flag %}
 
 <div class="dropdown relative inline-flex">
-    <button data-target="language-selector" type="button" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-slate-100 text-gray-800 rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg-slate-200"> 
-        <span class="fi fi-{{ current_language_flag }}"></span>
+    <button data-target="language-selector" type="button" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm bg-slate-100 text-gray-800 rounded-full cursor-pointer text-center shadow-xs transition-all duration-500 hover:bg-slate-200">
+        <span class="fi fi-{{ current_language_flag }} flag-icon"></span>
         {{ current_language_name }}
         <svg class="dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-800" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -25,7 +25,7 @@
                 <form action="{{ url_for('set_language') }}" method="post" class="block">
                     <input type="hidden" name="language" value="{{ code }}">
                     <button type="submit" class="w-full text-left px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium">
-                        <span class="fi fi-{{ data.flag }}"></span>
+                        <span class="fi fi-{{ data.flag }} flag-icon"></span>
                         {{ data.name }}
                     </button>
                 </form>
