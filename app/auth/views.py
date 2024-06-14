@@ -66,5 +66,4 @@ def reset_email():
 
 @auth.route("/logout", methods=['GET', 'POST'])
 def logout():
-    flash(_('Veuillez vous connecter à votre compte!'),'error')
     return redirect(url_for('auth.login'))
