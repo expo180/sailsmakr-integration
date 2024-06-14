@@ -1,5 +1,4 @@
-# app/__init__.py
-
+# app/init.py
 from flask import Flask, session, request, redirect
 from flask_mail import Mail
 from flask_moment import Moment
@@ -10,7 +9,7 @@ from flask_login import LoginManager, current_user
 from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
-from flask_babel import Babel, lazy_gettext as _l  # Ensure you import Babel from flask_babel
+from flask_babel import Babel
 from .filters import mask_token
 from .utils import get_tasks_for_user
 from datetime import datetime
@@ -26,10 +25,17 @@ rapi = CountriesAPI()
 migrate = Migrate()
 babel = Babel()
 
-def create_app(development=True):
+def get_locale():
+    user_language = request.cookies.get('language')
+    if user_language:
+        return user_language
+    return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+
+
+def create_app(production=True):
     app = Flask(__name__)
-    app.config.from_object(config['development'])
-    config['development'].init_app(app)
+    app.config.from_object(config['production'])
+    config['production'].init_app(app)
     bootstrap.init_app(app)
     mail.init_app(app)
     db.init_app(app)
@@ -38,7 +44,7 @@ def create_app(development=True):
     login_manager.init_app(app)
     oauth.init_app(app)
     rapi.init_app(app)
-    babel.init_app(app)
+    babel.init_app(app, locale_selector=get_locale)
     
     from .api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api/v1')
@@ -49,16 +55,6 @@ def create_app(development=True):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    @babel.localeselector
-    def get_locale():
-        user_language = request.cookies.get('language')
-        if user_language:
-            return user_language
-        return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
-
-    @app.context_processor
-    def inject_get_locale():
-        return {'get_locale': get_locale}
 
     @app.route('/set_language', methods=['POST'])
     def set_language():
@@ -88,6 +84,7 @@ def create_app(development=True):
             tasks = []
         return dict(tasks=tasks)
     
+
     def get_latest_article():
         from .models import Article
         article = Article.query.order_by(Article.id.desc()).first()
