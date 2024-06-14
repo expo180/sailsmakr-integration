@@ -17,7 +17,7 @@ load_dotenv()
 
 @api.route("/quotes/apply", methods=['GET', 'POST'])
 @login_required
-@user_required
+@user_required  # Define your user_required decorator
 def apply_quotes():
     if request.method == 'POST':
         data = request.form
@@ -33,15 +33,15 @@ def apply_quotes():
             agent_first_name = data.get('agent_first_name')
             agent_last_name = data.get('agent_last_name')
             shipping_company_title = data.get('shipping_company_title')
-            
+
             client_signature_file = files.get('client_signature_url')
             client_id_file = files.get('client_id_card_url')
 
-            saved_files = save_files([client_signature_file, client_id_file], client_first_name, client_last_name)
+            saved_files = save_files([client_signature_file, client_id_file], "authorization_files")
             client_signature_url = saved_files[0] if len(saved_files) > 0 else ''
             client_id_card_url = saved_files[1] if len(saved_files) > 1 else ''
 
-            qr_code_path = generate_qr_code(lading_number, client_first_name, client_last_name)
+            qr_code_path = generate_qr_code(lading_number)
 
             new_authorization = Authorization(
                 client_first_name=client_first_name,
@@ -57,10 +57,11 @@ def apply_quotes():
                 user_id=current_user.id
             )
 
+            # Save to database
             db.session.add(new_authorization)
             db.session.commit()
 
-            return jsonify({'success': True, 'message': _('Votre requête a bien été envoyé')}), 200
+            return jsonify({'success': True, 'message': 'Votre requête a bien été envoyé'}), 200
 
         except Exception as e:
             db.session.rollback()
@@ -141,8 +142,8 @@ def purchase_request():
             db.session.commit()
 
             return jsonify({
-                'title': _('Envoyé avec succès'), 
-                'message': _('Votre requête a été bien envoyée'), 
+                'title': 'Envoyé avec succès', 
+                'message': 'Votre requête a été bien envoyée', 
                 'token': token
             })
 
@@ -496,7 +497,7 @@ def edit_ad(ad_id):
         ad.debt = float(debt)
 
         db.session.commit()
-        return jsonify({'success': True, 'message': _('Votre campagne a été bien mise à jour')}), 200
+        return jsonify({'success': True, 'message': 'Votre campagne a été bien mise à jour'}), 200
     except Exception as e:
         db.session.rollback()
         return jsonify({'success': False, 'message': str(e)}), 500
@@ -509,7 +510,7 @@ def delete_ad(ad_id):
     try:
         db.session.delete(ad)
         db.session.commit()
-        return jsonify({'success': True, 'message': _('Campagne supprimée')}), 200
+        return jsonify({'success': True, 'message': 'Campagne supprimée'}), 200
     except Exception as e:
         db.session.rollback()
         return jsonify({'success': False, 'message': str(e)}), 500
@@ -519,17 +520,18 @@ def delete_ad(ad_id):
 @login_required
 def edit_request(request_id):
     req = Authorization.query.get_or_404(request_id)
+
     if req.user_id != current_user.id:
         return jsonify({"success": False, "message": "Unauthorized"}), 403
 
-    req.client_first_name = request.form.get('client_first_name')
-    req.client_last_name = request.form.get('client_last_name')
-    req.client_phone_number = request.form.get('client_phone_number')
-    req.client_location = request.form.get('client_location')
-    req.lading_bills_identifier = request.form.get('lading_number')
-    req.agent_first_name = request.form.get('agent_first_name')
-    req.agent_last_name = request.form.get('agent_last_name')
-    req.shipping_company_title = request.form.get('shipping_company_title')
+    req.client_first_name = request.form.get('client_first_name', req.client_first_name)
+    req.client_last_name = request.form.get('client_last_name', req.client_last_name)
+    req.client_phone_number = request.form.get('client_phone_number', req.client_phone_number)
+    req.client_location = request.form.get('client_location', req.client_location)
+    req.lading_bills_identifier = request.form.get('lading_number', req.lading_bills_identifier)
+    req.agent_first_name = request.form.get('agent_first_name', req.agent_first_name)
+    req.agent_last_name = request.form.get('agent_last_name', req.agent_last_name)
+    req.shipping_company_title = request.form.get('shipping_company_title', req.shipping_company_title)
 
     files = []
     if 'client_signature_url' in request.files:
@@ -538,21 +540,28 @@ def edit_request(request_id):
         files.append(request.files['client_id_card_url'])
 
     if files:
-        save_authorization_request_files(files, req.client_first_name, req.client_last_name)
+        saved_files = save_files(files, f"authorization_files/{req.id}")
+        req.client_signature_url = saved_files[0] if len(saved_files) > 0 else req.client_signature_url
+        req.client_id_card_url = saved_files[1] if len(saved_files) > 1 else req.client_id_card_url
 
-    db.session.commit()
-    return jsonify({"success": True, "message": _("Votre demande a bien été mise à jour")})
+    try:
+        db.session.commit()
+        return jsonify({'success': True, 'message': 'Request updated successfully'}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'message': str(e)}), 500
 
 @api.route('/delete_request/<int:request_id>', methods=['DELETE'])
 @login_required
 def delete_request(request_id):
     req = Authorization.query.get_or_404(request_id)
     if req.user_id != current_user.id:
-        return jsonify({"success": False, "message": _("Accès non autorisé")}), 403
+        return jsonify({"success": False, "message": "Accès non autorisé"}), 403
 
     db.session.delete(req)
     db.session.commit()
-    return jsonify({"success": True, "message": _("Votre demande a été bien supprimé")})
+    return jsonify({"success": True, "message": "Votre demande a été bien supprimé"})
 
 @api.route('/delete_purchase/<int:purchase_id>', methods=['DELETE'])
 @login_required
@@ -577,7 +586,7 @@ def delete_client_purchase(purchase_id):
 def edit_invoice(invoice_id):
     invoice = Invoice.query.get_or_404(invoice_id)
     if not invoice:
-        return jsonify({'message': _('La facture est introuvable.')}), 404
+        return jsonify({'message': 'La facture est introuvable.'}), 404
 
     data = request.get_json()
     title = data.get('title')
@@ -585,21 +594,21 @@ def edit_invoice(invoice_id):
     description = data.get('description')
 
     if not title or not amount:
-        return jsonify({'message': _('Le titre et le montant sont requis.')}), 400
+        return jsonify({'message': 'Le titre et le montant sont requis.'}), 400
 
     try:
         amount = float(amount)
         if amount <= 0:
             raise ValueError
     except ValueError:
-        return jsonify({'message': _('Montant invalide.')}), 400
+        return jsonify({'message': 'Montant invalide.'}), 400
 
     invoice.title = title
     invoice.amount = amount
     invoice.description = description
     db.session.commit()
 
-    return jsonify({'message': _('La facture a été mise à jour avec succès.')}), 200
+    return jsonify({'message': 'La facture a été mise à jour avec succès.'}), 200
 
 
 @api.route("/delete_invoice/<int:invoice_id>", methods=['DELETE'])
@@ -608,15 +617,15 @@ def edit_invoice(invoice_id):
 def delete_invoice(invoice_id):
     invoice = Invoice.query.get_or_404(invoice_id)
     if not invoice:
-        return jsonify({'message': _('La facture est introuvable.')}), 404
+        return jsonify({'message': 'La facture est introuvable.'}), 404
 
     try:
         db.session.delete(invoice)
         db.session.commit()
-        return jsonify({'message': _('La facture a été supprimée avec succès.')}), 200
+        return jsonify({'message': 'La facture a été supprimée avec succès.'}), 200
     except Exception as e:
         db.session.rollback()
-        return jsonify({'message': _('Une erreur est survenue lors de la suppression de la facture.')}), 500
+        return jsonify({'message': 'Une erreur est survenue lors de la suppression de la facture.'}), 500
     
 
 @api.route('/quote/delete/<int:quote_id>', methods=['DELETE'])
@@ -628,7 +637,7 @@ def delete_quote(quote_id):
         db.session.delete(quote)
         db.session.commit()
         return jsonify({'success': True})
-    return jsonify({'success': False, 'message': _('Demande Introuvable')}), 404
+    return jsonify({'success': False, 'message': 'Demande Introuvable'}), 404
 
 @api.route('/quote/edit/<int:quote_id>', methods=['PUT'])
 @login_required
@@ -636,7 +645,7 @@ def delete_quote(quote_id):
 def edit_quote(quote_id):
     quote = Authorization.query.get_or_404(quote_id)
     if not quote:
-        return jsonify({'success': False, 'message': _('Demande Introuvable')}), 404
+        return jsonify({'success': False, 'message': 'Demande Introuvable'}), 404
 
     data = request.json
     if 'client_first_name' in data:

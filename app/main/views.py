@@ -333,7 +333,7 @@ def ads():
         db.session.add(new_ad)
         db.session.commit()
 
-        return jsonify({'success' : True, 'message' :  _('Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le meilleur de votre audience') })
+        return jsonify({'success' : True, 'message' :  'Votre nouvelle campagne a été ajoutée, vous pouvez maintenant tirer le meilleur de votre audience' })
 
     ads = MarketingCampaign.query.all()
     return render_template("dashboard/@support_team/ads.html", ads=ads)
