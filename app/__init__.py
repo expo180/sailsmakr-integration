@@ -1,4 +1,5 @@
-# app/init.py
+# app/__init__.py
+
 from flask import Flask, session, request, redirect
 from flask_mail import Mail
 from flask_moment import Moment
@@ -9,7 +10,7 @@ from flask_login import LoginManager, current_user
 from flask_oauthlib.client import OAuth
 from flask_restcountries import CountriesAPI
 from flask_migrate import Migrate
-from flask_babel import Babel
+from flask_babel import Babel, lazy_gettext as _l  # Ensure you import Babel from flask_babel
 from .filters import mask_token
 from .utils import get_tasks_for_user
 from datetime import datetime
@@ -25,10 +26,10 @@ rapi = CountriesAPI()
 migrate = Migrate()
 babel = Babel()
 
-def create_app(production=True):
+def create_app(development=True):
     app = Flask(__name__)
-    app.config.from_object(config['production'])
-    config['production'].init_app(app)
+    app.config.from_object(config['development'])
+    config['development'].init_app(app)
     bootstrap.init_app(app)
     mail.init_app(app)
     db.init_app(app)
@@ -87,7 +88,6 @@ def create_app(production=True):
             tasks = []
         return dict(tasks=tasks)
     
-
     def get_latest_article():
         from .models import Article
         article = Article.query.order_by(Article.id.desc()).first()
