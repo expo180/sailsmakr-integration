@@ -52,11 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             hasError = true;
         }
 
-        if (!/^\d+$/.test(ladingNumber)) {
-            document.getElementById('LaddingNumberError').style.display = 'block';
-            hasError = true;
-        }
-
         if (!/^[a-zA-Z]+$/.test(agentFirstName)) {
             document.getElementById('AgentFirstNameError').style.display = 'block';
             hasError = true;

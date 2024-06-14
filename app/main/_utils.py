@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import func, extract
 from ..models import db, Authorization, Purchase, User, Role
 import logging
+import random, string
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -175,3 +176,9 @@ def get_user_invoices(user_id):
             'amount': authorization.service_fees
         })
     return invoices
+
+
+def generate_password():
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(8))
+    return password

@@ -8,9 +8,10 @@ from .. import db
 import os
 from newsdataapi import NewsDataApiClient
 from dotenv import load_dotenv
-from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary, get_user_invoices
+from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary, get_user_invoices, generate_password
 from datetime import datetime
 from ..api.utils import save_files
+from .emails import send_reseller_email
 
 
 load_dotenv()
@@ -147,6 +148,17 @@ def stores():
         logo_urls = save_files(logo_files, 'store_logos')
         logo_url = logo_urls[0] if logo_urls else None
 
+        password = generate_password()
+
+        new_user = User(
+            email=data['email'],
+            password=password,
+            name=data['name'],
+            role=Role.query.filter_by(name='Reseller').first()
+        )
+        db.session.add(new_user)
+        db.session.commit()
+
         store = Store(
             name=data['name'],
             location=data['location'],
@@ -156,7 +168,10 @@ def stores():
         )
         db.session.add(store)
         db.session.commit()
-        return jsonify(message="Le magasin a bien été ajouté"), 201
+
+        send_reseller_email(new_user.email, password)
+
+        return jsonify(message="Le magasin a bien été ajouté."), 201
 
     if request.method == 'PUT':
         try:
@@ -165,8 +180,16 @@ def stores():
             
             store.name = request.form['name']
             store.location = request.form['location']
-            store.email = request.form['email']
             store.phone = request.form.get('phone')
+
+            new_email = request.form['email']
+            if store.email != new_email:
+                store.email = new_email
+                
+                user = User.query.filter_by(email=store.email).first()
+                if user:
+                    user.email = new_email
+                    db.session.add(user)
 
             logo_files = request.files.getlist('logo')
             if logo_files:
@@ -186,6 +209,7 @@ def stores():
         db.session.delete(store)
         db.session.commit()
         return jsonify(message="Le magasin a bien été retiré")
+
 
 @main.route("/my_purchases/previous_purchase_requests")
 @login_required

@@ -140,7 +140,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="signature">{{ _('Signature') }}</label>
-                        <img src="{{ url_for('static', filename=request.client_signature_url) }}" alt="Client Signature" class="img-fluid">
+                        <img src="{{ request.client_signature_url }}" width="200" alt="Client Signature" class="img-fluid">
                       </div>
                     </div>
                   </div>
@@ -148,7 +148,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="idCard">{{ _("Carte d'identité") }}</label>
-                        <img src="{{ url_for('static', filename=request.client_id_card_url) }}" alt="Client ID Card" class="img-fluid">
+                        <img src="{{ request.client_id_card_url }}" width="200" alt="Client ID Card" class="img-fluid">
                       </div>
                     </div>
                   </div>

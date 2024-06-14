@@ -1,18 +1,13 @@
+Website
 ✔ nav bar design @done (6/1/2024, 2:12:30 PM)
 ✔ other page design @done (6/1/2024, 2:12:32 PM)
 ✔ navigation links accessibility & fixes @done (6/5/2024, 9:44:56 PM)
 ✔ globe implementation @done (6/3/2024, 1:46:30 PM)
 ✔ hero fixes @done (6/2/2024, 7:39:19 PM)
-☐ hr manager set of tools
-☐ chart development
 ☐ buyer + ads templates & apis flask+js
 ☐ calcul page integration + bytesprint sailsmakr + pricing settings
-☐ adjust the QR code generator and host user generated files
-✔ authenticated user navbar @done (6/13/2024, 10:21:43 PM)
-☐ blog, avis
-☐ messages, newsletter
-☐ translation recompile
-☐ icon & logo
+✔ adjust the QR code generator and host user generated files @done (6/14/2024, 5:24:07 PM)
+
 ✔ navbar fixes @done (6/11/2024, 12:53:33 PM)
 ✔ migration script @done (6/6/2024, 3:28:57 PM)
 ☐ footer
@@ -32,6 +27,7 @@ HomePageView
 ✔ user level view @done (5/28/2024, 12:41:09 PM)
 ✔ language selector in crm @done (6/5/2024, 9:46:01 PM)
 ✔ admin level view @done (6/5/2024, 9:46:07 PM)
+☐ article & news page js+flask api + view
 ✔ hr manager level @done (6/5/2024, 9:46:12 PM)
 ✔ accountant manager level view @done (6/5/2024, 9:46:15 PM)
 ☐ sales manager level view

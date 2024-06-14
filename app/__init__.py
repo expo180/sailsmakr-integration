@@ -1,5 +1,4 @@
 # app/init.py
-
 from flask import Flask, session, request, redirect
 from flask_mail import Mail
 from flask_moment import Moment
