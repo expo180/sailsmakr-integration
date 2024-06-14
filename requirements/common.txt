@@ -45,6 +45,7 @@ google-auth-httplib2
 google-auth-oauthlib
 newsdataapi
 Faker
+Flask-BabelEx
 Flask-Babel
 opencage
 firebase-admin

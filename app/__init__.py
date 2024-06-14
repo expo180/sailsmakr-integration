@@ -49,6 +49,7 @@ def create_app(production=True):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    @babel.localeselector
     def get_locale():
         user_language = request.cookies.get('language')
         if user_language:
