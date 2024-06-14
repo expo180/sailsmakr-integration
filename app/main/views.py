@@ -155,7 +155,7 @@ def stores():
         logo_urls = save_files(logo_files, 'store_logos')
         logo_url = logo_urls[0] if logo_urls else None
 
-        password = generate_password()
+        password='alpha232$'
 
         new_user = User(
             email=data['email'],
