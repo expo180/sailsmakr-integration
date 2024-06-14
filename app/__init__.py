@@ -25,12 +25,6 @@ rapi = CountriesAPI()
 migrate = Migrate()
 babel = Babel()
 
-def get_locale():
-    user_language = request.cookies.get('language')
-    if user_language:
-        return user_language
-    return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
-
 
 def create_app(production=True):
     app = Flask(__name__)
@@ -44,6 +38,19 @@ def create_app(production=True):
     login_manager.init_app(app)
     oauth.init_app(app)
     rapi.init_app(app)
+
+    def get_locale():
+        user_language = request.cookies.get('language')
+        if user_language:
+            return user_language
+        return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+    
+    @app.context_processor
+    def inject_get_locale():
+        return {'get_locale': get_locale}
+
+
+
     babel.init_app(app, locale_selector=get_locale)
     
     from .api import api as api_blueprint
