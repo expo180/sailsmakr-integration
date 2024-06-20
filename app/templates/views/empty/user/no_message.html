@@ -1,9 +1,18 @@
 <div class="text-center">
-    <h6 class="text-body-emphasis">{{ _('Aucun message trouvé') }}</h6>
-    <div class="mx-auto">
-        <p class="muted">
-            {{ _("Tous vos messages vont s'afficher ici") }}
-        </p>
+    <div>
+        <div>
+             <img src="{{ url_for('static', filename='img/feedbacks/messages.png') }}" alt="{{ _('Aucun message') }}" class="img-fluid" width="200">              
+        </div>
     </div>
-    <div class="py-5"></div>
+    <h6 class="text-body-emphasis mt-2 ">{{ _('Aucun message à afficher') }}</h6>
+    <div>
+      <p >
+        {{ _('Tous vos messages vont s\'afficher ici') }}
+      </p>
+      <div class="mb-5">
+        <button type="button" class="btn btn-info me-sm-3">
+            {{ _('Commencer') }}
+        </button>
+      </div>
+    </div>
 </div>

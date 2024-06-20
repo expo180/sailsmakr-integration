@@ -12,5 +12,16 @@
 </head>
 <body class="h-full">
     <main>{% block content %}{% endblock %}</main>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const flashMessage = document.querySelector('.flash-message');
+            if (flashMessage) {
+                flashMessage.style.display = 'block';
+                setTimeout(() => {
+                    flashMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
 </body>
 </html>

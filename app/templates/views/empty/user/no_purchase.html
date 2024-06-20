@@ -1,9 +1,19 @@
 <div class="text-center">
-    <h6 class="text-body-emphasis">{{ _('Aucun achat effectué pour le moment.') }}</h6>
-    <div class="mx-auto">
-        <p class="muted">
-            {{ _("Tous vos achats seront affichés ici") }}
-        </p>
+    <div>
+        <div>
+          <img src="{{ url_for('static', filename='img/feedbacks/no_purchases.png') }}" alt="{{ _('Aucun achat') }}" width="200" class="img-fluid">              
+        </div>
     </div>
-    <div class="py-5"></div>
+    <h6 class="text-body-emphasis mt-2">{{ _('Aucun achat effectué') }}</h6>
+    <div>
+      <p>
+        {{ _('Acheter et faites-vous livrer vos <br>produits en toute sécurité.') }}
+      </p>
+      <div class="mb-5">
+        <a href="{{ url_for('api.purchase_request') }}" class="btn btn-info me-sm-3">
+            <i class="bi bi-plus-circle-dotted"></i>
+            Commencer
+        </a>
+      </div>
+    </div>
 </div>

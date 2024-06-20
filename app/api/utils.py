@@ -8,6 +8,10 @@ from PIL import Image
 from io import BytesIO
 import barcode
 from barcode.writer import ImageWriter
+import platform
+from pathlib import Path
+import requests
+from urllib.parse import urlparse
 
 load_dotenv()
 
@@ -43,6 +47,9 @@ def save_files(files, folder):
 
 def save_product_pictures(files):
     return save_files(files, "product_pictures")
+
+def save_shop_product_barcodes(files):
+    return save_files(files, "shop_product_barcodes")
 
 def save_docs(files):
     return save_files(files, "documents")
@@ -80,7 +87,7 @@ def generate_qr_code(token):
 
 def generate_barcode(token):
     code128 = barcode.get_barcode_class('code128')
-    barcode_instance = code128(token, writer=ImageWriter())
+    barcode_instance = code128(str(token), writer=ImageWriter())
     buffer = BytesIO()
     barcode_instance.write(buffer)
     buffer.seek(0)
@@ -91,3 +98,36 @@ def generate_barcode(token):
     blob.make_public()
 
     return blob.public_url
+
+
+def save_file_locally(url, save_directory=None):
+    try:
+        parsed_url = urlparse(url)
+        filename = os.path.basename(parsed_url.path)
+        
+        if save_directory is None:
+            system = platform.system()
+            if system == 'Windows':
+                save_directory = os.path.join(str(Path.home()), 'Downloads')
+            elif system == 'Linux':
+                save_directory = os.path.join(str(Path.home()), 'Downloads')
+            elif system == 'Darwin':
+                save_directory = os.path.join(str(Path.home()), 'Downloads')
+            else:
+                save_directory = os.path.join(str(Path.home()), 'Downloads')
+        
+        os.makedirs(save_directory, exist_ok=True)
+        
+        response = requests.get(url)
+        if response.status_code == 200:
+            local_file_path = os.path.join(save_directory, filename)
+            with open(local_file_path, 'wb') as f:
+                f.write(response.content)
+            return local_file_path
+        else:
+            return None
+        
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+

@@ -13,6 +13,7 @@ from flask_babelex import Babel
 from .filters import mask_token
 from .utils import get_tasks_for_user
 from datetime import datetime
+from flask_oauthlib.client import OAuth
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -25,10 +26,10 @@ rapi = CountriesAPI()
 migrate = Migrate()
 babel = Babel()
 
-def create_app(production=True):
+def create_app(development=True):
     app = Flask(__name__)
-    app.config.from_object(config['production'])
-    config['production'].init_app(app)
+    app.config.from_object(config['development'])
+    config['development'].init_app(app)
     bootstrap.init_app(app)
     mail.init_app(app)
     db.init_app(app)

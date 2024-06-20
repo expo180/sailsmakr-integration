@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
-    "electron": "^31.0.1"
+    "electron": "^31.0.1",
+    "sweetalert2": "^11.11.1"
   }
 }

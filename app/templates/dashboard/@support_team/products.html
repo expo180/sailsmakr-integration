@@ -19,14 +19,16 @@
         </ol>
     </nav>
 
-    <!-- Title -->
-    <h2>{{ _('Produits') }}</h2>
+    <h2>{{ _('Gestionnaire de stock') }}</h2>
 
     <!-- Button Group -->
     <div class="d-flex justify-content-end align-items-center mb-4">
-        <div class="btn-group" role="group" aria-label="Actions sur les Produits">
+        <div class="btn-group" role="group" aria-label="Task Actions">
             <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#NewProductModal">
-                <i class="bi bi-plus-circle"></i> {{ _('Ajouter Produit') }}
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-sort-up"></i>
             </button>
         </div>
     </div>
@@ -52,18 +54,30 @@
                         <td>{{ product.stock }}</td>
                         <td>
                             <div class="dropdown">
-                                <button class="btn btn-link btn-sm btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton{{ product.id }}" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots"></i>
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton{{ product.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ _('Options') }}
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ product.id }}">
                                     <li>
                                         <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ViewProductModal{{ product.id }}">
-                                            <i class="bi bi-eye"></i> {{ _('Voir') }}
+                                            <i class="bi bi-eye"></i> {{ _('Voir les details') }}
                                         </button>
                                     </li>
                                     <li>
                                         <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#EditProductModal{{ product.id }}">
                                             <i class="bi bi-pencil"></i> {{ _('Modifier') }}
+                                        </button>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <button class="download-barcode-btn dropdown-item" data-product-id="{{ product.id }}">
+                                            <i class="bi bi-upc-scan"></i> {{ _('Générer le Code-barres') }}
+                                        </button>                                     
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <button class="dropdown-item text-danger removeProductBtn">
+                                            <i class="bi bi-trash"></i> Supprimer
                                         </button>
                                     </li>
                                 </ul>
@@ -80,14 +94,47 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p><strong>{{ _('Titre') }}:</strong> {{ product.title }}</p>
-                                    <p><strong>{{ _('Coût') }}:</strong> {{ product.cost }}</p>
-                                    <p><strong>{{ _('Stock') }}:</strong> {{ product.stock }}</p>
-                                    <!-- Add other details as needed -->
+                                    <div class="mb-3">
+                                        <label for="ViewProductTitle{{ product.id }}" class="form-label">{{ _('Titre') }}</label>
+                                        <input type="text" class="form-control" id="ViewProductTitle{{ product.id }}" value="{{ product.title }}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ViewProductCost{{ product.id }}" class="form-label">{{ _('Coût') }}</label>
+                                        <input type="number" step="0.01" class="form-control" id="ViewProductCost{{ product.id }}" value="{{ product.cost }}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ViewProductStock{{ product.id }}" class="form-label">{{ _('Stock') }}</label>
+                                        <input type="number" class="form-control" id="ViewProductStock{{ product.id }}" value="{{ product.stock }}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ViewProductProvider{{ product.id }}" class="form-label">{{ _('Fournisseur') }}</label>
+                                        <input type="text" class="form-control" id="ViewProductProvider{{ product.id }}" value="{{ product.provider }}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ViewProductProviderLocation{{ product.id }}" class="form-label">{{ _('Emplacement du Fournisseur') }}</label>
+                                        <input type="text" class="form-control" id="ViewProductProviderLocation{{ product.id }}" value="{{ product.provider_location }}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ViewProductCategory{{ product.id }}" class="form-label">{{ _('Catégorie') }}</label>
+                                        <select class="form-select" id="ViewProductCategory{{ product.id }}" disabled>
+                                            <option value="electronique" {% if product.category == 'electronique' %}selected{% endif %}>{{ _('Électronique') }}</option>
+                                            <option value="vetements" {% if product.category == 'vetements' %}selected{% endif %}>{{ _('Vêtements') }}</option>
+                                            <option value="livres" {% if product.category == 'livres' %}selected{% endif %}>{{ _('Livres') }}</option>
+                                            <option value="cadeaux" {% if product.category == 'cadeaux' %}selected{% endif %}>{{ _('Cadeaux') }}</option>
+                                            <option value="house&garden" {% if product.category == 'house&garden' %}selected{% endif %}>{{ _('Maison et jardin') }}</option>
+                                            <option value="children&babies" {% if product.category == 'children&babies' %}selected{% endif %}>{{ _('Bébés et enfants') }}</option>
+                                            <option value="tools" {% if product.category == 'tools' %}selected{% endif %}>{{ _('Outils') }}</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="EditProductPublish" name="publish" {% if product.publish %} checked {% endif %} disabled>
+                                        <label class="form-check-label" for="EditProductPublish">{{ _('Publier dans notre centrale d\'achat') }}</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     <!-- Edit Product Modal -->
                     <div class="modal fade" id="EditProductModal{{ product.id }}" tabindex="-1" aria-labelledby="EditProductModalLabel{{ product.id }}" aria-hidden="true">
@@ -98,8 +145,8 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Edit Form (similar to New Product Modal) -->
-                                    <form method="POST" action="">
+                                    <form id="editProductForm" enctype="multipart/form-data">
+                                        <input type="hidden" id="productId" name="id" value="{{ product.id }}">
                                         <div class="mb-3">
                                             <label for="EditProductTitle" class="form-label">{{ _('Titre') }}</label>
                                             <input type="text" class="form-control" id="EditProductTitle" name="title" value="{{ product.title }}" required>
@@ -109,11 +156,38 @@
                                             <input type="number" step="0.01" class="form-control" id="EditProductCost" name="cost" value="{{ product.cost }}" required>
                                         </div>
                                         <div class="mb-3">
+                                            <label for="EditProductCategory" class="form-label">{{ _('Catégorie') }}</label>
+                                            <select class="form-select w-100 text-start" id="EditProductCategory" name="category" aria-label="Sélectionner la catégorie">
+                                                <option selected disabled>{{ _('Sélectionner la catégorie') }}</option>
+                                                <option value="electronique">{{ _('Électronique') }}</option>
+                                                <option value="vetements">{{ _('Vêtements') }}</option>
+                                                <option value="livres">{{ _('Livres') }}</option>
+                                                <option value="cadeaux">{{ _('Cadeaux') }}</option>
+                                                <option value="house&garden">{{ _('Maison et jardin') }}</option>
+                                                <option value="children&babies">{{ _('Bébés et enfants') }}</option>
+                                                <option value="tools">{{ _('Outils') }}</option>
+                                            </select> 
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="EditProductStock" class="form-label">{{ _('Stock') }}</label>
                                             <input type="number" class="form-control" id="EditProductStock" name="stock" value="{{ product.stock }}">
                                         </div>
+                                        <div class="mb-3">
+                                            <label for="EditProductImage" class="form-label">{{ _('Image URL') }}</label>
+                                            <input type="file" class="form-control" id="EditProductImage" name="image_url" accept="image/*">
+                                            <p class="text-muted mt-2">
+                                                {{ _('Formats d\'image acceptés : ') }}<span class="text-info">{{ _('JPG, PNG, GIF.') }}</span><br>
+                                                {{ _('Taille maximale de l\'image : ') }}<span class="text-info">{{ _('5MB.') }}</span><br>
+                                                {{ _('Résolution recommandée : ') }}<span class="text-info">{{ _('800x800 px') }}</span> {{ _('ou plus pour une meilleure qualité d\'affichage.') }}<br>
+                                                {{ _('L\'image n\'est pas obligatoire si vous ne prévoyez pas de publier le produit.') }}
+                                            </p>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="EditProductPublish" name="publish">
+                                            <label class="form-check-label" for="EditProductPublish">{{ _('Publier dans notre centrale d\'achat') }}</label>
+                                        </div>
                                         <div class="modal-footer">
-                                            <button type="submit" class="btn btn-primary">{{ _('Enregistrer') }}</button>
+                                            <button type="button" class="btn btn-info" id="editProductBtn">{{ _('Enregistrer') }}</button>
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Annuler') }}</button>
                                         </div>
                                     </form>
@@ -121,38 +195,90 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
                 {% endfor %}
             </tbody>
         </table>
     {% else %}
         <!-- Empty State -->
-        {% include 'dashboard/empty/no_product.html' %}
+        {% include 'dashboard/@support_team/empty/no_product.html' %}
     {% endif %}
 
     <!-- New Product Modal -->
     <div class="modal fade" id="NewProductModal" tabindex="-1" aria-labelledby="NewProductModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="NewProductModalLabel">{{ _('Ajouter un Nouveau Produit') }}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ url_for('main.add_product') }}">
+                    <form method="POST" id="productForm" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="NewProductTitle" class="form-label">{{ _('Titre') }}</label>
+                            <label for="NewProductTitle" class="form-label">{{ _('Titre') }} <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="NewProductTitle" name="title" placeholder="{{ _('Nom du produit') }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="NewProductCost" class="form-label">{{ _('Coût') }}</label>
+                            <label for="NewProductCost" class="form-label">{{ _('Prix unitaire(USD)') }} <span class="text-danger">*</span></label>
                             <input type="number" step="0.01" class="form-control" id="NewProductCost" name="cost" placeholder="{{ _('Coût du produit') }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="NewProductStock" class="form-label">{{ _('Stock') }}</label>
                             <input type="number" class="form-control" id="NewProductStock" name="stock" placeholder="{{ _('Stock disponible') }}">
                         </div>
+                        <div class="mb-3">
+                            <label for="NewProductProvider" class="form-label">{{ _('Fournisseur') }}</label>
+                            <input type="text" class="form-control" id="NewProductProvider" name="provider" placeholder="{{ _('Nom du fournisseur') }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="NewProductProviderLocation" class="form-label">{{ _('Emplacement du Fournisseur') }}</label>
+                            <input type="text" class="form-control" id="NewProductProviderLocation" name="provider_location" placeholder="{{ _('Emplacement du fournisseur') }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="NewProductCategory" class="form-label">{{ _('Catégorie') }} <span class="text-danger">*</span></label>
+                            <select class="form-select w-100 text-start" id="NewProductCategory" name="category" aria-label="Sélectionner la catégorie">
+                                <option selected disabled>{{ _('Sélectionner la catégorie') }}</option>
+                                <option value="electronique">{{ _('Électronique') }}</option>
+                                <option value="vetements">{{ _('Vêtements') }}</option>
+                                <option value="livres">{{ _('Livres') }}</option>
+                                <option value="cadeaux">{{ _('Cadeaux') }}</option>
+                                <option value="house&garden">{{ _('Maison et jardin') }}</option>
+                                <option value="children&babies">{{ _('Bébés et enfants') }}</option>
+                                <option value="pharma">{{ _('Produit pharmaceutique') }}</option>
+                                <option value="tools">{{ _('Outils') }}</option>
+                                <option value="pharma">{{ _('Autre') }}</option>
+                            </select>                            
+                            <p class="text-muted error-text">
+                                {{ _('Veuillez sélectionner une catégorie valide pour le produit.') }}
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="product_img_url" class="form-label">{{ _('Image du Produit') }}</label>
+                            <input type="file" class="form-control" id="product_img_url" name="product_img_url" accept="image/*">
+                            <p class="text-muted mt-2">
+                                {{ _('Formats d\'image acceptés : ') }}<span class="text-info">{{ _('JPG, PNG, GIF.') }}</span><br>
+                                {{ _('Taille maximale de l\'image : ') }}<span class="text-info">{{ _('5MB.') }}</span><br>
+                                {{ _('Résolution recommandée : ') }}<span class="text-info">{{ _('800x800 px') }}</span> {{ _('ou plus pour une meilleure qualité d\'affichage.') }}<br>
+                                {{ _('L\'image n\'est pas obligatoire si vous ne prévoyez pas de publier le produit.') }}
+                            </p>
+                            <p class="text-muted error-text">
+                                {{ _('Veuillez télécharger une image valide pour le produit.') }}
+                            </p>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="NewProductPublish" name="publish">
+                            <label class="form-check-label" for="NewProductPublish">{{ _('Publier dans notre centrale d\'achat') }}</label>
+                        </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">{{ _('Ajouter') }}</button>
+                            <button type="submit" class="btn btn-info">
+                                <i class="bi bi-plus-circle-dotted"></i>
+                                {{ _('Ajouter') }}
+                            </button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Annuler') }}</button>
                         </div>
                     </form>
@@ -160,10 +286,13 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <!-- Scripts -->
 <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/AddProduct.js') }}"></script>
 <script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/EditProduct.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/RemoveProduct.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/async/api/@support_team/Products/BarCodeGenerator.js') }}"></script>
 
 {% endblock %}

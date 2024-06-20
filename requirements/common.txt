@@ -50,3 +50,5 @@ Flask-Babel
 opencage
 firebase-admin
 python-barcode
+reportlab
+twilio

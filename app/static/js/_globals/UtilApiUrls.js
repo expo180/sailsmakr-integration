@@ -1,4 +1,5 @@
-const BaseURL = 'https://afrilog.onrender.com/api/v1/';
+const BaseURL = 'http://127.0.0.1:5000/api/v1/';
+const SecBaseURL = 'http://127.0.0.1:5000/';
 
 const UtilApiURLs = {
     GetEventsApiURL: `${BaseURL}get_events`,
@@ -21,9 +22,13 @@ const UtilApiURLs = {
     EditStoreURL: `${BaseURL}edit_store/`,
     DeleteStoreURL: `${BaseURL}delete_store/`,
     ApplyJobURL: `${BaseURL}job-openings/apply/`,
-    DeleteStoreURL : 'https://afrilog.onrender.com/stores',
-    EditStoreURL : 'https://afrilog.onrender.com/stores',
-    GetStoreDetailsURL : `${BaseURL}/get-store_details/`
+    DeleteStoreURL : `${SecBaseURL}stores`,
+    EditStoreURL : `${SecBaseURL}stores`,
+    GetStoreDetailsURL : `${BaseURL}get-store_details/`,
+    ManageProductURL: `${SecBaseURL}products`,
+    GetProductBarCodeURL : `${BaseURL}download_barcode/`,
+    SendQuoteRequestURL : `${BaseURL}send-message`,
+    SendWhatsappMassageURL : `${BaseURL}send-whatsapp-message`
 };
 
 export default UtilApiURLs;

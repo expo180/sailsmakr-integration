@@ -5,18 +5,18 @@
 <div class="flex h-screen">
   <!-- Left Pane -->
   <div class="lg:flex items-center justify-center flex-1 bg-white text-black">
-    <img src="{{ url_for('static', filename='img/entry/Work_7.jpg') }}" alt="{{ _('productif image') }}">
+    <img src="{{ url_for('static', filename='img/entry/beam-woman-sitting-at-desk-and-programming.gif') }}" alt="{{ _('productif image') }}">
   </div>
   <!-- Right Pane -->
   <div class="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
     <div class="max-w-md w-full p-6">
       <h1 class="text-3xl mb-6 text-black text-center">{{ _('Créer un nouveau compte') }}</h1>
       <h1 class="text-sm  mb-6 text-gray-500 text-center">
-        {{ _('Rejoignez notre communauté et suivez-nous') }}
+        {{ _('Booster votre productivité et accélerer vos livraisons') }}
       </h1>
       <div class="mt-4 flex flex-col lg:flex-row items-center justify-between">
         <div class="w-full mb-2 lg:mb-0">
-          <button type="button" class="w-full flex justify-center items-center gap-2 bg-white text-sm text-gray-600 p-2 rounded-md hover:bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 transition-colors duration-300">
+          <a href="{{ url_for('auth.google_signup') }}" class="w-full flex justify-center items-center gap-2 bg-white text-sm text-gray-600 p-2 rounded-md hover:bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 transition-colors duration-300 py-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4" id="google">
               <path fill="#fbbb00" d="M113.47 309.408 95.648 375.94l-65.139 1.378C11.042 341.211 0 299.9 0 256c0-42.451 10.324-82.483 28.624-117.732h.014L86.63 148.9l25.404 57.644c-5.317 15.501-8.215 32.141-8.215 49.456.002 18.792 3.406 36.797 9.651 53.408z"></path>
               <path fill="#518ef8" d="M507.527 208.176C510.467 223.662 512 239.655 512 256c0 18.328-1.927 36.206-5.598 53.451-12.462 58.683-45.025 109.925-90.134 146.187l-.014-.014-73.044-3.727-10.338-64.535c29.932-17.554 53.324-45.025 65.646-77.911h-136.89V208.176h245.899z"></path>
@@ -24,9 +24,27 @@
               <path fill="#f14336" d="m419.404 58.936-82.933 67.896C313.136 112.246 285.552 103.82 256 103.82c-66.729 0-123.429 42.957-143.965 102.724l-83.397-68.276h-.014C71.23 56.123 157.06 0 256 0c62.115 0 119.068 22.126 163.404 58.936z"></path>
             </svg>
             {{ _('Continuer avec Google') }}
-          </button>
+          </a>
         </div>
       </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% set category, message = messages[-1] %}
+                <div class="flash-message {% if category == 'error' %}bg-red-100 border-red-500 text-red-900{% elif category == 'success' %}bg-green-100 border-green-500 text-green-900{% elif category == 'warning' %}bg-yellow-100 border-yellow-500 text-yellow-900{% else %}bg-teal-100 border-teal-500 text-teal-900{% endif %} rounded-b px-4 py-3 shadow-md" role="alert">
+                    <div class="flex">
+                        <div>
+                            <svg class="fill-current h-6 w-6 {% if category == 'error' %}text-red-500{% elif category == 'success' %}text-green-500{% elif category == 'warning' %}text-yellow-500{% else %}text-teal-500{% endif %} mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm">{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endwith %}
 
       <div class="py-2"></div>
 

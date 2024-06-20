@@ -1,23 +1,33 @@
-from flask import request, render_template, session,  flash, redirect, url_for, jsonify
+from flask import request, render_template, session,  flash, redirect, url_for, jsonify, current_app
 from flask_babel import _
 from . import api
 from flask_login import current_user, login_required
-from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice, Store
-from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required, employee_required
+from ..models import db, Event, Task, Note, Job, Employee, JobApplication, MarketingCampaign, Purchase, Authorization, Invoice, Store, Product, Contact
+from ..decorators import ceo_required, hr_manager_required, user_required, sales_manager_required, accountant_required, employee_required, reseller_required
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
 import secrets
-from .utils import save_files, generate_qr_code, generate_barcode, save_product_pictures, save_docs
+from .utils import save_files, generate_qr_code, generate_barcode, save_product_pictures, save_docs, save_file_locally
 import json
 from dotenv import load_dotenv
 import os, requests
+from flask import send_file
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
+from io import BytesIO
+from barcode import EAN13
+from flask_mail import Message
+from .. import mail
+from twilio.rest import Client
+
 
 load_dotenv()
 
 
 @api.route("/quotes/apply", methods=['GET', 'POST'])
 @login_required
-@user_required  # Define your user_required decorator
+@user_required 
 def apply_quotes():
     if request.method == 'POST':
         data = request.form
@@ -796,3 +806,131 @@ def apply_job(job_id):
         'api/customers/jobs/apply.html',
         job=job
     )
+
+@api.route("/download_barcode/<int:product_id>", methods=['GET'])
+@login_required
+@reseller_required
+def download_barcode(product_id):
+    product = Product.query.get_or_404(product_id)
+
+    token = f"{product.title}-{product.id}"
+    barcode_url = generate_barcode(token)
+
+    local_file_path = save_file_locally(barcode_url)
+
+    if local_file_path:
+        try:
+            pdf_buffer = BytesIO()
+
+            c = canvas.Canvas(pdf_buffer, pagesize=letter)
+            c.drawString(100, 750, f"Product Title: {product.title}")
+            c.drawString(100, 730, f"Token: {token}")
+
+            if local_file_path.endswith('.png'):
+                img = ImageReader(local_file_path)
+                c.drawImage(img, 100, 600, width=200, height=100)
+
+            c.save()
+
+            pdf_buffer.seek(0)
+
+            return send_file(pdf_buffer, as_attachment=True, download_name=f"{product.title}_{token}.pdf")
+
+        except Exception as e:
+            print(f"Error generating PDF: {e}")
+            return jsonify({"success": False, "message": "Failed to generate PDF"}), 500
+
+    else:
+        return jsonify({"success": False, "message": "Failed to download the barcode"}), 500
+    
+
+@api.route('/send-message', methods=['POST'])
+def send_email():
+    data = request.form
+
+    first_name = data.get('first-name')
+    last_name = data.get('last-name')
+    company = data.get('company', '')
+    email = data.get('email')
+    phone = data.get('author_phone_number_raw')
+    message_content = data.get('message')
+
+    subject = "Soumission de formulaire de contact pour les ventes"
+    sender = ("Site web AfriLog", 'noreply@afrilog.net')
+    recipients = [os.environ.get('COMPANY_SALES_MANAGER')]
+
+    body = f"""
+    Vous avez une nouvelle soumission de formulaire de contact.
+
+    Nom : {first_name} {last_name}
+    Entreprise : {company}
+    Email : {email}
+    Téléphone : {phone}
+
+    Message :
+    {message_content}
+    """
+
+    body = body.format(first_name=first_name, last_name=last_name, company=company, email=email, phone=phone, message_content=message_content)
+
+    try:
+        msg = Message(subject, sender=sender, recipients=recipients, body=body)
+        mail.send(msg)
+        return jsonify(success=True)
+    except Exception as e:
+        return jsonify(success=False, error=str(e))
+    
+
+
+@api.route('/send-whatsapp-message', methods=['POST'])
+def send_whatsapp_message():
+    account_sid = os.environ.get('TWILIO_ACCOUNT_ID_SECRET')
+    auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
+    twilio_phone_number = 'whatsapp:+14155238886'
+
+    data = request.json
+    first_name = data.get('first_name')
+    last_name = data.get('last_name')
+    message_text = data.get('message')
+    phone_number = data.get('phone')
+
+    if not phone_number:
+        return jsonify({'error': 'Phone number is required'}), 400
+
+    body = f"Nom du client: {first_name}, Prénom du client: {last_name}, Message: {message_text}"
+
+    try:
+
+        existing_contact = Contact.query.filter_by(phone=phone_number).first()
+        
+        if existing_contact:
+            pass
+        
+        else:
+            new_contact = Contact(
+                first_name=first_name,
+                last_name=last_name,
+                phone=phone_number,
+                message=message_text
+            )
+
+            db.session.add(new_contact)
+            db.session.commit()
+
+        client = Client(account_sid, auth_token)
+
+        message = client.messages.create(
+            body=body,
+            from_=twilio_phone_number,
+            to=f'whatsapp:{phone_number}'
+        )
+
+        print(message.sid)
+
+        return jsonify({'message': 'Message sent successfully'}), 200
+
+    except Exception as e:
+        print(f"Error sending WhatsApp message: {str(e)}")
+        return jsonify({'error': 'Failed to send message'}), 500
+
+

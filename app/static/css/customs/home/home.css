@@ -41,6 +41,10 @@
   height: 14px;
 }
 
+.flash-message {
+  display: none;
+}
+
 .button {
   display: inline-flex;
   align-items: center;

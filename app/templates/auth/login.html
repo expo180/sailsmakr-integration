@@ -112,8 +112,9 @@
         </button>
       </div>
       
-      <button
+      <a
         class="flex w-full items-center justify-center mb-3 gap-3.5 rounded-lg border border-stroke bg-gray p-4 font-medium hover:bg-opacity-70 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-70"
+        href="{{ url_for('auth.google_login') }}"
         >
         <span>
           <svg
@@ -149,7 +150,26 @@
         </svg>
       </span>
       {{ _('Se connecter avec Google') }}
-    </button>  
+    </a>  
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% set category, message = messages[-1] %}
+                <div class="flash-message {% if category == 'error' %}bg-red-100 border-red-500 text-red-900{% elif category == 'success' %}bg-green-100 border-green-500 text-green-900{% elif category == 'warning' %}bg-yellow-100 border-yellow-500 text-yellow-900{% else %}bg-teal-100 border-teal-500 text-teal-900{% endif %} rounded-b px-4 py-3 shadow-md" role="alert">
+                    <div class="flex">
+                        <div>
+                            <svg class="fill-current h-6 w-6 {% if category == 'error' %}text-red-500{% elif category == 'success' %}text-green-500{% elif category == 'warning' %}text-yellow-500{% else %}text-teal-500{% endif %} mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm">{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+     {% endwith %}
 
     <p class="mt-4 text-center text-sm text-gray-500">
       {{ _("Vous n'avez pas de compte?") }}

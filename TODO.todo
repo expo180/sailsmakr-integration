@@ -4,15 +4,28 @@ Website
 ✔ navigation links accessibility & fixes @done (6/5/2024, 9:44:56 PM)
 ✔ globe implementation @done (6/3/2024, 1:46:30 PM)
 ✔ hero fixes @done (6/2/2024, 7:39:19 PM)
-☐ buyer + ads templates & apis flask+js
+✔ buyer + ads templates & apis flask+js @done (6/20/2024, 7:47:23 AM)
 ☐ calcul page integration + bytesprint sailsmakr + pricing settings
 ✔ adjust the QR code generator and host user generated files @done (6/14/2024, 5:24:07 PM)
-
+✔ messaging system config @done (6/20/2024, 7:47:36 AM)
+☐ domain name registration
+☐ hr set of tools
+☐ employee set of tools
+☐ sales set of tools
+☐ accountant set of tools
+☐ reseller set of tools
+☐ settings page
+☐ services page
+☐ buying page
+☐ Google Ads setup
+☐ training preparation
+☐ sellers dropdowns database
 ✔ navbar fixes @done (6/11/2024, 12:53:33 PM)
 ✔ migration script @done (6/6/2024, 3:28:57 PM)
 ☐ footer
-☐ docker config + server + domain name registration 
+☐ docker config + server
 ☐ deployment
+☐ javascript translation & recompilation
 ✔ retranslate & recompile translation @done (6/10/2024, 8:22:01 PM)
 ✔ recheck chinese translation @done (6/10/2024, 11:09:47 AM)
 ☐ cookies consent
@@ -20,14 +33,14 @@ Website
 ✔ Google Ads content & budget @done (6/5/2024, 3:32:07 PM)
 ☐ fixes the globe
 ✔ biggest dropdown adjustments @done (6/8/2024, 8:02:57 PM)
-☐ Wednesday next week - meeting
+
+
 
 CRM
 HomePageView
 ✔ user level view @done (5/28/2024, 12:41:09 PM)
 ✔ language selector in crm @done (6/5/2024, 9:46:01 PM)
 ✔ admin level view @done (6/5/2024, 9:46:07 PM)
-☐ article & news page js+flask api + view
 ✔ hr manager level @done (6/5/2024, 9:46:12 PM)
 ✔ accountant manager level view @done (6/5/2024, 9:46:15 PM)
 ☐ sales manager level view

@@ -10,9 +10,11 @@ from newsdataapi import NewsDataApiClient
 from dotenv import load_dotenv
 from ._utils import truncate_description, get_weekly_financial_summary, get_monthly_user_summary, get_daily_client_summary, get_user_invoices, generate_password
 from datetime import datetime
-from ..api.utils import save_files
+from ..api.utils import save_files, save_product_pictures, generate_barcode
 from .emails import send_reseller_email
 from werkzeug.security import generate_password_hash
+import barcode
+from barcode.writer import ImageWriter
 
 
 load_dotenv()
@@ -80,7 +82,8 @@ def jobs():
 
 @main.route("/sailsmakr-services/shop")
 def shop():
-    return render_template("main/shop.html")
+    products = Product.query.filter_by(publish=True).all()
+    return render_template("main/shop.html", products=products)
 
 @main.route("/home")
 @login_required
@@ -91,6 +94,8 @@ def user_home():
     user_summary = get_monthly_user_summary()
     client_summary = get_daily_client_summary()
     invoices = get_user_invoices(current_user.id)
+    published_products = Product.query.filter_by(user_id=current_user.id).all()
+    new_products = Product.query.all()
     purchases = Purchase.query.filter_by(user_id=current_user.id).all()
 
     return render_template(
@@ -99,7 +104,9 @@ def user_home():
         user_summary=user_summary,
         client_summary=client_summary,
         invoices=invoices,
-        purchases=purchases
+        purchases=purchases,
+        published_products=published_products,
+        new_products=new_products
     
     )
 
@@ -117,8 +124,88 @@ def my_previous_applications():
 @login_required
 @reseller_required
 def products():
-    products = Product.query.filter_by(user_id=current_user.id).all()
-    return render_template('dashboard/@support_team/products.html', products=products)
+    if request.method == 'POST':
+        title = request.form.get('title')
+        cost = float(request.form.get('cost'))
+        stock = int(request.form.get('stock', 0))
+        category = request.form.get('category')
+        provider = request.form.get('provider')
+        provider_location = request.form.get('provider_location')
+        publish = 'publish' in request.form
+        image_file = request.files.get('product_img_url')
+
+        if not category:
+            return jsonify({"success": False, "message": "Category is required"}), 400
+
+        if image_file:
+            image_urls = save_files([image_file], "shop_product_images")
+            product_img_url = image_urls[0] if image_urls else None
+        else:
+            product_img_url = None
+
+        new_product = Product(
+            title=title,
+            cost=cost,
+            stock=stock,
+            category=category,
+            provider=provider,
+            provider_location=provider_location,
+            product_img_url=product_img_url,
+            publish=publish,
+            user_id=current_user.id
+        )
+        db.session.add(new_product)
+        db.session.commit()
+
+        barcode_url = generate_barcode(new_product.id)
+        new_product.barcode_url = barcode_url
+        db.session.commit()
+
+        return redirect(url_for('main.products'))
+
+    elif request.method == 'PUT':
+        product_id = request.form.get('id')
+        product = Product.query.get_or_404(product_id)
+
+        title = request.form.get('title')
+        cost = float(request.form.get('cost'))
+        stock = int(request.form.get('stock', 0))
+        category = request.form.get('category')
+        publish = 'publish' in request.form
+        product_img = request.files.get('product_img_url')
+
+
+        if product_img:
+            product_img_url = save_files([product_img], 'shop_product_images')[0]
+        else:
+            product_img_url = product.product_img_url
+
+        product.title = title
+        product.cost = cost
+        product.stock = stock
+        product.category = category
+        product.product_img_url = product_img_url
+        product.publish = publish
+
+        db.session.commit()
+
+        barcode_url = generate_barcode(product.id)
+        product.barcode_url = barcode_url
+        db.session.commit()
+
+        return jsonify({"success": True}), 200
+
+    elif request.method == 'DELETE':
+        product_id = request.form.get('id')
+        product = Product.query.get_or_404(product_id)
+        db.session.delete(product)
+        db.session.commit()
+
+        return jsonify({"success": True}), 200
+
+    else:
+        products = Product.query.filter_by(user_id=current_user.id).all()
+        return render_template('dashboard/@support_team/products.html', products=products)
 
 @main.route("/careers/job_list")
 @login_required
@@ -156,19 +243,23 @@ def stores():
         logo_urls = save_files(logo_files, 'store_logos')
         logo_url = logo_urls[0] if logo_urls else None
 
-        password = 'alpha256$'  
+        password = generate_password()
         hashed_password = generate_password_hash(password)
-
-        reseller_role = Role.query.filter_by(name='Reseller').first()
 
         new_user = User(
             email=data['email'],
             password_hash=hashed_password,
-            role_id=reseller_role.id
         )
 
         db.session.add(new_user)
         db.session.commit()
+
+        stored_user = User.query.filter_by(email=data['email']).first()
+
+        if stored_user:
+            reseller_role = Role.query.filter_by(name='Reseller').first()
+            stored_user.role_id = reseller_role.id
+            db.session.commit() 
 
         store = Store(
             name=data['name'],

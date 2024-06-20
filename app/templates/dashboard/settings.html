@@ -12,115 +12,88 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-    <div class="d-flex">
+<div class="container">
+  <div class="d-flex">
       <div class="my-3">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
-            <li class="breadcrumb-item">
-              <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
-                <i class="bi bi-house-fill"></i>
-                <span class="visually-hidden">{{ _('Accueil') }}</span>
-              </a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              {{ _('Paramètres') }}
-            </li>
-          </ol>
-        </nav>
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+                  <li class="breadcrumb-item">
+                      <a class="link-body-emphasis" href="{{ url_for('main.user_home') }}">
+                          <i class="bi bi-house-fill"></i>
+                          <span class="visually-hidden">{{ _('Accueil') }}</span>
+                      </a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    {{ _('Paramètres') }}
+                  </li>
+              </ol>
+          </nav>
       </div>
   </div>
 
-  <h2>
-    {{ _('Paramètres') }}
-  </h2>
-
-  <div class="py-2"></div>
-
-  <form action="{{ url_for('main.settings') }}" method="post">
-    <div class="row">
-      <div class="col-md-6 mb-2">
-        <label for="FirstName" class="form-label">
-          {{ _('Prénom') }}
-        </label>
-        <input type="text" 
-          class="form-control" 
-          placeholder="Endie" 
-          value="{% if current_user.first_name %}{{ current_user.first_name }}{% endif %}" 
-          id="FirstName"
-        >
+  <h2>{{ _('Paramètres') }}</h2>
+  <div class="container">
+    <form action="{{ url_for('main.settings') }}" method="post">
+      <hr class="my-4" />
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="FirstName">{{ _('Prénom') }}</label>
+              <input type="text" id="FirstName" name="first_name" class="form-control" placeholder="Endie" value="{% if current_user.first_name %}{{ current_user.first_name }}{% endif %}">
+          </div>
+          <div class="form-group col-md-6">
+              <label for="LastName">{{ _('Nom de famille') }}</label>
+              <input type="text" id="LastName" name="last_name" class="form-control" placeholder="Stafford" value="{% if current_user.last_name %}{{ current_user.last_name }}{% endif %}">
+          </div>
       </div>
-      
-      <div class="col-md-6">
-        <label for="LastName" class="form-label">
-          {{ _('Nom de famille') }}
-        </label>
-        <input type="text" 
-          class="form-control" 
-          placeholder="Stafford" 
-          value="{% if current_user.last_name %}{{ current_user.last_name }}{% endif %}" 
-          id="LastName"
-        >
+      <div class="form-group">
+          <label for="EmailAddress">{{ _("Adresse E-mail") }}</label>
+          <input type="email" class="form-control" id="EmailAddress" name="email" placeholder="endiestafford456@gmail.com" value="{{ current_user.email }}">
       </div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <label for="UserName">
-          {{ _("Nom d'utilisateur") }}
-        </label>
-        <input type="text"
-          class="form-control"
-          id="UserName"
-          placeholder="endiestafford456"
-          value="{% if current_user.username %}{{ current_user.username }}{% endif %}"
-        >
+      <div class="form-group">
+          <label for="UserAddress">{{ _('Adresse Maison') }}</label>
+          <input type="text" class="form-control" id="UserAddress" name="address" placeholder="5230 Newell Road, San Francisco, CA" value="{% if current_user.address %}{{ current_user.address }}{% endif %}">
       </div>
-      <div class="col-md-6 my-2">
-        <label for="EmailAddress">
-          {{ _("Adresse E-mail") }}
-        </label>
-        <input type="text"
-          class="form-control"
-          id="EmailAddress"
-          placeholder="endiestafford456@gmail.com"
-          value="{% if current_user.email %}{{ current_user.email }}{% endif %}"
-        >
+      <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="UserName">{{ _("Nom d'utilisateur") }}</label>
+            <input type="text" class="form-control" id="UserName" name="username" placeholder="endiestafford456" value="{% if current_user.username %}{{ current_user.username }}{% endif %}">
+          </div>
       </div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <label for="UserAddress" class="form-label">
-          {{ _('Adresse Maison') }}
-        </label>
-        <input type="text"
-          class="form-control"
-          id="UserAddress"
-          placeholder="5230 Newell Road, San Francisco, CA"
-          value="{% if current_user.address %}{{ current_user.address }}{% endif %}"
-        >
+      <hr class="my-4" />
+      <div class="row mb-4">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label for="OldPassword">{{ _('Ancien mot de passe') }}</label>
+                <input type="password" class="form-control" id="OldPassword" name="old_password">
+              </div>
+              <div class="form-group">
+                  <label for="NewPassword">{{ _('Nouveau mot de passe') }}</label>
+                  <input type="password" class="form-control" id="NewPassword" name="new_password">
+              </div>
+              <div class="form-group">
+                  <label for="ConfirmPassword">{{ _('Confirmer mot de passe') }}</label>
+                  <input type="password" class="form-control" id="ConfirmPassword" name="confirm_password">
+              </div>
+          </div>
+          <div class="col-md-6">
+              <p class="mb-2">{{ _('Exigences du mot de passe') }}</p>
+              <p class="small text-muted mb-2">{{ _('Pour créer un nouveau mot de passe, vous devez répondre à toutes les exigences suivantes:') }}</p>
+              <ul class="small text-muted pl-4 mb-0">
+                  <li>{{ _('Minimum 8 caractères') }}</li>
+                  <li>{{ _('Au moins un caractère spécial') }}</li>
+                  <li>{{ _('Au moins un numéro') }}</li>
+                  <li>{{ _('Ne peut pas être le même que l\'ancien mot de passe') }}</li>
+              </ul>
+          </div>
       </div>
-    </div>
-
-    <div class="py-5"></div>
-
-    <div class="d-flex justify-content-end">
-      <button class="btn btn-info">
-        <span id="LoadingText" style="display: none;">En cours...</span>
-        <span>Sauvegarder</span>
-        <div class="spinner-border spinner-border-sm" style="display: none;"></div>
-      </button>
-    </div>
-      
-    <div class="py-5"></div>
-
-
-  </form>
-
+      <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-info">
+              <span id="LoadingText" style="display: none;">{{ _('En cours...') }}</span>
+              <span>{{ _('Enregistrer') }}</span>
+              <div class="spinner-border spinner-border-sm" style="display: none;"></div>
+          </button>
+      </div>
+    </form>
+  </div>
 </div>
 {% endblock %}

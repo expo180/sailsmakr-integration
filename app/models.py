@@ -133,6 +133,7 @@ class User(UserMixin, db.Model):
         super(User, self).__init__(**kwargs)
         self.assign_role()
 
+
     def is_employee(self):
         return self.role.name == 'Employee'
 
@@ -408,7 +409,11 @@ class Product(db.Model):
     title = db.Column(db.String, nullable=False)
     cost = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer)
-    product_img_url = db.Column(db.String, nullable=False)
+    category = db.Column(db.String, nullable=False)
+    provider = db.Column(db.String)
+    provider_location = db.Column(db.String)
+    product_img_url = db.Column(db.String)
+    publish = db.Column(db.Boolean, nullable=False)
     barcode_url = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
 
@@ -416,3 +421,12 @@ class Product(db.Model):
         return f'<Product {self.title}>'
 
 
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String)
+    last_name = db.Column(db.String)
+    email = db.Column(db.String)
+    phone = db.Column(db.String)
+    message = db.Column(db.String)
+    gender = db.Column(db.String)
+    

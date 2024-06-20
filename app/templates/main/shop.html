@@ -1,0 +1,38 @@
+{% extends 'main/layout.html' %}
+    <head>
+        {% block title %}{{ _('Afrilog : Central d\'achat') }}{% endblock %}
+        {% block meta_tags %}
+            <meta name="description" content="{{ _('Découvrez notre central d\'achat') }}">
+            <meta name="keywords" content="{{ _('central d\'achat, achats, produits, services, ecommerce, marketplace, ventes en ligne, commerce électronique') }}">      
+        {% endblock %}
+    </head>
+<body>
+    <main>
+        {% block content %}
+        
+            {% include 'includes/main/shop/hero.html' %}
+            
+            {% include 'main/top_product.html' %}
+
+            <div class="pattern_1"></div>
+
+            {% include 'main/services.html' %}
+
+            <div class="pattern_1"></div>
+
+
+            {% include 'main/testimonial.html' %}
+
+            <div class="pattern_1"></div>
+
+            {% include 'main/contact.html' %}
+
+            <div class="pattern_2"></div>
+
+            <script type="module" src="{{ url_for('static', filename='js/async/api/customers/Messages/WhatsappQuote.js') }}"></script>
+
+
+        {% endblock %}
+
+    </main>
+</body>

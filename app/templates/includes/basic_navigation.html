@@ -3,7 +3,7 @@
       <div class="w-full flex  flex-col lg:flex-row">
         <div class=" flex justify-between  lg:flex-row">
           <a href="{{ url_for('main.home') }}" class="flex items-center">
-            <img src="" alt="Afrilog logo">
+            <img src="{{ url_for('static', filename='img/brand/logo.png') }}" alt="Afrilog logo" width="100">
           </a>
           <button data-collapse-toggle="navigation-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">

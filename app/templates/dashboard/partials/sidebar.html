@@ -27,17 +27,22 @@
                 </a>
             </li>
           {% endif %}
+          
 
           {% if current_user.is_reseller() %}
             <li class="nav-item">
                 <a class="nav-link text-white {% if request.path == url_for('main.products') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.products') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">inventory 2</i>
+                        <i class="material-icons opacity-10">store</i>
                     </div>
-                    <span class="nav-link-text ms-1">{{ _('Mes Produits') }}</span>
+                    <span class="nav-link-text">{{ _('Stock') }}</span>
                 </a>
             </li>
           {% endif %}
+
+
+
+          
         
 
           {% if current_user.is_employee() %}
@@ -280,14 +285,6 @@
                   </ul>
               </div>
           </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {% if request.path == url_for('main.calculator') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.calculator') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="bi bi-calculator"></i>
-                </div>
-                <span class="nav-link-text ms-1">{{ _('Calculatrice') }}</span>
-            </a>
-        </li>
         <li class="nav-item">
             <a class="nav-link text-white {% if request.path == url_for('main.settings') %}active bg-gradient-primary{% endif %}" href="{{ url_for('main.settings') }}">
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
