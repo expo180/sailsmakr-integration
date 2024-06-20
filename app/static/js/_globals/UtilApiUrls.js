@@ -1,5 +1,5 @@
-const BaseURL = 'http://127.0.0.1:5000/api/v1/';
-const SecBaseURL = 'http://127.0.0.1:5000/';
+const BaseURL = 'https://afrilog.onrender.com/api/v1/';
+const SecBaseURL = 'https://afrilog.onrender.com/';
 
 const UtilApiURLs = {
     GetEventsApiURL: `${BaseURL}get_events`,

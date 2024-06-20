@@ -900,23 +900,6 @@ def send_whatsapp_message():
     body = f"Nom du client: {first_name}, Prénom du client: {last_name}, Message: {message_text}"
 
     try:
-
-        existing_contact = Contact.query.filter_by(phone=phone_number).first()
-        
-        if existing_contact:
-            pass
-        
-        else:
-            new_contact = Contact(
-                first_name=first_name,
-                last_name=last_name,
-                phone=phone_number,
-                message=message_text
-            )
-
-            db.session.add(new_contact)
-            db.session.commit()
-
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
